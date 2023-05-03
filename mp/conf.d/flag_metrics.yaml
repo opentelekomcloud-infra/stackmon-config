@@ -1,0 +1,1105 @@
+---
+flag_metrics:
+  ### Anti-DDoS
+  - name: "api_down"
+    service: "antiddos"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "antiddos"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "antiddos"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### AutoScaling
+  - name: "api_down"
+    service: "as"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "as"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "as"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### BMS
+  ### CBR
+  - name: "api_down"
+    service: "cbr"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "cbr"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "cbr"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### CCE
+  - name: "api_down"
+    service: "ccev2_0"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "ccev2_0"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "ccev2_0"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### CES
+  - name: "api_down"
+    service: "ces"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "ces"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "ces"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### CSBS
+  ### CSS
+  - name: "api_down"
+    service: "css"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "css"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "css"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### CTS
+  - name: "api_down"
+    service: "cts"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "cts"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "cts"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DC
+  ### DCS
+  - name: "api_down"
+    service: "dcs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "dcs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "dcs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DDS
+  - name: "api_down"
+    service: "ddsv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "ddsv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "ddsv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DEH
+  - name: "api_down"
+    service: "deh"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "deh"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "deh"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DIS
+  - name: "api_down"
+    service: "disv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "disv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "disv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DMS
+  - name: "api_down"
+    service: "dms"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "dms"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "dms"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DNS
+  - name: "api_down"
+    service: "dns"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "dns"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "dns"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### DWS
+  - name: "api_down"
+    service: "dwsv1"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "dwsv1"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "dwsv1"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### ECS
+  - name: "api_down"
+    service: "compute"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_server_errors"
+    service: "compute"
+    template:
+      name: "api_server_errors"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "compute"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "compute"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_down"
+    service: "ecs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "ecs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "ecs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### EIP
+  ### ELB
+  - name: "api_down"
+    service: "elb"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "elb"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "elb"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_down"
+    service: "elbv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "elbv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "elbv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### EVS
+  - name: "api_down"
+    service: "evs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "evs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "evs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_down"
+    service: "block-storage"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "block-storage"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "block-storage"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### IAM
+  - name: "api_down"
+    service: "identity"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "identity"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "identity"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### IMS
+  - name: "api_down"
+    service: "image"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "image"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "image"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### KMS
+  - name: "api_down"
+    service: "kms"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "kms"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "kms"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### LTS
+  ### MA
+  - name: "api_down"
+    service: "modelartsv1"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "modelartsv1"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "modelartsv1"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_down"
+    service: "modelartsv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "modelartsv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "modelartsv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### MRS
+  - name: "api_down"
+    service: "mrs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "mrs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "mrs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### NATGW
+  - name: "api_down"
+    service: "nat"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "nat"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "nat"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### OBS
+  - name: "api_down"
+    service: "object"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "object"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "object"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### PLAS
+  ### RDS
+  - name: "api_down"
+    service: "rdsv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "rdsv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "rdsv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### RTS
+  - name: "api_down"
+    service: "orchestration"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "orchestration"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "orchestration"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### SDRS
+  - name: "api_down"
+    service: "sdrs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "sdrs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "sdrs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### SFS
+  - name: "api_down"
+    service: "shared-file-system"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "shared-file-system"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "shared-file-system"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_down"
+    service: "sfsturbo"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "sfsturbo"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "sfsturbo"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### SMN
+  - name: "api_down"
+    service: "smn"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "smn"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "smn"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### SWR
+  ### TMS
+  - name: "api_down"
+    service: "tms"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "tms"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "tms"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### VBS
+  - name: "api_down"
+    service: "vbs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "vbs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "vbs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### VPC
+  - name: "api_down"
+    service: "network"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "network"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "network"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### VPCE
+  - name: "api_down"
+    service: "vpcep"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "vpcep"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "vpcep"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  ### VPN
+  ### WAF
+  - name: "api_down"
+    service: "waf"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_slow"
+    service: "waf"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"
+
+  - name: "api_success_rate_low"
+    service: "waf"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+      - name: "hybrid_swiss"

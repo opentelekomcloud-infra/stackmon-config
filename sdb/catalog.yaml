@@ -1,0 +1,501 @@
+components:
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: antiddos
+  name: Anti DDoS
+- attributes:
+    category: Security Services
+    region: EU-NL
+    type: antiddos
+  name: Anti DDoS
+- attributes:
+    category: Application Services
+    region: EU-DE
+    type: aom
+  name: Application Operations Management
+- attributes:
+    category: Application Services
+    region: EU-NL
+    type: aom
+  name: Application Operations Management
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: as
+  name: Auto Scaling
+- attributes:
+    category: Compute
+    region: EU-NL
+    type: as
+  name: Auto Scaling
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: bms
+  name: Bare Metal Server
+- attributes:
+    category: Compute
+    region: EU-NL
+    type: bms
+  name: Bare Metal Server
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: cbr
+  name: Cloud Backup and Recovery
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: cbr
+  name: Cloud Backup and Recovery
+- attributes:
+    category: Container
+    region: EU-DE
+    type: cce
+  name: Cloud Container Service
+- attributes:
+    category: Container
+    region: EU-NL
+    type: cce
+  name: Cloud Container Service
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: ces
+  name: Cloud Eye
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: ces
+  name: Cloud Eye
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: csbs
+  name: Cloud Server Backup Service
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: csbs
+  name: Cloud Server Backup Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: css
+  name: Cloud Search Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-NL
+    type: css
+  name: Cloud Search Service
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: cts
+  name: Cloud Trace Service
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: cts
+  name: Cloud Trace Service
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: dc
+  name: Direct Connect
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: dc
+  name: Direct Connect
+- attributes:
+    category: Database
+    region: EU-DE
+    type: dcs
+  name: Distributed Cache Service
+- attributes:
+    category: Database
+    region: EU-NL
+    type: dcs
+  name: Distributed Cache Service
+- attributes:
+    category: Database
+    region: EU-DE
+    type: dds
+  name: Document Database Service
+- attributes:
+    category: Database
+    region: EU-NL
+    type: dds
+  name: Document Database Service
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: deh
+  name: Dedicated Host
+- attributes:
+    category: Compute
+    region: EU-NL
+    type: deh
+  name: Dedicated Host
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: dis
+  name: Data Ingestion Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-NL
+    type: dis
+  name: Data Ingestion Service
+- attributes:
+    category: Application Services
+    region: EU-DE
+    type: dms
+  name: Distributed Message Service
+- attributes:
+    category: Application Services
+    region: EU-NL
+    type: dms
+  name: Distributed Message Service
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: dns
+  name: Domain Name Service
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: dns
+  name: Domain Name Service
+- attributes:
+    category: Database
+    region: EU-DE
+    type: drs
+  name: Data Replication Service
+- attributes:
+    category: Database
+    region: EU-NL
+    type: drs
+  name: Data Replication Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: dws
+  name: Data Warehouse Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-NL
+    type: dws
+  name: Data Warehouse Service
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: ecs
+  name: Elastic Cloud Server
+- attributes:
+    category: Compute
+    region: EU-NL
+    type: ecs
+  name: Elastic Cloud Server
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: eip
+  name: Elastic IP
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: eip
+  name: Elastic IP
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: elb
+  name: Elastic Load Balancing
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: elb
+  name: Elastic Load Balancing
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: evs
+  name: Elastic Volume Service
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: evs
+  name: Elastic Volume Service
+- attributes:
+    category: Database
+    region: EU-DE
+    type: gaussdb_mysql
+  name: GaussDB (for MySQL)
+- attributes:
+    category: Database
+    region: EU-NL
+    type: gaussdb_mysql
+  name: GaussDB (for MySQL)
+- attributes:
+    category: Database
+    region: EU-DE
+    type: gaussdb_nosql
+  name: GaussDB NoSQL
+- attributes:
+    category: Database
+    region: EU-NL
+    type: gaussdb_nosql
+  name: GaussDB NoSQL
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: iam
+  name: Identity and Access Management
+- attributes:
+    category: Security Services
+    region: EU-NL
+    type: iam
+  name: Identity and Access Management
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: ims
+  name: Image Management Service
+- attributes:
+    category: Compute
+    region: EU-NL
+    type: ims
+  name: Image Management Service
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: kms
+  name: Key Management Service
+- attributes:
+    category: Security Services
+    region: EU-NL
+    type: kms
+  name: Key Management Service
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: lts
+  name: Log Tank Service
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: lts
+  name: Log Tank Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: ma
+  name: ModelArts
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-NL
+    type: ma
+  name: ModelArts
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: mrs
+  name: Map Reduce Service
+- attributes:
+    category: Big Data and Data Analysis
+    region: EU-NL
+    type: mrs
+  name: Map Reduce Service
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: natgw
+  name: NAT Gateway
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: natgw
+  name: NAT Gateway
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: obs
+  name: Object Storage Service
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: obs
+  name: Object Storage Service
+- attributes:
+    category: Database
+    region: EU-DE
+    type: opengauss
+  name: GaussDB (openGauss)
+- attributes:
+    category: Database
+    region: EU-NL
+    type: opengauss
+  name: GaussDB (openGauss)
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: plas
+  name: Private Link Access
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: plas
+  name: Private Link Access
+- attributes:
+    category: Database
+    region: EU-DE
+    type: rds
+  name: Relational Database Service
+- attributes:
+    category: Database
+    region: EU-NL
+    type: rds
+  name: Relational Database Service
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: rms
+  name: Resource Management Service
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: rms
+  name: Resource Management Service
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: rts
+  name: Resource Template Service
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: rts
+  name: Resource Template Service
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: sdrs
+  name: Storage Disaster Recovery Service
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: sdrs
+  name: Storage Disaster Recovery Service
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: sfs
+  name: Scalable File System
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: sfs
+  name: Scalable File System
+- attributes:
+    category: Application Services
+    region: EU-DE
+    type: smn
+  name: Simple Message Notification
+- attributes:
+    category: Application Services
+    region: EU-NL
+    type: smn
+  name: Simple Message Notification
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: smg
+  name: Secure Mail Gateway
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: smg
+  name: Secure Mail Gateway
+- attributes:
+    category: Container
+    region: EU-DE
+    type: swr
+  name: Software Repository for Containers
+- attributes:
+    category: Container
+    region: EU-NL
+    type: swr
+  name: Software Repository for Containers
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: tms
+  name: Tag Management Service
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: tms
+  name: Tag Management Service
+- attributes:
+    category: Storage
+    region: EU-DE
+    type: vbs
+  name: Volume Backup Service
+- attributes:
+    category: Storage
+    region: EU-NL
+    type: vbs
+  name: Volume Backup Service
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: vpc
+  name: Virtual Private Cloud
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: vpc
+  name: Virtual Private Cloud
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: vpcep
+  name: VPC Endpoint
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: vpcep
+  name: VPC Endpoint
+- attributes:
+    category: Networking
+    region: EU-DE
+    type: vpn
+  name: Virtual Private Network
+- attributes:
+    category: Networking
+    region: EU-NL
+    type: vpn
+  name: Virtual Private Network
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: waf
+  name: Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-NL
+    type: waf
+  name: Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: wafd
+  name: Dedicated Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-NL
+    type: wafd
+  name: Dedicated Web Application Firewall

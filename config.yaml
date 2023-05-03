@@ -1,0 +1,311 @@
+---
+# Cloud credentials are a sensitive information
+# clouds_credentials:
+# database:
+#   # HA mode is based on patroni, for now disabled while clarifying of the
+#   # deployment issues (not always proper connectivity between nodes)
+#   databases:
+#     - name: grafana
+#       users:
+#         - name: grafana
+#     - name: apimon
+#       users:
+#         - name: apimon
+#     - name: status_dashboard
+#       users:
+#         - name: sdb
+
+grafana:
+  dashboards:
+    - name: main
+      repo_url: git@github.com:stackmon/apimon-tests.git
+      repo_ref: main
+      path: dashboards/grafana
+
+environments: # What we monitor and which credentials to use from every monitoring location (zone)
+  # NOTE: not allowed to use same cloud names in same zone for different envs
+  - name: production_eu_de
+    env:
+      OS_CLOUD: production
+    monitoring_zones:
+      - name: eu-de
+        clouds:
+          - name: production
+            ref: probes-de1
+          - name: swift
+            ref: swift1
+      - name: eu-nl
+        clouds:
+          - name: production
+            ref: probes-nl1
+          - name: swift
+            ref: swift1
+  - name: production_eu_nl
+    env:
+      OS_CLOUD: production
+    monitoring_zones:
+      - name: eu-de
+        clouds:
+          - name: production_eu_nl
+            ref: probes-de2
+          - name: swift
+            ref: swift1
+      - name: eu-nl
+        clouds:
+          - name: production_eu_nl
+            ref: probes-nl2
+          - name: swift
+            ref: swift1
+
+matrix:
+  # Mapping of environments to test projects
+  # Regular apimon project in env ext
+  - env: production_eu_de
+    monitoring_zone: eu-de
+    # TODO: placing db_url here feels questionable
+    # db_url or db_entry as ref to database.databases
+    db_entry: apimon.apimon
+    plugins:
+      - name: apimon
+        schedulers_inventory_group_name: schedulers
+        executors_inventory_group_name: executors
+        #epmons_inventory_group_name: epmons
+        tests_project: apimon
+        tasks:
+          - scenario1_token.yaml
+      - name: epmon
+        epmon_inventory_group_name: epmon_de
+        cloud_name: production_eu_de # env in zone has few creds. We need to pick one
+        config_elements:
+          - antiddos
+          - antiddos_skip_bad_type
+          - as
+          - as_skip_v1
+          - bms_skip
+          - cce_skip_unver
+          - cce
+          - ces
+          - ces_skip_v1
+          - compute
+          - css
+          - cts_skip_unver
+          - cts
+          - data_protect_skip
+          - database_skip
+          - dcs
+          - dcs_skip_v1
+          - dds
+          - deh
+          - dis_skip_unver
+          - dis
+          - dms
+          - dms_skip_v2
+          - dns
+          - dws
+          - dws_skip_v1
+          - identity
+          - image
+          - kms_skip_unver
+          - kms
+          - mrs
+          - nat
+          - network
+          - object_skip
+          - object_store
+          - orchestration
+          - rds_skip_unver
+          - rds_skip_v1
+          - rds
+          - sdrs
+          - sfsturbo
+          - share
+          - smn
+          - smn_skip_v2
+          - volume_skip_v2
+          - volume
+  - env: production_eu_nl
+    monitoring_zone: eu-de
+    db_entry: apimon.apimon
+    plugins:
+      - name: apimon
+        schedulers_inventory_group_name: schedulers
+        executors_inventory_group_name: executors
+        #epmons_inventory_group_name: epmons
+        tests_project: apimon
+        tasks:
+          - scenario1_token.yaml
+      - name: epmon
+        epmon_inventory_group_name: epmon_de
+        cloud_name: production_eu_nl # env in zone has few creds. We need to pick one
+        config_elements:
+          - antiddos
+          - antiddos_skip_bad_type
+          - as
+          - as_skip_v1
+          - bms_skip
+          - cce_skip_unver
+          - cce
+          - ces
+          - ces_skip_v1
+          - compute
+          - css
+          - cts_skip_unver
+          - cts
+          - data_protect_skip
+          - database_skip
+          - dcs
+          - dcs_skip_v1
+          - dds
+          - deh
+          - dis_skip_unver
+          - dis
+          - dms
+          - dms_skip_v2
+          - dns
+          - dws
+          - dws_skip_v1
+          - identity
+          - image
+          - kms_skip_unver
+          - kms
+          - mrs
+          - nat
+          - network
+          - object_skip
+          - object_store
+          - orchestration
+          - rds_skip_unver
+          - rds_skip_v1
+          - rds
+          - sdrs
+          - sfsturbo
+          - share
+          - smn
+          - smn_skip_v2
+          - volume_skip_v2
+          - volume
+
+metrics_processor:
+  - name: prod
+    kube_context: cloudmon-de
+    kube_namespace: stackmon
+    domain_name: metrics.cloudmon.eco.tsi-dev.otc-service.com
+    kustomization:
+      extra_files:
+        - mp/config.yaml
+        - mp/conf.d/flag_metrics.yaml
+        - mp/conf.d/health_metrics.yaml
+        - mp/conf.d/metric_templates.yaml
+
+      configMapGenerator:
+        - name: metrics-processor-config
+          behavior: merge
+          files:
+            - config.yaml=mp/config.yaml
+        - name: metrics-processor-confd
+          behavior: merge
+          files:
+            - flag_metrics.yaml=mp/conf.d/flag_metrics.yaml
+            - health_metrics.yaml=mp/conf.d/health_metrics.yaml
+            - metric_templates.yaml=mp/conf.d/metric_templates.yaml
+
+      images:
+        - name: quay.io/stackmon/metrics-processor
+          newTag: "change_8_latest"
+
+      patches:
+        - patch: |-
+            - op: replace
+              path: /spec/ingressClassName
+              value: nginx
+            - op: replace
+              path: /spec/rules/0/host
+              value: metrics.cloudmon.eco.tsi-dev.otc-service.com
+            - op: replace
+              path: /metadata/annotations
+              value:
+                cert-manager.io/cluster-issuer: letsencrypt-prod
+            - op: replace
+              path: /spec/tls
+              value:
+                - hosts:
+                    - metrics.cloudmon.eco.tsi-dev.otc-service.com
+                  secretName: metrics-processor-cert-prod
+          target:
+            group: networking.k8s.io
+            kind: Ingress
+            name: metrics-processor
+            version: v1
+
+monitoring_zones: # Defining from where we are monitoring
+  - name: eu-de
+    graphite_group_name: graphite_eu_de
+    statsd_group_name: statsd_eu_de
+  - name: eu-nl
+    graphite_group_name: graphite_eu_nl
+    statsd_group_name: statsd_eu_nl
+
+# Known CloudMon plugins with their basic settings
+plugins:
+  - name: apimon
+    type: apimon
+    scheduler_image: quay.io/opentelekomcloud/apimon:dev
+    executor_image: quay.io/opentelekomcloud/apimon:dev
+      # epmon_image: quay.io/opentelekomcloud/apimon:dev
+    tests_projects:
+      - name: apimon
+        repo_url: https://github.com/stackmon/apimon-tests
+        repo_ref: main
+        exec_cmd: ansible-playbook -i inventory/production %s -vvv
+        scenarios_location: playbooks
+        grafana_dashboards_location: dashboards
+  - name: epmon
+    type: epmon
+    image: quay.io/opentelekomcloud/apimon:dev
+    config: epmon/config.yaml
+  - name: lb
+    type: general
+    image: quay.io/opentelekomcloud/cloudmon-plugin-lb
+    init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
+
+status_dashboard:
+  - name: prod
+    kube_context: cloudmon-de
+    kube_namespace: stackmon
+    domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb/catalog.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_11_latest"
+      patches:
+        - patch: |-
+            - op: replace
+              path: /spec/ingressClassName
+              value: nginx
+            - op: replace
+              path: /spec/rules/0/host
+              value: status.cloudmon.eco.tsi-dev.otc-service.com
+            - op: replace
+              path: /metadata/annotations
+              value:
+                cert-manager.io/cluster-issuer: letsencrypt-prod
+            - op: replace
+              path: /spec/tls
+              value:
+                - hosts:
+                    - status.cloudmon.eco.tsi-dev.otc-service.com
+                  secretName: sdb-cert-prod
+          target:
+            group: networking.k8s.io
+            kind: Ingress
+            name: status-dashboard
+            version: v1
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb/catalog.yaml

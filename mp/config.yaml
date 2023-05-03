@@ -1,0 +1,13 @@
+---
+datasource:
+  url: https://graphite-ca.eco.tsi-dev.otc-service.com
+  type: graphite
+server:
+  port: 3005
+environments:
+  - name: "production_eu-de"
+    attributes:
+      region: "EU-DE"
+  - name: "production_eu-nl"
+    attributes:
+      region: "EU-NL"
