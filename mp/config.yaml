@@ -1,6 +1,6 @@
 ---
 datasource:
-  url: https://graphite-ca.eco.tsi-dev.otc-service.com
+  url: https://graphite.cloudmon.eco.tsi-dev.otc-service.com
   type: graphite
 server:
   port: 3005
