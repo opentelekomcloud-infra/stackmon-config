@@ -24,7 +24,7 @@ grafana:
 
 environments: # What we monitor and which credentials to use from every monitoring location (zone)
   # NOTE: not allowed to use same cloud names in same zone for different envs
-  - name: production_eu_de
+  - name: production_eu-de
     env:
       OS_CLOUD: production
     monitoring_zones:
@@ -40,19 +40,19 @@ environments: # What we monitor and which credentials to use from every monitori
             ref: probes-nl1
           - name: swift
             ref: swift1
-  - name: production_eu_nl
+  - name: production_eu-nl
     env:
       OS_CLOUD: production
     monitoring_zones:
       - name: eu-de
         clouds:
-          - name: production_eu_nl
+          - name: production_eu-nl
             ref: probes-de2
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
-          - name: production_eu_nl
+          - name: production_eu-nl
             ref: probes-nl2
           - name: swift
             ref: swift1
@@ -60,7 +60,7 @@ environments: # What we monitor and which credentials to use from every monitori
 matrix:
   # Mapping of environments to test projects
   # Regular apimon project in env ext
-  - env: production_eu_de
+  - env: production_eu-de
     monitoring_zone: eu-de
     # TODO: placing db_url here feels questionable
     # db_url or db_entry as ref to database.databases
@@ -75,7 +75,7 @@ matrix:
           - scenario1_token.yaml
       - name: epmon
         epmon_inventory_group_name: epmon_de
-        cloud_name: production_eu_de # env in zone has few creds. We need to pick one
+        cloud_name: production_eu-de # env in zone has few creds. We need to pick one
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
@@ -123,7 +123,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
-  - env: production_eu_nl
+  - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
     plugins:
@@ -136,7 +136,7 @@ matrix:
           - scenario1_token.yaml
       - name: epmon
         epmon_inventory_group_name: epmon_de
-        cloud_name: production_eu_nl # env in zone has few creds. We need to pick one
+        cloud_name: production_eu-nl # env in zone has few creds. We need to pick one
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
@@ -191,10 +191,10 @@ metrics_processor:
     kube_namespace: stackmon
     domain_name: metrics.cloudmon.eco.tsi-dev.otc-service.com
     environments:
-      - name: "production_eu_de"
+      - name: "production_eu-de"
         attributes:
           region: "EU-DE"
-      - name: "production_eu_nl"
+      - name: "production_eu-nl"
         attributes:
           region: "EU-NL"
     status_dashboard_instance_name: "prod"
@@ -247,11 +247,11 @@ metrics_processor:
 
 monitoring_zones: # Defining from where we are monitoring
   - name: eu-de
-    graphite_group_name: graphite_eu_de
-    statsd_group_name: statsd_eu_de
+    graphite_group_name: graphite_eu-de
+    statsd_group_name: statsd_eu-de
   - name: eu-nl
-    graphite_group_name: graphite_eu_nl
-    statsd_group_name: statsd_eu_nl
+    graphite_group_name: graphite_eu-nl
+    statsd_group_name: statsd_eu-nl
 
 # Known CloudMon plugins with their basic settings
 plugins:
