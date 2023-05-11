@@ -247,11 +247,11 @@ metrics_processor:
 
 monitoring_zones: # Defining from where we are monitoring
   - name: eu-de
-    graphite_group_name: graphite_eu-de
-    statsd_group_name: statsd_eu-de
+    graphite_group_name: graphite_eu_de
+    statsd_group_name: statsd_eu_de
   - name: eu-nl
-    graphite_group_name: graphite_eu-nl
-    statsd_group_name: statsd_eu-nl
+    graphite_group_name: graphite_eu_nl
+    statsd_group_name: statsd_eu_nl
 
 # Known CloudMon plugins with their basic settings
 plugins:
