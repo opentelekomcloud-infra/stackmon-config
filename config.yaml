@@ -26,23 +26,23 @@ environments: # What we monitor and which credentials to use from every monitori
   # NOTE: not allowed to use same cloud names in same zone for different envs
   - name: production_eu-de
     env:
-      OS_CLOUD: production
+      OS_CLOUD: production_eu-de
     monitoring_zones:
       - name: eu-de
         clouds:
-          - name: production
+          - name: production_eu-de
             ref: probes-de1
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
-          - name: production
+          - name: production_eu-de
             ref: probes-nl1
           - name: swift
             ref: swift1
   - name: production_eu-nl
     env:
-      OS_CLOUD: production
+      OS_CLOUD: production_eu-nl
     monitoring_zones:
       - name: eu-de
         clouds:
