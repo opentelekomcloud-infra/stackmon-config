@@ -273,6 +273,13 @@ status_dashboard:
     kube_context: cloudmon-de
     kube_namespace: stackmon
     domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
+    environments:
+      - name: "production_eu_de"
+        attributes:
+          region: "EU-DE"
+      - name: "production_eu_nl"
+        attributes:
+          region: "EU-NL"
     kustomization:
       extra_files:
         - sdb/catalog.yaml
