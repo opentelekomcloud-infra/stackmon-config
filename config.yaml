@@ -197,6 +197,7 @@ metrics_processor:
       - name: "production_eu_nl"
         attributes:
           region: "EU-NL"
+    status_dashboard_instance_name: "prod"
     kustomization:
       extra_files:
         - mp/config.yaml
