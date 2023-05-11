@@ -5,9 +5,9 @@ datasource:
 server:
   port: 3005
 environments:
-  - name: "production_eu-de"
+  - name: "production_eu_de"
     attributes:
       region: "EU-DE"
-  - name: "production_eu-nl"
+  - name: "production_eu_nl"
     attributes:
       region: "EU-NL"
