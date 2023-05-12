@@ -200,16 +200,11 @@ metrics_processor:
     status_dashboard_instance_name: "prod"
     kustomization:
       extra_files:
-        - mp/config.yaml
         - mp/conf.d/flag_metrics.yaml
         - mp/conf.d/health_metrics.yaml
         - mp/conf.d/metric_templates.yaml
 
       configMapGenerator:
-        - name: metrics-processor-config
-          behavior: merge
-          files:
-            - config.yaml=mp/config.yaml
         - name: metrics-processor-confd
           behavior: merge
           files:
@@ -219,7 +214,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_8_latest"
+          newTag: "change_11_latest"
 
       patches:
         - patch: |-
