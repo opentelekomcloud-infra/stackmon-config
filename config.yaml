@@ -18,7 +18,7 @@
 grafana:
   dashboards:
     - name: main
-      repo_url: git@github.com:stackmon/apimon-tests.git
+      repo_url: https://github.com/stackmon/apimon-tests.git
       repo_ref: main
       path: dashboards/grafana
 
