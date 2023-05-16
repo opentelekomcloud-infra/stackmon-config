@@ -31,13 +31,13 @@ environments: # What we monitor and which credentials to use from every monitori
       - name: eu-de
         clouds:
           - name: production_eu-de
-            ref: probes-de1
+            ref: probes-de1  # we want to monitor DE from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: production_eu-de
-            ref: probes-nl1
+            ref: probes-de2  # we want to monitor DE from NL
           - name: swift
             ref: swift1
   - name: production_eu-nl
@@ -47,13 +47,13 @@ environments: # What we monitor and which credentials to use from every monitori
       - name: eu-de
         clouds:
           - name: production_eu-nl
-            ref: probes-de2
+            ref: probes-nl1  # we want to monitor NL from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: production_eu-nl
-            ref: probes-nl2
+            ref: probes-nl2  # we want to monitor NL from NL
           - name: swift
             ref: swift1
 
@@ -136,6 +136,116 @@ matrix:
           - scenario1_token.yaml
       - name: epmon
         epmon_inventory_group_name: epmon_de
+        cloud_name: production_eu-nl # env in zone has few creds. We need to pick one
+        config_elements:
+          - antiddos
+          - antiddos_skip_bad_type
+          - as
+          - as_skip_v1
+          - bms_skip
+          - cce_skip_unver
+          - cce
+          - ces
+          - ces_skip_v1
+          - compute
+          - css
+          - cts_skip_unver
+          - cts
+          - data_protect_skip
+          - database_skip
+          - dcs
+          - dcs_skip_v1
+          - dds
+          - deh
+          - dis_skip_unver
+          - dis
+          - dms
+          - dms_skip_v2
+          - dns
+          - dws
+          - dws_skip_v1
+          - identity
+          - image
+          - kms_skip_unver
+          - kms
+          - mrs
+          - nat
+          - network
+          - object_skip
+          - object_store
+          - orchestration
+          - rds_skip_unver
+          - rds_skip_v1
+          - rds
+          - sdrs
+          - sfsturbo
+          - share
+          - smn
+          - smn_skip_v2
+          - volume_skip_v2
+          - volume
+  - env: production_eu-de
+    monitoring_zone: eu-nl
+    # TODO: placing db_url here feels questionable
+    # db_url or db_entry as ref to database.databases
+    db_entry: apimon.apimon
+    plugins:
+      - name: epmon
+        epmon_inventory_group_name: epmon_nl
+        cloud_name: production_eu-de # env in zone has few creds. We need to pick one
+        config_elements:
+          - antiddos
+          - antiddos_skip_bad_type
+          - as
+          - as_skip_v1
+          - bms_skip
+          - cce_skip_unver
+          - cce
+          - ces
+          - ces_skip_v1
+          - compute
+          - css
+          - cts_skip_unver
+          - cts
+          - data_protect_skip
+          - database_skip
+          - dcs
+          - dcs_skip_v1
+          - dds
+          - deh
+          - dis_skip_unver
+          - dis
+          - dms
+          - dms_skip_v2
+          - dns
+          - dws
+          - dws_skip_v1
+          - identity
+          - image
+          - kms_skip_unver
+          - kms
+          - mrs
+          - nat
+          - network
+          - object_skip
+          - object_store
+          - orchestration
+          - rds_skip_unver
+          - rds_skip_v1
+          - rds
+          - sdrs
+          - sfsturbo
+          - share
+          - smn
+          - smn_skip_v2
+          - volume_skip_v2
+          - volume
+  - env: production_eu-nl
+    monitoring_zone: eu-nl
+    db_entry: apimon.apimon
+    plugins:
+      - name: epmon
+        epmon_inventory_group_name: epmon_nl
         cloud_name: production_eu-nl # env in zone has few creds. We need to pick one
         config_elements:
           - antiddos
