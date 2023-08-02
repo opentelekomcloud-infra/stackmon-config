@@ -1,0 +1,301 @@
+components:
+# - attributes:
+#     category: Security Services
+#     region: EU-CH2
+#     type: antiddos
+#   name: Anti DDoS
+
+- attributes:
+    category: Application Services
+    region: EU-CH2
+    type: aom
+  name: Application Operations Management
+
+- attributes:
+    category: Compute
+    region: EU-CH2
+    type: as
+  name: Auto Scaling
+
+# - attributes:
+#     category: Compute
+#     region: EU-CH2
+#     type: bms
+#   name: Bare Metal Server
+
+- attributes:
+    category: Storage
+    region: EU-CH2
+    type: cbr
+  name: Cloud Backup and Recovery
+
+- attributes:
+    category: Container
+    region: EU-CH2
+    type: cce
+  name: Cloud Container Engine
+
+- attributes:
+    category: Management & Deployment
+    region: EU-CH2
+    type: ces
+  name: Cloud Eye
+
+# - attributes:
+#     category: Storage
+#     region: EU-CH2
+#     type: csbs
+#   name: Cloud Server Backup Service
+
+# - attributes:
+#     category: Big Data and Data Analysis
+#     region: EU-CH2
+#     type: css
+#   name: Cloud Search Service
+
+- attributes:
+    category: Management & Deployment
+    region: EU-CH2
+    type: cts
+  name: Cloud Trace Service
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: dc
+  name: Direct Connect
+
+# - attributes:
+#     category: Database
+#     region: EU-CH2
+#     type: dcs
+#   name: Distributed Cache Service
+
+# - attributes:
+#     category: Database
+#     region: EU-CH2
+#     type: dds
+#   name: Document Database Service
+
+- attributes:
+    category: Compute
+    region: EU-CH2
+    type: deh
+  name: Dedicated Host
+
+# - attributes:
+#     category: Big Data and Data Analysis
+#     region: EU-CH2
+#     type: dis
+#   name: Data Ingestion Service
+
+# - attributes:
+#     category: Application Services
+#     region: EU-CH2
+#     type: dms
+#   name: Distributed Message Service
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: dns
+  name: Domain Name Service
+
+# - attributes:
+#     category: Database
+#     region: EU-CH2
+#     type: drs
+#   name: Data Replication Service
+
+# - attributes:
+#     category: Big Data and Data Analysis
+#     region: EU-CH2
+#     type: dws
+#   name: Data Warehouse Service
+
+- attributes:
+    category: Compute
+    region: EU-CH2
+    type: ecs
+  name: Elastic Cloud Server
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: eip
+  name: Elastic IP
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: elb
+  name: Elastic Load Balancing
+
+- attributes:
+    category: Storage
+    region: EU-CH2
+    type: evs
+  name: Elastic Volume Service
+
+# - attributes:
+#     category: Database
+#     region: EU-CH2
+#     type: gaussdb_mysql
+#   name: GaussDB (for MySQL)
+
+# - attributes:
+#     category: Database
+#     region: EU-CH2
+#     type: gaussdb_nosql
+#   name: GaussDB NoSQL
+
+- attributes:
+    category: Security Services
+    region: EU-CH2
+    type: iam
+  name: Identity and Access Management
+
+- attributes:
+    category: Compute
+    region: EU-CH2
+    type: ims
+  name: Image Management Service
+
+- attributes:
+    category: Security Services
+    region: EU-CH2
+    type: kms
+  name: Key Management Service
+
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-CH2
+#     type: lts
+#   name: Log Tank Service
+
+# - attributes:
+#     category: Big Data and Data Analysis
+#     region: EU-CH2
+#     type: ma
+#   name: ModelArts
+
+# - attributes:
+#     category: Big Data and Data Analysis
+#     region: EU-CH2
+#     type: mrs
+#   name: Map Reduce Service
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: natgw
+  name: NAT Gateway
+
+- attributes:
+    category: Storage
+    region: EU-CH2
+    type: obs
+  name: Object Storage Service
+
+# - attributes:
+#     category: Database
+#     region: EU-CH2
+#     type: opengauss
+#   name: GaussDB (openGauss)
+
+# - attributes:
+#     category: Networking
+#     region: EU-CH2
+#     type: plas
+#   name: Private Link Access
+
+- attributes:
+    category: Database
+    region: EU-CH2
+    type: rds
+  name: Relational Database Service
+
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-CH2
+#     type: rms
+#   name: Resource Management Service
+
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-CH2
+#     type: rts
+#   name: Resource Template Service
+
+- attributes:
+    category: Storage
+    region: EU-CH2
+    type: sdrs
+  name: Storage Disaster Recovery Service
+
+# - attributes:
+#     category: Storage
+#     region: EU-CH2
+#     type: sfs
+#   name: Scalable File System
+
+- attributes:
+    category: Application Services
+    region: EU-CH2
+    type: smn
+  name: Simple Message Notification
+
+# - attributes:
+#     category: Networking
+#     region: EU-CH2
+#     type: smg
+#   name: Secure Mail Gateway
+
+- attributes:
+    category: Container
+    region: EU-CH2
+    type: swr
+  name: Software Repository for Containers
+
+- attributes:
+    category: Management & Deployment
+    region: EU-CH2
+    type: tms
+  name: Tag Management Service
+
+# - attributes:
+#     category: Storage
+#     region: EU-CH2
+#     type: vbs
+#   name: Volume Backup Service
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: vpc
+  name: Virtual Private Cloud
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: vpcep
+  name: VPC Endpoint
+
+- attributes:
+    category: Networking
+    region: EU-CH2
+    type: vpn
+  name: Virtual Private Network
+
+# - attributes:
+#     category: Security Services
+#     region: EU-CH2
+#     type: waf
+#   name: Web Application Firewall
+
+- attributes:
+    category: Security Services
+    region: EU-CH2
+    type: wafd
+  name: Dedicated Web Application Firewall
+
