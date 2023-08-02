@@ -388,7 +388,7 @@ status_dashboard:
     domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
     kustomization:
       extra_files:
-        - sdb/catalog.yaml
+        - sdb_prod/catalog.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
@@ -421,4 +421,45 @@ status_dashboard:
       configMapGenerator:
         - name: sdb-config
           files:
-            - catalog.yaml=sdb/catalog.yaml
+            - catalog.yaml=sdb_prod/catalog.yaml
+
+  - name: prod-ch2_from_eu-de
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-ch2
+    domain_name: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_ch2/catalog.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_14_latest"
+      patches:
+        - patch: |-
+            - op: replace
+              path: /spec/ingressClassName
+              value: nginx
+            - op: replace
+              path: /spec/rules/0/host
+              value: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+            - op: replace
+              path: /metadata/annotations
+              value:
+                cert-manager.io/cluster-issuer: letsencrypt-prod
+            - op: replace
+              path: /spec/tls
+              value:
+                - hosts:
+                    - status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+                  secretName: sdb-cert-prod
+          target:
+            group: networking.k8s.io
+            kind: Ingress
+            name: status-dashboard
+            version: v1
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_ch2/catalog.yaml
