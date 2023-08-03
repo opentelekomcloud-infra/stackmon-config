@@ -1,0 +1,560 @@
+---
+flag_metrics:
+
+  ### AutoScaling
+  - name: "api_down"
+    service: "as"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "as"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "as"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### CBR
+  - name: "api_down"
+    service: "cbr"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "cbr"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "cbr"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### CCE
+  - name: "api_down"
+    service: "ccev2_0"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "ccev2_0"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "ccev2_0"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### CES
+  - name: "api_down"
+    service: "ces"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "ces"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "ces"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### CTS
+  - name: "api_down"
+    service: "cts"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "cts"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "cts"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### DC
+  ### DEH
+  - name: "api_down"
+    service: "deh"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "deh"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "deh"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### DNS
+  - name: "api_down"
+    service: "dns"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "dns"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "dns"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### ECS
+  - name: "api_down"
+    service: "compute"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_server_errors"
+    service: "compute"
+    template:
+      name: "api_server_errors"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "compute"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "compute"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_down"
+    service: "ecs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "ecs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "ecs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### EIP
+  ### ELB
+  - name: "api_down"
+    service: "elb"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "elb"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "elb"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_down"
+    service: "elbv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "elbv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "elbv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### EVS
+  - name: "api_down"
+    service: "evs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "evs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "evs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_down"
+    service: "block-storage"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "block-storage"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "block-storage"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### IAM
+  - name: "api_down"
+    service: "identity"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "identity"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "identity"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### IMS
+  - name: "api_down"
+    service: "image"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "image"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "image"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### KMS
+  - name: "api_down"
+    service: "kms"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "kms"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "kms"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### NATGW
+  - name: "api_down"
+    service: "nat"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "nat"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "nat"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### OBS
+  - name: "api_down"
+    service: "object"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "object"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "object"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### RDS
+  - name: "api_down"
+    service: "rdsv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "rdsv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "rdsv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### SDRS
+  - name: "api_down"
+    service: "sdrs"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "sdrs"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "sdrs"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### SMN
+  - name: "api_down"
+    service: "smn"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "smn"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "smn"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### SWR
+  ### TMS
+  - name: "api_down"
+    service: "tms"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "tms"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "tms"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### VPC
+  - name: "api_down"
+    service: "network"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "network"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "network"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### VPCE
+  - name: "api_down"
+    service: "vpcep"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "vpcep"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "vpcep"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  ### VPN
+  ### WAFD
+#  - name: "api_down"
+#    service: "wafd"
+#    template:
+#      name: "api_down"
+#    environments:
+#      - name: "hybrid_eu-ch2"
+#
+#  - name: "api_slow"
+#    service: "wafd"
+#    template:
+#      name: "api_slow"
+#    environments:
+#      - name: "hybrid_eu-ch2"
+#
+#  - name: "api_success_rate_low"
+#    service: "wafd"
+#    template:
+#      name: "api_success_rate_low"
+#    environments:
+#      - name: "hybrid_eu-ch2"

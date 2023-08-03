@@ -310,17 +310,17 @@ metrics_processor:
     status_dashboard_instance_name: "prod"
     kustomization:
       extra_files:
-        - mp/conf.d/flag_metrics.yaml
-        - mp/conf.d/health_metrics.yaml
-        - mp/conf.d/metric_templates.yaml
+        - mp-prod/conf.d/flag_metrics.yaml
+        - mp-prod/conf.d/health_metrics.yaml
+        - mp-prod/conf.d/metric_templates.yaml
 
       configMapGenerator:
         - name: metrics-processor-confd
           behavior: merge
           files:
-            - flag_metrics.yaml=mp/conf.d/flag_metrics.yaml
-            - health_metrics.yaml=mp/conf.d/health_metrics.yaml
-            - metric_templates.yaml=mp/conf.d/metric_templates.yaml
+            - flag_metrics.yaml=mp-prod/conf.d/flag_metrics.yaml
+            - health_metrics.yaml=mp-prod/conf.d/health_metrics.yaml
+            - metric_templates.yaml=mp-prod/conf.d/metric_templates.yaml
 
       images:
         - name: quay.io/stackmon/metrics-processor
@@ -343,6 +343,57 @@ metrics_processor:
               value:
                 - hosts:
                     - metrics.cloudmon.eco.tsi-dev.otc-service.com
+                  secretName: metrics-processor-cert-prod
+          target:
+            group: networking.k8s.io
+            kind: Ingress
+            name: metrics-processor
+            version: v1
+
+  - name: hybrid-ch2_from_eu-de
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-ch2
+    domain_name: metrics-ch2.cloudmon.eco.tsi-dev.otc-service.com
+    environments:
+      - name: "hybrid_eu-ch2"
+        attributes:
+          region: "EU-CH2"
+    status_dashboard_instance_name: "hybrid-ch2_from_eu-de"
+    kustomization:
+      extra_files:
+        - mp-ch2/conf.d/flag_metrics.yaml
+        - mp-ch2/conf.d/health_metrics.yaml
+        - mp-ch2/conf.d/metric_templates.yaml
+
+      configMapGenerator:
+        - name: metrics-processor-confd
+          behavior: merge
+          files:
+            - flag_metrics.yaml=mp-ch2/conf.d/flag_metrics.yaml
+            - health_metrics.yaml=mp-ch2/conf.d/health_metrics.yaml
+            - metric_templates.yaml=mp-ch2/conf.d/metric_templates.yaml
+
+      images:
+        - name: quay.io/stackmon/metrics-processor
+          newTag: "change_11_latest"
+
+      patches:
+        - patch: |-
+            - op: replace
+              path: /spec/ingressClassName
+              value: nginx
+            - op: replace
+              path: /spec/rules/0/host
+              value: metrics-ch2.cloudmon.eco.tsi-dev.otc-service.com
+            - op: replace
+              path: /metadata/annotations
+              value:
+                cert-manager.io/cluster-issuer: letsencrypt-prod
+            - op: replace
+              path: /spec/tls
+              value:
+                - hosts:
+                    - metrics-ch2.cloudmon.eco.tsi-dev.otc-service.com
                   secretName: metrics-processor-cert-prod
           target:
             group: networking.k8s.io
@@ -423,7 +474,7 @@ status_dashboard:
           files:
             - catalog.yaml=sdb_prod/catalog.yaml
 
-  - name: prod-ch2_from_eu-de
+  - name: hybrid-ch2_from_eu-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-ch2
     domain_name: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
