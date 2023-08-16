@@ -318,52 +318,30 @@ matrix:
         epmon_inventory_group_name: epmon_de
         cloud_name: hybrid_eu-ch2 # env in zone has few creds. We need to pick one
         config_elements:
-          - antiddos
-          - antiddos_skip_bad_type
-          - as
-          # - as_skip_v1
-          - bms_skip
-          - cce_skip_unver
+          - as_swiss
           - cce
           - ces
           - ces_skip_v1
           - compute
-          - css
           - cts_skip_unver
-          - cts
-          - data_protect_skip
-          - database_skip
-          - dcs
-          - dcs_skip_v1
-          - dds
+          - cts_skip_v2
+          - cts_v3
+          - dcaas
           - deh
-          - dis_skip_unver
-          - dis
-          - dms
-          - dms_skip_v2
-          - dns
-          - dws
-          - dws_skip_v1
+          - dns_private_only
           - identity
           - image
           - kms_skip_unver
           - kms
-          - mrs
           - nat
           - network
           - object_skip
-          - object_store
-          - orchestration
-          - rds_skip_unver
-          - rds_skip_v1
           - rds
           - sdrs
-          - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
-          - volume
+          - volume_no_backups
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -372,52 +350,30 @@ matrix:
         epmon_inventory_group_name: epmon_nl
         cloud_name: hybrid_eu-ch2 # env in zone has few creds. We need to pick one
         config_elements:
-          - antiddos
-          - antiddos_skip_bad_type
-          - as
-          # - as_skip_v1
-          - bms_skip
-          - cce_skip_unver
+          - as_swiss
           - cce
           - ces
           - ces_skip_v1
           - compute
-          - css
           - cts_skip_unver
-          - cts
-          - data_protect_skip
-          - database_skip
-          - dcs
-          - dcs_skip_v1
-          - dds
+          - cts_skip_v2
+          - cts_v3
+          - dcaas
           - deh
-          - dis_skip_unver
-          - dis
-          - dms
-          - dms_skip_v2
-          - dns
-          - dws
-          - dws_skip_v1
+          - dns_private_only
           - identity
           - image
           - kms_skip_unver
           - kms
-          - mrs
           - nat
           - network
           - object_skip
-          - object_store
-          - orchestration
-          - rds_skip_unver
-          - rds_skip_v1
           - rds
           - sdrs
-          - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
-          - volume
+          - volume_no_backups
 
 metrics_processor:
   - name: prod
