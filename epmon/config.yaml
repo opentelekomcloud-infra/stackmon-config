@@ -21,6 +21,13 @@ elements:
       - /scaling_group
       - /scaling_configuration
       - /scaling_policy
+  as_swiss:
+    service_type: as
+    sdk_proxy: auto_scaling
+    urls:
+      - /
+      - /scaling_group
+      - /scaling_configuration
   as_skip_v1:
     service_type: asv1
     urls: []
@@ -60,8 +67,15 @@ elements:
     - /clusters
   cts_skip_unver:
     service_type: cts
+  cts_skip_v2:
+    service_type: ctsv2
   cts:
     service_type: ctsv2
+    sdk_proxy: cts
+    urls:
+    - /
+  cts_v3:
+    service_type: ctsv3
     sdk_proxy: cts
     urls:
     - /
@@ -69,6 +83,14 @@ elements:
     service_type: data-protect
   database_skip:
     service_type: database
+  dcaas:
+    service_type: dcaas
+    sdk_proxy: dcaas
+    urls:
+    - /dcaas/direct-connects
+    - /dcaas/virtual-interfaces
+    - /dcaas/dc-endpoint-groups
+    - /dcaas/virtual-gateways
   dcs:
     service_type: dcs
     sdk_proxy: dcs
@@ -114,6 +136,12 @@ elements:
     - /zones
     - /recordsets
     - /reverse/floatingips
+  dns_private_only:
+    service_type: dns
+    urls:
+    - /
+    - /zones
+    - /recordsets
   dws:
     service_type: dws
     urls:
@@ -154,7 +182,6 @@ elements:
     service_type: nat
     urls:
     - /
-    - /v2.0
     - /nat_gateways
     - /snat_rules
     - /dnat_rules
@@ -234,5 +261,13 @@ elements:
     - /volumes
     - /snapshots
     - /backups
+    - /os-volume-transfer
+    - /os-availability-zone
+  volume_no_backups:
+    service_type: volumev3
+    sdk_proxy: block_storage
+    urls:
+    - /volumes
+    - /snapshots
     - /os-volume-transfer
     - /os-availability-zone
