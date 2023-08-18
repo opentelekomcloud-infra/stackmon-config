@@ -1,6 +1,28 @@
 ---
 flag_metrics:
 
+  ### AOM
+  - name: "api_down"
+    service: "aom"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "aom"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "aom"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
   ### AutoScaling
   - name: "api_down"
     service: "as"
@@ -112,6 +134,27 @@ flag_metrics:
       - name: "hybrid_eu-ch2"
 
   ### DC
+  - name: "api_down"
+    service: "dcaas"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "dcaas"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "dcaas"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
   ### DEH
   - name: "api_down"
     service: "deh"
@@ -208,27 +251,6 @@ flag_metrics:
 
   ### EIP
   ### ELB
-  - name: "api_down"
-    service: "elb"
-    template:
-      name: "api_down"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_slow"
-    service: "elb"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_success_rate_low"
-    service: "elb"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "hybrid_eu-ch2"
-
   - name: "api_down"
     service: "elbv3"
     template:
@@ -470,6 +492,27 @@ flag_metrics:
       - name: "hybrid_eu-ch2"
 
   ### SWR
+  - name: "api_down"
+    service: "swr"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "swr"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "swr"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
   ### TMS
   - name: "api_down"
     service: "tms"
@@ -514,7 +557,7 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
-  ### VPCE
+  ### VPCEP
   - name: "api_down"
     service: "vpcep"
     template:
