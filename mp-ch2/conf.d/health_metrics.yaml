@@ -1,5 +1,35 @@
 ---
 health_metrics:
+  ## Application Services
+  ### AOM
+  aom:
+    service: aom
+    component_name: "Application Operations Management"
+    category: application
+    metrics:
+      - aom.api_down
+      - aom.api_slow
+      - aom.api_success_rate_low
+    expressions:
+      - expression: "aom.api_slow || aom.api_success_rate_low"
+        weight: 1
+      - expression: "aom.api_down"
+        weight: 2
+  ### SMN
+  smn:
+    service: smn
+    component_name: "Simple Message Notification"
+    category: application
+    metrics:
+      - smn.api_down
+      - smn.api_slow
+      - smn.api_success_rate_low
+    expressions:
+      - expression: "smn.api_slow || smn.api_success_rate_low"
+        weight: 1
+      - expression: "smn.api_down"
+        weight: 2
+
   ## Compute
   ### AS
   as:
@@ -138,7 +168,78 @@ health_metrics:
       - expression: "object.api_down"
         weight: 2
 
+  ### SDRS
+  sdrs:
+    service: sdrs
+    component_name: "Storage Disaster Recovery Service"
+    category: storage
+    metrics:
+      - sdrs.api_down
+      - sdrs.api_slow
+      - sdrs.api_success_rate_low
+    expressions:
+      - expression: "sdrs.api_slow || sdrs.api_success_rate_low"
+        weight: 1
+      - expression: "sdrs.api_down"
+        weight: 2
+
   ## Network
+  ### DC
+  dc:
+    service: dcaas
+    component_name: "Direct Connect"
+    category: network
+    metrics:
+      - dcaas.api_down
+      - dcaas.api_slow
+      - dcaas.api_success_rate_low
+    expressions:
+      - expression: "dcaas.api_slow || dcaas.api_success_rate_low"
+        weight: 1
+      - expression: "dcaas.api_down"
+        weight: 2
+  ### DNS
+  dns:
+    service: dns
+    component_name: "Domain Name Service"
+    category: network
+    metrics:
+      - dns.api_down
+      - dns.api_slow
+      - dns.api_success_rate_low
+    expressions:
+      - expression: "dns.api_slow || dns.api_success_rate_low"
+        weight: 1
+      - expression: "dns.api_down"
+        weight: 2
+  ### ELB
+  elb:
+    service: elb
+    component_name: "Elastic Load Balancing"
+    category: network
+    metrics:
+      - elbv3.api_down
+      - elbv3.api_slow
+      - elbv3.api_success_rate_low
+    expressions:
+      - expression: "elbv3.api_slow || elbv3.api_success_rate_low"
+        weight: 1
+      - expression: "elbv3.api_down"
+        weight: 2
+  ### NAT GW
+  natgw:
+    service: natgw
+    component_name: "NAT Gateway"
+    category: network
+    metrics:
+      - nat.api_down
+      - nat.api_slow
+      - nat.api_success_rate_low
+    expressions:
+      - expression: "nat.api_slow || nat.api_success_rate_low"
+        weight: 1
+      - expression: "nat.api_down"
+        weight: 2
   ### VPC
   vpc:
     service: vpc
@@ -167,51 +268,14 @@ health_metrics:
         weight: 1
       - expression: "vpcep.api_down"
         weight: 2
-  ### ELB
-  elb:
-    service: elb
-    component_name: "Elastic Load Balancing"
+  
+  ### VPN
+  vpn:
+    service: network
+    component_name: "Virtul Private Network"
     category: network
-    metrics:
-      - elb.api_down
-      - elb.api_slow
-      - elb.api_success_rate_low
-      - elbv3.api_down
-      - elbv3.api_slow
-      - elbv3.api_success_rate_low
-    expressions:
-      - expression: "elb.api_slow || elb.api_success_rate_low || elbv3.api_slow || elbv3.api_success_rate_low"
-        weight: 1
-      - expression: "elb.api_down || elbv3.api_down"
-        weight: 2
-  ### DNS
-  dns:
-    service: dns
-    component_name: "Domain Name Service"
-    category: network
-    metrics:
-      - dns.api_down
-      - dns.api_slow
-      - dns.api_success_rate_low
-    expressions:
-      - expression: "dns.api_slow || dns.api_success_rate_low"
-        weight: 1
-      - expression: "dns.api_down"
-        weight: 2
-  ### NAT GW
-  natgw:
-    service: natgw
-    component_name: "NAT Gateway"
-    category: network
-    metrics:
-      - nat.api_down
-      - nat.api_slow
-      - nat.api_success_rate_low
-    expressions:
-      - expression: "nat.api_slow || nat.api_success_rate_low"
-        weight: 1
-      - expression: "nat.api_down"
-        weight: 2
+    metrics: []
+    expressions: []
 
   ## Database
   ### RDS
@@ -229,27 +293,26 @@ health_metrics:
       - expression: "rdsv3.api_down"
         weight: 2
 
-  ### DCS
-  dcs:
-    service: dcs
-    component_name: "Distributed Cache Service"
-    category: database
-    metrics:
-      - dcs.api_down
-      - dcs.api_slow
-      - dcs.api_success_rate_low
-    expressions:
-      - expression: "dcs.api_slow || dcs.api_success_rate_low"
-        weight: 1
-      - expression: "dcs.api_down"
-        weight: 2
-
   ## SecurityServices
+  ### IAM
+  identity:
+    service: identity
+    component_name: "Identity and Access Management"
+    category: security-services
+    metrics:
+      - identity.api_slow
+      - identity.api_down
+      - identity.api_success_rate_low
+    expressions:
+      - expression: "identity.api_slow || identity.api_success_rate_low"
+        weight: 1
+      - expression: "identity.api_down"
+        weight: 2
   ### KMS
   kms:
     service: kms
     component_name: "Key Management Service"
-    category: database
+    category: security-services
     metrics:
       - kms.api_down
       - kms.api_slow
@@ -259,20 +322,20 @@ health_metrics:
         weight: 1
       - expression: "kms.api_down"
         weight: 2
-#  ### WAF
-#  waf:
-#    service: waf
-#    component_name: "Web Application Firewall"
-#    category: database
-#    metrics:
-#      - waf.api_down
-#      - waf.api_slow
-#      - waf.api_success_rate_low
-#    expressions:
-#      - expression: "waf.api_slow || waf.api_success_rate_low"
-#        weight: 1
-#      - expression: "waf.api_down"
-#        weight: 2
+  ### WAF
+  waf:
+    service: waf
+    component_name: "Dedicated Web Application Firewall"
+    category: security-services
+    metrics:
+      - waf.api_down
+      - waf.api_slow
+      - waf.api_success_rate_low
+    expressions:
+      - expression: "waf.api_slow || waf.api_success_rate_low"
+        weight: 1
+      - expression: "waf.api_down"
+        weight: 2
 
   ## Management and Deployment
   ### CES
@@ -303,17 +366,17 @@ health_metrics:
         weight: 1
       - expression: "cts.api_down"
         weight: 2
-  ### IAM
-  identity:
-    service: iam
-    component_name: "Identity and Access Management"
+  ### TMS
+  tms:
+    service: tms
+    component_name: "Tag Management Service"
     category: management
     metrics:
-      - identity.api_slow
-      - identity.api_down
-      - identity.api_success_rate_low
+      - tms.api_slow
+      - tms.api_down
+      - tms.api_success_rate_low
     expressions:
-      - expression: "identity.api_slow || identity.api_success_rate_low"
+      - expression: "tms.api_slow || tms.api_success_rate_low"
         weight: 1
-      - expression: "identity.api_down"
+      - expression: "tms.api_down"
         weight: 2
