@@ -22,7 +22,9 @@ grafana:
       repo_ref: main
       path: dashboards/grafana
 
-environments: # What we monitor and which credentials to use from every monitoring location (zone)
+# What we monitor and which credentials to use from every monitoring location
+# (zone)
+environments:
   # NOTE: not allowed to use same cloud names in same zone for different envs
   - name: production_eu-de
     env:
@@ -481,13 +483,16 @@ metrics_processor:
             name: metrics-processor
             version: v1
 
-monitoring_zones: # Defining from where we are monitoring
+monitoring_zones:  # Defining from where we are monitoring
   - name: eu-de
     graphite_group_name: graphite_eu_de
     statsd_group_name: statsd_eu_de
   - name: eu-nl
     graphite_group_name: graphite_eu_nl
     statsd_group_name: statsd_eu_nl
+  - name: hybrid_eu-ch2
+    graphite_group_name: graphite_eu_ch
+    statsd_group_name: statsd_eu_ch
 
 # Known CloudMon plugins with their basic settings
 plugins:
