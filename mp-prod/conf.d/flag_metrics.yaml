@@ -808,6 +808,7 @@ flag_metrics:
       name: "api_success_rate_low"
     environments:
       - name: "production_eu-de"
+        threshold: 1000
       - name: "production_eu-nl"
 
   - name: "api_down"
