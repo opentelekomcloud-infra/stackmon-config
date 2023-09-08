@@ -17,7 +17,7 @@ metric_templates:
     op: "gt"
     threshold: 0
   api_slow:
-    query: "consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'avgerage')"
+    query: "consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average')"
     op: "gt"
     threshold: 300
   api_failed:
