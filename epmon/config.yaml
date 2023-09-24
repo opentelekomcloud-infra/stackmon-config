@@ -65,6 +65,7 @@ elements:
     urls:
     - /
     - /clusters
+    - /flavors
   cts_skip_unver:
     service_type: cts
   cts_skip_v2:
