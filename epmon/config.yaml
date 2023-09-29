@@ -150,6 +150,7 @@ elements:
     - /
     - /clusters
     - /snaphosts
+    - /clusters/tags
   dws_skip_v1:
     service_type: dwsv1
   identity:
