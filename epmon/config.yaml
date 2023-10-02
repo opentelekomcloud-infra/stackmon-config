@@ -65,6 +65,8 @@ elements:
     urls:
     - /
     - /clusters
+    - /flavors
+    - /css-cluster/tags
   cts_skip_unver:
     service_type: cts
   cts_skip_v2:
@@ -148,6 +150,7 @@ elements:
     - /
     - /clusters
     - /snaphosts
+    - /clusters/tags
   dws_skip_v1:
     service_type: dwsv1
   identity:
