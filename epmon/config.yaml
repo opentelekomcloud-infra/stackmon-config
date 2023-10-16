@@ -80,6 +80,12 @@ elements:
     sdk_proxy: cts
     urls:
     - /
+  dataarts:
+    service_type: dataarts
+    sdk_proxy: dataarts
+    urls:
+    - /
+    - /clusters
   data_protect_skip:
     service_type: data-protect
   database_skip:

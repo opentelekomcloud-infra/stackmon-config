@@ -177,6 +177,28 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### DATAARTS
+  - name: "api_down"
+    service: "dataarts"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "dataarts"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "dataarts"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### DC
   ### DCS
   - name: "api_down"

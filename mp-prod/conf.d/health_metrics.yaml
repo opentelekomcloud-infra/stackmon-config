@@ -390,6 +390,20 @@ health_metrics:
         weight: 1
       - expression: "css.api_down"
         weight: 2
+  ### DATAARTS
+  dataarts:
+    service: dataarts
+    component_name: "Data Arts Studio"
+    category: management
+    metrics:
+      - dataarts.api_slow
+      - dataarts.api_down
+      - dataarts.api_success_rate_low
+    expressions:
+      - expression: "dataarts.api_slow || dataarts.api_success_rate_low"
+        weight: 1
+      - expression: "dataarts.api_down"
+        weight: 2
   ### DIS
   dis:
     service: dis
