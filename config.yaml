@@ -116,6 +116,7 @@ matrix:
           - deh
           - dis_skip_unver
           - dis
+          - dli
           - dms
           - dms_skip_v2
           - dns
@@ -233,6 +234,7 @@ matrix:
           - deh
           - dis_skip_unver
           - dis
+          - dli
           - dms
           - dms_skip_v2
           - dns
