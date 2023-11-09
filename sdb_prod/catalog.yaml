@@ -90,6 +90,11 @@ components:
     type: css
   name: Cloud Search Service
 - attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: dataarts
+  name: DataArts Studio
+- attributes:
     category: Management & Deployment
     region: EU-DE
     type: cts
