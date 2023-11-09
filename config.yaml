@@ -550,16 +550,16 @@ status_dashboard:
                 - hosts:
                     - status.cloudmon.eco.tsi-dev.otc-service.com
                   secretName: sdb-cert-prod
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
               value: "cookie"
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
               value: "route"
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
               value: "7200"
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
               value: "7200"
           target:
@@ -612,16 +612,16 @@ status_dashboard:
                 - hosts:
                     - status-ch2.cloudmon.eco.tsi-dev.otc-service.com
                   secretName: sdb-cert-prod
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
               value: "cookie"
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
               value: "route"
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
               value: "7200"
-            - op: replace
+            - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
               value: "7200"
           target:
