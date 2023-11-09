@@ -550,6 +550,18 @@ status_dashboard:
                 - hosts:
                     - status.cloudmon.eco.tsi-dev.otc-service.com
                   secretName: sdb-cert-prod
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
+              value: "cookie"
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
+              value: "route"
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
+              value: "7200"
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
+              value: "7200"
           target:
             group: networking.k8s.io
             kind: Ingress
@@ -600,9 +612,30 @@ status_dashboard:
                 - hosts:
                     - status-ch2.cloudmon.eco.tsi-dev.otc-service.com
                   secretName: sdb-cert-prod
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
+              value: "cookie"
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
+              value: "route"
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
+              value: "7200"
+            - op: replace
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
+              value: "7200"
           target:
             group: networking.k8s.io
             kind: Ingress
+            name: status-dashboard
+            version: v1
+        - patch: |-
+            - op: replace
+              path: /spec/replicas
+              value: 2
+          target:
+            group: apps/v1
+            kind: Deployment
             name: status-dashboard
             version: v1
 
