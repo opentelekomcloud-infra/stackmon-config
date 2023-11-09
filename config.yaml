@@ -226,6 +226,7 @@ matrix:
           - css
           - cts_skip_unver
           - cts
+          - dataarts
           - data_protect_skip
           - database_skip
           - dcs

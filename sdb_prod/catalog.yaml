@@ -93,7 +93,7 @@ components:
     category: Big Data and Data Analysis
     region: EU-DE
     type: dataarts
-  name: Data Arts Service
+  name: DataArts Studio
 - attributes:
     category: Management & Deployment
     region: EU-DE

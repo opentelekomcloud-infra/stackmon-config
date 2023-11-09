@@ -393,7 +393,7 @@ health_metrics:
   ### DATAARTS
   dataarts:
     service: dataarts
-    component_name: "Data Arts Studio"
+    component_name: "DataArts Studio"
     category: management
     metrics:
       - dataarts.api_slow
