@@ -553,6 +553,15 @@ status_dashboard:
             kind: Ingress
             name: status-dashboard
             version: v1
+        - patch: |-
+            - op: replace
+              path: /spec/replicas
+              value: 2
+          target:
+            group: apps/v1
+            kind: Deployment
+            name: status-dashboard
+            version: v1
 
       configMapGenerator:
         - name: sdb-config
