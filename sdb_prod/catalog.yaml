@@ -155,6 +155,11 @@ components:
     type: dis
   name: Data Ingestion Service
 - attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: dli
+  name: Data Lake Insight
+- attributes:
     category: Application Services
     region: EU-DE
     type: dms

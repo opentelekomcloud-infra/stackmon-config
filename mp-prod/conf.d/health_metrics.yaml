@@ -418,6 +418,22 @@ health_metrics:
         weight: 1
       - expression: "dis.api_down"
         weight: 2
+
+  ### DLI
+  dli:
+    service: dli
+    component_name: "Data Lake Insight"
+    category: management
+    metrics:
+      - dli.api_slow
+      - dli.api_down
+      - dli.api_success_rate_low
+    expressions:
+      - expression: "dli.api_slow || dli.api_success_rate_low"
+        weight: 1
+      - expression: "dli.api_down"
+        weight: 2
+
   ### DWS
   dws:
     service: dws

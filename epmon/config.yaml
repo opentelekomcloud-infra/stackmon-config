@@ -127,6 +127,12 @@ elements:
     - /
     - /streams
     - /stream/tags
+  dli:
+    service_type: dli
+    urls:
+    - /queues
+    - /jobs
+    - /streaming/jobs
   dms:
     service_type: dms
     sdk_proxy: dms
