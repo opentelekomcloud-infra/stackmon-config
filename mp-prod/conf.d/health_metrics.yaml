@@ -1,6 +1,20 @@
 ---
 health_metrics:
   ## Compute
+  ### AS
+  as:
+    service: as
+    component_name: "Auto Scaling"
+    category: compute
+    metrics:
+      - as.api_down
+      - as.api_slow
+      - as.api_success_rate_low
+    expressions:
+      - expression: "as.api_slow || as.api_success_rate_low"
+        weight: 1
+      - expression: "as.api_down"
+        weight: 2
   ### DEH
   deh:
     service: deh
