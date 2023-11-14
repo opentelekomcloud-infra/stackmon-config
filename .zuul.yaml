@@ -1,0 +1,8 @@
+- project:
+    merge-mode: squash-merge
+    check:
+      jobs:
+        - noop
+    gate:
+      jobs:
+        - noop
