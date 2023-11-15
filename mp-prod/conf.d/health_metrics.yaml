@@ -36,13 +36,13 @@ health_metrics:
     category: compute
     metrics:
       - ecs.api_down
-      - ecs.api_slow
+      - ecs.api_slow_600
       - ecs.api_success_rate_low
       - compute.api_down
-      - compute.api_slow
+      - compute.api_slow_600
       - compute.api_success_rate_low
     expressions:
-      - expression: "ecs.api_slow || compute.api_slow || ecs.api_success_rate_low || compute.api_success_rate_low"
+      - expression: "ecs.api_slow_600 || compute.api_slow_600 || ecs.api_success_rate_low || compute.api_success_rate_low"
         weight: 1
       - expression: "ecs.api_down || compute.api_down"
         weight: 2

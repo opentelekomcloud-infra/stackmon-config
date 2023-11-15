@@ -414,10 +414,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow"
+  - name: "api_slow_600"
     service: "compute"
     template:
-      name: "api_slow"
+      name: "api_slow_600"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
@@ -438,10 +438,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow"
+  - name: "api_slow_600"
     service: "ecs"
     template:
-      name: "api_slow"
+      name: "api_slow_600"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
