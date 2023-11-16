@@ -1,8 +1,9 @@
 - project:
     merge-mode: squash-merge
+    default-branch: main
     check:
       jobs:
-        - yamllint
+        - otc-tox-linters
     gate:
       jobs:
-        - yamllint
+        - otc-tox-linters
