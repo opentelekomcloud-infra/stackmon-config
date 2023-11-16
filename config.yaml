@@ -542,6 +542,9 @@ status_dashboard:
             - op: replace
               path: /spec/rules/0/host
               value: status.cloudmon.eco.tsi-dev.otc-service.com
+            - op: add
+              path: /spec/rules/1/host
+              value: status-beta.otc-service.com
             - op: replace
               path: /metadata/annotations
               value:
@@ -551,6 +554,7 @@ status_dashboard:
               value:
                 - hosts:
                     - status.cloudmon.eco.tsi-dev.otc-service.com
+                    - status-beta.otc-service.com
                   secretName: sdb-cert-prod
             - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
