@@ -268,7 +268,7 @@ health_metrics:
         weight: 1
       - expression: "vpcep.api_down"
         weight: 2
-  
+
   ### VPN
   vpn:
     service: network
