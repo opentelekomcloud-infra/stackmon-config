@@ -2,7 +2,7 @@
     merge-mode: squash-merge
     check:
       jobs:
-        - noop
+        - yamllint
     gate:
       jobs:
-        - noop
+        - yamllint
