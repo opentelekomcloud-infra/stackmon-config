@@ -609,6 +609,9 @@ status_dashboard:
               path: /spec/rules/0/host
               value: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
             - op: replace
+              path: /spec/rules/1/host
+              value: status-beta-ch2.otc-service.com
+            - op: replace
               path: /metadata/annotations
               value:
                 cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -617,6 +620,7 @@ status_dashboard:
               value:
                 - hosts:
                     - status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+                    - status-beta-ch2.otc-service.com
                   secretName: sdb-cert-prod
             - op: add
               path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
