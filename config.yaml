@@ -87,13 +87,14 @@ matrix:
       - name: apimon
         schedulers_inventory_group_name: schedulers
         executors_inventory_group_name: executors
-        #epmons_inventory_group_name: epmons
+        # epmons_inventory_group_name: epmons
         tests_project: apimon
         tasks:
           - scenario1_token.yaml
       - name: epmon
         epmon_inventory_group_name: epmon_de
-        cloud_name: production_eu-de # env in zone has few creds. We need to pick one
+        # env in zone has few creds. We need to pick one
+        cloud_name: production_eu-de
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
@@ -150,13 +151,14 @@ matrix:
       - name: apimon
         schedulers_inventory_group_name: schedulers
         executors_inventory_group_name: executors
-        #epmons_inventory_group_name: epmons
+        # epmons_inventory_group_name: epmons
         tests_project: apimon
         tasks:
           - scenario1_token.yaml
       - name: epmon
         epmon_inventory_group_name: epmon_de
-        cloud_name: production_eu-nl # env in zone has few creds. We need to pick one
+        cloud_name: production_eu-nl
+        # env in zone has few creds. We need to pick one
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
@@ -212,7 +214,8 @@ matrix:
     plugins:
       - name: epmon
         epmon_inventory_group_name: epmon_nl
-        cloud_name: production_eu-de # env in zone has few creds. We need to pick one
+        cloud_name: production_eu-de
+        # env in zone has few creds. We need to pick one
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
@@ -268,7 +271,8 @@ matrix:
     plugins:
       - name: epmon
         epmon_inventory_group_name: epmon_nl
-        cloud_name: production_eu-nl # env in zone has few creds. We need to pick one
+        cloud_name: production_eu-nl
+        # env in zone has few creds. We need to pick one
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
@@ -322,7 +326,8 @@ matrix:
     plugins:
       - name: epmon
         epmon_inventory_group_name: epmon_de
-        cloud_name: hybrid_eu-ch2 # env in zone has few creds. We need to pick one
+        cloud_name: hybrid_eu-ch2
+        # env in zone has few creds. We need to pick one
         config_elements:
           - as_swiss
           - cce
@@ -354,7 +359,8 @@ matrix:
     plugins:
       - name: epmon
         epmon_inventory_group_name: epmon_nl
-        cloud_name: hybrid_eu-ch2 # env in zone has few creds. We need to pick one
+        cloud_name: hybrid_eu-ch2
+        # env in zone has few creds. We need to pick one
         config_elements:
           - as_swiss
           - cce
@@ -504,7 +510,7 @@ plugins:
     type: apimon
     scheduler_image: quay.io/opentelekomcloud/apimon:dev
     executor_image: quay.io/opentelekomcloud/apimon:dev
-      # epmon_image: quay.io/opentelekomcloud/apimon:dev
+    # epmon_image: quay.io/opentelekomcloud/apimon:dev
     tests_projects:
       - name: apimon
         repo_url: https://github.com/stackmon/apimon-tests

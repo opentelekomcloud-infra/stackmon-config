@@ -1,8 +1,9 @@
 - project:
     merge-mode: squash-merge
+    default-branch: main
     check:
       jobs:
-        - noop
+        - otc-tox-linters
     gate:
       jobs:
-        - noop
+        - otc-tox-linters
