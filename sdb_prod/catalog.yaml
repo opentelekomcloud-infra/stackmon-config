@@ -239,26 +239,6 @@ components:
     region: EU-NL
     type: evs
   name: Elastic Volume Service
-# - attributes:
-#     category: Database
-#     region: EU-DE
-#     type: gaussdb_mysql
-#   name: GaussDB (for MySQL)
-# - attributes:
-#     category: Database
-#     region: EU-NL
-#     type: gaussdb_mysql
-#   name: GaussDB (for MySQL)
-# - attributes:
-#     category: Database
-#     region: EU-DE
-#     type: gaussdb_nosql
-#   name: GaussDB NoSQL
-# - attributes:
-#     category: Database
-#     region: EU-NL
-#     type: gaussdb_nosql
-#   name: GaussDB NoSQL
 - attributes:
     category: Security Services
     region: EU-DE
@@ -339,16 +319,6 @@ components:
     region: EU-NL
     type: obs
   name: Object Storage Service
-# - attributes:
-#     category: Database
-#     region: EU-DE
-#     type: opengauss
-#   name: GaussDB (openGauss)
-# - attributes:
-#     category: Database
-#     region: EU-NL
-#     type: opengauss
-#   name: GaussDB (openGauss)
 - attributes:
     category: Networking
     region: EU-DE
