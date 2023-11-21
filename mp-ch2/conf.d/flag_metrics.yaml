@@ -579,8 +579,9 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
-  ### VPN
-  ### WAFD
+### VPN
+### WAFD
+
 #  - name: "api_down"
 #    service: "wafd"
 #    template:

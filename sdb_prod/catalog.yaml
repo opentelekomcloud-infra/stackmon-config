@@ -35,11 +35,6 @@ components:
     type: bms
   name: Bare Metal Server
 - attributes:
-    category: Compute
-    region: EU-NL
-    type: bms
-  name: Bare Metal Server
-- attributes:
     category: Storage
     region: EU-DE
     type: cbr

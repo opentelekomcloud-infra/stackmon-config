@@ -1,10 +1,14 @@
 ---
 # monitoring elements
 elements:
-  antiddos: # simple regular antiddos
-    service_type: antiddos # service_type in the catalog
-    sdk_proxy: anti_ddos # how SDK proxy is named
-    urls: # which urls to test
+  # simple regular antiddos
+  antiddos:
+    # service_type in the catalog
+    service_type: antiddos
+    # how SDK proxy is named
+    sdk_proxy: anti_ddos
+    # which urls to test
+    urls:
       - /
       - /antiddos
       - /antiddos/query_config_list
@@ -31,41 +35,46 @@ elements:
   as_skip_v1:
     service_type: asv1
     urls: []
-  bms_skip:
+  bms:
     service_type: bms
+    urls:
+      - /
+      - /baremetalservers/detail
+      - /baremetalservers/flavors
+      - /baremetalservers/limits
   cce_skip_unver:
     service_type: cce
   cce:
     service_type: ccev2.0
     sdk_proxy: cce
     urls:
-    - /clusters
+      - /clusters
   ces:
     service_type: ces
     sdk_proxy: ces
     urls:
-    - /
-    - /metrics
-    - /alarms
+      - /
+      - /metrics
+      - /alarms
   ces_skip_v1:
     service_type: cesv1
   compute:
     service_type: compute
     urls:
-    - /
-    - /servers
-    - /flavors
-    - /limits
-    - /os-keypairs
-    - /os-server-groups
-    - /os-availability-zone
+      - /
+      - /servers
+      - /flavors
+      - /limits
+      - /os-keypairs
+      - /os-server-groups
+      - /os-availability-zone
   css:
     service_type: css
     sdk_proxy: css
     urls:
-    - /
-    - /clusters
-    - /css-cluster/tags
+      - /
+      - /clusters
+      - /css-cluster/tags
   cts_skip_unver:
     service_type: cts
   cts_skip_v2:
@@ -74,18 +83,18 @@ elements:
     service_type: ctsv2
     sdk_proxy: cts
     urls:
-    - /
+      - /
   cts_v3:
     service_type: ctsv3
     sdk_proxy: cts
     urls:
-    - /
+      - /
   dataarts:
     service_type: dataarts
     sdk_proxy: dataarts
     urls:
-    - /
-    - /clusters
+      - /
+      - /clusters
   data_protect_skip:
     service_type: data-protect
   database_skip:
@@ -94,143 +103,143 @@ elements:
     service_type: dcaas
     sdk_proxy: dcaas
     urls:
-    - /dcaas/direct-connects
-    - /dcaas/virtual-interfaces
-    - /dcaas/dc-endpoint-groups
-    - /dcaas/virtual-gateways
+      - /dcaas/direct-connects
+      - /dcaas/virtual-interfaces
+      - /dcaas/dc-endpoint-groups
+      - /dcaas/virtual-gateways
   dcs:
     service_type: dcs
     sdk_proxy: dcs
     urls:
-    - /
-    - /instances
-    - /quota
+      - /
+      - /instances
+      - /quota
   dcs_skip_v1:
     service_type: dcsv1
   dds:
     service_type: ddsv3
     sdk_proxy: dds
     urls:
-    - /
-    - /v3
-    - /instances
+      - /
+      - /v3
+      - /instances
   deh:
     service_type: deh
     urls:
-    - /
-    - /dedicated-hosts
+      - /
+      - /dedicated-hosts
   dis_skip_unver:
     service_type: dis
   dis:
     service_type: disv2
     urls:
-    - /
-    - /streams
-    - /stream/tags
+      - /
+      - /streams
+      - /stream/tags
   dli:
     service_type: dli
     urls:
-    - /queues
-    - /jobs
-    - /streaming/jobs
+      - /queues
+      - /jobs
+      - /streaming/jobs
   dms:
     service_type: dms
     sdk_proxy: dms
     urls:
-    - /queues
-    - /quotas/dms
-    - /queue/tags
+      - /queues
+      - /quotas/dms
+      - /queue/tags
   dms_skip_v2:
     service_type: dmsv2
   dns:
     service_type: dns
     urls:
-    - /
-    - /zones
-    - /recordsets
-    - /reverse/floatingips
+      - /
+      - /zones
+      - /recordsets
+      - /reverse/floatingips
   dns_private_only:
     service_type: dns
     urls:
-    - /
-    - /zones
-    - /recordsets
+      - /
+      - /zones
+      - /recordsets
   dws:
     service_type: dws
     urls:
-    - /
-    - /clusters
-    - /snaphosts
-    - /clusters/tags
+      - /
+      - /clusters
+      - /snaphosts
+      - /clusters/tags
   dws_skip_v1:
     service_type: dwsv1
   identity:
     service_type: identity
     urls:
-    - /
-    - /regions
-    - /auth/projects
+      - /
+      - /regions
+      - /auth/projects
   image:
     service_type: image
     urls:
-    - /
-    - /images
-    - /schemas/images
+      - /
+      - /images
+      - /schemas/images
   kms_skip_unver:
     service_type: kms
   kms:
     service_type: kmsv1
     sdk_proxy: kms
     urls:
-    - /
-    - /kms/list-keys
-    - /kms/user-quotas
+      - /
+      - /kms/list-keys
+      - /kms/user-quotas
   modelarts:
     service_type: modelartsv1
     sdk_proxy: modelartsv1
     urls:
-    - /demanager/instances
-    - /models
+      - /demanager/instances
+      - /models
   mrs:
     service_type: mrsv1
     sdk_proxy: mrs
     urls:
-    - /data-sources
-    - /cluster_infos
-    - /job-binaries
+      - /data-sources
+      - /cluster_infos
+      - /job-binaries
   nat:
     service_type: nat
     urls:
-    - /
-    - /nat_gateways
-    - /snat_rules
-    - /dnat_rules
+      - /
+      - /nat_gateways
+      - /snat_rules
+      - /dnat_rules
   network:
     service_type: network
     urls:
-    - /
-    - /networks
-    - /subnets
-    - /ports
-    - /routers
-    - /floatingips
-    - /security-groups
-    - /subnetpools
+      - /
+      - /networks
+      - /subnets
+      - /ports
+      - /routers
+      - /floatingips
+      - /security-groups
+      - /subnetpools
   object_skip:
     service_type: object
   object_store:
     service_type: object-store
     sdk_proxy: object_store
     urls:
-    - /
-    - /info
+      - /
+      - /info
   orchestration:
     service_type: orchestration
     urls:
-    - /stacks
-    - /build_info
-    - /software_configs
-    - /resource_types
+      - /stacks
+      - /build_info
+      - /software_configs
+      - /resource_types
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:
@@ -239,37 +248,37 @@ elements:
     service_type: rdsv3
     sdk_proxy: rds
     urls:
-    - /
-    - /datastores/postgresql
-    - /instances
-    - /configurations
+      - /
+      - /datastores/postgresql
+      - /instances
+      - /configurations
   sdrs:
     service_type: sdrs
     urls:
-    - /
-    - /v1
-    - /active-domains
-    - /server-groups
-    - /protected-instances
-    - /replications
+      - /
+      - /v1
+      - /active-domains
+      - /server-groups
+      - /protected-instances
+      - /replications
   sfsturbo:
     service_type: sfsturbo
     urls:
-    - /sfs-turbo/shares/detail
+      - /sfs-turbo/shares/detail
   share:
     service_type: sharev2
     sdk_proxy: share
     urls:
-    - /
-    - /v2
-    - /shares
+      - /
+      - /v2
+      - /shares
   smn:
     service_type: smn
     urls:
-    - /
-    - /notifications
-    - /notifications/subscriptions
-    - /notifications/message_template
+      - /
+      - /notifications
+      - /notifications/subscriptions
+      - /notifications/message_template
   smn_skip_v2:
     service_type: smnv2
   volume_skip_v2:
@@ -278,16 +287,16 @@ elements:
     service_type: volumev3
     sdk_proxy: block_storage
     urls:
-    - /volumes
-    - /snapshots
-    - /backups
-    - /os-volume-transfer
-    - /os-availability-zone
+      - /volumes
+      - /snapshots
+      - /backups
+      - /os-volume-transfer
+      - /os-availability-zone
   volume_no_backups:
     service_type: volumev3
     sdk_proxy: block_storage
     urls:
-    - /volumes
-    - /snapshots
-    - /os-volume-transfer
-    - /os-availability-zone
+      - /volumes
+      - /snapshots
+      - /os-volume-transfer
+      - /os-availability-zone
