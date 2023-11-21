@@ -162,7 +162,6 @@ matrix:
           - antiddos_skip_bad_type
           - as
           - as_skip_v1
-          - bms
           - cce_skip_unver
           - cce
           - ces
@@ -218,6 +217,7 @@ matrix:
           - antiddos_skip_bad_type
           - as
           - as_skip_v1
+          - bms
           - cce_skip_unver
           - cce
           - ces
