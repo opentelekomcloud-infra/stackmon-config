@@ -34,10 +34,10 @@ elements:
   bms:
     service_type: bms
     urls:
-    - /
-    - /baremetalservers/detail
-    - /baremetalservers/flavors
-    - /baremetalservers/limits
+      - /
+      - /baremetalservers/detail
+      - /baremetalservers/flavors
+      - /baremetalservers/limits
   cce_skip_unver:
     service_type: cce
   cce:
