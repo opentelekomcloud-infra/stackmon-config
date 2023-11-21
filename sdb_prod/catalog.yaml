@@ -146,11 +146,6 @@ components:
   name: Data Ingestion Service
 - attributes:
     category: Big Data and Data Analysis
-    region: EU-NL
-    type: dis
-  name: Data Ingestion Service
-- attributes:
-    category: Big Data and Data Analysis
     region: EU-DE
     type: dli
   name: Data Lake Insight
@@ -190,11 +185,6 @@ components:
     type: dws
   name: Data Warehouse Service
 - attributes:
-    category: Big Data and Data Analysis
-    region: EU-NL
-    type: dws
-  name: Data Warehouse Service
-- attributes:
     category: Compute
     region: EU-DE
     type: ecs
@@ -297,11 +287,6 @@ components:
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
-    type: ma
-  name: ModelArts
-- attributes:
-    category: Big Data and Data Analysis
-    region: EU-NL
     type: ma
   name: ModelArts
 - attributes:
