@@ -538,7 +538,7 @@ status_dashboard:
             - op: replace
               path: /spec/rules/0/host
               value: status.cloudmon.eco.tsi-dev.otc-service.com
-            - op: add
+            - op: replace
               path: /spec/rules/1/host
               value: status-beta.otc-service.com
             - op: replace
@@ -604,7 +604,7 @@ status_dashboard:
             - op: replace
               path: /spec/rules/0/host
               value: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
-            - op: add
+            - op: replace
               path: /spec/rules/1/host
               value: status-beta-ch2.otc-service.com
             - op: replace
