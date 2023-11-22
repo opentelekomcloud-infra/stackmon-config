@@ -111,23 +111,68 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
-  ### CTS
+ ### CTS
+  # API version 1
   - name: "api_down"
-    service: "cts"
+    service: "cts_v1"
     template:
       name: "api_down"
     environments:
       - name: "hybrid_eu-ch2"
 
   - name: "api_slow"
-    service: "cts"
+    service: "cts_v1"
     template:
       name: "api_slow"
     environments:
       - name: "hybrid_eu-ch2"
 
   - name: "api_success_rate_low"
-    service: "cts"
+    service: "cts_v1"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  # API version 2
+  - name: "api_down"
+    service: "cts_v2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "cts_v2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "cts_v2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  # API version 3
+  - name: "api_down"
+    service: "cts_v3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "cts_v3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "cts_v3"
     template:
       name: "api_success_rate_low"
     environments:
