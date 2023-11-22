@@ -584,6 +584,68 @@ status_dashboard:
           files:
             - catalog.yaml=sdb_prod/catalog.yaml
 
+  - name: beta
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-beta
+    domain_name: status-beta.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_prod/catalog.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_21_latest"
+      patches:
+        - patch: |-
+            - op: replace
+              path: /spec/ingressClassName
+              value: nginx
+            - op: replace
+              path: /spec/rules/0/host
+              value: status-beta.otc-service.com
+            - op: replace
+              path: /metadata/annotations
+              value:
+                cert-manager.io/cluster-issuer: letsencrypt-prod
+            - op: replace
+              path: /spec/tls
+              value:
+                - hosts:
+                    - status-beta.otc-service.com
+                  secretName: sdb-cert-prod
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
+              value: "cookie"
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
+              value: "route"
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
+              value: "7200"
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
+              value: "7200"
+          target:
+            group: networking.k8s.io
+            kind: Ingress
+            name: status-dashboard
+            version: v1
+        - patch: |-
+            - op: replace
+              path: /spec/replicas
+              value: 2
+          target:
+            group: apps/v1
+            kind: Deployment
+            name: status-dashboard
+            version: v1
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_prod/catalog.yaml
+
   - name: hybrid-ch2_from_eu-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-ch2
@@ -616,6 +678,68 @@ status_dashboard:
               value:
                 - hosts:
                     - status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+                    - status-beta-ch2.otc-service.com
+                  secretName: sdb-cert-prod
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
+              value: "cookie"
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
+              value: "route"
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
+              value: "7200"
+            - op: add
+              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
+              value: "7200"
+          target:
+            group: networking.k8s.io
+            kind: Ingress
+            name: status-dashboard
+            version: v1
+        - patch: |-
+            - op: replace
+              path: /spec/replicas
+              value: 2
+          target:
+            group: apps/v1
+            kind: Deployment
+            name: status-dashboard
+            version: v1
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_ch2/catalog.yaml
+
+  - name: ch2-beta
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-ch2
+    domain_name: status-beta-ch2.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_ch2/catalog.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_16_latest"
+      patches:
+        - patch: |-
+            - op: replace
+              path: /spec/ingressClassName
+              value: nginx
+            - op: replace
+              path: /spec/rules/0/host
+              value: status-beta-ch2.otc-service.com
+            - op: replace
+              path: /metadata/annotations
+              value:
+                cert-manager.io/cluster-issuer: letsencrypt-prod
+            - op: replace
+              path: /spec/tls
+              value:
+                - hosts:
                     - status-beta-ch2.otc-service.com
                   secretName: sdb-cert-prod
             - op: add
