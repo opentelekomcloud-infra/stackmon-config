@@ -107,8 +107,9 @@ matrix:
           - ces_skip_v1
           - compute
           - css
-          - cts_skip_unver
-          - cts
+          - cts_v1
+          - cts_v2
+          - cts_v3
           - dataarts
           - data_protect_skip
           - database_skip
@@ -170,7 +171,9 @@ matrix:
           - ces_skip_v1
           - compute
           - css
-          - cts_skip_unver
+          - cts_v1
+          - cts_v2
+          - cts_v3
           - cts
           - data_protect_skip
           - database_skip
@@ -223,8 +226,9 @@ matrix:
           - ces_skip_v1
           - compute
           - css
-          - cts_skip_unver
-          - cts
+          - cts_v1
+          - cts_v2
+          - cts_v3
           - dataarts
           - data_protect_skip
           - database_skip
@@ -279,8 +283,9 @@ matrix:
           - ces_skip_v1
           - compute
           - css
-          - cts_skip_unver
-          - cts
+          - cts_v1
+          - cts_v2
+          - cts_v3
           - data_protect_skip
           - database_skip
           - dcs
