@@ -198,7 +198,7 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
-# API version 2
+  # API version 2
   - name: "api_down"
     service: "cts_v2"
     template:
@@ -222,8 +222,8 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
-      
-# API version 3
+ 
+  # API version 3
   - name: "api_down"
     service: "cts_v3"
     template:

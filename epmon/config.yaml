@@ -87,20 +87,20 @@ elements:
     service_type: cts
     sdk_proxy: cts
     urls:
-    - /
-    - /tracker?tracker_name=system
+      - /
+      - /tracker?tracker_name=system
   cts_v2:
     service_type: ctsv2
     sdk_proxy: cts
     urls:
-    - /
-    - /system/trace?limit=10
+      - /
+      - /system/trace?limit=10
   cts_v3:
     service_type: ctsv3
     sdk_proxy: cts
     urls:
-    - /
-    - /notifications/smn
+      - /
+      - /notifications/smn
   dataarts:
     service_type: dataarts
     sdk_proxy: dataarts
