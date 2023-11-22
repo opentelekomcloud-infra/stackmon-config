@@ -111,7 +111,7 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
- ### CTS
+  ### CTS
   # API version 1
   - name: "api_down"
     service: "cts_v1"
