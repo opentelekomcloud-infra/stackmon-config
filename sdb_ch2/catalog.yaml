@@ -60,7 +60,7 @@ components:
   name: Cloud Trace Service
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: dc
   name: Direct Connect
@@ -96,7 +96,7 @@ components:
 #   name: Distributed Message Service
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: dns
   name: Domain Name Service
@@ -120,13 +120,13 @@ components:
   name: Elastic Cloud Server
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: eip
   name: Elastic IP
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: elb
   name: Elastic Load Balancing
@@ -186,7 +186,7 @@ components:
 #   name: Map Reduce Service
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: natgw
   name: NAT Gateway
@@ -204,7 +204,7 @@ components:
 #   name: GaussDB (openGauss)
 
 # - attributes:
-#     category: Networking
+#     category: Network
 #     region: EU-CH2
 #     type: plas
 #   name: Private Link Access
@@ -246,7 +246,7 @@ components:
   name: Simple Message Notification
 
 # - attributes:
-#     category: Networking
+#     category: Network
 #     region: EU-CH2
 #     type: smg
 #   name: Secure Mail Gateway
@@ -270,19 +270,19 @@ components:
 #   name: Volume Backup Service
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: vpc
   name: Virtual Private Cloud
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: vpcep
   name: VPC Endpoint
 
 - attributes:
-    category: Networking
+    category: Network
     region: EU-CH2
     type: vpn
   name: Virtual Private Network
