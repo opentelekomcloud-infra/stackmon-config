@@ -540,8 +540,8 @@ status_dashboard:
             name: status-dashboard
 
       replicas:
-      - name: status-dashboard
-        count: 2
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
@@ -573,8 +573,8 @@ status_dashboard:
             name: status-dashboard
 
       replicas:
-      - name: status-dashboard
-        count: 2
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
@@ -606,8 +606,8 @@ status_dashboard:
             name: status-dashboard
 
       replicas:
-      - name: status-dashboard
-        count: 2
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
@@ -639,8 +639,8 @@ status_dashboard:
             name: status-dashboard
 
       replicas:
-      - name: status-dashboard
-        count: 2
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
