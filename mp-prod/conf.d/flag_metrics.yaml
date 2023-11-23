@@ -176,7 +176,7 @@ flag_metrics:
   ### CTS
   # API version 1
   - name: "api_down"
-    service: "cts_v1"
+    service: "cts"
     template:
       name: "api_down"
     environments:
@@ -184,7 +184,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "cts_v1"
+    service: "cts"
     template:
       name: "api_slow"
     environments:
@@ -192,7 +192,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "cts_v1"
+    service: "cts"
     template:
       name: "api_success_rate_low"
     environments:
@@ -201,7 +201,7 @@ flag_metrics:
 
   # API version 2
   - name: "api_down"
-    service: "cts_v2"
+    service: "ctsv2"
     template:
       name: "api_down"
     environments:
@@ -209,7 +209,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "cts_v2"
+    service: "ctsv2"
     template:
       name: "api_slow"
     environments:
@@ -217,7 +217,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "cts_v2"
+    service: "ctsv2"
     template:
       name: "api_success_rate_low"
     environments:
@@ -226,7 +226,7 @@ flag_metrics:
 
   # API version 3
   - name: "api_down"
-    service: "cts_v3"
+    service: "ctsv3"
     template:
       name: "api_down"
     environments:
@@ -234,7 +234,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "cts_v3"
+    service: "ctsv3"
     template:
       name: "api_slow"
     environments:
@@ -242,7 +242,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "cts_v3"
+    service: "ctsv3"
     template:
       name: "api_success_rate_low"
     environments:
