@@ -649,4 +649,3 @@ status_dashboard:
 
       resources:
         - kustomize/sdb/sdb_ch2_beta.yaml
-
