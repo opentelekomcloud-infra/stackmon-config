@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io:
+      affinity: cookie
+      session-cookie-name: route
+      session-cookie-max-age: 7200
+      session-cookie-expires: 7200
+  labels:
+    app.kubernetes.io/instance: base
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: status-dashboard
+    app.kubernetes.io/version: 1.0.0
+  name: status-dashboard-ch2-internal
+  namespace: stackmon
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: status-dashboard
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+    secretName: sdb-cert-prod
