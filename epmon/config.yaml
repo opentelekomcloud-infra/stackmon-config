@@ -49,6 +49,7 @@ elements:
     sdk_proxy: cce
     urls:
       - /clusters
+      - /quotas
   ces:
     service_type: ces
     sdk_proxy: ces
