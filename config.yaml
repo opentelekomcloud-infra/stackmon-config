@@ -525,6 +525,7 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
+        - kustomize/sdb/sdb_internal.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
@@ -558,6 +559,7 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
+        - kustomize/sdb/sdb_beta.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
@@ -591,6 +593,7 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
+        - kustomize/sdb/sdb_ch2_internal.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
@@ -624,6 +627,7 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
+        - kustomize/sdb/sdb_ch2_beta.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
