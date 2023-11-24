@@ -129,6 +129,7 @@ matrix:
           - kms_skip_unver
           - kms
           - modelarts
+          - modelartsv2
           - mrs
           - nat
           - network
@@ -250,6 +251,7 @@ matrix:
           - kms_skip_unver
           - kms
           - modelarts
+          - modelartsv2
           - mrs
           - nat
           - network
