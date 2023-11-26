@@ -508,3 +508,33 @@ health_metrics:
         weight: 1
       - expression: "modelartsv1.api_down || modelartsv2.api_down"
         weight: 2
+
+  ## Application Services
+  ### DMS
+  dms:
+    service: dms
+    component_name: "Distributed Message Service"
+    category: application
+    metrics:
+      - dms.api_slow
+      - dms.api_down
+      - dms.api_success_rate_low
+    expressions:
+      - expression: "dms.api_slow || dms.api_success_rate_low"
+        weight: 1
+      - expression: "dms.api_down"
+        weight: 2
+  ### SMN
+  smn:
+    service: smn
+    component_name: "Simple Message Notification"
+    category: application
+    metrics:
+      - smn.api_slow
+      - smn.api_down
+      - smn.api_success_rate_low
+    expressions:
+      - expression: "smn.api_slow || smn.api_success_rate_low"
+        weight: 1
+      - expression: "smn.api_down"
+        weight: 2
