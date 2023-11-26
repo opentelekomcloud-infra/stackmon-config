@@ -61,7 +61,7 @@ flag_metrics:
   - name: "api_slow_1200"
     service: "bms"
     template:
-      name: "api_slow_120"
+      name: "api_slow_1200"
     environments:
       - name: "production_eu-de"
 
