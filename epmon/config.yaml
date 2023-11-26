@@ -39,6 +39,7 @@ elements:
     service_type: bms
     urls:
       - /
+      - /v1
       - /baremetalservers/detail
       - /baremetalservers/flavors
       - /baremetalservers/limits
