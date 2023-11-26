@@ -195,6 +195,20 @@ elements:
       - /
       - /kms/list-keys
       - /kms/user-quotas
+  modelarts:
+    service_type: modelartsv1
+    sdk_proxy: modelarts
+    urls:
+      - /demanager/instances
+      - /models
+      - /training-jobs
+      - /services
+  modelartsv2:
+    service_type: modelartsv2
+    sdk_proxy: modelarts
+    urls:
+      - /authorizations
+      - /datasets
   mrs:
     service_type: mrsv1
     sdk_proxy: mrs
