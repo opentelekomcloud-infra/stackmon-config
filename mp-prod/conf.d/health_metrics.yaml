@@ -435,17 +435,17 @@ health_metrics:
         weight: 2
   ### DIS
   dis:
-    service: dis
+    service: disv2
     component_name: "Data Ingestion Service"
     category: management
     metrics:
-      - dis.api_slow
-      - dis.api_down
-      - dis.api_success_rate_low
+      - disv2.api_slow
+      - disv2.api_down
+      - disv2.api_success_rate_low
     expressions:
-      - expression: "dis.api_slow || dis.api_success_rate_low"
+      - expression: "disv2.api_slow || disv2.api_success_rate_low"
         weight: 1
-      - expression: "dis.api_down"
+      - expression: "disv2.api_down"
         weight: 2
 
   ### DLI
@@ -469,13 +469,13 @@ health_metrics:
     component_name: "Data Warehouse Service"
     category: management
     metrics:
-      - dws.api_slow
-      - dws.api_down
-      - dws.api_success_rate_low
+      - dwsv1.api_slow
+      - dwsv1.api_down
+      - dwsv1.api_success_rate_low
     expressions:
-      - expression: "dws.api_slow || dws.api_success_rate_low"
+      - expression: "dwsv1.api_slow || dwsv1.api_success_rate_low"
         weight: 1
-      - expression: "dws.api_down"
+      - expression: "dwsv1.api_down"
         weight: 2
   ### MRS
   mrs:
