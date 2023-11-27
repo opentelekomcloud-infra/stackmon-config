@@ -184,8 +184,9 @@ elements:
     service_type: image
     urls:
       - /
-      - /images
+      - /images?limit=1
       - /schemas/images
+      - /schemas/image
   kms_skip_unver:
     service_type: kms
   kms:
