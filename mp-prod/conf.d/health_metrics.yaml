@@ -48,17 +48,17 @@ health_metrics:
         weight: 2
   ### IMS
   ims:
-    service: ims
+    service: image
     component_name: "Image Management Service"
     category: compute
     metrics:
-      - ims.api_down
-      - ims.api_slow
-      - ims.api_success_rate_low
+      - image.api_down
+      - image.api_slow
+      - image.api_success_rate_low
     expressions:
-      - expression: "ims.api_slow || ims.api_success_rate_low"
+      - expression: "image.api_slow || image.api_success_rate_low"
         weight: 1
-      - expression: "ims.api_down"
+      - expression: "image.api_down"
         weight: 2
   ### BMS
   bms:
@@ -67,10 +67,10 @@ health_metrics:
     category: compute
     metrics:
       - bms.api_down
-      - bms.api_slow
+      - bms.api_slow_1200
       - bms.api_success_rate_low
     expressions:
-      - expression: "bms.api_slow || bms.api_success_rate_low"
+      - expression: "bms.api_slow_1200 || bms.api_success_rate_low"
         weight: 1
       - expression: "bms.api_down"
         weight: 2
@@ -513,4 +513,34 @@ health_metrics:
       - expression: "modelartsv1.api_slow || modelartsv1.api_success_rate_low || modelartsv2.api_slow || modelartsv2.api_success_rate_low"
         weight: 1
       - expression: "modelartsv1.api_down || modelartsv2.api_down"
+        weight: 2
+
+  ## Application Services
+  ### DMS
+  dms:
+    service: dms
+    component_name: "Distributed Message Service"
+    category: application
+    metrics:
+      - dms.api_slow
+      - dms.api_down
+      - dms.api_success_rate_low
+    expressions:
+      - expression: "dms.api_slow || dms.api_success_rate_low"
+        weight: 1
+      - expression: "dms.api_down"
+        weight: 2
+  ### SMN
+  smn:
+    service: smn
+    component_name: "Simple Message Notification"
+    category: application
+    metrics:
+      - smn.api_slow
+      - smn.api_down
+      - smn.api_success_rate_low
+    expressions:
+      - expression: "smn.api_slow || smn.api_success_rate_low"
+        weight: 1
+      - expression: "smn.api_down"
         weight: 2

@@ -129,6 +129,8 @@ matrix:
           - image
           - kms_skip_unver
           - kms
+          - modelarts
+          - modelartsv2
           - mrs
           - nat
           - network
@@ -248,6 +250,8 @@ matrix:
           - image
           - kms_skip_unver
           - kms
+          - modelarts
+          - modelartsv2
           - mrs
           - nat
           - network
@@ -530,60 +534,32 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
+        - kustomize/sdb/sdb_internal.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
           newTag: "change_21_latest"
-      patches:
-        - patch: |-
-            - op: replace
-              path: /spec/ingressClassName
-              value: nginx
-            - op: replace
-              path: /spec/rules/0/host
-              value: status.cloudmon.eco.tsi-dev.otc-service.com
-            - op: replace
-              path: /metadata/annotations
-              value:
-                cert-manager.io/cluster-issuer: letsencrypt-prod
-            - op: replace
-              path: /spec/tls
-              value:
-                - hosts:
-                    - status.cloudmon.eco.tsi-dev.otc-service.com
-                  secretName: sdb-cert-prod
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
-              value: "cookie"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
-              value: "route"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
-              value: "7200"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
-              value: "7200"
-          target:
-            group: networking.k8s.io
-            kind: Ingress
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
             name: status-dashboard
-            version: v1
-        - patch: |-
-            - op: replace
-              path: /spec/replicas
-              value: 2
-          target:
-            group: apps/v1
-            kind: Deployment
-            name: status-dashboard
-            version: v1
+
+      replicas:
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
           files:
             - catalog.yaml=sdb_prod/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_internal.yaml
 
   - name: beta
     kube_context: cloudmon-de
@@ -592,60 +568,32 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
+        - kustomize/sdb/sdb_beta.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
           newTag: "change_21_latest"
-      patches:
-        - patch: |-
-            - op: replace
-              path: /spec/ingressClassName
-              value: nginx
-            - op: replace
-              path: /spec/rules/0/host
-              value: status-beta.otc-service.com
-            - op: replace
-              path: /metadata/annotations
-              value:
-                cert-manager.io/cluster-issuer: letsencrypt-prod
-            - op: replace
-              path: /spec/tls
-              value:
-                - hosts:
-                    - status-beta.otc-service.com
-                  secretName: sdb-cert-prod
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
-              value: "cookie"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
-              value: "route"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
-              value: "7200"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
-              value: "7200"
-          target:
-            group: networking.k8s.io
-            kind: Ingress
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
             name: status-dashboard
-            version: v1
-        - patch: |-
-            - op: replace
-              path: /spec/replicas
-              value: 2
-          target:
-            group: apps/v1
-            kind: Deployment
-            name: status-dashboard
-            version: v1
+
+      replicas:
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
           files:
             - catalog.yaml=sdb_prod/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_beta.yaml
 
   - name: hybrid-ch2_from_eu-de
     kube_context: cloudmon-de
@@ -654,60 +602,32 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
+        - kustomize/sdb/sdb_ch2_internal.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
           newTag: "change_16_latest"
-      patches:
-        - patch: |-
-            - op: replace
-              path: /spec/ingressClassName
-              value: nginx
-            - op: replace
-              path: /spec/rules/0/host
-              value: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
-            - op: replace
-              path: /metadata/annotations
-              value:
-                cert-manager.io/cluster-issuer: letsencrypt-prod
-            - op: replace
-              path: /spec/tls
-              value:
-                - hosts:
-                    - status-beta-ch2.otc-service.com
-                  secretName: sdb-cert-prod
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
-              value: "cookie"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
-              value: "route"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
-              value: "7200"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
-              value: "7200"
-          target:
-            group: networking.k8s.io
-            kind: Ingress
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
             name: status-dashboard
-            version: v1
-        - patch: |-
-            - op: replace
-              path: /spec/replicas
-              value: 2
-          target:
-            group: apps/v1
-            kind: Deployment
-            name: status-dashboard
-            version: v1
+
+      replicas:
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
           files:
             - catalog.yaml=sdb_ch2/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_ch2_internal.yaml
 
   - name: ch2-beta
     kube_context: cloudmon-de
@@ -716,57 +636,29 @@ status_dashboard:
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
+        - kustomize/sdb/sdb_ch2_beta.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
           newTag: "change_16_latest"
-      patches:
-        - patch: |-
-            - op: replace
-              path: /spec/ingressClassName
-              value: nginx
-            - op: replace
-              path: /spec/rules/0/host
-              value: status-beta-ch2.otc-service.com
-            - op: replace
-              path: /metadata/annotations
-              value:
-                cert-manager.io/cluster-issuer: letsencrypt-prod
-            - op: replace
-              path: /spec/tls
-              value:
-                - hosts:
-                    - status-beta-ch2.otc-service.com
-                  secretName: sdb-cert-prod
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/affinity
-              value: "cookie"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-name
-              value: "route"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-max-age
-              value: "7200"
-            - op: replace
-              path: /metadata/annotations/nginx.ingress.kubernetes.io/session-cookie-expires
-              value: "7200"
-          target:
-            group: networking.k8s.io
-            kind: Ingress
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
             name: status-dashboard
-            version: v1
-        - patch: |-
-            - op: replace
-              path: /spec/replicas
-              value: 2
-          target:
-            group: apps/v1
-            kind: Deployment
-            name: status-dashboard
-            version: v1
+
+      replicas:
+        - name: status-dashboard
+          count: 2
 
       configMapGenerator:
         - name: sdb-config
           files:
             - catalog.yaml=sdb_ch2/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_ch2_beta.yaml
