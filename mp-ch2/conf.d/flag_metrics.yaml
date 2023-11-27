@@ -163,10 +163,10 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
-  - name: "api_slow"
+  - name: "api_slow_600"
     service: "deh"
     template:
-      name: "api_slow"
+      name: "api_slow_600"
     environments:
       - name: "hybrid_eu-ch2"
 
