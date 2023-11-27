@@ -67,10 +67,10 @@ health_metrics:
     category: compute
     metrics:
       - bms.api_down
-      - bms.api_slow
+      - bms.api_slow_1200
       - bms.api_success_rate_low
     expressions:
-      - expression: "bms.api_slow || bms.api_success_rate_low"
+      - expression: "bms.api_slow_1200 || bms.api_success_rate_low"
         weight: 1
       - expression: "bms.api_down"
         weight: 2
