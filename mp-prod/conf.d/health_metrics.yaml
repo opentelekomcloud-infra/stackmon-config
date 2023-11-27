@@ -53,10 +53,10 @@ health_metrics:
     category: compute
     metrics:
       - image.api_down
-      - image.api_slow
+      - image.api_slow_600
       - image.api_success_rate_low
     expressions:
-      - expression: "image.api_slow || image.api_success_rate_low"
+      - expression: "image.api_slow_600 || image.api_success_rate_low"
         weight: 1
       - expression: "image.api_down"
         weight: 2
