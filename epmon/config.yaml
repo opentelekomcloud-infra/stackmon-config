@@ -199,7 +199,7 @@ elements:
       - /kms/user-quotas
   modelarts:
     service_type: modelartsv1
-    sdk_proxy: modelarts
+    sdk_proxy: modelartsv1
     urls:
       - /demanager/instances
       - /models
@@ -207,7 +207,7 @@ elements:
       - /services
   modelartsv2:
     service_type: modelartsv2
-    sdk_proxy: modelarts
+    sdk_proxy: modelartsv2
     urls:
       - /authorizations
       - /datasets
