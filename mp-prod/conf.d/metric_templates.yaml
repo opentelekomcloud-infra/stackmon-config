@@ -17,15 +17,15 @@ metric_templates:
     op: "gt"
     threshold: 0
   api_slow:
-    query: "consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '1min', 'average', '1min')"
     op: "gt"
     threshold: 300
   api_slow_600:
-    query: "summarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '1min', 'average')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '1min', 'average', '1min')"
     op: "gt"
     threshold: 600
   api_slow_1200:
-    query: "summarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '1min', 'average')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '1min', 'average', '1min')"
     op: "gt"
     threshold: 1200
   api_failed:
