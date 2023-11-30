@@ -201,7 +201,7 @@ elements:
     service_type: modelartsv1
     sdk_proxy: modelartsv1
     urls:
-      - /demanager/instances
+      - /demanager/instances?de_type=Notebook
       - /models
       - /training-jobs
       - /services
@@ -209,7 +209,6 @@ elements:
     service_type: modelartsv2
     sdk_proxy: modelartsv2
     urls:
-      - /authorizations
       - /datasets
   mrs:
     service_type: mrsv1
