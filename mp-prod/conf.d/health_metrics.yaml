@@ -116,13 +116,13 @@ health_metrics:
     category: storage
     metrics:
       - shared-file-system.api_down
-      - shared-file-system.api_slow
+      - shared-file-system.api_slow_600
       - shared-file-system.api_success_rate_low
       - sfsturbo.api_down
-      - sfsturbo.api_slow
+      - sfsturbo.api_slow_600
       - sfsturbo.api_success_rate_low
     expressions:
-      - expression: "shared-file-system.api_slow || shared-file-system.api_success_rate_low || sfsturbo.api_slow || sfsturbo.api_success_rate_low"
+      - expression: "shared-file-system.api_slow_600 || shared-file-system.api_success_rate_low || sfsturbo.api_slow_600 || sfsturbo.api_success_rate_low"
         weight: 1
       - expression: "shared-file-system.api_down || sfsturbo.api_down"
         weight: 2
