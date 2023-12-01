@@ -353,12 +353,12 @@ components:
     category: Storage
     region: EU-DE
     type: sfs
-  name: Scalable File System
+  name: SFS Turbo
 - attributes:
     category: Storage
     region: EU-NL
     type: sfs
-  name: Scalable File System
+  name: SFS Turbo
 - attributes:
     category: Application Services
     region: EU-DE

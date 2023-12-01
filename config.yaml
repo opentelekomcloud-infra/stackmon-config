@@ -141,7 +141,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -198,7 +197,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -259,7 +257,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -309,7 +306,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
