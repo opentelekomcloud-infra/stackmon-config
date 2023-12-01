@@ -275,13 +275,11 @@ elements:
     service_type: sfsturbo
     urls:
       - /sfs-turbo/shares/detail
+      - /sfs-turbo/tags
   share:
     service_type: sharev2
     sdk_proxy: share
-    urls:
-      - /
-      - /v2
-      - /shares
+    urls: []
   smn:
     service_type: smn
     urls:
