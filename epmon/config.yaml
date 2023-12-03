@@ -316,3 +316,13 @@ elements:
       - /snapshots
       - /os-volume-transfer
       - /os-availability-zone
+  vpn:
+    service_type: vpc
+    urls:
+      - /
+      - /v2.0
+      - /v2.0/vpn/ipsec-site-connections
+      - /v2.0/vpn/vpnservices
+      - /v2.0/vpn/ipsecpolicies
+      - /v2.0/vpn/ikepolicies
+      - /v2.0/vpn/endpoint-groups
