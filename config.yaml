@@ -112,6 +112,7 @@ matrix:
           - dataarts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -177,6 +178,7 @@ matrix:
           - cts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -232,6 +234,7 @@ matrix:
           - dataarts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -290,6 +293,7 @@ matrix:
           - cts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
