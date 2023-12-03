@@ -124,6 +124,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -183,6 +184,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -242,6 +244,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -294,6 +297,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
