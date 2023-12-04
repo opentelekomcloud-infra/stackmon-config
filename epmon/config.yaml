@@ -51,7 +51,7 @@ elements:
       - /vaults
       - /backups
       - /policies
-      - /vault/tags    
+      - /vault/tags
   cce_skip_unver:
     service_type: cce
   cce:
