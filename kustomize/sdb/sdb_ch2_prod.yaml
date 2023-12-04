@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "7200"
     nginx.ingress.kubernetes.io/session-cookie-expires: "7200"
   name: status-dashboard-ch2-prod
-  namespace: stackmon-ch2
+  namespace: stackmon-prod-ch2
 spec:
   ingressClassName: nginx
   rules:
