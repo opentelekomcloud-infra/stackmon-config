@@ -202,8 +202,9 @@ elements:
     sdk_proxy: kms
     urls:
       - /
-      - /kms/list-keys
       - /kms/user-quotas
+      - /kms/user-instances
+      - /kms/tags
   modelarts:
     service_type: modelartsv1
     sdk_proxy: modelartsv1
