@@ -112,6 +112,7 @@ matrix:
           - dataarts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -124,6 +125,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -175,6 +177,7 @@ matrix:
           - cts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -182,6 +185,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -228,6 +232,7 @@ matrix:
           - dataarts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -240,6 +245,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -284,6 +290,7 @@ matrix:
           - cts
           - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -291,6 +298,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver

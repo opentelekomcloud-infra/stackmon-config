@@ -212,6 +212,20 @@ health_metrics:
         weight: 1
       - expression: "elb.api_down || elbv3.api_down"
         weight: 2
+  ### DCAAS
+  dcaas:
+    service: dcaas
+    component_name: "Direct Connect"
+    category: network
+    metrics:
+      - dcaas.api_down
+      - dcaas.api_slow
+      - dcaas.api_success_rate_low
+    expressions:
+      - expression: "dcaas.api_slow || dcaas.api_success_rate_low"
+        weight: 1
+      - expression: "dcaas.api_down"
+        weight: 2
   ### DNS
   dns:
     service: dns
