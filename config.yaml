@@ -101,6 +101,7 @@ matrix:
           - as
           - as_skip_v1
           - bms
+          - cbr
           - cce_skip_unver
           - cce
           - ces
@@ -167,6 +168,7 @@ matrix:
           - antiddos_skip_bad_type
           - as
           - as_skip_v1
+          - cbr
           - cce_skip_unver
           - cce
           - ces
@@ -221,6 +223,7 @@ matrix:
           - as
           - as_skip_v1
           - bms
+          - cbr
           - cce_skip_unver
           - cce
           - ces
@@ -280,6 +283,7 @@ matrix:
           - antiddos_skip_bad_type
           - as
           - as_skip_v1
+          - cbr
           - cce_skip_unver
           - cce
           - ces
@@ -328,6 +332,7 @@ matrix:
         # env in zone has few creds. We need to pick one
         config_elements:
           - as_swiss
+          - cbr
           - cce
           - ces
           - ces_skip_v1
@@ -361,6 +366,7 @@ matrix:
         # env in zone has few creds. We need to pick one
         config_elements:
           - as_swiss
+          - cbr
           - cce
           - ces
           - ces_skip_v1
