@@ -528,6 +528,40 @@ plugins:
 status_dashboard:
   - name: prod
     kube_context: cloudmon-de
+    kube_namespace: stackmon-prod
+    domain_name: status.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_prod/catalog.yaml
+        - kustomize/sdb/sdb_prod.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_21_latest"
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
+            name: status-dashboard
+
+      replicas:
+        - name: status-dashboard
+          count: 2
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_prod/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_prod.yaml
+
+  - name: dev
+    kube_context: cloudmon-de
     kube_namespace: stackmon
     domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
     kustomization:
@@ -640,7 +674,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_16_latest"
+          newTag: "change_21_latest"
 
       patchesStrategicMerge:
         - |-
@@ -661,3 +695,37 @@ status_dashboard:
 
       resources:
         - kustomize/sdb/sdb_ch2_beta.yaml
+
+  - name: ch2-prod
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-prod-ch2
+    domain_name: status-ch2.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_ch2/catalog.yaml
+        - kustomize/sdb/sdb_ch2_prod.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_21_latest"
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
+            name: status-dashboard
+
+      replicas:
+        - name: status-dashboard
+          count: 2
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_ch2/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_ch2_prod.yaml
