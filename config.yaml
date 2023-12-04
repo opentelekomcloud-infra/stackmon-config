@@ -529,11 +529,11 @@ status_dashboard:
   - name: prod
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
-    domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
+    domain_name: status.otc-service.com
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
-        - kustomize/sdb/sdb_internal.yaml
+        - kustomize/sdb/sdb_prod.yaml
 
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
