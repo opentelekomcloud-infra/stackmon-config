@@ -43,6 +43,15 @@ elements:
       - /baremetalservers/detail
       - /baremetalservers/flavors
       - /baremetalservers/limits
+  cbr:
+    service_type: cbr
+    sdk_proxy: cbr
+    urls:
+      - /operation-logs
+      - /vaults
+      - /backups
+      - /policies
+      - /vault/tags    
   cce_skip_unver:
     service_type: cce
   cce:
