@@ -532,7 +532,7 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
 
 status_dashboard:
-  - name: prod
+  - name: prod-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
     domain_name: status.otc-service.com
@@ -566,7 +566,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_prod.yaml
 
-  - name: dev
+  - name: prod
     kube_context: cloudmon-de
     kube_namespace: stackmon
     domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
