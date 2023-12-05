@@ -168,7 +168,7 @@ flag_metrics:
       name: "api_success_rate_low"
     environments:
       - name: "production_eu-de"
-      
+
   ### CSS
   - name: "api_down"
     service: "css"
