@@ -79,6 +79,13 @@ elements:
       - /os-keypairs
       - /os-server-groups
       - /os-availability-zone
+   csbs:
+     service_type: data-protect
+     urls:
+      - /policies
+      - /quotas
+      - /csbs_backup_policy/tags
+      - /checkpoint_items
   css:
     service_type: css
     sdk_proxy: css
