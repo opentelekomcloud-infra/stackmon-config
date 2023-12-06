@@ -179,7 +179,6 @@ matrix:
           - cts_v1
           - cts_v2
           - cts_v3
-          - cts
           - database_skip
           - dcaas
           - dcs
