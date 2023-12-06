@@ -127,6 +127,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - ecs
           - eipv2.0
           - identity
           - image
@@ -188,6 +189,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - ecs
           - eipv2.0
           - identity
           - image
@@ -250,6 +252,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - ecs
           - eipv2.0
           - identity
           - image
@@ -304,6 +307,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - ecs
           - eipv2.0
           - identity
           - image
@@ -345,6 +349,7 @@ matrix:
           - dcaas
           - deh
           - dns_private_only
+          - ecs
           - identity
           - image
           - kms_skip_unver
@@ -379,6 +384,7 @@ matrix:
           - dcaas
           - deh
           - dns_private_only
+          - ecs
           - identity
           - image
           - kms_skip_unver
