@@ -148,6 +148,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -206,6 +207,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: production_eu-de
     monitoring_zone: eu-nl
     # TODO: placing db_url here feels questionable
@@ -269,6 +271,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: production_eu-nl
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -320,6 +323,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -354,6 +358,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume_no_backups
+          - vpcep
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -388,6 +393,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume_no_backups
+          - vpcep
 
 metrics_processor:
   - name: prod
