@@ -289,9 +289,8 @@ elements:
       - /configurations
   sdrs:
     service_type: sdrs
+    sdk_proxy: sdrs
     urls:
-      - /
-      - /v1
       - /active-domains
       - /server-groups
       - /protected-instances
