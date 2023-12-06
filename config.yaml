@@ -306,7 +306,7 @@ matrix:
           - dms_skip_v2
           - dns
           - eipv2.0
-          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
