@@ -9,7 +9,6 @@ elements:
     sdk_proxy: anti_ddos
     # which urls to test
     urls:
-      - /
       - /antiddos
       - /antiddos/query_config_list
       - /antiddos/default/config
@@ -21,7 +20,6 @@ elements:
     service_type: as
     sdk_proxy: auto_scaling
     urls:
-      - /
       - /scaling_group
       - /scaling_configuration
       - /scaling_policy
@@ -38,7 +36,6 @@ elements:
   bms:
     service_type: bms
     urls:
-      - /
       - /v1
       - /baremetalservers/detail
       - /baremetalservers/flavors
@@ -64,7 +61,6 @@ elements:
     service_type: ces
     sdk_proxy: ces
     urls:
-      - /
       - /metrics
       - /alarms
   ces_skip_v1:
@@ -72,7 +68,6 @@ elements:
   compute:
     service_type: compute
     urls:
-      - /
       - /servers
       - /flavors
       - /limits
@@ -91,7 +86,6 @@ elements:
     service_type: css
     sdk_proxy: css
     urls:
-      - /
       - /clusters
       - /css-cluster/tags
   cts_skip_unver:
@@ -106,25 +100,21 @@ elements:
     service_type: cts
     sdk_proxy: cts
     urls:
-      - /
       - /tracker?tracker_name=system
   cts_v2:
     service_type: ctsv2
     sdk_proxy: ctsv2
     urls:
-      - /
       - /system/trace?limit=10
   cts_v3:
     service_type: ctsv3
     sdk_proxy: ctsv3
     urls:
-      - /
       - /notifications/smn
   dataarts:
     service_type: dataarts
     sdk_proxy: dataarts
     urls:
-      - /
       - /clusters
   database_skip:
     service_type: database
@@ -140,7 +130,6 @@ elements:
     service_type: dcs
     sdk_proxy: dcs
     urls:
-      - /
       - /instances
       - /quota
   dcs_skip_v1:
@@ -149,13 +138,11 @@ elements:
     service_type: ddsv3
     sdk_proxy: dds
     urls:
-      - /
       - /v3
       - /instances
   deh:
     service_type: deh
     urls:
-      - /
       - /dedicated-hosts
   dis_skip_unver:
     service_type: dis
@@ -183,7 +170,6 @@ elements:
   dns:
     service_type: dns
     urls:
-      - /
       - /zones
       - /recordsets
       - /reverse/floatingips
@@ -196,7 +182,6 @@ elements:
   dws:
     service_type: dws
     urls:
-      - /
       - /clusters
       - /snaphosts
       - /clusters/tags
@@ -259,7 +244,6 @@ elements:
     service_type: kmsv1
     sdk_proxy: kms
     urls:
-      - /
       - /kms/user-quotas
       - /kms/user-instances
       - /kms/tags
@@ -286,14 +270,12 @@ elements:
   nat:
     service_type: nat
     urls:
-      - /
       - /nat_gateways
       - /snat_rules
       - /dnat_rules
   network:
     service_type: network
     urls:
-      - /
       - /networks
       - /subnets
       - /ports
@@ -324,7 +306,6 @@ elements:
     service_type: rdsv3
     sdk_proxy: rds
     urls:
-      - /
       - /datastores/postgresql
       - /instances
       - /configurations
@@ -348,7 +329,6 @@ elements:
   smn:
     service_type: smn
     urls:
-      - /
       - /notifications
       - /notifications/subscriptions
       - /notifications/message_template
