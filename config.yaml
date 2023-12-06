@@ -129,6 +129,8 @@ matrix:
           - dws_skip_v1
           - ecs
           - eipv2.0
+          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -150,6 +152,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -191,6 +194,8 @@ matrix:
           - dns
           - ecs
           - eipv2.0
+          - elb_skip
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -210,6 +215,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: production_eu-de
     monitoring_zone: eu-nl
     # TODO: placing db_url here feels questionable
@@ -254,6 +260,8 @@ matrix:
           - dws_skip_v1
           - ecs
           - eipv2.0
+          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -275,6 +283,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: production_eu-nl
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -309,6 +318,8 @@ matrix:
           - dns
           - ecs
           - eipv2.0
+          - elb_skip
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -328,6 +339,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume
+          - vpcep
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -350,6 +362,8 @@ matrix:
           - deh
           - dns_private_only
           - ecs
+          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -363,6 +377,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume_no_backups
+          - vpcep
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -385,6 +400,8 @@ matrix:
           - deh
           - dns_private_only
           - ecs
+          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -398,6 +415,7 @@ matrix:
           - smn_skip_v2
           - volume_skip_v2
           - volume_no_backups
+          - vpcep
 
 metrics_processor:
   - name: prod

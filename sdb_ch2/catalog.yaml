@@ -5,11 +5,12 @@ components:
 #     type: antiddos
 #   name: Anti DDoS
 
-- attributes:
-    category: Application Services
-    region: EU-CH2
-    type: aom
-  name: Application Operations Management
+# AOM is to be replaced by AOM2.0
+# - attributes:
+#     category: Application Services
+#     region: EU-CH2
+#     type: aom
+#   name: Application Operations Management
 
 - attributes:
     category: Compute
