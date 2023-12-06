@@ -148,6 +148,27 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### CSBS
+  - name: "api_down"
+    service: "data-protect"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "data-protect"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "data-protect"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### CSS
   - name: "api_down"
     service: "css"
@@ -272,6 +293,30 @@ flag_metrics:
       - name: "production_eu-de"
 
   ### DC
+  - name: "api_down"
+    service: "dcaas"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "dcaas"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "dcaas"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
   ### DCS
   - name: "api_down"
     service: "dcs"
@@ -331,10 +376,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow"
+  - name: "api_slow_600"
     service: "deh"
     template:
-      name: "api_slow"
+      name: "api_slow_600"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
@@ -659,10 +704,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow"
+  - name: "api_slow_600"
     service: "image"
     template:
-      name: "api_slow"
+      name: "api_slow_600"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
@@ -901,31 +946,7 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  ### SFS
-  - name: "api_down"
-    service: "shared-file-system"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_slow"
-    service: "shared-file-system"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_success_rate_low"
-    service: "shared-file-system"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
+  ### SFS Turbo
   - name: "api_down"
     service: "sfsturbo"
     template:

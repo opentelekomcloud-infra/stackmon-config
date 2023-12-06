@@ -43,6 +43,15 @@ elements:
       - /baremetalservers/detail
       - /baremetalservers/flavors
       - /baremetalservers/limits
+  cbr:
+    service_type: cbr
+    sdk_proxy: cbr
+    urls:
+      - /operation-logs
+      - /vaults
+      - /backups
+      - /policies
+      - /vault/tags
   cce_skip_unver:
     service_type: cce
   cce:
@@ -70,6 +79,14 @@ elements:
       - /os-keypairs
       - /os-server-groups
       - /os-availability-zone
+  csbs:
+    service_type: data-protect
+    sdk_proxy: csbs
+    urls:
+      - /policies
+      - /quotas
+      - /csbs_backup_policy/tags
+      - /checkpoint_items
   css:
     service_type: css
     sdk_proxy: css
@@ -109,8 +126,6 @@ elements:
     urls:
       - /
       - /clusters
-  data_protect_skip:
-    service_type: data-protect
   database_skip:
     service_type: database
   dcaas:
@@ -185,6 +200,13 @@ elements:
       - /clusters
       - /snaphosts
       - /clusters/tags
+  eipv2.0:
+    service_type: vpc
+    urls:
+      - /
+      - /v2.0
+      - /v2.0/floatingips
+      - /v2.0/eip/floatingips_v6
   dws_skip_v1:
     service_type: dwsv1
   identity:
@@ -207,21 +229,21 @@ elements:
     sdk_proxy: kms
     urls:
       - /
-      - /kms/list-keys
       - /kms/user-quotas
+      - /kms/user-instances
+      - /kms/tags
   modelarts:
     service_type: modelartsv1
-    sdk_proxy: modelarts
+    sdk_proxy: modelartsv1
     urls:
-      - /demanager/instances
+      - /demanager/instances?de_type=Notebook
       - /models
       - /training-jobs
       - /services
   modelartsv2:
     service_type: modelartsv2
-    sdk_proxy: modelarts
+    sdk_proxy: modelartsv2
     urls:
-      - /authorizations
       - /datasets
   mrs:
     service_type: mrsv1
@@ -277,9 +299,8 @@ elements:
       - /configurations
   sdrs:
     service_type: sdrs
+    sdk_proxy: sdrs
     urls:
-      - /
-      - /v1
       - /active-domains
       - /server-groups
       - /protected-instances
@@ -288,13 +309,11 @@ elements:
     service_type: sfsturbo
     urls:
       - /sfs-turbo/shares/detail
+      - /sfs-turbo/tags
   share:
     service_type: sharev2
     sdk_proxy: share
-    urls:
-      - /
-      - /v2
-      - /shares
+    urls: []
   smn:
     service_type: smn
     urls:
@@ -323,3 +342,13 @@ elements:
       - /snapshots
       - /os-volume-transfer
       - /os-availability-zone
+  vpn:
+    service_type: vpc
+    urls:
+      - /
+      - /v2.0
+      - /v2.0/vpn/ipsec-site-connections
+      - /v2.0/vpn/vpnservices
+      - /v2.0/vpn/ipsecpolicies
+      - /v2.0/vpn/ikepolicies
+      - /v2.0/vpn/endpoint-groups

@@ -22,10 +22,10 @@ health_metrics:
     category: compute
     metrics:
       - deh.api_down
-      - deh.api_slow
+      - deh.api_slow_600
       - deh.api_success_rate_low
     expressions:
-      - expression: "deh.api_slow || deh.api_success_rate_low"
+      - expression: "deh.api_slow_600 || deh.api_success_rate_low"
         weight: 1
       - expression: "deh.api_down"
         weight: 2
@@ -53,10 +53,10 @@ health_metrics:
     category: compute
     metrics:
       - image.api_down
-      - image.api_slow
+      - image.api_slow_600
       - image.api_success_rate_low
     expressions:
-      - expression: "image.api_slow || image.api_success_rate_low"
+      - expression: "image.api_slow_600 || image.api_success_rate_low"
         weight: 1
       - expression: "image.api_down"
         weight: 2
@@ -109,22 +109,19 @@ health_metrics:
         weight: 1
       - expression: "evs.api_down || block-storage.api_down"
         weight: 2
-  ### SFS
+  ### SFS Turbo
   sfs:
     service: sfs
-    component_name: "Scalable File System"
+    component_name: "SFS Turbo"
     category: storage
     metrics:
-      - shared-file-system.api_down
-      - shared-file-system.api_slow
-      - shared-file-system.api_success_rate_low
       - sfsturbo.api_down
       - sfsturbo.api_slow
       - sfsturbo.api_success_rate_low
     expressions:
-      - expression: "shared-file-system.api_slow || shared-file-system.api_success_rate_low || sfsturbo.api_slow || sfsturbo.api_success_rate_low"
+      - expression: "sfsturbo.api_slow || sfsturbo.api_success_rate_low"
         weight: 1
-      - expression: "shared-file-system.api_down || sfsturbo.api_down"
+      - expression: "sfsturbo.api_down"
         weight: 2
   ### CSBS
   csbs:
@@ -132,13 +129,13 @@ health_metrics:
     component_name: "Cloud Server Backup Service"
     category: storage
     metrics:
-      - csbs.api_down
-      - csbs.api_slow
-      - csbs.api_success_rate_low
+      - data-protect.api_down
+      - data-protect.api_slow
+      - data-protect.api_success_rate_low
     expressions:
-      - expression: "csbs.api_slow || csbs.api_success_rate_low"
+      - expression: "data-protect.api_slow || data-protect.api_success_rate_low"
         weight: 1
-      - expression: "csbs.api_down"
+      - expression: "data-protect.api_down"
         weight: 2
   ### CBR
   cbr:
@@ -167,6 +164,20 @@ health_metrics:
       - expression: "object.api_slow || object.api_success_rate_low"
         weight: 1
       - expression: "object.api_down"
+        weight: 2
+  ### SDRS
+  sdrs:
+    service: sdrs
+    component_name: "Storage Disaster Recovery Service"
+    category: storage
+    metrics:
+      - sdrs.api_down
+      - sdrs.api_slow
+      - sdrs.api_success_rate_low
+    expressions:
+      - expression: "sdrs.api_slow || sdrs.api_success_rate_low"
+        weight: 1
+      - expression: "sdrs.api_down"
         weight: 2
 
   ## Network
@@ -214,6 +225,20 @@ health_metrics:
       - expression: "elb.api_slow || elb.api_success_rate_low || elbv3.api_slow || elbv3.api_success_rate_low"
         weight: 1
       - expression: "elb.api_down || elbv3.api_down"
+        weight: 2
+  ### DCAAS
+  dcaas:
+    service: dcaas
+    component_name: "Direct Connect"
+    category: network
+    metrics:
+      - dcaas.api_down
+      - dcaas.api_slow
+      - dcaas.api_success_rate_low
+    expressions:
+      - expression: "dcaas.api_slow || dcaas.api_success_rate_low"
+        weight: 1
+      - expression: "dcaas.api_down"
         weight: 2
   ### DNS
   dns:
@@ -441,17 +466,17 @@ health_metrics:
         weight: 2
   ### DIS
   dis:
-    service: dis
+    service: disv2
     component_name: "Data Ingestion Service"
     category: management
     metrics:
-      - dis.api_slow
-      - dis.api_down
-      - dis.api_success_rate_low
+      - disv2.api_slow
+      - disv2.api_down
+      - disv2.api_success_rate_low
     expressions:
-      - expression: "dis.api_slow || dis.api_success_rate_low"
+      - expression: "disv2.api_slow || disv2.api_success_rate_low"
         weight: 1
-      - expression: "dis.api_down"
+      - expression: "disv2.api_down"
         weight: 2
 
   ### DLI
@@ -475,13 +500,13 @@ health_metrics:
     component_name: "Data Warehouse Service"
     category: management
     metrics:
-      - dws.api_slow
-      - dws.api_down
-      - dws.api_success_rate_low
+      - dwsv1.api_slow
+      - dwsv1.api_down
+      - dwsv1.api_success_rate_low
     expressions:
-      - expression: "dws.api_slow || dws.api_success_rate_low"
+      - expression: "dwsv1.api_slow || dwsv1.api_success_rate_low"
         weight: 1
-      - expression: "dws.api_down"
+      - expression: "dwsv1.api_down"
         weight: 2
   ### MRS
   mrs:

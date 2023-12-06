@@ -70,11 +70,6 @@ components:
     type: csbs
   name: Cloud Server Backup Service
 - attributes:
-    category: Storage
-    region: EU-NL
-    type: csbs
-  name: Cloud Server Backup Service
-- attributes:
     category: Big Data and Data Analysis
     region: EU-DE
     type: css
@@ -100,12 +95,12 @@ components:
     type: cts
   name: Cloud Trace Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: dc
   name: Direct Connect
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: dc
   name: Direct Connect
@@ -160,12 +155,12 @@ components:
     type: dms
   name: Distributed Message Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: dns
   name: Domain Name Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: dns
   name: Domain Name Service
@@ -195,22 +190,22 @@ components:
     type: ecs
   name: Elastic Cloud Server
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: eip
   name: Elastic IP
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: eip
   name: Elastic IP
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: elb
   name: Elastic Load Balancing
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: elb
   name: Elastic Load Balancing
@@ -280,12 +275,12 @@ components:
     type: mrs
   name: Map Reduce Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: natgw
   name: NAT Gateway
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: natgw
   name: NAT Gateway
@@ -300,15 +295,15 @@ components:
     type: obs
   name: Object Storage Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: plas
-  name: Private Link Access
+  name: Private Link Access Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: plas
-  name: Private Link Access
+  name: Private Link Access Service
 - attributes:
     category: Database
     region: EU-DE
@@ -353,12 +348,12 @@ components:
     category: Storage
     region: EU-DE
     type: sfs
-  name: Scalable File System
+  name: SFS Turbo
 - attributes:
     category: Storage
     region: EU-NL
     type: sfs
-  name: Scalable File System
+  name: SFS Turbo
 - attributes:
     category: Application Services
     region: EU-DE
@@ -370,12 +365,12 @@ components:
     type: smn
   name: Simple Message Notification
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: smg
   name: Secure Mail Gateway
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: smg
   name: Secure Mail Gateway
@@ -410,32 +405,32 @@ components:
     type: vbs
   name: Volume Backup Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: vpc
   name: Virtual Private Cloud
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: vpc
   name: Virtual Private Cloud
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: vpcep
   name: VPC Endpoint
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: vpcep
   name: VPC Endpoint
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: vpn
   name: Virtual Private Network
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: vpn
   name: Virtual Private Network

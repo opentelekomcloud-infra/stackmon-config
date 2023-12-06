@@ -101,18 +101,20 @@ matrix:
           - as
           - as_skip_v1
           - bms
+          - cbr
           - cce_skip_unver
           - cce
           - ces
           - ces_skip_v1
           - compute
+          - csbs
           - css
           - cts_v1
           - cts_v2
           - cts_v3
           - dataarts
-          - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -125,6 +127,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -142,7 +145,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -167,6 +169,7 @@ matrix:
           - antiddos_skip_bad_type
           - as
           - as_skip_v1
+          - cbr
           - cce_skip_unver
           - cce
           - ces
@@ -177,8 +180,8 @@ matrix:
           - cts_v2
           - cts_v3
           - cts
-          - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -186,6 +189,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -201,7 +205,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -222,18 +225,20 @@ matrix:
           - as
           - as_skip_v1
           - bms
+          - cbr
           - cce_skip_unver
           - cce
           - ces
           - ces_skip_v1
           - compute
+          - csbs
           - css
           - cts_v1
           - cts_v2
           - cts_v3
           - dataarts
-          - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -246,6 +251,7 @@ matrix:
           - dns
           - dws
           - dws_skip_v1
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -263,7 +269,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -281,6 +286,7 @@ matrix:
           - antiddos_skip_bad_type
           - as
           - as_skip_v1
+          - cbr
           - cce_skip_unver
           - cce
           - ces
@@ -290,8 +296,8 @@ matrix:
           - cts_v1
           - cts_v2
           - cts_v3
-          - data_protect_skip
           - database_skip
+          - dcaas
           - dcs
           - dcs_skip_v1
           - dds
@@ -299,6 +305,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - eipv2.0
           - identity
           - image
           - kms_skip_unver
@@ -314,7 +321,6 @@ matrix:
           - rds
           - sdrs
           - sfsturbo
-          - share
           - smn
           - smn_skip_v2
           - volume_skip_v2
@@ -329,6 +335,7 @@ matrix:
         # env in zone has few creds. We need to pick one
         config_elements:
           - as_swiss
+          - cbr
           - cce
           - ces
           - ces_skip_v1
@@ -362,6 +369,7 @@ matrix:
         # env in zone has few creds. We need to pick one
         config_elements:
           - as_swiss
+          - cbr
           - cce
           - ces
           - ces_skip_v1
@@ -415,7 +423,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_11_latest"
+          newTag: "change_14_latest"
 
       patches:
         - patch: |-
@@ -466,7 +474,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_11_latest"
+          newTag: "change_14_latest"
 
       patches:
         - patch: |-
@@ -519,7 +527,7 @@ plugins:
         grafana_dashboards_location: dashboards
   - name: epmon
     type: epmon
-    image: quay.io/stackmon/apimon:change_45_latest
+    image: quay.io/stackmon/apimon:change_48_latest
     config: epmon/config.yaml
   - name: lb
     type: general
@@ -527,6 +535,40 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
 
 status_dashboard:
+  - name: prod-de
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-prod
+    domain_name: status.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_prod/catalog.yaml
+        - kustomize/sdb/sdb_prod.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_24_latest"
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
+            name: status-dashboard
+
+      replicas:
+        - name: status-dashboard
+          count: 2
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_prod/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_prod.yaml
+
   - name: prod
     kube_context: cloudmon-de
     kube_namespace: stackmon
@@ -539,7 +581,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_21_latest"
+          newTag: "change_24_latest"
 
       patchesStrategicMerge:
         - |-
@@ -573,7 +615,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_21_latest"
+          newTag: "change_24_latest"
 
       patchesStrategicMerge:
         - |-
@@ -607,7 +649,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_16_latest"
+          newTag: "change_24_latest"
 
       patchesStrategicMerge:
         - |-
@@ -641,7 +683,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_16_latest"
+          newTag: "change_24_latest"
 
       patchesStrategicMerge:
         - |-
@@ -662,3 +704,37 @@ status_dashboard:
 
       resources:
         - kustomize/sdb/sdb_ch2_beta.yaml
+
+  - name: ch2-prod
+    kube_context: cloudmon-de
+    kube_namespace: stackmon-prod-ch2
+    domain_name: status-ch2.otc-service.com
+    kustomization:
+      extra_files:
+        - sdb_ch2/catalog.yaml
+        - kustomize/sdb/sdb_ch2_prod.yaml
+
+      images:
+        - name: quay.io/opentelekomcloud/stackmon-status-dashboard
+          newName: quay.io/opentelekomcloud/otc-status-dashboard
+          newTag: "change_24_latest"
+
+      patchesStrategicMerge:
+        - |-
+          $patch: delete
+          apiVersion: networking.k8s.io/v1
+          kind: Ingress
+          metadata:
+            name: status-dashboard
+
+      replicas:
+        - name: status-dashboard
+          count: 2
+
+      configMapGenerator:
+        - name: sdb-config
+          files:
+            - catalog.yaml=sdb_ch2/catalog.yaml
+
+      resources:
+        - kustomize/sdb/sdb_ch2_prod.yaml
