@@ -200,6 +200,14 @@ elements:
       - /clusters
       - /snaphosts
       - /clusters/tags
+  ecs:
+    service_type: ecs
+    sdk_proxy: ecs
+    urls:
+      - /cloudservers/detail
+      - /cloudservers/limits
+      - /cloudservers/flavors
+      - /cloudservers/tags
   eipv2.0:
     service_type: vpc
     urls:
