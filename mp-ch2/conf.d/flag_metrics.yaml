@@ -275,27 +275,6 @@ flag_metrics:
 
   ### EVS
   - name: "api_down"
-    service: "evs"
-    template:
-      name: "api_down"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_slow"
-    service: "evs"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_success_rate_low"
-    service: "evs"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_down"
     service: "block-storage"
     template:
       name: "api_down"
