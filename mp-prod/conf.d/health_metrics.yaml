@@ -381,10 +381,16 @@ health_metrics:
       - cts.api_slow
       - cts.api_down
       - cts.api_success_rate_low
+      - ctsv2.api_slow
+      - ctsv2.api_down
+      - ctsv2.api_success_rate_low
+      - ctsv3.api_slow
+      - ctsv3.api_down
+      - ctsv3.api_success_rate_low
     expressions:
-      - expression: "cts.api_slow || cts.api_success_rate_low"
+      - expression: "cts.api_slow || cts.api_success_rate_low || ctsv2.api_slow || ctsv2.api_success_rate_low || ctsv3.api_slow || ctsv3.api_success_rate_low"
         weight: 1
-      - expression: "cts.api_down"
+      - expression: "cts.api_down || ctsv2.api_down || ctsv3.api_down"
         weight: 2
   ### IAM
   identity:

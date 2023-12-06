@@ -358,13 +358,13 @@ health_metrics:
     component_name: "Cloud Trace Service"
     category: management
     metrics:
-      - cts.api_slow
-      - cts.api_down
-      - cts.api_success_rate_low
+      - ctsv3.api_slow
+      - ctsv3.api_down
+      - ctsv3.api_success_rate_low
     expressions:
-      - expression: "cts.api_slow || cts.api_success_rate_low"
+      - expression: "ctsv3.api_slow || ctsv3.api_success_rate_low"
         weight: 1
-      - expression: "cts.api_down"
+      - expression: "ctsv3.api_down"
         weight: 2
   ### TMS
   tms:
