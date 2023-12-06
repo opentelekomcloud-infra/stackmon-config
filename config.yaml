@@ -112,7 +112,6 @@ matrix:
           - cts_skip_unver
           - cts
           - dataarts
-          - data-protect
           - database_skip
           - dcaas
           - dcs
@@ -178,7 +177,6 @@ matrix:
           - css
           - cts_skip_unver
           - cts
-          - data-protect
           - database_skip
           - dcaas
           - dcs
@@ -235,7 +233,6 @@ matrix:
           - cts_skip_unver
           - cts
           - dataarts
-          - data-protect
           - database_skip
           - dcaas
           - dcs
@@ -294,7 +291,6 @@ matrix:
           - css
           - cts_skip_unver
           - cts
-          - data-protect
           - database_skip
           - dcaas
           - dcs
