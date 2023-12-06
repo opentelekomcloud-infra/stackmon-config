@@ -188,6 +188,7 @@ matrix:
           - dms
           - dms_skip_v2
           - dns
+          - elb_skip
           - elbv3
           - eipv2.0
           - identity
@@ -306,6 +307,7 @@ matrix:
           - dms_skip_v2
           - dns
           - eipv2.0
+          - elb_skip
           - elbv3
           - identity
           - image
