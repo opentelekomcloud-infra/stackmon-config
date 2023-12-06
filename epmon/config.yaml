@@ -330,6 +330,16 @@ elements:
       - /snapshots
       - /os-volume-transfer
       - /os-availability-zone
+  vpcep:
+    service_type: vpcep
+    sdk_proxy: vpcep
+    urls:
+      - /vpc-endpoint-services
+      - /vpc-endpoints
+      - /vpc-endpoint-services/public
+      - /quotas
+      - /endpoint_service/tags
+      - /endpoint/tags
   vpn:
     service_type: vpc
     urls:
