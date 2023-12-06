@@ -81,6 +81,7 @@ elements:
       - /os-availability-zone
   csbs:
     service_type: data-protect
+    sdk_proxy: csbs
     urls:
       - /policies
       - /quotas
