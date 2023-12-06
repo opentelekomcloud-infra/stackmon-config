@@ -347,6 +347,8 @@ matrix:
           - dcaas
           - deh
           - dns_private_only
+          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
@@ -381,6 +383,8 @@ matrix:
           - dcaas
           - deh
           - dns_private_only
+          - elb
+          - elbv3
           - identity
           - image
           - kms_skip_unver
