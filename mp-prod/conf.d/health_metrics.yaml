@@ -165,6 +165,20 @@ health_metrics:
         weight: 1
       - expression: "object.api_down"
         weight: 2
+  ### SDRS
+  sdrs:
+    service: sdrs
+    component_name: "Storage Disaster Recovery Service"
+    category: storage
+    metrics:
+      - sdrs.api_down
+      - sdrs.api_slow
+      - sdrs.api_success_rate_low
+    expressions:
+      - expression: "sdrs.api_slow || sdrs.api_success_rate_low"
+        weight: 1
+      - expression: "sdrs.api_down"
+        weight: 2
 
   ## Network
   ### VPC
