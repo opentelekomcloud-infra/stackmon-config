@@ -10,16 +10,6 @@ components:
     type: antiddos
   name: Anti DDoS
 - attributes:
-    category: Application Services
-    region: EU-DE
-    type: aom
-  name: Application Operations Management
-- attributes:
-    category: Application Services
-    region: EU-NL
-    type: aom
-  name: Application Operations Management
-- attributes:
     category: Compute
     region: EU-DE
     type: as
@@ -165,16 +155,6 @@ components:
     type: dns
   name: Domain Name Service
 - attributes:
-    category: Database
-    region: EU-DE
-    type: drs
-  name: Data Replication Service
-- attributes:
-    category: Database
-    region: EU-NL
-    type: drs
-  name: Data Replication Service
-- attributes:
     category: Big Data and Data Analysis
     region: EU-DE
     type: dws
@@ -314,16 +294,6 @@ components:
     region: EU-NL
     type: rds
   name: Relational Database Service
-- attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: rms
-  name: Resource Management Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: rms
-  name: Resource Management Service
 - attributes:
     category: Management & Deployment
     region: EU-DE
