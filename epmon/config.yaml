@@ -114,8 +114,6 @@ elements:
     urls:
       - /
       - /clusters
-  data_protect_skip:
-    service_type: data-protect
   database_skip:
     service_type: database
   dcaas:
