@@ -195,6 +195,33 @@ elements:
       - /v2.0
       - /v2.0/floatingips
       - /v2.0/eip/floatingips_v6
+  elb:
+    service_type: elb
+    sdk_proxy: elb
+    urls:
+      - /lbaas/loadbalancers
+      - /lbaas/listeners
+      - /lbaas/pools
+      - /lbaas/healthmonitors
+      - /lbaas/l7policies
+      - /lbaas/whitelists
+      - /lbaas/certificates
+  elbv3:
+    service_type: elbv3
+    sdk_proxy: elbv3
+    urls:
+      - /elb/quotas
+      - /elb/availability-zones
+      - /elb/flavors
+      - /elb/loadbalancers
+      - /elb/listeners
+      - /elb/pools
+      - /elb/healthmonitors
+      - /elb/l7policies
+      - /elb/certificates
+      - /elb/security-policies
+      - /elb/system-security-policies
+      - /elb/ipgroups
   dws_skip_v1:
     service_type: dwsv1
   identity:
