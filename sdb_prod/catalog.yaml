@@ -70,11 +70,6 @@ components:
     type: csbs
   name: Cloud Server Backup Service
 - attributes:
-    category: Storage
-    region: EU-NL
-    type: csbs
-  name: Cloud Server Backup Service
-- attributes:
     category: Big Data and Data Analysis
     region: EU-DE
     type: css

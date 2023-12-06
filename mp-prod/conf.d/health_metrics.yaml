@@ -129,13 +129,13 @@ health_metrics:
     component_name: "Cloud Server Backup Service"
     category: storage
     metrics:
-      - csbs.api_down
-      - csbs.api_slow
-      - csbs.api_success_rate_low
+      - data-protect.api_down
+      - data-protect.api_slow
+      - data-protect.api_success_rate_low
     expressions:
-      - expression: "csbs.api_slow || csbs.api_success_rate_low"
+      - expression: "data-protect.api_slow || data-protect.api_success_rate_low"
         weight: 1
-      - expression: "csbs.api_down"
+      - expression: "data-protect.api_down"
         weight: 2
   ### CBR
   cbr:
