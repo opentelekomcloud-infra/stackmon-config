@@ -195,6 +195,10 @@ elements:
       - /v2.0
       - /v2.0/floatingips
       - /v2.0/eip/floatingips_v6
+  elb_skip:
+    service_type: elb
+    sdk_proxy: elb
+    urls: []
   elb:
     service_type: elb
     sdk_proxy: elb
