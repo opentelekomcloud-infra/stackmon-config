@@ -239,6 +239,7 @@ elements:
       - /
       - /regions
       - /auth/projects
+      - /projects
   image:
     service_type: image
     urls:
