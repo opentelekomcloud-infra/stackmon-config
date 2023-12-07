@@ -370,11 +370,6 @@ components:
     type: vbs
   name: Volume Backup Service
 - attributes:
-    category: Storage
-    region: EU-NL
-    type: vbs
-  name: Volume Backup Service
-- attributes:
     category: Network
     region: EU-DE
     type: vpc

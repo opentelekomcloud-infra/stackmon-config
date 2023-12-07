@@ -381,6 +381,16 @@ elements:
       - /snapshots
       - /os-volume-transfer
       - /os-availability-zone
+  vbs_skip_v2:
+    service_type: vbsv2
+    urls: []
+  vbs:
+    service_type: vbs
+    urls:
+      - /backups
+      - /backuppolicy
+      - /backups/detail
+      - /backuppolicy/tags
   vpcep:
     service_type: vpcep
     sdk_proxy: vpcep

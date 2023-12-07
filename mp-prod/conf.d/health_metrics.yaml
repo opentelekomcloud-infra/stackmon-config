@@ -176,6 +176,20 @@ health_metrics:
         weight: 1
       - expression: "sdrs.api_down"
         weight: 2
+  ### VBS
+  vbs:
+    service: vbs
+    component_name: "Volume Backup Service"
+    category: storage
+    metrics:
+      - vbs.api_down
+      - vbs.api_slow
+      - vbs.api_success_rate_low
+    expressions:
+      - expression: "vbs.api_slow || vbs.api_success_rate_low"
+        weight: 1
+      - expression: "vbs.api_down"
+        weight: 2
 
   ## Network
   ### VPC
