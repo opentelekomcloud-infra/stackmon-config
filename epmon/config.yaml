@@ -383,10 +383,12 @@ elements:
       - /os-availability-zone
   vbs_skip_v2:
     service_type: vbsv2
+    urls: []
   vbs:
     service_type: vbs
     sdk_proxy: volume_backup
     urls:
+      - /backups
       - /backuppolicy
       - /backups/detail
       - /backuppolicy/tags
