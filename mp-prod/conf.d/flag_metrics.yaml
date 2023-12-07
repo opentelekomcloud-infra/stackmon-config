@@ -996,6 +996,30 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### SWR
+    - name: "api_down"
+    service: "swrv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "swrv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "swrv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
   ### TMS
   - name: "api_down"
     service: "tms"
