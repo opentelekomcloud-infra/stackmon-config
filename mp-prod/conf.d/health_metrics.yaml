@@ -206,6 +206,20 @@ health_metrics:
         weight: 1
       - expression: "vpcep.api_down"
         weight: 2
+  ### EIP
+  eip:
+    service: eip
+    component_name: "Elastic IP"
+    category: network
+    metrics:
+      - eip.api_down
+      - eip.api_slow
+      - eip.api_success_rate_low
+    expressions:
+      - expression: "eip.api_slow || eip.api_success_rate_low"
+        weight: 1
+      - expression: "eib.api_down"
+        weight: 2
   ### ELB
   elb:
     service: elb
