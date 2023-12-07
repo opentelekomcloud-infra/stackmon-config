@@ -104,7 +104,7 @@ health_metrics:
         weight: 1
       - expression: "swrv2.api_down"
         weight: 2
-  
+
   ## Storage
   ### EVS
   evs:
