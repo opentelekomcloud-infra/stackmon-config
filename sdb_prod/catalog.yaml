@@ -335,16 +335,6 @@ components:
     type: smn
   name: Simple Message Notification
 - attributes:
-    category: Network
-    region: EU-DE
-    type: smg
-  name: Secure Mail Gateway
-- attributes:
-    category: Network
-    region: EU-NL
-    type: smg
-  name: Secure Mail Gateway
-- attributes:
     category: Container
     region: EU-DE
     type: swr
