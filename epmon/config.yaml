@@ -324,6 +324,11 @@ elements:
       - /build_info
       - /software_configs
       - /resource_types
+  plas:
+    service_type: plas
+    sdk_proxy: plas
+    urls:
+      - /plasconnector/connectors?pageSize=10&pageNum=1
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:
@@ -362,6 +367,13 @@ elements:
       - /notifications/message_template
   smn_skip_v2:
     service_type: smnv2
+  swrv2:
+    service_type: swrv2
+    sdk_proxy: swrv2
+    urls:
+      - /manage/shared-repositories?center=self
+      - /manage/repos
+      - /manage/namespaces
   volume_skip_v2:
     service_type: volumev2
   volume:

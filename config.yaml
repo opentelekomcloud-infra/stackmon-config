@@ -143,6 +143,7 @@ matrix:
           - object_skip
           - object_store
           - orchestration
+          - plas
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -150,10 +151,12 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - vbs
           - volume_skip_v2
           - volume
           - vpcep
+          - vpn
           - waf
           - wafd
   - env: production_eu-nl
@@ -216,9 +219,11 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume
           - vpcep
+          - vpn
           - waf
   - env: production_eu-de
     monitoring_zone: eu-nl
@@ -278,6 +283,7 @@ matrix:
           - object_skip
           - object_store
           - orchestration
+          - plas
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -285,10 +291,12 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - vbs
           - volume_skip_v2
           - volume
           - vpcep
+          - vpn
           - waf
           - wafd
   - env: production_eu-nl
@@ -344,9 +352,11 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume
           - vpcep
+          - vpn
           - waf
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
@@ -383,9 +393,11 @@ matrix:
           - sdrs
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume_no_backups
           - vpcep
+          - vpn
           - waf
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
@@ -422,9 +434,11 @@ matrix:
           - sdrs
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume_no_backups
           - vpcep
+          - vpn
           - waf
 
 metrics_processor:

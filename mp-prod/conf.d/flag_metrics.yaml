@@ -870,6 +870,27 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### PLAS
+  - name: "api_down"
+    service: "plas"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "plas"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "plas"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### RDS
   - name: "api_down"
     service: "rdsv3"
@@ -996,6 +1017,30 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### SWR
+  - name: "api_down"
+    service: "swrv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "swrv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "swrv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
   ### TMS
   - name: "api_down"
     service: "tms"
@@ -1094,6 +1139,29 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### VPN
+  - name: "api_down"
+    service: "vpc"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "vpc"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "vpc"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
   ### WAF
   - name: "api_down"
     service: "waf"

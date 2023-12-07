@@ -109,16 +109,16 @@ health_metrics:
   ### SWR
   swr:
     service: swr
-    component_name: "Cloud Container Service"
+    component_name: "Software Repository for Containers"
     category: container
     metrics:
-      - swr.api_down
-      - swr.api_slow
-      - swr.api_success_rate_low
+      - swrv2.api_down
+      - swrv2.api_slow
+      - swrv2.api_success_rate_low
     expressions:
-      - expression: "swr.api_slow || swr.api_success_rate_low"
+      - expression: "swrv2.api_slow || swrv2.api_success_rate_low"
         weight: 1
-      - expression: "swr.api_down"
+      - expression: "swrv2.api_down"
         weight: 2
 
   ## Storage
@@ -268,11 +268,18 @@ health_metrics:
 
   ### VPN
   vpn:
-    service: network
+    service: vpn
     component_name: "Virtul Private Network"
     category: network
-    metrics: []
-    expressions: []
+    metrics:
+      - vpc.api_down
+      - vpc.api_slow
+      - vpc.api_success_rate_low
+    expressions:
+      - expression: "vpc.api_slow || vpc.api_success_rate_low"
+        weight: 1
+      - expression: "vpc.api_down"
+        weight: 2
 
   ## Database
   ### RDS
