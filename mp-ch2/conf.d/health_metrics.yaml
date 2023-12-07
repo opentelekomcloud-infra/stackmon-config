@@ -109,7 +109,7 @@ health_metrics:
   ### SWR
   swr:
     service: swr
-    component_name: "Cloud Container Service"
+    component_name: "Software Repository for Containers"
     category: container
     metrics:
       - swrv2.api_down
