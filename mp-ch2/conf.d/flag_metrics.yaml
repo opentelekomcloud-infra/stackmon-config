@@ -559,7 +559,27 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
-### VPN
+  ### VPN
+  - name: "api_down"
+    service: "vpc"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "vpc"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "vpc"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
 ### WAFD
 
 #  - name: "api_down"
