@@ -268,11 +268,18 @@ health_metrics:
 
   ### VPN
   vpn:
-    service: network
+    service: vpn
     component_name: "Virtul Private Network"
     category: network
-    metrics: []
-    expressions: []
+    metrics:
+      - vpc.api_down
+      - vpc.api_slow
+      - vpc.api_success_rate_low
+    expressions:
+      - expression: "vpc.api_slow || vpc.api_success_rate_low"
+        weight: 1
+      - expression: "vpc.api_down"
+        weight: 2
 
   ## Database
   ### RDS
