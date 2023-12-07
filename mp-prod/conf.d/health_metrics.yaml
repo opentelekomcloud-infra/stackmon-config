@@ -295,7 +295,7 @@ health_metrics:
         weight: 2
 
   ### PLAS
-  natgw:
+  plas:
     service: plas
     component_name: "Private Link Access Service"
     category: network
