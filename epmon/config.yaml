@@ -430,3 +430,13 @@ elements:
       - /waf/valuelist
       - /waf/certificate
       - /waf/event?recent=today
+  wafd_swiss:
+    service_type: waf
+    sdk_proxy: waf
+    urls:
+      - /premium-waf/instance
+      - /premium-waf/host
+      - /waf/policy
+      - /waf/valuelist
+      - /waf/certificate
+      - /waf/event?recent=today
