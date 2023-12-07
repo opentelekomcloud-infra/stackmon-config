@@ -398,7 +398,7 @@ matrix:
           - volume_no_backups
           - vpcep
           - vpn
-          - waf_swiss
+          - wafd_swiss
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
