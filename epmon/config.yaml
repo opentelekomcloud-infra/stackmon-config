@@ -324,6 +324,11 @@ elements:
       - /build_info
       - /software_configs
       - /resource_types
+  plas:
+    service_type: plas
+    sdk_proxy: plas
+    urls:
+      - /plasconnector/connectors?pageSize=10&pageNum=1
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:
