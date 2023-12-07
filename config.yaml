@@ -150,6 +150,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - vbs
           - volume_skip_v2
           - volume
           - vpcep
@@ -213,6 +214,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - vbs
           - volume_skip_v2
           - volume
           - vpcep
