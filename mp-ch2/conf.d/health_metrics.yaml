@@ -128,16 +128,13 @@ health_metrics:
     component_name: "Elastic Volume Service"
     category: storage
     metrics:
-      - evs.api_down
-      - evs.api_slow
-      - evs.api_success_rate_low
       - block-storage.api_down
       - block-storage.api_slow
       - block-storage.api_success_rate_low
     expressions:
-      - expression: "evs.api_slow || evs.api_success_rate_low || block-storage.api_slow || block-storage.api_success_rate_low"
+      - expression: "block-storage.api_slow || block-storage.api_success_rate_low"
         weight: 1
-      - expression: "evs.api_down || block-storage.api_down"
+      - expression: "block-storage.api_down"
         weight: 2
   ### CBR
   cbr:
