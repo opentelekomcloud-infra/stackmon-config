@@ -344,16 +344,16 @@ components:
     region: EU-NL
     type: swr
   name: Software Repository for Containers
-- attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: tms
-  name: Tag Management Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: tms
-  name: Tag Management Service
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-DE
+#     type: tms
+#   name: Tag Management Service
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-NL
+#     type: tms
+#   name: Tag Management Service
 - attributes:
     category: Storage
     region: EU-DE
