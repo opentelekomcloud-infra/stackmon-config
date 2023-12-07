@@ -382,6 +382,21 @@ health_metrics:
       - expression: "waf.api_down"
         weight: 2
 
+  ### WAFD
+  wafd:
+    service: wafd
+    component_name: "Dedicated Web Application Firewall"
+    category: database
+    metrics:
+      - premium-waf.api_down
+      - premium-waf.api_slow
+      - premium-waf.api_success_rate_low
+    expressions:
+      - expression: "premium-waf.api_slow || premium-waf.api_success_rate_low"
+        weight: 1
+      - expression: "premium-waf.api_down"
+        weight: 2
+
   ## Management and Deployment
   ### CES
   ces:

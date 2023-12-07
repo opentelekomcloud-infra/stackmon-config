@@ -562,23 +562,23 @@ flag_metrics:
 ### VPN
 ### WAFD
 
-#  - name: "api_down"
-#    service: "wafd"
-#    template:
-#      name: "api_down"
-#    environments:
-#      - name: "hybrid_eu-ch2"
-#
-#  - name: "api_slow"
-#    service: "wafd"
-#    template:
-#      name: "api_slow"
-#    environments:
-#      - name: "hybrid_eu-ch2"
-#
-#  - name: "api_success_rate_low"
-#    service: "wafd"
-#    template:
-#      name: "api_success_rate_low"
-#    environments:
-#      - name: "hybrid_eu-ch2"
+  - name: "api_down"
+    service: "waf"
+    template:
+      name: "api_down"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+   service: "waf"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "waf"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "hybrid_eu-ch2"
