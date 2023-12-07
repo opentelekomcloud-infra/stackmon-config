@@ -150,6 +150,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - vbs
           - volume_skip_v2
           - volume
@@ -214,6 +215,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume
           - vpcep
@@ -282,6 +284,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - vbs
           - volume_skip_v2
           - volume
@@ -339,6 +342,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume
           - vpcep
@@ -377,6 +381,7 @@ matrix:
           - sdrs
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume_no_backups
           - vpcep
@@ -415,6 +420,7 @@ matrix:
           - sdrs
           - smn
           - smn_skip_v2
+          - swrv2
           - volume_skip_v2
           - volume_no_backups
           - vpcep

@@ -473,21 +473,21 @@ flag_metrics:
 
   ### SWR
   - name: "api_down"
-    service: "swr"
+    service: "swrv2"
     template:
       name: "api_down"
     environments:
       - name: "hybrid_eu-ch2"
 
   - name: "api_slow"
-    service: "swr"
+    service: "swrv2"
     template:
       name: "api_slow"
     environments:
       - name: "hybrid_eu-ch2"
 
   - name: "api_success_rate_low"
-    service: "swr"
+    service: "swrv2"
     template:
       name: "api_success_rate_low"
     environments:

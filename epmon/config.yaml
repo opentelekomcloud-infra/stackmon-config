@@ -362,6 +362,13 @@ elements:
       - /notifications/message_template
   smn_skip_v2:
     service_type: smnv2
+  swrv2:
+    service_type: swrv2
+    sdk_proxy: swrv2
+    urls:
+      - /manage/shared-repositories?center=self
+      - /manage/repos
+      - /manage/namespaces
   volume_skip_v2:
     service_type: volumev2
   volume:

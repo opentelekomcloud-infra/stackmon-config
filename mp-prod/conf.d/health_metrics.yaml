@@ -90,6 +90,20 @@ health_metrics:
         weight: 1
       - expression: "ccev2_0.api_down"
         weight: 2
+  ### SWR
+  swr:
+    service: swr
+    component_name: "Software Repository for Containers"
+    category: container
+    metrics:
+      - swrv2.api_down
+      - swrv2.api_slow
+      - swrv2.api_success_rate_low
+    expressions:
+      - expression: "swrv2.api_slow || swrv2.api_success_rate_low"
+        weight: 1
+      - expression: "swrv2.api_down"
+        weight: 2
 
   ## Storage
   ### EVS
