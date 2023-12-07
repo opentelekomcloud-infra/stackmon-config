@@ -63,6 +63,7 @@ elements:
     urls:
       - /metrics?limit=1
       - /alarms
+      - /quotas
   ces_skip_v1:
     service_type: cesv1
   compute:
