@@ -61,7 +61,7 @@ elements:
     service_type: ces
     sdk_proxy: ces
     urls:
-      - /metrics
+      - /metrics?limit=1
       - /alarms
   ces_skip_v1:
     service_type: cesv1
