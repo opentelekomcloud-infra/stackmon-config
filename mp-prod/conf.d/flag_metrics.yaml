@@ -995,8 +995,8 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-    ### SWR
-    - name: "api_down"
+  ### SWR
+  - name: "api_down"
     service: "swrv2"
     template:
       name: "api_down"
