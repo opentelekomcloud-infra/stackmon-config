@@ -157,6 +157,8 @@ matrix:
           - volume
           - vpcep
           - vpn
+          - waf
+          - wafd
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -222,6 +224,7 @@ matrix:
           - volume
           - vpcep
           - vpn
+          - waf
   - env: production_eu-de
     monitoring_zone: eu-nl
     # TODO: placing db_url here feels questionable
@@ -294,6 +297,8 @@ matrix:
           - volume
           - vpcep
           - vpn
+          - waf
+          - wafd
   - env: production_eu-nl
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -352,6 +357,7 @@ matrix:
           - volume
           - vpcep
           - vpn
+          - waf
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -392,6 +398,7 @@ matrix:
           - volume_no_backups
           - vpcep
           - vpn
+          - waf
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -432,6 +439,7 @@ matrix:
           - volume_no_backups
           - vpcep
           - vpn
+          - waf
 
 metrics_processor:
   - name: prod
