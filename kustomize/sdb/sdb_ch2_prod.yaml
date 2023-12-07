@@ -12,7 +12,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: status-ch2.otc-service.com
+  - host: status-ch.otc-service.com
     http:
       paths:
       - backend:
@@ -24,5 +24,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - status-ch2.otc-service.com
+    - status-ch.otc-service.com
     secretName: sdb-cert

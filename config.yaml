@@ -151,6 +151,7 @@ matrix:
           - smn
           - smn_skip_v2
           - swrv2
+          - vbs
           - volume_skip_v2
           - volume
           - vpcep
@@ -284,6 +285,7 @@ matrix:
           - smn
           - smn_skip_v2
           - swrv2
+          - vbs
           - volume_skip_v2
           - volume
           - vpcep
@@ -737,7 +739,7 @@ status_dashboard:
   - name: ch2-prod
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod-ch2
-    domain_name: status-ch2.otc-service.com
+    domain_name: status-ch.otc-service.com
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
