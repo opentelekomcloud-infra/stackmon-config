@@ -494,26 +494,26 @@ flag_metrics:
       - name: "hybrid_eu-ch2"
 
   ### TMS
-  - name: "api_down"
-    service: "tms"
-    template:
-      name: "api_down"
-    environments:
-      - name: "hybrid_eu-ch2"
+  # - name: "api_down"
+  #   service: "tms"
+  #   template:
+  #     name: "api_down"
+  #   environments:
+  #     - name: "hybrid_eu-ch2"
 
-  - name: "api_slow"
-    service: "tms"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "hybrid_eu-ch2"
+  # - name: "api_slow"
+  #   service: "tms"
+  #   template:
+  #     name: "api_slow"
+  #   environments:
+  #     - name: "hybrid_eu-ch2"
 
-  - name: "api_success_rate_low"
-    service: "tms"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "hybrid_eu-ch2"
+  # - name: "api_success_rate_low"
+  #   service: "tms"
+  #   template:
+  #     name: "api_success_rate_low"
+  #   environments:
+  #     - name: "hybrid_eu-ch2"
 
   ### VPC
   - name: "api_down"

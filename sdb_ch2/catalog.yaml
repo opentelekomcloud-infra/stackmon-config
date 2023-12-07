@@ -258,11 +258,11 @@ components:
     type: swr
   name: Software Repository for Containers
 
-- attributes:
-    category: Management & Deployment
-    region: EU-CH2
-    type: tms
-  name: Tag Management Service
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-CH2
+#     type: tms
+#   name: Tag Management Service
 
 # - attributes:
 #     category: Storage
