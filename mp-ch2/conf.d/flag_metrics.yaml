@@ -560,8 +560,7 @@ flag_metrics:
       - name: "hybrid_eu-ch2"
 
 ### VPN
-### WAFD
-
+  ### WAFD
   - name: "api_down"
     service: "waf"
     template:
