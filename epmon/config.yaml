@@ -428,7 +428,4 @@ elements:
       - /waf/policy
       - /waf/valuelist
       - /waf/certificate
-      - /waf/overviews/statistics
-      - /waf/overviews/qps/timeline
-      - /waf/overviews/bandwidth/timeline
-      - /waf/event
+      - /waf/event?recent=today
