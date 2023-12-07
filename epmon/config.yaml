@@ -386,7 +386,6 @@ elements:
     urls: []
   vbs:
     service_type: vbs
-    sdk_proxy: volume_backup
     urls:
       - /backups
       - /backuppolicy
