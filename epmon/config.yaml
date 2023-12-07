@@ -89,6 +89,7 @@ elements:
     urls:
       - /clusters
       - /css-cluster/tags
+      - /flavors
   cts_skip_unver:
     service_type: cts
     sdk_proxy: cts
