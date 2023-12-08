@@ -280,11 +280,6 @@ components:
     type: plas
   name: Private Link Access Service
 - attributes:
-    category: Network
-    region: EU-NL
-    type: plas
-  name: Private Link Access Service
-- attributes:
     category: Database
     region: EU-DE
     type: rds
