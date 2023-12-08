@@ -52,10 +52,10 @@ health_metrics:
     category: compute
     metrics:
       - deh.api_down
-      - deh.api_slow_600
+      - deh.api_slow
       - deh.api_success_rate_low
     expressions:
-      - expression: "deh.api_slow_600 || deh.api_success_rate_low"
+      - expression: "deh.api_slow || deh.api_success_rate_low"
         weight: 1
       - expression: "deh.api_down"
         weight: 2
