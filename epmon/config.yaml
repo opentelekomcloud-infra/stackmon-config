@@ -177,7 +177,6 @@ elements:
   dns_private_only:
     service_type: dns
     urls:
-      - /
       - /zones
       - /recordsets
   dws:
