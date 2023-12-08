@@ -124,7 +124,6 @@ elements:
     sdk_proxy: dcaas
     urls:
       - /dcaas/direct-connects
-      - /dcaas/virtual-interfaces
       - /dcaas/dc-endpoint-groups
       - /dcaas/virtual-gateways
   dcs:
