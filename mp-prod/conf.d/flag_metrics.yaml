@@ -58,10 +58,10 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
-  - name: "api_slow_1200"
+  - name: "api_slow"
     service: "bms"
     template:
-      name: "api_slow_1200"
+      name: "api_slow"
     environments:
       - name: "production_eu-de"
 
@@ -555,10 +555,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow_1200"
+  - name: "api_slow"
     service: "ecs"
     template:
-      name: "api_slow_1200"
+      name: "api_slow"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
