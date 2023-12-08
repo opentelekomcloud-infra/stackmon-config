@@ -22,10 +22,10 @@ health_metrics:
     category: compute
     metrics:
       - deh.api_down
-      - deh.api_slow_600
+      - deh.api_slow
       - deh.api_success_rate_low
     expressions:
-      - expression: "deh.api_slow_600 || deh.api_success_rate_low"
+      - expression: "deh.api_slow || deh.api_success_rate_low"
         weight: 1
       - expression: "deh.api_down"
         weight: 2
@@ -36,13 +36,13 @@ health_metrics:
     category: compute
     metrics:
       - ecs.api_down
-      - ecs.api_slow_1200
+      - ecs.api_slow
       - ecs.api_success_rate_low
       - compute.api_down
-      - compute.api_slow_600
+      - compute.api_slow
       - compute.api_success_rate_low
     expressions:
-      - expression: "ecs.api_slow_1200 || compute.api_slow_600 || ecs.api_success_rate_low || compute.api_success_rate_low"
+      - expression: "ecs.api_slow || compute.api_slow || ecs.api_success_rate_low || compute.api_success_rate_low"
         weight: 1
       - expression: "ecs.api_down || compute.api_down"
         weight: 2
@@ -53,10 +53,10 @@ health_metrics:
     category: compute
     metrics:
       - image.api_down
-      - image.api_slow_600
+      - image.api_slow
       - image.api_success_rate_low
     expressions:
-      - expression: "image.api_slow_600 || image.api_success_rate_low"
+      - expression: "image.api_slow || image.api_success_rate_low"
         weight: 1
       - expression: "image.api_down"
         weight: 2
@@ -67,10 +67,10 @@ health_metrics:
     category: compute
     metrics:
       - bms.api_down
-      - bms.api_slow_1200
+      - bms.api_slow
       - bms.api_success_rate_low
     expressions:
-      - expression: "bms.api_slow_1200 || bms.api_success_rate_low"
+      - expression: "bms.api_slow || bms.api_success_rate_low"
         weight: 1
       - expression: "bms.api_down"
         weight: 2
