@@ -376,10 +376,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow_600"
+  - name: "api_slow"
     service: "deh"
     template:
-      name: "api_slow_600"
+      name: "api_slow"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
@@ -531,10 +531,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow_600"
+  - name: "api_slow"
     service: "compute"
     template:
-      name: "api_slow_600"
+      name: "api_slow"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
@@ -703,10 +703,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow_600"
+  - name: "api_slow"
     service: "image"
     template:
-      name: "api_slow_600"
+      name: "api_slow"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
