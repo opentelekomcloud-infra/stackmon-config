@@ -110,8 +110,7 @@ elements:
   cts_v3:
     service_type: ctsv3
     sdk_proxy: ctsv3
-    urls:
-      - /notifications/smn
+    urls: []
   dataarts:
     service_type: dataarts
     sdk_proxy: dataarts
