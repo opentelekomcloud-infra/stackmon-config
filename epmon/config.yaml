@@ -107,6 +107,11 @@ elements:
     sdk_proxy: ctsv2
     urls:
       - /system/trace?limit=10
+  cts_v3:
+    service_type: ctsv3
+    sdk_proxy: ctsv3
+    urls:
+      - /notifications/smn
   cts_v3_swiss:
     service_type: ctsv3
     sdk_proxy: ctsv3
