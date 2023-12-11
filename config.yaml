@@ -111,7 +111,7 @@ matrix:
           - css
           - cts_v1
           - cts_v2
-          - cts_v3
+          - cts_v3_swiss
           - dataarts
           - database_skip
           - dcaas

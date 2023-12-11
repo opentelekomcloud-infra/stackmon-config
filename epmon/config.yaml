@@ -107,10 +107,12 @@ elements:
     sdk_proxy: ctsv2
     urls:
       - /system/trace?limit=10
-  cts_v3:
+  cts_v3_swiss:
     service_type: ctsv3
     sdk_proxy: ctsv3
-    urls: []
+    urls:
+      - /system/trace?limit=10
+      - /tracker?tracker_name=system
   dataarts:
     service_type: dataarts
     sdk_proxy: dataarts
