@@ -64,7 +64,7 @@ health_metrics:
         weight: 2
   ### IMS
   ims:
-    service: image
+    service: ims
     component_name: "Image Management Service"
     category: compute
     metrics:
