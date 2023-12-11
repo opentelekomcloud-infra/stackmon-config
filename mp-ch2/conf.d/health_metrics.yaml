@@ -168,7 +168,7 @@ health_metrics:
 
   ## Network
   ### DC
-  dc:
+  dcaas:
     service: dcaas
     component_name: "Direct Connect"
     category: network
@@ -285,7 +285,7 @@ health_metrics:
 
   ## SecurityServices
   ### IAM
-  identity:
+  iam:
     service: iam
     component_name: "Identity and Access Management"
     category: security-services
