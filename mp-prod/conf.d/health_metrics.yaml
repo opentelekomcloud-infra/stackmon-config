@@ -549,7 +549,7 @@ health_metrics:
         weight: 2
   ### DIS
   dis:
-    service: disv2
+    service: dis
     component_name: "Data Ingestion Service"
     category: management
     metrics:
