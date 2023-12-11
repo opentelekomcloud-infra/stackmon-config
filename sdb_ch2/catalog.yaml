@@ -159,7 +159,7 @@ components:
 - attributes:
     category: Compute
     region: EU-CH2
-    type: ims
+    type: image
   name: Image Management Service
 
 - attributes:
