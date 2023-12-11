@@ -92,7 +92,7 @@ components:
 - attributes:
     category: Network
     region: EU-NL
-    type: dc
+    type: dcaas
   name: Direct Connect
 - attributes:
     category: Database
@@ -212,12 +212,12 @@ components:
 - attributes:
     category: Compute
     region: EU-DE
-    type: ims
+    type: image
   name: Image Management Service
 - attributes:
     category: Compute
     region: EU-NL
-    type: ims
+    type: image
   name: Image Management Service
 - attributes:
     category: Security Services
@@ -242,7 +242,7 @@ components:
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
-    type: ma
+    type: modelarts
   name: ModelArts
 - attributes:
     category: Big Data and Data Analysis
