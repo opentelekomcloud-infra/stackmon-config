@@ -1,28 +1,6 @@
 ---
 flag_metrics:
 
-  ### AOM
-  - name: "api_down"
-    service: "aom"
-    template:
-      name: "api_down"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_slow"
-    service: "aom"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "hybrid_eu-ch2"
-
-  - name: "api_success_rate_low"
-    service: "aom"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "hybrid_eu-ch2"
-
   ### AutoScaling
   - name: "api_down"
     service: "as"
