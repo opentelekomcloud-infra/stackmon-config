@@ -63,7 +63,7 @@ components:
 - attributes:
     category: Network
     region: EU-CH2
-    type: dc
+    type: dcaas
   name: Direct Connect
 
 # - attributes:
