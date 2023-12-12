@@ -1,20 +1,6 @@
 ---
 health_metrics:
   ## Application Services
-  ### AOM
-  aom:
-    service: aom
-    component_name: "Application Operations Management"
-    category: application
-    metrics:
-      - aom.api_down
-      - aom.api_slow
-      - aom.api_success_rate_low
-    expressions:
-      - expression: "aom.api_slow || aom.api_success_rate_low"
-        weight: 1
-      - expression: "aom.api_down"
-        weight: 2
   ### SMN
   smn:
     service: smn
@@ -182,7 +168,7 @@ health_metrics:
 
   ## Network
   ### DC
-  dc:
+  dcaas:
     service: dcaas
     component_name: "Direct Connect"
     category: network
@@ -299,8 +285,8 @@ health_metrics:
 
   ## SecurityServices
   ### IAM
-  identity:
-    service: identity
+  iam:
+    service: iam
     component_name: "Identity and Access Management"
     category: security-services
     metrics:

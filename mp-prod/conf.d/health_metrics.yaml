@@ -476,7 +476,7 @@ health_metrics:
       - expression: "cts.api_down || ctsv2.api_down || ctsv3.api_down"
         weight: 2
   ### IAM
-  identity:
+  iam:
     service: iam
     component_name: "Identity and Access Management"
     category: management
@@ -549,7 +549,7 @@ health_metrics:
         weight: 2
   ### DIS
   dis:
-    service: disv2
+    service: dis
     component_name: "Data Ingestion Service"
     category: management
     metrics:
