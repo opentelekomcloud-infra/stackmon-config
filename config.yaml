@@ -151,6 +151,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swift
           - swrv2
           - vbs
           - volume_skip_v2
@@ -159,6 +160,8 @@ matrix:
           - vpn
           - waf
           - wafd
+          - wks
+          - workspace
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -201,6 +204,7 @@ matrix:
           - ecs
           - eipv2.0
           - elb_skip
+          - elbv1_skip
           - elbv3
           - identity
           - image
@@ -291,6 +295,7 @@ matrix:
           - sfsturbo
           - smn
           - smn_skip_v2
+          - swift
           - swrv2
           - vbs
           - volume_skip_v2
@@ -299,6 +304,8 @@ matrix:
           - vpn
           - waf
           - wafd
+          - wks
+          - workspace
   - env: production_eu-nl
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -334,6 +341,7 @@ matrix:
           - ecs
           - eipv2.0
           - elb_skip
+          - elbv1_skip
           - elbv3
           - identity
           - image
