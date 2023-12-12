@@ -375,7 +375,7 @@ matrix:
           - compute
           - cts_skip_unver
           - cts_skip_v2
-          - cts_v3
+          - cts_v3_swiss
           - dcaas
           - deh
           - dns_private_only
@@ -416,7 +416,7 @@ matrix:
           - compute
           - cts_skip_unver
           - cts_skip_v2
-          - cts_v3
+          - cts_v3_swiss
           - dcaas
           - deh
           - dns_private_only
