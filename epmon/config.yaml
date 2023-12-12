@@ -116,8 +116,8 @@ elements:
     service_type: ctsv3
     sdk_proxy: ctsv3
     urls:
-      - /system/trace?limit=10
-      - /tracker?tracker_name=system
+      - /trackers
+      - /traces
   dataarts:
     service_type: dataarts
     sdk_proxy: dataarts
