@@ -209,6 +209,9 @@ elements:
     service_type: elb
     sdk_proxy: elb
     urls: []
+  elbv1_skip:
+    service_type: elbv1
+    urls: []
   elb:
     service_type: elb
     sdk_proxy: elb
@@ -445,3 +448,12 @@ elements:
       - /waf/valuelist
       - /waf/certificate
       - /waf/event?recent=today
+  workspace:
+    service_type: workspace
+    urls: []
+  wks:
+    service_type: wks
+    urls: []
+  swift:
+    service_type: object-store
+    urls: []
