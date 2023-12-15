@@ -495,13 +495,13 @@ health_metrics:
     component_name: "Log Tank Service"
     category: management
     metrics:
-      - lts.api_slow
-      - lts.api_down
-      - lts.api_success_rate_low
+      - ltsv2.api_slow
+      - ltsv2.api_down
+      - ltsv2.api_success_rate_low
     expressions:
-      - expression: "lts.api_slow || lts.api_success_rate_low"
+      - expression: "ltsv2.api_slow || ltsv2.api_success_rate_low"
         weight: 1
-      - expression: "lts.api_down"
+      - expression: "ltsv2.api_down"
         weight: 2
   ### RTS
   rts:

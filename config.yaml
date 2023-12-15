@@ -135,6 +135,7 @@ matrix:
           - image
           - kms_skip_unver
           - kms
+          - ltsv2
           - modelarts
           - modelartsv2
           - mrs
@@ -279,6 +280,7 @@ matrix:
           - image
           - kms_skip_unver
           - kms
+          - ltsv2
           - modelarts
           - modelartsv2
           - mrs
