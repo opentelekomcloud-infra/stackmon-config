@@ -770,7 +770,6 @@ flag_metrics:
       name: "api_down"
     environments:
       - name: "production_eu-de"
-      - name: "production_eu-nl"
 
   - name: "api_slow"
     service: "modelartsv1"
@@ -778,7 +777,6 @@ flag_metrics:
       name: "api_slow"
     environments:
       - name: "production_eu-de"
-      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
     service: "modelartsv1"
@@ -786,7 +784,6 @@ flag_metrics:
       name: "api_success_rate_low"
     environments:
       - name: "production_eu-de"
-      - name: "production_eu-nl"
 
   - name: "api_down"
     service: "modelartsv2"
