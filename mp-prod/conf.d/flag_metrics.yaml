@@ -781,7 +781,7 @@ flag_metrics:
   - name: "api_success_rate_low"
     service: "modelartsv1"
     template:
-      name: "api_success_rate_low"
+      name: "api_success_rate_low_2min"
     environments:
       - name: "production_eu-de"
 
@@ -804,7 +804,7 @@ flag_metrics:
   - name: "api_success_rate_low"
     service: "modelartsv2"
     template:
-      name: "api_success_rate_low"
+      name: "api_success_rate_low_2min"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
