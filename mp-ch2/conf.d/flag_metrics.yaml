@@ -511,7 +511,7 @@ flag_metrics:
   - name: "api_success_rate_low"
     service: "network"
     template:
-      name: "api_success_rate_low"
+      name: "api_success_rate_low_2min"
     environments:
       - name: "hybrid_eu-ch2"
 
