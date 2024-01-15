@@ -463,7 +463,7 @@ metrics_processor:
       - name: "production_eu-nl"
         attributes:
           region: "EU-NL"
-    status_dashboard_instance_name: "prod"
+    status_dashboard_instance_name: "prod-de"
     kustomization:
       extra_files:
         - mp-prod/conf.d/flag_metrics.yaml
