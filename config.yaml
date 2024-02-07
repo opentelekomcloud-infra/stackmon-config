@@ -123,7 +123,7 @@ matrix:
           - dis
           - dli
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - dws
           - dws_skip_v1
@@ -200,7 +200,7 @@ matrix:
           - dds
           - deh
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - ecs
           - eipv2.0
@@ -268,7 +268,7 @@ matrix:
           - dis
           - dli
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - dws
           - dws_skip_v1
@@ -338,7 +338,7 @@ matrix:
           - dds
           - deh
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - ecs
           - eipv2.0
