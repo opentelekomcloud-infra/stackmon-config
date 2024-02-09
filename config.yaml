@@ -638,7 +638,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_34_latest"
+          newTag: "change_35_latest"
 
       patchesStrategicMerge:
         - |-
