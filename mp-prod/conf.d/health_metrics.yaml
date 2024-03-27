@@ -633,10 +633,13 @@ health_metrics:
       - dms.api_slow
       - dms.api_down
       - dms.api_success_rate_low
+      - dmsv2.api_slow
+      - dmsv2.api_down
+      - dmsv2.api_success_rate_low
     expressions:
-      - expression: "dms.api_slow || dms.api_success_rate_low"
+      - expression: "dms.api_slow || dms.api_success_rate_low || dmsv2.api_slow || dmsv2.api_success_rate_low"
         weight: 1
-      - expression: "dms.api_down"
+      - expression: "dms.api_down || dmsv2.api_down"
         weight: 2
   ### SMN
   smn:

@@ -171,8 +171,12 @@ elements:
       - /queues
       - /quotas/dms
       - /queue/tags
-  dms_skip_v2:
+  dmsv2:
     service_type: dmsv2
+    sdk_proxy: dmsv2
+    urls:
+      - /instances
+      - /products
   dns:
     service_type: dns
     urls:
