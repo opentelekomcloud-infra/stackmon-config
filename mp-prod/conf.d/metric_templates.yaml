@@ -3,7 +3,7 @@ metric_templates:
   api_success_rate_low:
     query: "smartSummarize(asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.{2*,3*,404}.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count)), '3min', 'average')"
     op: "lt"
-    threshold: 75
+    threshold: 65
   api_success_rate_low_2min:
     query: "smartSummarize(asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.{2*,3*,404}.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count)), '2min', 'average')"
     op: "lt"
