@@ -12,6 +12,10 @@ metric_templates:
     query: "asPercent(smartSummarize(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.failed.count), '1min', 'average', '1min'), smartSummarize(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count), '1min', 'average', '1min'))"
     op: "eq"
     threshold: 100
+  api_down_3min:
+    query: "asPercent(smartSummarize(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.failed.count), '3min', 'average'), smartSummarize(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count), '3min', 'average'))"
+    op: "eq"
+    threshold: 100
   api_connect_failures_above_10pct:
     query: "asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.failed.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count))"
     op: "gt"
