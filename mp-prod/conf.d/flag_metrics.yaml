@@ -126,7 +126,7 @@ flag_metrics:
   - name: "api_down"
     service: "ces"
     template:
-      name: "api_down"
+      name: "api_down_3min"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
