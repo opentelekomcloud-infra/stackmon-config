@@ -123,7 +123,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### CES
-  - name: "api_down"
+  - name: "api_down_3min"
     service: "ces"
     template:
       name: "api_down_3min"
