@@ -448,12 +448,12 @@ health_metrics:
     category: management
     metrics:
       - ces.api_slow
-      - ces.api_down
+      - ces.api_down_3min
       - ces.api_success_rate_low
     expressions:
       - expression: "ces.api_slow || ces.api_success_rate_low"
         weight: 1
-      - expression: "ces.api_down"
+      - expression: "ces.api_down_3min"
         weight: 2
   ### CTS
   cts:
