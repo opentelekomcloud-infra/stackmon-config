@@ -176,7 +176,6 @@ elements:
     sdk_proxy: dmsv2
     urls:
       - /instances
-      - /products
   dns:
     service_type: dns
     urls:
