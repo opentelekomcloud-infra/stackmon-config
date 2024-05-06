@@ -176,7 +176,7 @@ elements:
     sdk_proxy: dmsv2
     urls:
       - /instances
-      - /products
+      - /products?engine=kafka
   dns:
     service_type: dns
     urls:
