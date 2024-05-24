@@ -290,16 +290,6 @@ components:
     type: rds
   name: Relational Database Service
 - attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: rts
-  name: Resource Template Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: rts
-  name: Resource Template Service
-- attributes:
     category: Storage
     region: EU-DE
     type: sdrs
