@@ -503,20 +503,6 @@ health_metrics:
         weight: 1
       - expression: "ltsv2.api_down"
         weight: 2
-  ### RTS
-  rts:
-    service: rts
-    component_name: "Resource Template Service"
-    category: management
-    metrics:
-      - orchestration.api_slow
-      - orchestration.api_down
-      - orchestration.api_success_rate_low
-    expressions:
-      - expression: "orchestration.api_slow || orchestration.api_success_rate_low"
-        weight: 1
-      - expression: "orchestration.api_down"
-        weight: 2
 
   ## BigData
   ### CSS
