@@ -143,7 +143,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - plas
           - rds_skip_unver
           - rds_skip_v1
@@ -216,7 +216,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -288,7 +288,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - plas
           - rds_skip_unver
           - rds_skip_v1
@@ -354,7 +354,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - rds_skip_unver
           - rds_skip_v1
           - rds
