@@ -319,11 +319,7 @@ elements:
       - /info
   orchestration:
     service_type: orchestration
-    urls:
-      - /stacks
-      - /build_info
-      - /software_configs
-      - /resource_types
+    urls: []
   plas:
     service_type: plas
     sdk_proxy: plas
