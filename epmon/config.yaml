@@ -317,7 +317,7 @@ elements:
     urls:
       - /
       - /info
-  orchestration:
+  orchestration_skip:
     service_type: orchestration
     urls: []
   plas:
