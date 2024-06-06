@@ -243,9 +243,11 @@ elements:
       - /elb/system-security-policies
       - /elb/ipgroups
   enterprise-dashboard:
+    service_type: enterprise-dashboard
     urls:
       - /api/health
   enterprise-dashboard-v1:
+    service_type: enterprise-dashboard-v1
     urls:
       - /v1/consumption/health
   dws_skip_v1:
