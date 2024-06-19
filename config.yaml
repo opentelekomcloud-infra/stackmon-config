@@ -584,7 +584,7 @@ plugins:
         grafana_dashboards_location: dashboards
   - name: epmon
     type: epmon
-    image: quay.io/stackmon/apimon:change_53_latest
+    image: quay.io/stackmon/apimon:change_54_latest
     config: epmon/config.yaml
   - name: lb
     type: general
@@ -604,7 +604,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_43_latest"
+          newTag: "change_44_latest"
 
       patchesStrategicMerge:
         - |-
@@ -638,7 +638,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_43_latest"
+          newTag: "change_44_latest"
 
       patchesStrategicMerge:
         - |-
@@ -672,7 +672,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_43_latest"
+          newTag: "change_44_latest"
 
       patchesStrategicMerge:
         - |-
@@ -706,7 +706,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_43_latest"
+          newTag: "change_44_latest"
 
       patchesStrategicMerge:
         - |-
@@ -740,7 +740,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_43_latest"
+          newTag: "change_44_latest"
 
       patchesStrategicMerge:
         - |-
