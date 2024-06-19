@@ -120,10 +120,10 @@ health_metrics:
         weight: 1
       - expression: "block-storage.api_down"
         weight: 2
-  ### SFS Turbo
+  ### Scalable File Service
   sfs:
     service: sfs
-    component_name: "SFS Turbo"
+    component_name: "Scalable File Service"
     category: storage
     metrics:
       - sfsturbo.api_down

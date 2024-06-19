@@ -303,12 +303,12 @@ components:
     category: Storage
     region: EU-DE
     type: sfs
-  name: SFS Turbo
+  name: Scalable File Service
 - attributes:
     category: Storage
     region: EU-NL
     type: sfs
-  name: SFS Turbo
+  name: Scalable File Service
 - attributes:
     category: Application Services
     region: EU-DE
