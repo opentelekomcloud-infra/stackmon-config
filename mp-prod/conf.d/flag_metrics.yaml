@@ -663,6 +663,50 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### EnterpriseDashboard
+  - name: "api_down"
+    service: "enterprise-dashboard"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "enterprise-dashboard"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "enterprise-dashboard"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
+  ### EnterpriseDashboard-v1
+  - name: "api_down"
+    service: "enterprise-dashboard-v1"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "enterprise-dashboard-v1"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "enterprise-dashboard-v1"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### EVS
   - name: "api_down"
     service: "block-storage"

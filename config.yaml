@@ -131,6 +131,8 @@ matrix:
           - eipv2.0
           - elb
           - elbv3
+          - enterprise-dashboard
+          - enterprise-dashboard-v1
           - identity
           - image
           - kms_skip_unver
@@ -276,6 +278,8 @@ matrix:
           - eipv2.0
           - elb
           - elbv3
+          - enterprise-dashboard
+          - enterprise-dashboard-v1
           - identity
           - image
           - kms_skip_unver
