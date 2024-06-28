@@ -608,7 +608,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_44_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -642,7 +642,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_44_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -676,7 +676,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_44_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -710,7 +710,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_44_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -744,7 +744,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_44_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -778,7 +778,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_43_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
