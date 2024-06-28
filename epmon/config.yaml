@@ -248,7 +248,7 @@ elements:
       - /api/health
   enterprise-dashboard-v1:
     service_type: enterprise-dashboard-v1
-    sdk_proxy: enterprise_dashboard_v1
+    sdk_proxy: enterprise-dashboard-v1
     urls:
       - /v1/consumption/health
   dws_skip_v1:
