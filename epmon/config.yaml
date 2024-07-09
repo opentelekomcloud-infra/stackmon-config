@@ -16,6 +16,16 @@ elements:
   antiddos_skip_bad_type:
     service_type: AntiDDoS
     urls: []
+  aomv1:
+    service_type: aomv1
+    sdk_proxy: aomv1
+    urls:
+      - /inv/servicediscoveryrules
+  aomv2:
+    service_type: aomv2
+    sdk_proxy: aomv2
+    urls:
+      - /alarm-rules
   as:
     service_type: as
     sdk_proxy: auto_scaling
