@@ -475,6 +475,23 @@ health_metrics:
         weight: 1
       - expression: "cts.api_down || ctsv2.api_down || ctsv3.api_down"
         weight: 2
+  ### Enterprise-Dashboard
+  enterprise-dashboard:
+    service: enterprise-dashboard
+    component_name: "Enterprise Dashboard"
+    category: management
+    metrics:
+      - enterprise-dashboard.api_slow
+      - enterprise-dashboard.api_down
+      - enterprise-dashboard.api_success_rate_low
+      - enterprise-dashboard-v1.api_slow
+      - enterprise-dashboard-v1.api_down
+      - enterprise-dashboard-v1.api_success_rate_low
+    expressions:
+      - expression: "enterprise-dashboard.api_slow || enterprise-dashboard.api_success_rate_low || enterprise-dashboard-v1.api_slow || enterprise-dashboard-v1.api_success_rate_low"
+        weight: 1
+      - expression: "enterprise-dashboard.api_down || enterprise-dashboard-v1.api_down"
+        weight: 2
   ### IAM
   iam:
     service: iam
