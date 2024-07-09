@@ -249,7 +249,7 @@ elements:
   enterprise-dashboard-v1:
     service_type: enterprise-dashboard-v1
     urls:
-      - /v1/consumption/health
+      - /consumption/health
   dws_skip_v1:
     service_type: dwsv1
   identity:
