@@ -200,6 +200,11 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: enterprise-dashboard
+  name: Enterprise Dashboard
+- attributes:
     category: Security Services
     region: EU-DE
     type: iam
@@ -290,16 +295,6 @@ components:
     type: rds
   name: Relational Database Service
 - attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: rts
-  name: Resource Template Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: rts
-  name: Resource Template Service
-- attributes:
     category: Storage
     region: EU-DE
     type: sdrs
@@ -313,12 +308,12 @@ components:
     category: Storage
     region: EU-DE
     type: sfs
-  name: SFS Turbo
+  name: Scalable File Service
 - attributes:
     category: Storage
     region: EU-NL
     type: sfs
-  name: SFS Turbo
+  name: Scalable File Service
 - attributes:
     category: Application Services
     region: EU-DE

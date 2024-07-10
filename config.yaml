@@ -123,7 +123,7 @@ matrix:
           - dis
           - dli
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - dws
           - dws_skip_v1
@@ -131,6 +131,8 @@ matrix:
           - eipv2.0
           - elb
           - elbv3
+          - enterprise-dashboard
+          - enterprise-dashboard-v1
           - identity
           - image
           - kms_skip_unver
@@ -143,7 +145,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - plas
           - rds_skip_unver
           - rds_skip_v1
@@ -200,7 +202,7 @@ matrix:
           - dds
           - deh
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - ecs
           - eipv2.0
@@ -216,7 +218,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -268,7 +270,7 @@ matrix:
           - dis
           - dli
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - dws
           - dws_skip_v1
@@ -276,6 +278,8 @@ matrix:
           - eipv2.0
           - elb
           - elbv3
+          - enterprise-dashboard
+          - enterprise-dashboard-v1
           - identity
           - image
           - kms_skip_unver
@@ -288,7 +292,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - plas
           - rds_skip_unver
           - rds_skip_v1
@@ -338,7 +342,7 @@ matrix:
           - dds
           - deh
           - dms
-          - dms_skip_v2
+          - dmsv2
           - dns
           - ecs
           - eipv2.0
@@ -354,7 +358,7 @@ matrix:
           - network
           - object_skip
           - object_store
-          - orchestration
+          - orchestration_skip
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -463,7 +467,7 @@ metrics_processor:
       - name: "production_eu-nl"
         attributes:
           region: "EU-NL"
-    status_dashboard_instance_name: "prod"
+    status_dashboard_instance_name: "prod-de"
     kustomization:
       extra_files:
         - mp-prod/conf.d/flag_metrics.yaml
@@ -480,7 +484,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_15_latest"
+          newTag: "change_18_latest"
 
       patches:
         - patch: |-
@@ -531,7 +535,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_15_latest"
+          newTag: "change_18_latest"
 
       patches:
         - patch: |-
@@ -584,7 +588,7 @@ plugins:
         grafana_dashboards_location: dashboards
   - name: epmon
     type: epmon
-    image: quay.io/stackmon/apimon:change_49_latest
+    image: quay.io/stackmon/apimon:change_54_latest
     config: epmon/config.yaml
   - name: lb
     type: general
@@ -604,7 +608,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_31_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -638,7 +642,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_31_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -672,7 +676,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_31_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -706,7 +710,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_31_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -740,7 +744,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_31_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-
@@ -774,7 +778,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_31_latest"
+          newTag: "change_45_latest"
 
       patchesStrategicMerge:
         - |-

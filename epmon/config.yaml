@@ -181,8 +181,11 @@ elements:
       - /queues
       - /quotas/dms
       - /queue/tags
-  dms_skip_v2:
+  dmsv2:
     service_type: dmsv2
+    sdk_proxy: dmsv2
+    urls:
+      - /instances
   dns:
     service_type: dns
     urls:
@@ -249,6 +252,14 @@ elements:
       - /elb/security-policies
       - /elb/system-security-policies
       - /elb/ipgroups
+  enterprise-dashboard:
+    service_type: enterprise-dashboard
+    urls:
+      - /api/health
+  enterprise-dashboard-v1:
+    service_type: enterprise-dashboard-v1
+    urls:
+      - /consumption/health
   dws_skip_v1:
     service_type: dwsv1
   identity:
@@ -324,13 +335,9 @@ elements:
     urls:
       - /
       - /info
-  orchestration:
+  orchestration_skip:
     service_type: orchestration
-    urls:
-      - /stacks
-      - /build_info
-      - /software_configs
-      - /resource_types
+    urls: []
   plas:
     service_type: plas
     sdk_proxy: plas

@@ -1,15 +1,15 @@
 ---
 metric_templates:
   api_success_rate_low:
-    query: "smartSummarize(asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.{2*,3*,404}.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count)), '1min', 'average', '1min')"
+    query: "smartSummarize(asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.{2*,3*,404}.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count)), '3min', 'average')"
     op: "lt"
-    threshold: 90
+    threshold: 65
   api_success_rate_low_2min:
     query: "smartSummarize(asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.{2*,3*,404}.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count)), '2min', 'average')"
     op: "lt"
-    threshold: 90
+    threshold: 75
   api_down:
-    query: "asPercent(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.failed.count), sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count))"
+    query: "asPercent(smartSummarize(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.failed.count), '1min', 'average', '1min'), smartSummarize(sumSeries(stats.counters.openstack.api.$environment.*.$service.*.*.attempted.count), '1min', 'average', '1min'))"
     op: "eq"
     threshold: 100
   api_connect_failures_above_10pct:
@@ -21,15 +21,15 @@ metric_templates:
     op: "gt"
     threshold: 0
   api_slow:
-    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '2min', 'average', '2min')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
     threshold: 1200
   api_slow_600:
-    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '2min', 'average', '2min')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
     threshold: 600
   api_slow_1200:
-    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '2min', 'average', '2min')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
     threshold: 1200
   api_failed:
