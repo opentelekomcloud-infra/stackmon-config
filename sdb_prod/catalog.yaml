@@ -38,12 +38,12 @@ components:
     category: Container
     region: EU-DE
     type: cce
-  name: Cloud Container Service
+  name: Cloud Container Engine
 - attributes:
     category: Container
     region: EU-NL
     type: cce
-  name: Cloud Container Service
+  name: Cloud Container Engine
 - attributes:
     category: Management & Deployment
     region: EU-DE

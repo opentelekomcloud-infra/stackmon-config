@@ -80,7 +80,7 @@ health_metrics:
   ### CCE
   cce:
     service: cce
-    component_name: "Cloud Container Service"
+    component_name: "Cloud Container Engine"
     category: container
     metrics:
       - ccev2_0.api_down
