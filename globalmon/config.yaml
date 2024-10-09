@@ -1,0 +1,9 @@
+# This is a sample configuration file
+services:
+  telekom:
+    urls:
+      - "https://yam-united.telekom.com"
+  console:
+    urls:
+      - "https://console.otc.t-systems.com"
+      - "https://auth.otc.t-systems.com/authui/login.action#/login"
