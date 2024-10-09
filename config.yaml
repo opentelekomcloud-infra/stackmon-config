@@ -33,13 +33,13 @@ environments:
       - name: eu-de
         clouds:
           - name: production_eu-de
-            ref: probes-de1 # we want to monitor DE from DE
+            ref: probes-de1 #  we want to monitor DE from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: production_eu-de
-            ref: probes-de2 # we want to monitor DE from NL
+            ref: probes-de2 #  we want to monitor DE from NL
           - name: swift
             ref: swift1
   - name: production_eu-nl
@@ -49,13 +49,13 @@ environments:
       - name: eu-de
         clouds:
           - name: production_eu-nl
-            ref: probes-nl1 # we want to monitor NL from DE
+            ref: probes-nl1 #  we want to monitor NL from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: production_eu-nl
-            ref: probes-nl2 # we want to monitor NL from NL
+            ref: probes-nl2 #  we want to monitor NL from NL
           - name: swift
             ref: swift1
   - name: hybrid_eu-ch2
@@ -65,13 +65,13 @@ environments:
       - name: eu-de
         clouds:
           - name: hybrid_eu-ch2
-            ref: probes-ch2-from-de # we want to monitor CH2 from DE
+            ref: probes-ch2-from-de #  we want to monitor CH2 from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: hybrid_eu-ch2
-            ref: probes-ch2-from-nl # we want to monitor CH2 from NL
+            ref: probes-ch2-from-nl #  we want to monitor CH2 from NL
           - name: swift
             ref: swift1
 
@@ -564,7 +564,7 @@ metrics_processor:
             name: metrics-processor
             version: v1
 
-monitoring_zones: # Defining from where we are monitoring
+monitoring_zones: #  Defining from where we are monitoring
   - name: eu-de
     graphite_group_name: graphite_eu_de
     statsd_group_name: statsd_eu_de
