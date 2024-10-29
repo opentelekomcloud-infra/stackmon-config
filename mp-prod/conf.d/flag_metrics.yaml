@@ -1266,3 +1266,24 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
+  ### OTC Console
+  - name: "api_down"
+    service: "console"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "console"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "console"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"

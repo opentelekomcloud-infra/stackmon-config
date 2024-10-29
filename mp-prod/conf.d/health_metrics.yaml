@@ -658,3 +658,18 @@ health_metrics:
         weight: 1
       - expression: "smn.api_down"
         weight: 2
+  ## Global Services
+  ### Console
+  console:
+    service: console
+    component_name: "Open Telekom Cloud Console"
+    category: global
+    metrics:
+      - console.api_slow
+      - console.api_down
+      - console.api_success_rate_low
+    expressions:
+      - expression: "console.api_slow || console.api_success_rate_low"
+        weight: 1
+      - expression: "console.api_down"
+        weight: 2
