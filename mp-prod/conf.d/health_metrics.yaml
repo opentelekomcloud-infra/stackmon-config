@@ -658,3 +658,60 @@ health_metrics:
         weight: 1
       - expression: "smn.api_down"
         weight: 2
+  ## Global Services
+  ### Console
+  console:
+    service: console
+    component_name: "Open Telekom Cloud Console"
+    category: global
+    metrics:
+      - console.api_slow
+      - console.api_down
+      - console.api_success_rate_low
+    expressions:
+      - expression: "console.api_slow || console.api_success_rate_low"
+        weight: 1
+      - expression: "console.api_down"
+        weight: 2
+  ### Open Telekom Cloud
+  otc:
+    service: otc
+    component_name: "Open Telekom Cloud"
+    category: global
+    metrics:
+      - otc.api_slow
+      - otc.api_down
+      - otc.api_success_rate_low
+    expressions:
+      - expression: "otc.api_slow || otc.api_success_rate_low"
+        weight: 1
+      - expression: "otc.api_down"
+        weight: 2
+  ### HelpCenter
+  helpcenter:
+    service: helpcenter
+    component_name: "HelpCenter"
+    category: global
+    metrics:
+      - helpcenter.api_slow
+      - helpcenter.api_down
+      - helpcenter.api_success_rate_low
+    expressions:
+      - expression: "helpcenter.api_slow || helpcenter.api_success_rate_low"
+        weight: 1
+      - expression: "helpcenter.api_down"
+        weight: 2
+  ### Community
+  community:
+    service: community
+    component_name: "Open Telekom Cloud Community"
+    category: global
+    metrics:
+      - community.api_slow
+      - community.api_down
+      - community.api_success_rate_low
+    expressions:
+      - expression: "community.api_slow || community.api_success_rate_low"
+        weight: 1
+      - expression: "community.api_down"
+        weight: 2

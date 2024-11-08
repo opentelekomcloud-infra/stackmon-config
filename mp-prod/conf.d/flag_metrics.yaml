@@ -1266,3 +1266,87 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
+  ### OTC Console
+  - name: "api_down"
+    service: "console"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "console"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "console"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
+  ### Open Telekom Cloud
+  - name: "api_down"
+    service: "otc"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "otc"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "otc"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
+  ### HelCenter
+  - name: "api_down"
+    service: "helpcenter"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "helpcenter"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "helpcenter"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
+  ### Community
+  - name: "api_down"
+    service: "community"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "community"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "community"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
