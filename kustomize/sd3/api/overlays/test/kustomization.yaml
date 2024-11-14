@@ -12,6 +12,6 @@ images:
     newTag: sha-7e6eddc
 
 configMapGenerator:
-  - name: sd3-api-env
+  - name: sd3-vault-config
     files:
       - vault-agent.hcl

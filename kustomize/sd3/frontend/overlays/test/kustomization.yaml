@@ -7,3 +7,8 @@ images:
   - name: sd3-frontend
     newName: quay.io/stackmon/status-dashboard-v3-front
     newTag: sha-07c30bd
+
+configMapGenerator:
+  - name: sd3-front-vault-config
+    files:
+      - vault-agent.hcl
