@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: sd3-api-test
+
+resources:
+  - ../../base
+
+images:
+  - name: sd3-api
+    newName: quay.io/stackmon/status-dashboard-v3
+    newTag: sha-7e6eddc
+
+configMapGenerator:
+  - name: sd3-api-env
+    files:
+      - vault-agent.hcl

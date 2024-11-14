@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sd3-api
+  labels:
+    app: sd3-api
+spec:
+  serviceAccountName: sd3-api
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sd3-api
+  template:
+    metadata:
+      labels:
+        app: sd3-api
+    spec:
+      containers:
+      - name: sd3-api
+        image: sd3-api
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
