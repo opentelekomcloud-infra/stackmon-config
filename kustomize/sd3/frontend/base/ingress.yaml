@@ -5,8 +5,8 @@ metadata:
   labels:
     app: sd3-frontend
   annotations:
-      cert-manager.io/cluster-issuer: "letsencrypt-prod"
-      nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: sd3-frontend.example.com
