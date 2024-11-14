@@ -4,6 +4,8 @@ metadata:
   name: sd3-api
   labels:
     app: sd3-api
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   rules:
   - http:
