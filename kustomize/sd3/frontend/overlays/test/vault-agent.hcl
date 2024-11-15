@@ -2,7 +2,7 @@ pid_file = "/home/vault/pidfile"
 
 auto_auth {
     method "kubernetes" {
-        mount_path = "auth/kubernetes_otc_sd"
+        mount_path = "auth/kubernetes_otcinfra2"
         config = {
             role = "sd3"
             token_path = "/var/run/secrets/tokens/vault-token"
@@ -18,7 +18,7 @@ auto_auth {
 template {
   destination = "/secrets/sd3-api-env"
   contents = <<EOT
-{{ with secret "secret/data/sd3-test" -}}
+{{ with secret "secret/data/statusdashboard/sd3-test" -}}
 export SD_BACKEND_URL=""
 export SD_BACKEND_API=""
 export SD_BACKEND_V2=false

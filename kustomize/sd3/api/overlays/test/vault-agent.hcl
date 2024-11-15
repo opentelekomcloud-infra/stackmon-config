@@ -2,7 +2,7 @@ pid_file = "/home/vault/pidfile"
 
 auto_auth {
     method "kubernetes" {
-        mount_path = "auth/kubernetes_otc_sd"
+        mount_path = "auth/kubernetes_otcinfra2"
         config = {
             role = "sd3"
             token_path = "/var/run/secrets/tokens/vault-token"
