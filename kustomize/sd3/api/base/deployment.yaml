@@ -51,8 +51,8 @@ spec:
         image: "hashicorp/vault"
         resources:
           limits:
-            cpu: "100m"
-            memory: "100Mi"
+            cpu: "300m"
+            memory: "300Mi"
           requests:
             cpu: "50m"
             memory: "50Mi"
