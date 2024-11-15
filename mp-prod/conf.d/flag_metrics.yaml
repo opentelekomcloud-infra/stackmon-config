@@ -682,6 +682,31 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
+  ### Enterprise Router
+  - name: "api_down"
+    service: "er"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "er"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "er"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
   ### EVS
   - name: "api_down"
     service: "block-storage"
