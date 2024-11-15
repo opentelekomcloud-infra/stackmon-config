@@ -109,6 +109,7 @@ matrix:
           - compute
           - csbs
           - css
+          - cts_skip_v1
           - cts_v2
           - cts_v3
           - dataarts
@@ -194,6 +195,7 @@ matrix:
           - ces_skip_v1
           - compute
           - css
+          - cts_skip_v1
           - cts_v2
           - cts_v3
           - database_skip
@@ -257,6 +259,7 @@ matrix:
           - compute
           - csbs
           - css
+          - cts_skip_v1
           - cts_v2
           - cts_v3
           - dataarts
@@ -332,6 +335,7 @@ matrix:
           - ces_skip_v1
           - compute
           - css
+          - cts_skip_v1
           - cts_v2
           - cts_v3
           - database_skip

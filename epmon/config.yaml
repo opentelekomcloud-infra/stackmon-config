@@ -93,6 +93,10 @@ elements:
     service_type: cts
     sdk_proxy: cts
     urls: []
+  cts_skip_v1:
+    service_type: cts
+    sdk_proxy: cts
+    urls: []
   cts_skip_v2:
     service_type: ctsv2
     sdk_proxy: cts
