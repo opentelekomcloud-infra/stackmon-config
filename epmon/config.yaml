@@ -97,11 +97,6 @@ elements:
     service_type: ctsv2
     sdk_proxy: cts
     urls: []
-  cts_v1:
-    service_type: cts
-    sdk_proxy: cts
-    urls:
-      - /tracker?tracker_name=system
   cts_v2:
     service_type: ctsv2
     sdk_proxy: ctsv2
