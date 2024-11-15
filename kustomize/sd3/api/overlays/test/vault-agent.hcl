@@ -19,7 +19,7 @@ template {
   destination = "/secrets/sd3-api-env"
   contents = <<EOT
 {{ with secret "secret/data/statusdashboard/sd3-test" -}}
-export SD_DB={{ .Data.data.dburi }}
+export SD_DB={{ .Data.data.dburl }}
 export SD_CACHE=internal
 export SD_LOG_LEVEL=devel
 {{- end }}
