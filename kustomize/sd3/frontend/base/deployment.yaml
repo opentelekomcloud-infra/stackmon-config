@@ -14,7 +14,7 @@ spec:
       labels:
         app: sd3-frontend
     spec:
-      serviceAccount: sd3-frontend
+      serviceAccount: sd3
       containers:
         - name: sd3-frontend
           image: sd3-frontend

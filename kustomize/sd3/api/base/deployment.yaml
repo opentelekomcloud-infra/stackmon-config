@@ -14,7 +14,7 @@ spec:
       labels:
         app: sd3-api
     spec:
-      serviceAccount: sd3-api
+      serviceAccount: sd3
       containers:
       - name: sd3-api
         image: sd3-api
