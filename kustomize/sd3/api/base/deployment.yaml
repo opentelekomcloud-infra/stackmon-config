@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sd3-api
 spec:
-  serviceAccountName: sd3-api
+  serviceAccount: sd3-api
   replicas: 1
   selector:
     matchLabels:
