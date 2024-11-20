@@ -591,7 +591,7 @@ plugins:
         grafana_dashboards_location: dashboards
   - name: epmon
     type: epmon
-    image: quay.io/stackmon/apimon:change_54_latest
+    image: quay.io/stackmon/apimon:change_58_latest
     config: epmon/config.yaml
   - name: lb
     type: general
