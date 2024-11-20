@@ -25,3 +25,7 @@ patchesStrategicMerge:
     spec:
       rules:
         - host: api.test.status.otc-service.com
+      tls:
+      - hosts:
+        - api.test.status.otc-service.com
+        secretName: sd3-cert-test
