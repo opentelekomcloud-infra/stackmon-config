@@ -18,6 +18,10 @@ spec:
       containers:
       - name: sd3-api
         image: sd3-api
+        command:
+          ["/bin/sh", "-c"]
+        args:
+          ['source /secrets/sd3-api-env && "/usr/src/app/app"']
         ports:
         - containerPort: 8000
         resources:
