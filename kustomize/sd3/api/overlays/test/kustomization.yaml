@@ -25,6 +25,15 @@ patchesStrategicMerge:
     spec:
       rules:
         - host: api.test.status.otc-service.com
+          http:
+            paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: sd3-api
+                  port:
+                    number: 8000
       tls:
       - hosts:
         - api.test.status.otc-service.com
