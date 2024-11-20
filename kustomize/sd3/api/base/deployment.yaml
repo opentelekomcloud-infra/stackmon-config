@@ -43,6 +43,9 @@ spec:
             port: 8000
           initialDelaySeconds: 5
           periodSeconds: 5
+        volumeMounts:
+        - mountPath: "/secrets"
+          name: "secrets"
       initContainers:
       - name: "vault-agent"
         command:
