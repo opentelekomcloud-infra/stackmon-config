@@ -21,7 +21,7 @@ spec:
         command:
           ["/bin/sh", "-c"]
         args:
-          ['source /secrets/sd3-api-env && nginx -g "daemon off;"']
+          ['source /secrets/sd3-front-env && nginx -g "daemon off;"']
         ports:
           - containerPort: 80
             name: http

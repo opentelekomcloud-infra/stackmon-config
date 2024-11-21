@@ -16,7 +16,7 @@ auto_auth {
 }
 
 template {
-  destination = "/secrets/sd3-api-env"
+  destination = "/secrets/sd3-front-env"
   contents = <<EOT
 {{ with secret "secret/data/statusdashboard/sd3-test" -}}
 export SD_BACKEND_URL="https://api.test.status.otc-service.com"
@@ -30,7 +30,6 @@ export SD_AUTH_SECRET={{ .Data.data.authsecret }}
 export SD_BACKEND_FILE=false
 export SD_FREEZE=false
 {{- end }}
-
 EOT
   perms = "0664"
 }
