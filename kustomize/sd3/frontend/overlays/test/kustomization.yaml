@@ -25,3 +25,16 @@ patchesStrategicMerge:
     spec:
       rules:
         - host: test.status.otc-service.com
+          http:
+            paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: sd3-frontend
+                  port:
+                    number: 80
+      tls:
+      - hosts:
+        - test.status.otc-service.com
+        secretName: sd3-front-cert-test
