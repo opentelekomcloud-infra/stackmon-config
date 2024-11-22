@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sd3-frontend 
+      app: sd3-frontend
   template:
     metadata:
       labels:
-        app: sd3-frontend 
+        app: sd3-frontend
     spec:
       serviceAccount: sd3
       containers:
@@ -23,18 +23,18 @@ spec:
         args:
           ['source /secrets/sd3-front-env && nginx -g "daemon off;"']
         ports:
-          - containerPort: 80
-            name: http
+        - containerPort: 80
+          name: http
         resources:
           requests:
-            cpu: 200m 
-            memory: 256Mi 
+            cpu: 200m
+            memory: 256Mi
           limits:
-            cpu: 500m 
-            memory: 512Mi 
+            cpu: 500m
+            memory: 512Mi
         volumeMounts:
-          - mountPath: "/secrets"
-            name: "secrets"
+        - mountPath: "/secrets"
+          name: "secrets"
       initContainers:
       - name: "vault-agent"
         command:
@@ -66,11 +66,11 @@ spec:
           defaultMode: 420
           name: sd3-front-vault-config
       - name: secrets
-        emptyDir: {} 
+        emptyDir: {}
       - name: "k8-tokens"
         projected:
           defaultMode: 420
           sources:
           - serviceAccountToken:
-              expirationSeconds: 7200 
+              expirationSeconds: 7200
               path: "vault-token"
