@@ -133,6 +133,7 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - functiongraph_v2
           - identity
           - image
           - kms_skip_unver
@@ -283,6 +284,7 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - functiongraph_v2
           - identity
           - image
           - kms_skip_unver
