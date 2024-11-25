@@ -712,3 +712,18 @@ health_metrics:
         weight: 1
       - expression: "community.api_down"
         weight: 2
+  ### FunctionGraph
+  functiongraph:
+    service: functiongraph
+    component_name: "FunctionGraph"
+    category: compute
+    metrics:
+      - functiongraph.api_slow
+      - functiongraph.api_down
+      - functiongraph.api_success_rate_low
+    expressions:
+      - expression: "functiongraph.api_slow || functiongraph.api_success_rate_low || functiongraph.api_slow || functiongraph.api_success_rate_low"
+        weight: 1
+      - expression: "functiongraph.api_down || functiongraph.api_down"
+        weight: 2
+ 
