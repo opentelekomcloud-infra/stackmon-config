@@ -258,6 +258,12 @@ elements:
       - /enterprise-router/instances
   dws_skip_v1:
     service_type: dwsv1
+  functiongraph_v2:
+    service_type: functiongraph
+    sdk_proxy: function_graph
+    urls:
+      - /fgs/quotas
+      - /fgs/dependencies
   identity:
     service_type: identity
     urls:
