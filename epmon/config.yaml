@@ -252,7 +252,7 @@ elements:
   dws_skip_v1:
     service_type: dwsv1
   functiongraph_v2:
-    service_type: functiongraph_v2
+    service_type: functiongraph
     sdk_proxy: function_graph
     urls:
       - /fgs/quotas
