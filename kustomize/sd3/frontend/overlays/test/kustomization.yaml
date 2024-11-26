@@ -6,7 +6,7 @@ namespace: sd3-test
 images:
   - name: sd3-frontend
     newName: quay.io/stackmon/status-dashboard-v3-front
-    newTag: sha-f16d273
+    newTag: sha-86cf5f7
 
 configMapGenerator:
   - name: sd3-front-vault-config
