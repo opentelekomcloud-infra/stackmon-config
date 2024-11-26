@@ -722,7 +722,7 @@ health_metrics:
       - functiongraph.api_down
       - functiongraph.api_success_rate_low
     expressions:
-      - expression: "functiongraph.api_slow || functiongraph.api_success_rate_low || functiongraph.api_slow || functiongraph.api_success_rate_low"
+      - expression: "functiongraph.api_slow || functiongraph.api_success_rate_low"
         weight: 1
-      - expression: "functiongraph.api_down || functiongraph.api_down"
+      - expression: "functiongraph.api_down"
         weight: 2
