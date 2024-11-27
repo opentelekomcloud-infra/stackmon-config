@@ -8,11 +8,6 @@ images:
     newName: quay.io/stackmon/status-dashboard-v3-front
     newTag: sha-2fcfe3f
 
-# configMapGenerator:
-#   - name: sd3-front-vault-config
-#     files:
-#       - vault-agent.hcl
-
 resources:
   - ../../base
 
