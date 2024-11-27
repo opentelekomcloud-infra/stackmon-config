@@ -6,12 +6,12 @@ namespace: sd3-test
 images:
   - name: sd3-frontend
     newName: quay.io/stackmon/status-dashboard-v3-front
-    newTag: sha-86cf5f7
+    newTag: sha-2fcfe3f
 
-configMapGenerator:
-  - name: sd3-front-vault-config
-    files:
-      - vault-agent.hcl
+# configMapGenerator:
+#   - name: sd3-front-vault-config
+#     files:
+#       - vault-agent.hcl
 
 resources:
   - ../../base
