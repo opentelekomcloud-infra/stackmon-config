@@ -406,22 +406,27 @@ components:
   name: Dedicated Web Application Firewall
 ### Global
 - attributes:
-    category: Platform Sites
+    category: Sites
     region: Global
     type: console
   name: Open Telekom Cloud Console
 - attributes:
-    category: Global Sites
+    category: Sites
     region: Global
     type: otc
   name: Open Telekom Cloud
 - attributes:
-    category: Knowledge Center Sites
+    category: Sites
     region: Global
     type: helpcenter
   name: HelpCenter
 - attributes:
-    category: Knowledge Center Sites
+    category: Sites
     region: Global
     type: community
   name: Open Telekom Cloud Community
+- attributes:
+    category: Optional Services
+    region: Global
+    type: enterprise-dashboard
+  name: Enterprise Dashboard
