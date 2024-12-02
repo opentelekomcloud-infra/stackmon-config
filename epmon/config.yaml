@@ -250,7 +250,8 @@ elements:
     urls:
       - /consumption/health
   er:
-    service_type: er
+    service_type: erv3
+    sdk_proxy: er
     urls:
       - /
       - /enterprise-router/quotas

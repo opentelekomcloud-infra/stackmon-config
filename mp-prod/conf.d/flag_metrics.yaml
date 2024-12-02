@@ -684,7 +684,7 @@ flag_metrics:
 
   ### Enterprise Router
   - name: "api_down"
-    service: "er"
+    service: "erv3"
     template:
       name: "api_down"
     environments:
@@ -692,7 +692,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "er"
+    service: "erv3"
     template:
       name: "api_slow"
     environments:
@@ -700,7 +700,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "er"
+    service: "erv3"
     template:
       name: "api_success_rate_low"
     environments:

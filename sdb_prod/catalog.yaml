@@ -207,12 +207,12 @@ components:
 - attributes:
     category: Network
     region: EU-DE
-    type: er
+    type: erv3
   name: Enterprise Router
 - attributes:
     category: Network
     region: EU-NL
-    type: er
+    type: erv3
   name: Enterprise Router
 - attributes:
     category: Security Services
