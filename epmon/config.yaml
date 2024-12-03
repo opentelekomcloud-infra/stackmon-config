@@ -16,6 +16,11 @@ elements:
   antiddos_skip_bad_type:
     service_type: AntiDDoS
     urls: []
+  apig_v2:
+    service_type: apig
+    sdk_proxy: apig
+    urls:
+      - /apigw/available-zones
   as:
     service_type: as
     sdk_proxy: auto_scaling
