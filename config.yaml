@@ -601,7 +601,7 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
   - name: globalmon
     type: globalmon
-    image: quay.io/stackmon/globalmon:change_8_latest
+    image: quay.io/stackmon/globalmon:change_11_latest
     config: globalmon/config.yaml
 
 status_dashboard:
@@ -617,7 +617,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_51_latest"
 
       patchesStrategicMerge:
         - |-
@@ -651,7 +651,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_51_latest"
 
       patchesStrategicMerge:
         - |-
@@ -685,7 +685,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_51_latest"
 
       patchesStrategicMerge:
         - |-
@@ -719,7 +719,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_51_latest"
 
       patchesStrategicMerge:
         - |-
@@ -753,7 +753,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_51_latest"
 
       patchesStrategicMerge:
         - |-
@@ -787,7 +787,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_51_latest"
 
       patchesStrategicMerge:
         - |-
