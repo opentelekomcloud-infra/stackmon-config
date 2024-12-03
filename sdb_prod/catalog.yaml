@@ -220,6 +220,11 @@ components:
     type: iam
   name: Identity and Access Management
 - attributes:
+    category: Compute
+    region: EU-DE
+    type: functiongraph
+  name: FunctionGraph
+- attributes:
     category: Security Services
     region: EU-NL
     type: iam
