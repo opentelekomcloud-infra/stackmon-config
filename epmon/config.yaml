@@ -253,7 +253,6 @@ elements:
     service_type: erv3
     sdk_proxy: er
     urls:
-      - /
       - /enterprise-router/quotas
       - /enterprise-router/availability-zones
       - /enterprise-router/instances
