@@ -601,7 +601,7 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
   - name: globalmon
     type: globalmon
-    image: quay.io/stackmon/globalmon:change_8_latest
+    image: quay.io/stackmon/globalmon:change_11_latest
     config: globalmon/config.yaml
 
 status_dashboard:
