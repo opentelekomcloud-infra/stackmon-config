@@ -21,6 +21,9 @@ elements:
     sdk_proxy: apig
     urls:
       - /apigw/available-zones
+      - /apigw/instances
+      - /apigw/instance/configs
+      - /apigw/instance-tags
   as:
     service_type: as
     sdk_proxy: auto_scaling
