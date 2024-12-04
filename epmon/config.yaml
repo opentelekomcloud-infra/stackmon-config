@@ -17,7 +17,7 @@ elements:
     service_type: AntiDDoS
     urls: []
   apig_v2:
-    service_type: apig
+    service_type: apigv2
     sdk_proxy: apig
     urls:
       - /apigw/available-zones
