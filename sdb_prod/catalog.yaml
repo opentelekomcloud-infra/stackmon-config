@@ -200,6 +200,16 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
+    category: Network
+    region: EU-DE
+    type: erv3
+  name: Enterprise Router
+- attributes:
+    category: Network
+    region: EU-NL
+    type: erv3
+  name: Enterprise Router
+- attributes:
     category: Security Services
     region: EU-DE
     type: iam
