@@ -98,6 +98,7 @@ matrix:
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
+          - apig_v2
           - as
           - as_skip_v1
           - bms
@@ -251,6 +252,7 @@ matrix:
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
+          - apig_v2
           - as
           - as_skip_v1
           - bms
