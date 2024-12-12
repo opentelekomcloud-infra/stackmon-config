@@ -200,11 +200,6 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: enterprise-dashboard
-  name: Enterprise Dashboard
-- attributes:
     category: Security Services
     region: EU-DE
     type: iam
