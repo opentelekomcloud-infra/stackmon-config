@@ -264,6 +264,19 @@ elements:
       - /enterprise-router/quotas
       - /enterprise-router/availability-zones
       - /enterprise-router/instances
+  evpn:
+    service_type: evpn
+    sdk_proxy: evpn
+    urls:
+      - /vpn-connection
+      - /vpn-gateways/availability-zones
+      - /vpn-gateways
+      - /customer-gateways
+      - /vpn/quotas
+      - /connection-monitors
+      - /vpn-connection/tags
+      - /vpn-gateways/tags
+      - /customer-gateways/tags
   dws_skip_v1:
     service_type: dwsv1
   functiongraph_v2:
