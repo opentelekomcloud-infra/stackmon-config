@@ -200,10 +200,15 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
-    category: Management & Deployment
+    category: Network
     region: EU-DE
-    type: enterprise-dashboard
-  name: Enterprise Dashboard
+    type: erv3
+  name: Enterprise Router
+- attributes:
+    category: Network
+    region: EU-NL
+    type: erv3
+  name: Enterprise Router
 - attributes:
     category: Security Services
     region: EU-DE
@@ -404,3 +409,29 @@ components:
     region: EU-NL
     type: wafd
   name: Dedicated Web Application Firewall
+### Global
+- attributes:
+    category: Sites
+    region: Global
+    type: console
+  name: Open Telekom Cloud Console
+- attributes:
+    category: Sites
+    region: Global
+    type: otc
+  name: Open Telekom Cloud
+- attributes:
+    category: Sites
+    region: Global
+    type: helpcenter
+  name: HelpCenter
+- attributes:
+    category: Sites
+    region: Global
+    type: community
+  name: Open Telekom Cloud Community
+- attributes:
+    category: Optional Services
+    region: Global
+    type: enterprise-dashboard
+  name: Enterprise Dashboard

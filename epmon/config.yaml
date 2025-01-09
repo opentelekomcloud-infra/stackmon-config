@@ -257,6 +257,13 @@ elements:
     service_type: enterprise-dashboard-v1
     urls:
       - /consumption/health
+  er:
+    service_type: erv3
+    sdk_proxy: er
+    urls:
+      - /enterprise-router/quotas
+      - /enterprise-router/availability-zones
+      - /enterprise-router/instances
   dws_skip_v1:
     service_type: dwsv1
   functiongraph_v2:

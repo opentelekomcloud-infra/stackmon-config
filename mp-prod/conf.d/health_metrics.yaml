@@ -265,6 +265,20 @@ health_metrics:
         weight: 1
       - expression: "elb.api_down || elbv3.api_down"
         weight: 2
+  ### ER
+  er:
+    service: erv3
+    component_name: "Enterprise Router"
+    category: network
+    metrics:
+      - erv3.api_down
+      - erv3.api_slow
+      - erv3.api_success_rate_low
+    expressions:
+      - expression: "erv3.api_slow || erv3.api_success_rate_low"
+        weight: 1
+      - expression: "erv3.api_down"
+        weight: 2
   ### DCAAS
   dcaas:
     service: dcaas
