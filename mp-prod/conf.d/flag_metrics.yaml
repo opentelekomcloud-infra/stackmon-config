@@ -25,6 +25,28 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### APIG-v2
+  - name: "api_down"
+    service: "apigv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "apigv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "apigv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### AutoScaling
   - name: "api_down"
     service: "as"
