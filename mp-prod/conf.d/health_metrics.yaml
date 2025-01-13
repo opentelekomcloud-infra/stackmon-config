@@ -741,7 +741,7 @@ health_metrics:
       - expression: "functiongraph.api_down"
         weight: 2
   ### APIG-v2
-  functiongraph:
+  apigv2:
     service: apigv2
     component_name: "API Gateway (APIG)"
     category: application
