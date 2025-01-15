@@ -743,7 +743,7 @@ health_metrics:
   ### APIG-v2
   apigv2:
     service: apigv2
-    component_name: "API Gateway (APIG)"
+    component_name: "API Gateway"
     category: application
     metrics:
       - apigv2.api_slow

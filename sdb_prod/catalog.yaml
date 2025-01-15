@@ -13,7 +13,7 @@ components:
     category: Application Services
     region: EU-DE
     type: apigv2
-  name: API Gateway (APIG)
+  name: API Gateway
 - attributes:
     category: Compute
     region: EU-DE
