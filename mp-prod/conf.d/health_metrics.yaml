@@ -740,3 +740,17 @@ health_metrics:
         weight: 1
       - expression: "functiongraph.api_down"
         weight: 2
+  ### APIG-v2
+  apigv2:
+    service: apigv2
+    component_name: "API Gateway"
+    category: application
+    metrics:
+      - apigv2.api_slow
+      - apigv2.api_down
+      - apigv2.api_success_rate_low
+    expressions:
+      - expression: "apigv2.api_slow || apigv2.api_success_rate_low"
+        weight: 1
+      - expression: "apigv2.api_down"
+        weight: 2

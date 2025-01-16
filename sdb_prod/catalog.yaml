@@ -10,6 +10,11 @@ components:
     type: antiddos
   name: Anti DDoS
 - attributes:
+    category: Application Services
+    region: EU-DE
+    type: apigv2
+  name: API Gateway
+- attributes:
     category: Compute
     region: EU-DE
     type: as
