@@ -168,13 +168,16 @@ health_metrics:
     component_name: "Object Storage Service"
     category: storage
     metrics:
-      - object.api_down
-      - object.api_slow
-      - object.api_success_rate_low
+      - obs.api_down_obs_eu-de
+      - obs.api_slow_obs_eu-de
+      - obs.api_success_rate_low_obs_eu-de
+      - obs.api_down_obs_eu-nl
+      - obs.api_slow_obs_eu-nl
+      - obs.api_success_rate_low_obs_eu-nl
     expressions:
-      - expression: "object.api_slow || object.api_success_rate_low"
+      - expression: "obs.api_slow_obs_eu-de || obs.api_success_rate_low_obs_eu-de || obs.api_slow_obs_eu-nl || obs.api_success_rate_low_obs_eu-nl"
         weight: 1
-      - expression: "object.api_down"
+      - expression: "obs.api_down_obs_eu-de || obs.api_down_obs_eu-nl"
         weight: 2
   ### SDRS
   sdrs:
