@@ -385,7 +385,7 @@ matrix:
           - waf
       - name: globalmon
         globalmons_inventory_group_name: globalmons
-        cloud_name: production_eu-de
+        cloud_name: production_eu-nl
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
