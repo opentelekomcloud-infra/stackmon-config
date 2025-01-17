@@ -53,26 +53,26 @@ metric_templates:
     op: "eq"
     threshold: 100
   api_success_rate_low_obs_eu-de:
-    query: "smartSummarize(asPercent(sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-de*.{2*,3*}.count), sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-de*.attempted.count)), '3min', 'average')"
+    query: "smartSummarize(asPercent(sumSeries(stats.counters.counter.globalmon.production_eu-de.eu-de.$service.*eu-de*.{2*,3*}.count), sumSeries(stats.counters.counter.globalmon.production_eu-de.eu-de.$service.*eu-de*.attempted.count)), '3min', 'average')"
     op: "lt"
     threshold: 65
   api_slow_obs_eu-de:
-    query: "smartSummarize(consolidateBy(aggregate(stats.timers.globalmon.$environment.*.$service.*eu-de*.*.mean, 'average'), 'average'), '3min', 'average')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.globalmon.production_eu-de.eu-de.$service.*eu-de*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
     threshold: 1200
   api_down_obs_eu-de:
-    query: "asPercent(smartSummarize(sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-de*.failed.count), '1min', 'average', '1min'), smartSummarize(sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-de*.attempted.count), '1min', 'average', '1min'))"
+    query: "asPercent(smartSummarize(sumSeries(stats.counters.counter.globalmon.production_eu-de.eu-de.$service.*eu-de*.failed.count), '1min', 'average', '1min'), smartSummarize(sumSeries(stats.counters.counter.globalmon.production_eu-de.eu-de.$service.*eu-de*.attempted.count), '1min', 'average', '1min'))"
     op: "eq"
     threshold: 100
   api_success_rate_low_obs_eu-nl:
-    query: "smartSummarize(asPercent(sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-nl*.{2*,3*}.count), sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-nl*.attempted.count)), '3min', 'average')"
+    query: "smartSummarize(asPercent(sumSeries(stats.counters.counter.globalmon.production_eu-nl.eu-nl.$service.*eu-nl*.{2*,3*}.count), sumSeries(stats.counters.counter.globalmon.production_eu-nl.eu-nl.$service.*eu-nl*.attempted.count)), '3min', 'average')"
     op: "lt"
     threshold: 65
   api_slow_obs_eu-nl:
-    query: "smartSummarize(consolidateBy(aggregate(stats.timers.globalmon.$environment.*.$service.*eu-nl*.*.mean, 'average'), 'average'), '3min', 'average')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.globalmon.production_eu-nl.eu-nl.$service.*eu-nl*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
     threshold: 1200
   api_down_obs_eu-nl:
-    query: "asPercent(smartSummarize(sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-nl*.failed.count), '1min', 'average', '1min'), smartSummarize(sumSeries(stats.counters.counter.globalmon.$environment.*.$service.*eu-nl*.attempted.count), '1min', 'average', '1min'))"
+    query: "asPercent(smartSummarize(sumSeries(stats.counters.counter.globalmon.production_eu-nl.eu-nl.$service.*eu-nl*.failed.count), '1min', 'average', '1min'), smartSummarize(sumSeries(stats.counters.counter.globalmon.production_eu-nl.eu-nl.$service.*eu-nl*.attempted.count), '1min', 'average', '1min'))"
     op: "eq"
     threshold: 100
