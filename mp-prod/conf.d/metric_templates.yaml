@@ -69,7 +69,7 @@ metric_templates:
     op: "lt"
     threshold: 65
   api_slow_obs_eu-nl:
-    query: "smartSummarize(consolidateBy(aggregate(stats.timers.globalmon.$environment.*.$service.*eu-de*.*.mean, 'average'), 'average'), '3min', 'average')"
+    query: "smartSummarize(consolidateBy(aggregate(stats.timers.globalmon.$environment.*.$service.*eu-nl*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
     threshold: 1200
   api_down_obs_eu-nl:
