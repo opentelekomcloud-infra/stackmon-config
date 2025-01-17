@@ -169,7 +169,7 @@ matrix:
           - wks
           - workspace
       - name: globalmon
-        globalmons_inventory_group_name: globalmons
+        globalmons_inventory_group_name: globalmons_de
         cloud_name: production_eu-de
   - env: production_eu-nl
     monitoring_zone: eu-de
@@ -384,7 +384,7 @@ matrix:
           - vpn
           - waf
       - name: globalmon
-        globalmons_inventory_group_name: globalmons
+        globalmons_inventory_group_name: globalmons_nl
         cloud_name: production_eu-nl
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
