@@ -1415,3 +1415,27 @@ flag_metrics:
       name: "api_success_rate_low_obs_eu-nl"
     environments:
       - name: "production_eu-nl"
+
+  - name: "api_down"
+    service: "obs"
+    template:
+      name: "api_down_obs"
+    environments:
+      - name: "eu-nl"
+      - name: "eu-de"
+
+  - name: "api_slow"
+    service: "obs"
+    template:
+      name: "api_slow_obs"
+    environments:
+      - name: "eu-nl"
+      - name: "eu-de"
+
+  - name: "api_success_rate_low"
+    service: "obs"
+    template:
+      name: "api_success_rate_low_obs"
+    environments:
+      - name: "eu-nl"
+      - name: "eu-de"
