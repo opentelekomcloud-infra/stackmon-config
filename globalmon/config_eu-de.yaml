@@ -16,3 +16,7 @@ services:
   community:
     urls:
       - "https://community.open-telekom-cloud.com/community?id=community_home"
+  obs:
+    urls:
+      - "https://sd2-eu-de-globalmon.obs.eu-de.otc.t-systems.com/sd2-test-object.txt"
+      - "https://sd2-eu-de-globalmon.obs.eu-de.otc.t-systems.com"

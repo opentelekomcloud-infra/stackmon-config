@@ -1,0 +1,22 @@
+# This is a sample configuration file
+services:
+  otc:
+    urls:
+      - "https://www.open-telekom-cloud.com"
+  console:
+    urls:
+      - "https://console.otc.t-systems.com"
+      - "https://auth.otc.t-systems.com/authui/login.action#/login"
+  helpcenter:
+    urls:
+      - "https://docs.otc.t-systems.com"
+  helpcenter-swiss:
+    urls:
+      - "https://docs.sc.otc.t-systems.com"
+  community:
+    urls:
+      - "https://community.open-telekom-cloud.com/community?id=community_home"
+  obs:
+    urls:
+      - "https://sd2-eu-nl-globalmon.obs.eu-nl.otc.t-systems.com/sd2-test-object.txt"
+      - "https://sd2-eu-nl-globalmon.obs.eu-nl.otc.t-systems.com"

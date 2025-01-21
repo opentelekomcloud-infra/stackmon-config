@@ -33,13 +33,13 @@ environments:
       - name: eu-de
         clouds:
           - name: production_eu-de
-            ref: probes-de1  # we want to monitor DE from DE
+            ref: probes-de1 # we want to monitor DE from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: production_eu-de
-            ref: probes-de2  # we want to monitor DE from NL
+            ref: probes-de2 # we want to monitor DE from NL
           - name: swift
             ref: swift1
   - name: production_eu-nl
@@ -49,13 +49,13 @@ environments:
       - name: eu-de
         clouds:
           - name: production_eu-nl
-            ref: probes-nl1  # we want to monitor NL from DE
+            ref: probes-nl1 # we want to monitor NL from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: production_eu-nl
-            ref: probes-nl2  # we want to monitor NL from NL
+            ref: probes-nl2 # we want to monitor NL from NL
           - name: swift
             ref: swift1
   - name: hybrid_eu-ch2
@@ -65,13 +65,13 @@ environments:
       - name: eu-de
         clouds:
           - name: hybrid_eu-ch2
-            ref: probes-ch2-from-de  # we want to monitor CH2 from DE
+            ref: probes-ch2-from-de # we want to monitor CH2 from DE
           - name: swift
             ref: swift1
       - name: eu-nl
         clouds:
           - name: hybrid_eu-ch2
-            ref: probes-ch2-from-nl  # we want to monitor CH2 from NL
+            ref: probes-ch2-from-nl # we want to monitor CH2 from NL
           - name: swift
             ref: swift1
 
@@ -169,8 +169,9 @@ matrix:
           - wks
           - workspace
       - name: globalmon
-        globalmons_inventory_group_name: globalmons
+        globalmons_inventory_group_name: globalmons_de
         cloud_name: production_eu-de
+        config: globalmon/config_eu-de.yaml
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -383,6 +384,10 @@ matrix:
           - vpcep
           - vpn
           - waf
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: production_eu-nl
+        config: globalmon/config_eu-nl.yaml
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -572,7 +577,7 @@ metrics_processor:
             name: metrics-processor
             version: v1
 
-monitoring_zones:  # Defining from where we are monitoring
+monitoring_zones: # Defining from where we are monitoring
   - name: eu-de
     graphite_group_name: graphite_eu_de
     statsd_group_name: statsd_eu_de
@@ -607,8 +612,7 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
   - name: globalmon
     type: globalmon
-    image: quay.io/stackmon/globalmon:change_11_latest
-    config: globalmon/config.yaml
+    image: quay.io/stackmon/globalmon:change_14_latest
 
 status_dashboard:
   - name: prod-de
