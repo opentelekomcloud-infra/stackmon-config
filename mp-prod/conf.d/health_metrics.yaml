@@ -170,7 +170,7 @@ health_metrics:
     metrics:
       - obs.api_down
       - obs.api_slow
-      - obs.api_success_rate
+      - obs.api_success_rate_low
     expressions:
       - expression: "obs.api_slow || obs.api_success_rate_low"
         weight: 1
