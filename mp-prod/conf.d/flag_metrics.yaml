@@ -1390,10 +1390,10 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_success_rate_global"
+  - name: "api_success_rate_low"
     service: "obs"
     template:
-      name: "api_success_rate_low_obs"
+      name: "api_success_rate_low_global"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
