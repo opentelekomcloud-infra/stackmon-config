@@ -1374,44 +1374,26 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
   ### OBS
-  - name: "api_down_eu-de"
+  - name: "api_down"
     service: "obs"
     template:
-      name: "api_down_obs_eu-de"
+      name: "api_down_global"
     environments:
       - name: "production_eu-de"
-
-  - name: "api_slow_eu-de"
-    service: "obs"
-    template:
-      name: "api_slow_obs_eu-de"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_success_rate_low_eu-de"
-    service: "obs"
-    template:
-      name: "api_success_rate_low_obs_eu-de"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_down_eu-nl"
-    service: "obs"
-    template:
-      name: "api_down_obs_eu-nl"
-    environments:
       - name: "production_eu-nl"
 
-  - name: "api_slow_eu-nl"
+  - name: "api_slow"
     service: "obs"
     template:
-      name: "api_slow_obs_eu-nl"
+      name: "api_slow_global"
     environments:
+      - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_success_rate_low_eu-nl"
+  - name: "api_success_rate_global"
     service: "obs"
     template:
-      name: "api_success_rate_low_obs_eu-nl"
+      name: "api_success_rate_low_obs"
     environments:
+      - name: "production_eu-de"
       - name: "production_eu-nl"
