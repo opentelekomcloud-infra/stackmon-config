@@ -169,8 +169,9 @@ matrix:
           - wks
           - workspace
       - name: globalmon
-        globalmons_inventory_group_name: globalmons
+        globalmons_inventory_group_name: globalmons_de
         cloud_name: production_eu-de
+        config: globalmon/config_eu-de.yaml
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -383,6 +384,10 @@ matrix:
           - vpcep
           - vpn
           - waf
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: production_eu-nl
+        config: globalmon/config_eu-nl.yaml
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -607,8 +612,7 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
   - name: globalmon
     type: globalmon
-    image: quay.io/stackmon/globalmon:change_11_latest
-    config: globalmon/config.yaml
+    image: quay.io/stackmon/globalmon:change_14_latest
 
 status_dashboard:
   - name: prod-de
