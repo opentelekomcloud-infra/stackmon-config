@@ -430,7 +430,7 @@ matrix:
           - vpn
           - wafd_swiss
       - name: globalmon
-        globalmons_inventory_group_name: globalmons_de
+        globalmons_inventory_group_name: globalmons_ch
         cloud_name: hybrid_eu-ch2
         config: globalmon/config_eu-ch2.yaml
   - env: hybrid_eu-ch2
@@ -475,7 +475,7 @@ matrix:
           - vpn
           - wafd_swiss
       - name: globalmon
-        globalmons_inventory_group_name: globalmons_nl
+        globalmons_inventory_group_name: globalmons_ch
         cloud_name: hybrid_eu-ch2
         config: globalmon/config_eu-ch2.yaml
 
