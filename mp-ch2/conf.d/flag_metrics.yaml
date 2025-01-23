@@ -601,6 +601,8 @@ flag_metrics:
     template:
       name: "api_success_rate_low_global"
     environments:
+      - name: "hybrid_eu-ch2"
+
   ### Open Telekom Cloud
   - name: "api_down"
     service: "otc"
@@ -622,6 +624,7 @@ flag_metrics:
       name: "api_success_rate_low_global"
     environments:
       - name: "hybrid_eu-ch2"
+
   ### HelCenter
   - name: "api_down"
     service: "helpcenter"
@@ -665,6 +668,7 @@ flag_metrics:
       name: "api_success_rate_low_global"
     environments:
       - name: "hybrid_eu-ch2"
+
   ### OBS
   - name: "api_down"
     service: "obs"
