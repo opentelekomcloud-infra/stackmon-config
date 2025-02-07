@@ -345,6 +345,10 @@ elements:
     urls:
       - /
       - /info
+  ocr:
+    service_type: ocr
+    urls:
+      - /ocr/general-table-health
   orchestration_skip:
     service_type: orchestration
     urls: []
