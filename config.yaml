@@ -478,14 +478,6 @@ matrix:
         globalmons_inventory_group_name: globalmons_nl
         cloud_name: hybrid_eu-ch2
         config: globalmon/config_eu-ch2.yaml
-  - env: hybrid_eu-ch2
-    monitoring_zone: eu-ch2
-    db_entry: apimon.apimon
-    plugins:
-      - name: globalmon
-        globalmons_inventory_group_name: globalmons_ch2
-        cloud_name: hybrid_eu-ch2
-        config: globalmon/config_eu-ch2.yaml
 
 metrics_processor:
   - name: prod
