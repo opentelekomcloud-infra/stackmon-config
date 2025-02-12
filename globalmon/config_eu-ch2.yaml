@@ -7,7 +7,7 @@ services:
     urls:
       - "https://console.sc.otc.t-systems.com"
       - "https://auth.sc.otc.t-systems.com/authui/login.action#/login"
-  helpcenter-swiss:
+  helpcenter:
     urls:
       - "https://docs.sc.otc.t-systems.com"
   community:
