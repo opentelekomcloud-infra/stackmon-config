@@ -299,4 +299,24 @@ components:
     region: EU-CH2
     type: wafd
   name: Dedicated Web Application Firewall
-
+### Global
+- attributes:
+    category: Sites
+    region: Global
+    type: console
+  name: Open Telekom Cloud Console
+- attributes:
+    category: Sites
+    region: Global
+    type: otc
+  name: Open Telekom Cloud
+- attributes:
+    category: Sites
+    region: Global
+    type: helpcenter
+  name: HelpCenter
+- attributes:
+    category: Sites
+    region: Global
+    type: community
+  name: Open Telekom Cloud Community

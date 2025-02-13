@@ -240,6 +240,10 @@ matrix:
           - vpcep
           - vpn
           - waf
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_de
+        cloud_name: production_eu-nl
+        config: globalmon/config_eu-nl.yaml
   - env: production_eu-de
     monitoring_zone: eu-nl
     # TODO: placing db_url here feels questionable
@@ -323,6 +327,10 @@ matrix:
           - wafd
           - wks
           - workspace
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: production_eu-de
+        config: globalmon/config_eu-de.yaml
   - env: production_eu-nl
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -429,6 +437,10 @@ matrix:
           - vpcep
           - vpn
           - wafd_swiss
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_de
+        cloud_name: hybrid_eu-ch2
+        config: globalmon/config_eu-ch2.yaml
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -470,6 +482,10 @@ matrix:
           - vpcep
           - vpn
           - wafd_swiss
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: hybrid_eu-ch2
+        config: globalmon/config_eu-ch2.yaml
 
 metrics_processor:
   - name: prod
