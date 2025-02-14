@@ -272,6 +272,11 @@ elements:
     urls:
       - /fgs/quotas
       - /fgs/dependencies
+  geminidb:
+    service_type: geminidb
+    sdk_proxy: geminidb
+    urls:
+      - /jobs
   identity:
     service_type: identity
     urls:
