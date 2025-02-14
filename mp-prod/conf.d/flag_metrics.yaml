@@ -776,6 +776,28 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
+    ### GeminiDB
+  - name: "api_down"
+    service: "geminidb"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "geminidb"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "geminidb"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### IAM
   - name: "api_down"
     service: "identity"
