@@ -136,6 +136,7 @@ matrix:
           - enterprise-dashboard-v1
           - er
           - functiongraph_v2
+          - gemindb
           - identity
           - image
           - kms_skip_unver
@@ -295,6 +296,7 @@ matrix:
           - enterprise-dashboard-v1
           - er
           - functiongraph_v2
+          - geminidb
           - identity
           - image
           - kms_skip_unver
