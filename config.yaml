@@ -118,6 +118,8 @@ matrix:
           - dcaas
           - dcs
           - dcs_skip_v1
+          - ddmv1
+          - ddmv2
           - dds
           - deh
           - dis_skip_unver
@@ -280,6 +282,8 @@ matrix:
           - dcaas
           - dcs
           - dcs_skip_v1
+          - ddmv1
+          - ddmv2          
           - dds
           - deh
           - dis_skip_unver

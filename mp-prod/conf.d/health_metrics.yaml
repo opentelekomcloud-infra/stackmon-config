@@ -422,6 +422,23 @@ health_metrics:
         weight: 1
       - expression: "geminidb.api_down"
         weight: 2
+  ### DDM
+  ddm:
+    service: ddm
+    component_name: "Distributed Database Middleware"
+    category: database
+    metrics:
+      - ddmv1.api_slow
+      - ddmv1.api_down
+      - ddmv1.api_success_rate_low
+      - ddmv2.api_slow
+      - ddmv2.api_down
+      - ddmv2.api_success_rate_low
+    expressions:
+      - expression: "ddmv1.api_slow || ddmv1.api_success_rate_low || ddmv2.api_slow || ddmv2.api_success_rate_low"
+        weight: 1
+      - expression: "ddmv1.api_down || ddmv2.api_down"
+        weight: 2
 
   ## SecurityServices
   ### Anti-DDoS
