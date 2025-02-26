@@ -225,6 +225,11 @@ components:
     type: functiongraph
   name: FunctionGraph
 - attributes:
+    category: Database
+    region: EU-DE
+    type: geminidb
+  name: GeminiDB Service
+- attributes:
     category: Security Services
     region: EU-NL
     type: iam

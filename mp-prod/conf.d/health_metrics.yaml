@@ -394,6 +394,20 @@ health_metrics:
         weight: 1
       - expression: "dcs.api_down"
         weight: 2
+  ### GeminiDB
+  geminidb:
+    service: geminidb
+    component_name: "GeminiDB Service"
+    category: database
+    metrics:
+      - geminidb.api_down
+      - geminidb.api_slow
+      - geminidb.api_success_rate_low
+    expressions:
+      - expression: "geminidb.api_slow || geminidb.api_success_rate_low"
+        weight: 1
+      - expression: "geminidb.api_down"
+        weight: 2
 
   ## SecurityServices
   ### Anti-DDoS
