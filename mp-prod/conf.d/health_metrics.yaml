@@ -285,9 +285,9 @@ health_metrics:
     component_name: "Enterprise Virtual Private Network"
     category: network
     metrics:
-      - vpn.api_down
-      - vpn.api_slow
-      - vpn.api_success_rate_low
+      - evpn.api_down
+      - evpn.api_slow
+      - evpn.api_success_rate_low
     expressions:
       - expression: "vpn.api_slow || vpn.api_success_rate_low"
         weight: 1
