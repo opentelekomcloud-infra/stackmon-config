@@ -135,6 +135,7 @@ matrix:
           - enterprise-dashboard
           - enterprise-dashboard-v1
           - er
+          - evpn
           - functiongraph_v2
           - geminidb
           - identity
@@ -296,6 +297,7 @@ matrix:
           - enterprise-dashboard-v1
           - er
           - geminidb
+          - evpn
           - functiongraph_v2
           - identity
           - image

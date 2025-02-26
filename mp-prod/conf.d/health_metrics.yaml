@@ -279,6 +279,20 @@ health_metrics:
         weight: 1
       - expression: "erv3.api_down"
         weight: 2
+  ### EVPN
+  evpn:
+    service: evpn
+    component_name: "Enterprise Virtual Private Network"
+    category: network
+    metrics:
+      - evpn.api_down
+      - evpn.api_slow
+      - evpn.api_success_rate_low
+    expressions:
+      - expression: "evpn.api_slow || evpn.api_success_rate_low"
+        weight: 1
+      - expression: "evpn.api_down"
+        weight: 2
   ### DCAAS
   dcaas:
     service: dcaas
