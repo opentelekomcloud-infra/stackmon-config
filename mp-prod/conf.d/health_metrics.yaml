@@ -665,6 +665,21 @@ health_metrics:
       - expression: "modelartsv1.api_down || modelartsv2.api_down"
         weight: 2
 
+  ### OCR
+  ocr:
+    service: ocr
+    component_name: "Optical Character Recognition"
+    category: bigdataai
+    metrics:
+      - ocr.api_slow
+      - ocr.api_down
+      - ocr.api_success_rate_low
+    expressions:
+      - expression: "ocr.api_slow || ocr.api_success_rate_low"
+        weight: 1
+      - expression: "ocr.api_down"
+        weight: 2
+
   ## Application Services
   ### DMS
   dms:
