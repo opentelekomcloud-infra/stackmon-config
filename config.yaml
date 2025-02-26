@@ -150,6 +150,7 @@ matrix:
           - network
           - object_skip
           - object_store
+          - ocr
           - orchestration_skip
           - plas
           - rds_skip_unver
@@ -311,6 +312,7 @@ matrix:
           - network
           - object_skip
           - object_store
+          - ocr
           - orchestration_skip
           - plas
           - rds_skip_unver
