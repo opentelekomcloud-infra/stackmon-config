@@ -681,7 +681,7 @@ flag_metrics:
       name: "api_success_rate_low"
     environments:
       - name: "production_eu-de"
-  
+
   - name: "api_down"
     service: "enterprise_dashboard_v2"
     template:
