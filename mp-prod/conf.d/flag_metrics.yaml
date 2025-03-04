@@ -683,7 +683,7 @@ flag_metrics:
       - name: "production_eu-de"
   
   - name: "api_down"
-    service: "enterprise_dashboard"
+    service: "enterprise_dashboard_v2"
     template:
       name: "api_down_global"
     environments:
@@ -691,7 +691,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "enterprise_dashboard"
+    service: "enterprise_dashboard_v2"
     template:
       name: "api_slow_global"
     environments:
@@ -699,7 +699,7 @@ flag_metrics:
       - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "enterprise_dashboard"
+    service: "enterprise_dashboard_v2"
     template:
       name: "api_success_rate_low_global"
     environments:
