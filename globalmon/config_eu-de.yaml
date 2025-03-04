@@ -17,3 +17,6 @@ services:
     urls:
       - "https://sd2-eu-de-globalmon.obs.eu-de.otc.t-systems.com/sd2-test-object.txt"
       - "https://sd2-eu-de-globalmon.obs.eu-de.otc.t-systems.com"
+  enterprise_dashboard:
+    urls:
+      - "https://api-enterprise-dashboard.otc-service.com/v2/health/"
