@@ -147,6 +147,16 @@ elements:
       - /quota
   dcs_skip_v1:
     service_type: dcsv1
+  ddmv1:
+    service_type: ddmv1
+    sdk_proxy: ddmv1
+    urls:
+      - /instances
+  ddmv2:
+    service_type: ddmv2
+    sdk_proxy: ddmv2
+    urls:
+      - /engines
   dds:
     service_type: ddsv3
     sdk_proxy: dds
