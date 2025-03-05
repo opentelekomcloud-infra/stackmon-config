@@ -523,13 +523,13 @@ health_metrics:
       - enterprise-dashboard.api_slow
       - enterprise-dashboard.api_down
       - enterprise-dashboard.api_success_rate_low
-      - enterprise-dashboard-v1.api_slow
-      - enterprise-dashboard-v1.api_down
-      - enterprise-dashboard-v1.api_success_rate_low
+      - enterprise_dashboard_v2.api_slow
+      - enterprise_dashboard_v2.api_down
+      - enterprise_dashboard_v2.api_success_rate_low
     expressions:
-      - expression: "enterprise-dashboard.api_slow || enterprise-dashboard.api_success_rate_low || enterprise-dashboard-v1.api_slow || enterprise-dashboard-v1.api_success_rate_low"
+      - expression: "enterprise-dashboard.api_slow || enterprise-dashboard.api_success_rate_low || enterprise_dashboard_v2.api_slow || enterprise_dashboard_v2.api_success_rate_low"
         weight: 1
-      - expression: "enterprise-dashboard.api_down || enterprise-dashboard-v1.api_down"
+      - expression: "enterprise-dashboard.api_down || enterprise_dashboard_v2.api_down"
         weight: 2
   ### IAM
   iam:
