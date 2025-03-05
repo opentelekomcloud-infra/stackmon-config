@@ -682,27 +682,29 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
-  ### EnterpriseDashboard-v1
   - name: "api_down"
-    service: "enterprise-dashboard-v1"
+    service: "enterprise_dashboard_v2"
     template:
-      name: "api_down"
+      name: "api_down_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "enterprise-dashboard-v1"
+    service: "enterprise_dashboard_v2"
     template:
-      name: "api_slow"
+      name: "api_slow_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "enterprise-dashboard-v1"
+    service: "enterprise_dashboard_v2"
     template:
-      name: "api_success_rate_low"
+      name: "api_success_rate_low_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   ### Enterprise Router
   - name: "api_down"
