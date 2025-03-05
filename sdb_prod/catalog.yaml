@@ -140,6 +140,11 @@ components:
     type: dli
   name: Data Lake Insight
 - attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: ocr
+  name: Optical Character Recognition
+- attributes:
     category: Application Services
     region: EU-DE
     type: dms
