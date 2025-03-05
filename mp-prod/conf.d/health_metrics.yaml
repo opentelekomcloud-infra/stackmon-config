@@ -643,7 +643,7 @@ health_metrics:
   ocr:
     service: ocr
     component_name: "Optical Character Recognition"
-    category: management
+    category: bigdataai
     metrics:
       - ocr.api_slow
       - ocr.api_down
