@@ -120,6 +120,11 @@ components:
     type: dds
   name: Document Database Service
 - attributes:
+    category: Database
+    region: EU-DE
+    type: ddm
+  name: Distributed Database Middleware
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
