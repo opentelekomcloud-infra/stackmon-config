@@ -647,6 +647,28 @@ flag_metrics:
     environments:
       - name: "hybrid_eu-ch2"
 
+  ### ArchitectureCenter
+  - name: "api_down"
+    service: "architecturecenter"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_slow"
+    service: "architecturecenter"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "hybrid_eu-ch2"
+
+  - name: "api_success_rate_low"
+    service: "architecturecenter"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "hybrid_eu-ch2"
+
   ### Community
   - name: "api_down"
     service: "community"
