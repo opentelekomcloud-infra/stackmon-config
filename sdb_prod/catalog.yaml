@@ -448,6 +448,11 @@ components:
 - attributes:
     category: Sites
     region: Global
+    type: architecturecenter
+  name: Architecture Center
+- attributes:
+    category: Sites
+    region: Global
     type: community
   name: Open Telekom Cloud Community
 - attributes:

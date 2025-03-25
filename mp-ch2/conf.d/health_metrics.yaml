@@ -398,6 +398,20 @@ health_metrics:
         weight: 1
       - expression: "helpcenter.api_down"
         weight: 2
+  ### ArchitectureCenter
+  architecturecenter:
+    service: architecturecenter
+    component_name: "Architecture Center"
+    category: global
+    metrics:
+      - architecturecenter.api_slow
+      - architecturecenter.api_down
+      - architecturecenter.api_success_rate_low
+    expressions:
+      - expression: "architecturecenter.api_slow || architecturecenter.api_success_rate_low"
+        weight: 1
+      - expression: "architecturecenter.api_down"
+        weight: 2
   ### Community
   community:
     service: community
