@@ -367,6 +367,7 @@ elements:
     sdk_proxy: ocr
     urls:
       - /ocr/general-table-health
+      - /ocr/general-text-health
   orchestration_skip:
     service_type: orchestration
     urls: []
