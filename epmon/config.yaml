@@ -206,7 +206,6 @@ elements:
     urls:
       - /cloudservers/detail
       - /cloudservers/limits
-      - /cloudservers/flavors
       - /cloudservers/tags
   eipv2.0:
     service_type: vpc
