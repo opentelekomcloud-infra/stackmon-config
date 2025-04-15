@@ -483,7 +483,7 @@ health_metrics:
         weight: 2
 
   ### CFW
-  waf:
+  cfw:
     service: CFW
     component_name: "Cloud Firewall"
     category: security
