@@ -445,7 +445,7 @@ health_metrics:
   antiddos:
     service: antiddos
     component_name: "Anti DDoS"
-    category: database
+    category: security
     metrics:
       - antiddos.api_down
       - antiddos.api_slow
@@ -459,7 +459,7 @@ health_metrics:
   kms:
     service: kms
     component_name: "Key Management Service"
-    category: database
+    category: security
     metrics:
       - kms.api_down
       - kms.api_slow
@@ -473,7 +473,7 @@ health_metrics:
   waf:
     service: waf
     component_name: "Web Application Firewall"
-    category: database
+    category: security
     metrics:
       - waf.api_down
       - waf.api_slow
@@ -488,7 +488,7 @@ health_metrics:
   wafd:
     service: wafd
     component_name: "Dedicated Web Application Firewall"
-    category: database
+    category: security
     metrics:
       - premium-waf.api_down
       - premium-waf.api_slow
@@ -497,6 +497,21 @@ health_metrics:
       - expression: "premium-waf.api_slow || premium-waf.api_success_rate_low"
         weight: 1
       - expression: "premium-waf.api_down"
+        weight: 2
+
+  ### CFW
+  waf:
+    service: CFW
+    component_name: "Cloud Firewall"
+    category: security
+    metrics:
+      - cfw.api_down
+      - cfw.api_slow
+      - cfw.api_success_rate_low
+    expressions:
+      - expression: "cfw.api_slow || cfw.api_success_rate_low"
+        weight: 1
+      - expression: "cfw.api_down"
         weight: 2
 
   ## Management and Deployment
