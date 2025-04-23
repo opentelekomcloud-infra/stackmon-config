@@ -6,7 +6,7 @@ namespace: sd3-prod
 images:
   - name: sd3-frontend
     newName: quay.io/stackmon/status-dashboard-v3-front
-    newTag: sha-aa815cf
+    newTag: sha-2a82669
 
 resources:
   - ../../base
@@ -19,7 +19,7 @@ patchesStrategicMerge:
       name: sd3-frontend-ingress
     spec:
       rules:
-        - host: status.otc-service.com
+        - host: status-new.otc-service.com
           http:
             paths:
             - path: /
@@ -31,5 +31,5 @@ patchesStrategicMerge:
                     number: 80
       tls:
       - hosts:
-        - status.otc-service.com
+        - status-new.otc-service.com
         secretName: sd3-front-cert-prod
