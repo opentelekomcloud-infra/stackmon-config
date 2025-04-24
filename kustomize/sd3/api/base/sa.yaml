@@ -17,3 +17,6 @@ subjects:
 - kind: ServiceAccount
   name: sd3
   namespace: sd3-test
+- kind: ServiceAccount
+  name: sd3
+  namespace: status-dashboard
