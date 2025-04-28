@@ -74,6 +74,22 @@ environments:
             ref: probes-ch2-from-nl  # we want to monitor CH2 from NL
           - name: swift
             ref: swift1
+  - name: production_global
+    env:
+      OS_CLOUD: production_eu-de
+    monitoring_zones:
+      - name: eu-de
+        clouds:
+          - name: production_eu-de
+            ref: probes-de1  # we want to monitor Global from DE
+          - name: swift
+            ref: swift1
+      - name: eu-nl
+        clouds:
+          - name: production_eu-de
+            ref: probes-de2  # we want to monitor Global from NL
+          - name: swift
+            ref: swift1
 
 matrix:
   # Mapping of environments to test projects
@@ -505,6 +521,9 @@ metrics_processor:
       - name: "production_eu-nl"
         attributes:
           region: "EU-NL"
+      - name: "production_global"
+        attributes:
+          region: "Global"
     status_dashboard_instance_name: "prod-de"
     kustomization:
       extra_files:
