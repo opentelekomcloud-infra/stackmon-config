@@ -336,7 +336,7 @@ health_metrics:
       - expression: "nat.api_down"
         weight: 2
   ### Private NAT GW
-  natgw:
+  private-natgw:
     service: private-natgw
     component_name: "Private NAT Gateway"
     category: network

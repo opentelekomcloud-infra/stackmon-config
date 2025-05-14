@@ -318,7 +318,7 @@ components:
     category: Network
     region: EU-DE
     type: private-natgw
-  name: Private NAT Gateway  
+  name: Private NAT Gateway
 - attributes:
     category: Database
     region: EU-DE
