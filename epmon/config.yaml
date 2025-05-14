@@ -375,6 +375,14 @@ elements:
     sdk_proxy: plas
     urls:
       - /plasconnector/connectors?pageSize=10&pageNum=1
+  private-natgw:
+    service_type: private-natgw
+    sdk_proxy: private-natgw
+    urls:
+      - /private-nat/gateways
+      - /private-nat/transit-ips
+      - /private-nat/dnat-rules
+      - /private-nat/snat-rules
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:

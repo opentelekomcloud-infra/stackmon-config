@@ -153,6 +153,7 @@ matrix:
           - ocr
           - orchestration_skip
           - plas
+          - private-natgw
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -315,6 +316,7 @@ matrix:
           - ocr
           - orchestration_skip
           - plas
+          - private-natgw
           - rds_skip_unver
           - rds_skip_v1
           - rds
