@@ -217,36 +217,11 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### CTS
-  # API version 2
-  - name: "api_down"
-    service: "ctsv2"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_slow"
-    service: "ctsv2"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_success_rate_low"
-    service: "ctsv2"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
   # API version 3
-  - name: "api_down"
+  - name: "api_down_3min"
     service: "ctsv3"
     template:
-      name: "api_down"
+      name: "api_down_3min"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
