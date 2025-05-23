@@ -520,16 +520,13 @@ health_metrics:
     component_name: "Cloud Trace Service"
     category: management
     metrics:
-      - ctsv2.api_slow
-      - ctsv2.api_down
-      - ctsv2.api_success_rate_low
       - ctsv3.api_slow
-      - ctsv3.api_down
+      - ctsv3.api_down_3min
       - ctsv3.api_success_rate_low
     expressions:
-      - expression: "ctsv2.api_slow || ctsv2.api_success_rate_low || ctsv3.api_slow || ctsv3.api_success_rate_low"
+      - expression: "ctsv3.api_slow || ctsv3.api_success_rate_low"
         weight: 1
-      - expression: "ctsv2.api_down || ctsv3.api_down"
+      - expression: "ctsv3.api_down_3min"
         weight: 2
   ### Enterprise-Dashboard
   enterprise-dashboard:
