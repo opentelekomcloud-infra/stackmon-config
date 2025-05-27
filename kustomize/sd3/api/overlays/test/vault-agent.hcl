@@ -22,6 +22,7 @@ template {
 export SD_DB={{ .Data.data.dburl }}
 export SD_CACHE=internal
 export SD_LOG_LEVEL=devel
+export SD_SECRET_KEY={{ .Data.data.sdsecretkey }}
 export SD_WEB_URL=https://status.test.cloudmon.otc-service.com
 export SD_HOSTNAME=https://api.test.status.otc-service.com
 export SD_KEYCLOAK_URL={{ .Data.data.keycloakurl }}
