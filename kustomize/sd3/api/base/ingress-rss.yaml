@@ -8,7 +8,6 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-origin: '*'
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /
-  generation: 1
   labels:
     app: sd3-api-rss-ingress
   name: sd3-api-rss-ingress
