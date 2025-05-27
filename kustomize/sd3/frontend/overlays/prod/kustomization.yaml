@@ -29,7 +29,7 @@ patchesStrategicMerge:
                   name: sd3-frontend
                   port:
                     number: 80
-            - path: /rss
+            - path: /rss/
               pathType: Prefix
               backend:
                 service:
