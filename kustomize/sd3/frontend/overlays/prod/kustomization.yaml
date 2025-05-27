@@ -29,14 +29,7 @@ patchesStrategicMerge:
                   name: sd3-frontend
                   port:
                     number: 80
-            - path: /rss/
-              pathType: Prefix
-              backend:
-                service:
-                  name: sd3-api
-                  port:
-                    number: 8000     
-                    
+
       tls:
       - hosts:
         - status.otc-service.com

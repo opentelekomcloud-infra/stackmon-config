@@ -1,0 +1,31 @@
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header "X-Forwarded-Host: api.status.otc-service.com";
+      proxy_set_header "Host: api.status.otc-service.com";
+    nginx.ingress.kubernetes.io/cors-allow-origin: '*'
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  generation: 1
+  labels:
+    app: sd3-api-prod-ingress
+  name: sd3-api-prod-ingress
+  namespace: status-dashboard
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: status.otc-service.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: sd3-api
+                port:
+                  number: 8000
+            path: /rss
+            pathType: Prefix
+  tls:
+    - hosts:
+        - status.otc-service.com
+      secretName: sd3-front-cert-prod
