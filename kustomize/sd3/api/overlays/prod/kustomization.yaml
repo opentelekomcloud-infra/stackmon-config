@@ -9,7 +9,7 @@ resources:
 images:
   - name: sd3-api
     newName: quay.io/stackmon/status-dashboard-v3
-    newTag: sha-20d587f
+    newTag: sha-41e9e01
 
 configMapGenerator:
   - name: sd3-vault-config
