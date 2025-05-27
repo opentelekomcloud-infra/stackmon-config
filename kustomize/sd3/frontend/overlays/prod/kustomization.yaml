@@ -19,7 +19,7 @@ patchesStrategicMerge:
       name: sd3-frontend-ingress
     spec:
       rules:
-        - host: status-new.otc-service.com
+        - host: status.otc-service.com
           http:
             paths:
             - path: /
@@ -31,5 +31,5 @@ patchesStrategicMerge:
                     number: 80
       tls:
       - hosts:
-        - status-new.otc-service.com
+        - status.otc-service.com
         secretName: sd3-front-cert-prod
