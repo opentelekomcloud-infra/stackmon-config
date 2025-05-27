@@ -323,5 +323,10 @@ components:
 - attributes:
     category: Sites
     region: Global
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
+    category: Sites
+    region: Global
     type: community
   name: Open Telekom Cloud Community

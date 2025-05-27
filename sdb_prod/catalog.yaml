@@ -461,6 +461,11 @@ components:
     type: community
   name: Open Telekom Cloud Community
 - attributes:
+    category: Sites
+    region: Global
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
     category: Optional Services
     region: Global
     type: enterprise-dashboard
