@@ -20,3 +20,10 @@ spec:
             name: sd3-frontend
             port:
               number: 80
+      - path: /rss
+        pathType: Prefix
+        backend:
+          service:
+            name: sd3-api
+            port:
+              number: 8000
