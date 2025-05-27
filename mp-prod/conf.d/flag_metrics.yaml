@@ -83,7 +83,7 @@ flag_metrics:
   - name: "api_slow"
     service: "bms"
     template:
-      name: "api_slow"
+      name: "api_slow_test"
     environments:
       - name: "production_eu-de"
 
