@@ -18,7 +18,7 @@ patchesStrategicMerge:
     metadata:
       name: sd3-frontend-ingress
       annotations:
-        nginx.ingress.kubernetes.io/server-snippet: |
+        nginx.ingress.kubernetes.io/configuration-snippet: |
           location ~ ^/rss {
             return 301 https://api.status.otc-service.com$request_uri;
           }
