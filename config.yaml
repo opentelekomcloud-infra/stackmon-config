@@ -526,7 +526,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_18_latest"
+          newTag: "change_20_latest"
 
       patches:
         - patch: |-
@@ -644,7 +644,7 @@ status_dashboard:
   - name: prod-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
-    domain_name: status.otc-service.com
+    domain_name: api.status.otc-service.com
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
