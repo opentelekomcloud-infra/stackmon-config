@@ -468,5 +468,5 @@ components:
 - attributes:
     category: Optional Services
     region: Global
-    type: enterprise-dashboard
-  name: Enterprise Dashboard
+    type: financial-dashboard
+  name: Financial Dashboard
