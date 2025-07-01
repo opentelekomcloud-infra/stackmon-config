@@ -120,8 +120,6 @@ matrix:
           - dcs_skip_v1
           - dds
           - deh
-          - dis_skip_unver
-          - dis
           - dli
           - dms
           - dmsv2
@@ -282,8 +280,6 @@ matrix:
           - dcs_skip_v1
           - dds
           - deh
-          - dis_skip_unver
-          - dis
           - dli
           - dms
           - dmsv2

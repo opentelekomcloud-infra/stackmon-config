@@ -589,20 +589,6 @@ health_metrics:
         weight: 1
       - expression: "dataarts.api_down"
         weight: 2
-  ### DIS
-  dis:
-    service: dis
-    component_name: "Data Ingestion Service"
-    category: management
-    metrics:
-      - disv2.api_slow
-      - disv2.api_down
-      - disv2.api_success_rate_low
-    expressions:
-      - expression: "disv2.api_slow || disv2.api_success_rate_low"
-        weight: 1
-      - expression: "disv2.api_down"
-        weight: 2
 
   ### DLI
   dli:
