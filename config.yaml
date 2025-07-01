@@ -164,6 +164,7 @@ matrix:
           - smn_skip_v2
           - swift
           - swrv2
+          - taurusdb
           - vbs
           - volume_skip_v2
           - volume
@@ -328,6 +329,7 @@ matrix:
           - smn_skip_v2
           - swift
           - swrv2
+          - taurusdb
           - vbs
           - volume_skip_v2
           - volume

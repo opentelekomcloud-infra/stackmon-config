@@ -1203,6 +1203,28 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### TaurusDB
+  - name: "api_down"
+    service: "taurusdb"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "taurusdb"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "taurusdb"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### TMS
   # - name: "api_down"
   #   service: "tms"

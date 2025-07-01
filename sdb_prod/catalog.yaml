@@ -125,6 +125,11 @@ components:
     type: ddm
   name: Distributed Database Middleware
 - attributes:
+    category: Database
+    region: EU-DE
+    type: ddm
+  name: TaurusDB
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
