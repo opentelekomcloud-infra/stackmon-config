@@ -1205,21 +1205,21 @@ flag_metrics:
 
   ### TaurusDB
   - name: "api_down"
-    service: "taurusdb"
+    service: "gaussdb-mysql"
     template:
       name: "api_down"
     environments:
       - name: "production_eu-de"
 
   - name: "api_slow"
-    service: "taurusdb"
+    service: "gaussdb-mysql"
     template:
       name: "api_slow"
     environments:
       - name: "production_eu-de"
 
   - name: "api_success_rate_low"
-    service: "taurusdb"
+    service: "gaussdb-mysql"
     template:
       name: "api_success_rate_low"
     environments:

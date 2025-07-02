@@ -127,7 +127,7 @@ components:
 - attributes:
     category: Database
     region: EU-DE
-    type: ddm
+    type: gaussdb-mysql
   name: TaurusDB
 - attributes:
     category: Compute
