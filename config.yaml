@@ -123,7 +123,6 @@ matrix:
           - dds
           - deh
           - dis_skip_unver
-          - dis
           - dli
           - dms
           - dmsv2
@@ -287,7 +286,6 @@ matrix:
           - dds
           - deh
           - dis_skip_unver
-          - dis
           - dli
           - dms
           - dmsv2

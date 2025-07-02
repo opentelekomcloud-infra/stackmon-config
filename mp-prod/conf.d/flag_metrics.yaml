@@ -408,28 +408,6 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  ### DIS
-  - name: "api_down"
-    service: "disv2"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_slow"
-    service: "disv2"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_success_rate_low"
-    service: "disv2"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-
   ### DLI
   - name: "api_down"
     service: "dli"

@@ -166,12 +166,6 @@ elements:
       - /dedicated-hosts
   dis_skip_unver:
     service_type: dis
-  dis:
-    service_type: disv2
-    urls:
-      - /
-      - /streams
-      - /stream/tags
   dli:
     service_type: dli
     urls:
