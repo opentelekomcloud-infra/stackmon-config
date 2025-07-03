@@ -465,3 +465,8 @@ components:
     region: Global
     type: financial-dashboard
   name: Financial Dashboard
+- attributes:
+    category: Optional Services
+    region: Global
+    type: billing
+  name: Billing
