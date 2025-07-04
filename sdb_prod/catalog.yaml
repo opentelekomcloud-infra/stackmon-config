@@ -469,4 +469,4 @@ components:
     category: Optional Services
     region: Global
     type: billing
-  name: Billing
+  name: Invoicing
