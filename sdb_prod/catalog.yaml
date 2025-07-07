@@ -10,6 +10,11 @@ components:
     type: antiddos
   name: Anti DDoS
 - attributes:
+    category: Application Services
+    region: EU-DE
+    type: apigv2
+  name: API Gateway
+- attributes:
     category: Compute
     region: EU-DE
     type: as
@@ -115,6 +120,11 @@ components:
     type: dds
   name: Document Database Service
 - attributes:
+    category: Database
+    region: EU-DE
+    type: ddm
+  name: Distributed Database Middleware
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
@@ -127,13 +137,13 @@ components:
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
-    type: dis
-  name: Data Ingestion Service
+    type: dli
+  name: Data Lake Insight
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
-    type: dli
-  name: Data Lake Insight
+    type: ocr
+  name: Optical Character Recognition
 - attributes:
     category: Application Services
     region: EU-DE
@@ -200,15 +210,35 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
-    category: Management & Deployment
+    category: Network
     region: EU-DE
-    type: enterprise-dashboard
-  name: Enterprise Dashboard
+    type: erv3
+  name: Enterprise Router
+- attributes:
+    category: Network
+    region: EU-NL
+    type: erv3
+  name: Enterprise Router
+- attributes:
+    category: Network
+    region: EU-DE
+    type: evpn
+  name: Enterprise Virtual Private Network
 - attributes:
     category: Security Services
     region: EU-DE
     type: iam
   name: Identity and Access Management
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: functiongraph
+  name: FunctionGraph
+- attributes:
+    category: Database
+    region: EU-DE
+    type: geminidb
+  name: GeminiDB Service
 - attributes:
     category: Security Services
     region: EU-NL
@@ -399,3 +429,44 @@ components:
     region: EU-NL
     type: wafd
   name: Dedicated Web Application Firewall
+### Global
+- attributes:
+    category: Sites
+    region: Global
+    type: console
+  name: Open Telekom Cloud Console
+- attributes:
+    category: Sites
+    region: Global
+    type: otc
+  name: Open Telekom Cloud
+- attributes:
+    category: Sites
+    region: Global
+    type: helpcenter
+  name: HelpCenter
+- attributes:
+    category: Sites
+    region: Global
+    type: architecturecenter
+  name: Architecture Center
+- attributes:
+    category: Sites
+    region: Global
+    type: community
+  name: Open Telekom Cloud Community
+- attributes:
+    category: Sites
+    region: Global
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
+    category: Optional Services
+    region: Global
+    type: financial-dashboard
+  name: Financial Dashboard
+- attributes:
+    category: Optional Services
+    region: Global
+    type: billing
+  name: Invoicing

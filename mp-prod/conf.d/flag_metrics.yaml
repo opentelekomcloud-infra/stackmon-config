@@ -25,6 +25,28 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### APIG-v2
+  - name: "api_down"
+    service: "apigv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "apigv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "apigv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### AutoScaling
   - name: "api_down"
     service: "as"
@@ -195,61 +217,11 @@ flag_metrics:
       - name: "production_eu-nl"
 
   ### CTS
-  # API version 1
-  - name: "api_down"
-    service: "cts"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_slow"
-    service: "cts"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_success_rate_low"
-    service: "cts"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  # API version 2
-  - name: "api_down"
-    service: "ctsv2"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_slow"
-    service: "ctsv2"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
-  - name: "api_success_rate_low"
-    service: "ctsv2"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-      - name: "production_eu-nl"
-
   # API version 3
-  - name: "api_down"
+  - name: "api_down_3min"
     service: "ctsv3"
     template:
-      name: "api_down"
+      name: "api_down_3min"
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
@@ -342,6 +314,50 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### DDMv1
+  - name: "api_down"
+    service: "ddmv1"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "ddmv1"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "ddmv1"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
+  ### DDMv2
+  - name: "api_down"
+    service: "ddmv2"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "ddmv2"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "ddmv2"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### DDS
   - name: "api_down"
     service: "ddsv3"
@@ -391,28 +407,6 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
-
-  ### DIS
-  - name: "api_down"
-    service: "disv2"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_slow"
-    service: "disv2"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_success_rate_low"
-    service: "disv2"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
 
   ### DLI
   - name: "api_down"
@@ -685,23 +679,72 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
-  ### EnterpriseDashboard-v1
   - name: "api_down"
-    service: "enterprise-dashboard-v1"
+    service: "enterprise_dashboard_v2"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "enterprise_dashboard_v2"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "enterprise_dashboard_v2"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  ### Enterprise Router
+  - name: "api_down"
+    service: "erv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "erv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "erv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  ### Enterprise VPN
+  - name: "api_down"
+    service: "evpn"
     template:
       name: "api_down"
     environments:
       - name: "production_eu-de"
 
   - name: "api_slow"
-    service: "enterprise-dashboard-v1"
+    service: "evpn"
     template:
       name: "api_slow"
     environments:
       - name: "production_eu-de"
 
   - name: "api_success_rate_low"
-    service: "enterprise-dashboard-v1"
+    service: "evpn"
     template:
       name: "api_success_rate_low"
     environments:
@@ -731,6 +774,50 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
+
+  ### FunctionGraph
+  - name: "api_down"
+    service: "functiongraph"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "functiongraph"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "functiongraph"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
+  ### GeminiDB
+  - name: "api_down"
+    service: "geminidb"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "geminidb"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "geminidb"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
 
   ### IAM
   - name: "api_down"
@@ -925,30 +1012,27 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  ### OBS
+  ### OCR
   - name: "api_down"
-    service: "object"
+    service: "ocr"
     template:
       name: "api_down"
     environments:
       - name: "production_eu-de"
-      - name: "production_eu-nl"
 
   - name: "api_slow"
-    service: "object"
+    service: "ocr"
     template:
       name: "api_slow"
     environments:
       - name: "production_eu-de"
-      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
-    service: "object"
+    service: "ocr"
     template:
       name: "api_success_rate_low"
     environments:
       - name: "production_eu-de"
-      - name: "production_eu-nl"
 
   ### PLAS
   - name: "api_down"
@@ -1273,6 +1357,7 @@ flag_metrics:
       name: "api_down_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_slow"
     service: "console"
@@ -1280,6 +1365,7 @@ flag_metrics:
       name: "api_slow_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
     service: "console"
@@ -1287,6 +1373,7 @@ flag_metrics:
       name: "api_success_rate_low_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
   ### Open Telekom Cloud
   - name: "api_down"
     service: "otc"
@@ -1294,6 +1381,7 @@ flag_metrics:
       name: "api_down_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_slow"
     service: "otc"
@@ -1301,6 +1389,7 @@ flag_metrics:
       name: "api_slow_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
     service: "otc"
@@ -1308,6 +1397,7 @@ flag_metrics:
       name: "api_success_rate_low_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
   ### HelCenter
   - name: "api_down"
     service: "helpcenter"
@@ -1315,6 +1405,7 @@ flag_metrics:
       name: "api_down_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_slow"
     service: "helpcenter"
@@ -1322,6 +1413,7 @@ flag_metrics:
       name: "api_slow_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
     service: "helpcenter"
@@ -1329,6 +1421,31 @@ flag_metrics:
       name: "api_success_rate_low_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
+  ### ArchitectureCenter
+  - name: "api_down"
+    service: "architecturecenter"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "architecturecenter"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "architecturecenter"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
   ### Community
   - name: "api_down"
     service: "community"
@@ -1336,6 +1453,7 @@ flag_metrics:
       name: "api_down_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_slow"
     service: "community"
@@ -1343,6 +1461,7 @@ flag_metrics:
       name: "api_slow_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
     service: "community"
@@ -1350,3 +1469,28 @@ flag_metrics:
       name: "api_success_rate_low_global"
     environments:
       - name: "production_eu-de"
+      - name: "production_eu-nl"
+  ### OBS
+  - name: "api_down"
+    service: "obs"
+    template:
+      name: "api_down_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_slow"
+    service: "obs"
+    template:
+      name: "api_slow_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"
+
+  - name: "api_success_rate_low"
+    service: "obs"
+    template:
+      name: "api_success_rate_low_global"
+    environments:
+      - name: "production_eu-de"
+      - name: "production_eu-nl"

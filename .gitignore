@@ -19,6 +19,10 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+Vagrantfile
+.vagrant/
+*.retry
+test_inventory
 
 # Virtual Environment
 venv/
