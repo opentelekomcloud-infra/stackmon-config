@@ -1,0 +1,16 @@
+.DS_Store
+*.swp
+*.pyc
+doc/build/
+.tox/
+.test/
+/.project
+/.pydevproject
+*.egg
+*.eggs
+Vagrantfile
+.vagrant/
+*.retry
+test_inventory
+.vscode/
+.idea/

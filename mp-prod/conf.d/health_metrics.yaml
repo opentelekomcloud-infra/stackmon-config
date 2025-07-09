@@ -422,6 +422,23 @@ health_metrics:
         weight: 1
       - expression: "geminidb.api_down"
         weight: 2
+  ### DDM
+  ddm:
+    service: ddm
+    component_name: "Distributed Database Middleware"
+    category: database
+    metrics:
+      - ddmv1.api_slow
+      - ddmv1.api_down
+      - ddmv1.api_success_rate_low
+      - ddmv2.api_slow
+      - ddmv2.api_down
+      - ddmv2.api_success_rate_low
+    expressions:
+      - expression: "ddmv1.api_slow || ddmv1.api_success_rate_low || ddmv2.api_slow || ddmv2.api_success_rate_low"
+        weight: 1
+      - expression: "ddmv1.api_down || ddmv2.api_down"
+        weight: 2
 
   ## SecurityServices
   ### Anti-DDoS
@@ -518,16 +535,13 @@ health_metrics:
     component_name: "Cloud Trace Service"
     category: management
     metrics:
-      - ctsv2.api_slow
-      - ctsv2.api_down
-      - ctsv2.api_success_rate_low
       - ctsv3.api_slow
-      - ctsv3.api_down
+      - ctsv3.api_down_3min
       - ctsv3.api_success_rate_low
     expressions:
-      - expression: "ctsv2.api_slow || ctsv2.api_success_rate_low || ctsv3.api_slow || ctsv3.api_success_rate_low"
+      - expression: "ctsv3.api_slow || ctsv3.api_success_rate_low"
         weight: 1
-      - expression: "ctsv2.api_down || ctsv3.api_down"
+      - expression: "ctsv3.api_down_3min"
         weight: 2
   ### Enterprise-Dashboard
   enterprise-dashboard:
@@ -603,20 +617,6 @@ health_metrics:
       - expression: "dataarts.api_slow || dataarts.api_success_rate_low"
         weight: 1
       - expression: "dataarts.api_down"
-        weight: 2
-  ### DIS
-  dis:
-    service: dis
-    component_name: "Data Ingestion Service"
-    category: management
-    metrics:
-      - disv2.api_slow
-      - disv2.api_down
-      - disv2.api_success_rate_low
-    expressions:
-      - expression: "disv2.api_slow || disv2.api_success_rate_low"
-        weight: 1
-      - expression: "disv2.api_down"
         weight: 2
 
   ### DLI

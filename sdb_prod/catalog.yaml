@@ -120,6 +120,11 @@ components:
     type: dds
   name: Document Database Service
 - attributes:
+    category: Database
+    region: EU-DE
+    type: ddm
+  name: Distributed Database Middleware
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
@@ -129,11 +134,6 @@ components:
     region: EU-NL
     type: deh
   name: Dedicated Host
-- attributes:
-    category: Big Data and Data Analysis
-    region: EU-DE
-    type: dis
-  name: Data Ingestion Service
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
@@ -456,7 +456,17 @@ components:
     type: community
   name: Open Telekom Cloud Community
 - attributes:
-    category: Optional Services
+    category: Sites
     region: Global
-    type: enterprise-dashboard
-  name: Enterprise Dashboard
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
+    category: Financial Services
+    region: Global
+    type: financial-dashboard
+  name: Financial Dashboard
+- attributes:
+    category: Financial Services
+    region: Global
+    type: billing
+  name: Invoicing
