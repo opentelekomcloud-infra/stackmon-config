@@ -461,12 +461,12 @@ components:
     type: status-dashboard
   name: Status Dashboard
 - attributes:
-    category: Optional Services
+    category: Financial Services
     region: Global
     type: financial-dashboard
   name: Financial Dashboard
 - attributes:
-    category: Optional Services
+    category: Financial Services
     region: Global
     type: billing
   name: Invoicing
