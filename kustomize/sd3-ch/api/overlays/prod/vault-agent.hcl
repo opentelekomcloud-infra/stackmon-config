@@ -18,13 +18,13 @@ auto_auth {
 template {
   destination = "/secrets/sd3-ch-api-env"
   contents = <<EOT
-{{ with secret "secret/data/statusdashboard/sd3-prod" -}}
+{{ with secret "secret/data/statusdashboard/sd3-ch-prod" -}}
 export SD_DB={{ .Data.data.dburl }}
 export SD_CACHE=internal
 export SD_LOG_LEVEL=devel
 export SD_SECRET_KEY={{ .Data.data.sdsecretkey }}
-export SD_WEB_URL=https://status.otc-service.com
-export SD_HOSTNAME=https://api.status.otc-service.com
+export SD_WEB_URL=https://status-ch-new.otc-service.com
+export SD_HOSTNAME=https://api.status-ch.otc-service.com
 export SD_KEYCLOAK_URL={{ .Data.data.keycloakurl }}
 export SD_KEYCLOAK_REALM={{ .Data.data.keycloakrealm }}
 export SD_KEYCLOAK_CLIENT_ID={{ .Data.data.keycloakclientid }}
