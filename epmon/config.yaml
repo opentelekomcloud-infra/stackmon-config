@@ -200,7 +200,7 @@ elements:
     urls:
       - /clusters
       - /snaphosts
-      - /clusters/tags
+      - /tags
   ecs:
     service_type: ecs
     sdk_proxy: ecs
