@@ -1,0 +1,41 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: status-dashboard-ch-prod
+
+images:
+  - name: sd3-ch-frontend
+    newName: quay.io/stackmon/status-dashboard-v3-front
+    newTag: 0.1.1
+
+resources:
+  - ../../base
+
+patchesStrategicMerge:
+  - |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: sd3-ch-frontend-ingress
+      annotations:
+        nginx.ingress.kubernetes.io/configuration-snippet: |
+          location ~ ^/rss {
+            return 301 https://api.status-ch.otc-service.com$request_uri;
+          }
+    spec:
+      rules:
+        - host: status-ch-new.otc-service.com
+          http:
+            paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: sd3-ch-frontend
+                  port:
+                    number: 80
+
+      tls:
+      - hosts:
+        - status-ch-new.otc-service.com
+        secretName: sd3-ch-front-cert-prod
