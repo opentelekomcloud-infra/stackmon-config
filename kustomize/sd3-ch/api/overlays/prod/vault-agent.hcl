@@ -4,7 +4,7 @@ auto_auth {
     method "kubernetes" {
         mount_path = "auth/kubernetes_otcinfra2"
         config = {
-            role = "sd3-ch"
+            role = "sd3"
             token_path = "/var/run/secrets/tokens/vault-token"
         }
     }
