@@ -21,7 +21,7 @@ spec:
         command:
           ["/bin/sh", "-c"]
         args:
-          ['source /secrets/sd3-api-env && "/usr/src/app/app"']
+          ['source /secrets/sd3-ch-api-env && "/usr/src/app/app"']
         ports:
         - containerPort: 8000
         resources:
