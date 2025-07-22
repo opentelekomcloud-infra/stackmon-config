@@ -377,8 +377,8 @@ elements:
     urls:
       - /plasconnector/connectors?pageSize=10&pageNum=1
   private-natgw:
-    service_type: private-natgw
-    sdk_proxy: private-natgw
+    service_type: natv3
+    sdk_proxy: natv3
     urls:
       - /private-nat/gateways
       - /private-nat/transit-ips

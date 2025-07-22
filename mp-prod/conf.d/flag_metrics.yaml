@@ -1058,21 +1058,21 @@ flag_metrics:
 
   ### Private NATGW
   - name: "api_down"
-    service: "private-natgw"
+    service: "natv3"
     template:
       name: "api_down"
     environments:
       - name: "production_eu-de"
 
   - name: "api_slow"
-    service: "private-natgw"
+    service: "natv3"
     template:
       name: "api_slow"
     environments:
       - name: "production_eu-de"
 
   - name: "api_success_rate_low"
-    service: "private-natgw"
+    service: "natv3"
     template:
       name: "api_success_rate_low"
     environments:

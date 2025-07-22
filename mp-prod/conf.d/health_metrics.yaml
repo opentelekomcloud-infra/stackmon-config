@@ -337,17 +337,17 @@ health_metrics:
         weight: 2
   ### Private NAT GW
   private-natgw:
-    service: private-natgw
+    service: natv3
     component_name: "Private NAT Gateway"
     category: network
     metrics:
-      - nat.api_down
-      - nat.api_slow
-      - nat.api_success_rate_low
+      - natv3.api_down
+      - natv3.api_slow
+      - natv3.api_success_rate_low
     expressions:
-      - expression: "nat.api_slow || nat.api_success_rate_low"
+      - expression: "natv3.api_slow || natv3.api_success_rate_low"
         weight: 1
-      - expression: "nat.api_down"
+      - expression: "natv3.api_down"
         weight: 2
   ### VPN
   vpn:
