@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sd3-frontend
+  labels:
+    app: sd3-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sd3-frontend
+  template:
+    metadata:
+      labels:
+        app: sd3-frontend
+    spec:
+      containers:
+      - name: sd3-frontend
+        image: sd3-frontend
+        command:
+          ["/bin/sh", "-c"]
+        args:
+          ['nginx -g "daemon off;"']
+        ports:
+        - containerPort: 80
+          name: http
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi

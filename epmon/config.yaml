@@ -109,16 +109,13 @@ elements:
     service_type: ctsv2
     sdk_proxy: cts
     urls: []
-  cts_v2:
-    service_type: ctsv2
-    sdk_proxy: ctsv2
-    urls:
-      - /system/trace?limit=10
   cts_v3:
     service_type: ctsv3
     sdk_proxy: ctsv3
     urls:
       - /notifications/smn
+      - /trackers
+      - /traces
   cts_v3_swiss:
     service_type: ctsv3
     sdk_proxy: ctsv3
@@ -147,6 +144,16 @@ elements:
       - /quota
   dcs_skip_v1:
     service_type: dcsv1
+  ddmv1:
+    service_type: ddmv1
+    sdk_proxy: ddmv1
+    urls:
+      - /instances
+  ddmv2:
+    service_type: ddmv2
+    sdk_proxy: ddmv2
+    urls:
+      - /engines
   dds:
     service_type: ddsv3
     sdk_proxy: dds
@@ -159,12 +166,6 @@ elements:
       - /dedicated-hosts
   dis_skip_unver:
     service_type: dis
-  dis:
-    service_type: disv2
-    urls:
-      - /
-      - /streams
-      - /stream/tags
   dli:
     service_type: dli
     urls:
@@ -198,8 +199,8 @@ elements:
     service_type: dws
     urls:
       - /clusters
-      - /snaphosts
-      - /clusters/tags
+      - /snapshots
+      - /tags
   ecs:
     service_type: ecs
     sdk_proxy: ecs

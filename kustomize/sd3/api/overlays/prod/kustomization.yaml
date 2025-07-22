@@ -1,0 +1,40 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: status-dashboard
+
+resources:
+  - ../../base
+
+images:
+  - name: sd3-api
+    newName: quay.io/stackmon/status-dashboard-v3
+    newTag: sha-3a259f0
+
+configMapGenerator:
+  - name: sd3-vault-config
+    files:
+      - vault-agent.hcl
+
+patchesStrategicMerge:
+  - |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: sd3-api-ingress
+    spec:
+      rules:
+        - host: api.status.otc-service.com
+          http:
+            paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: sd3-api
+                  port:
+                    number: 8000
+      tls:
+      - hosts:
+        - api.status.otc-service.com
+        secretName: sd3-cert-prod
