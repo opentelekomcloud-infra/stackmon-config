@@ -427,6 +427,14 @@ elements:
       - /manage/shared-repositories?center=self
       - /manage/repos
       - /manage/namespaces
+  taurusdb:
+    service_type: gaussdb-mysql
+    sdk_proxy: gaussdb
+    urls:
+      - /flavors/gaussdb-mysql?availability_zone_mode=multi
+      - /instances
+      - /backups
+      - /configurations
   volume_skip_v2:
     service_type: volumev2
   volume:
