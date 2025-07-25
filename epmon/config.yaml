@@ -74,6 +74,11 @@ elements:
       - /quotas
   ces_skip_v1:
     service_type: cesv1
+  cfw:
+    service_type: cfwv1
+    sdk_proxy: cfwv1
+    urls:
+      - /dns/servers
   compute:
     service_type: compute
     urls:
