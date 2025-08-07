@@ -27,7 +27,7 @@ metric_templates:
   api_slow_test:
     query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
-    threshold: 50
+    threshold: 49
   api_slow_600:
     query: "smartSummarize(consolidateBy(aggregate(stats.timers.openstack.api.$environment.*.$service.*.*.*.mean, 'average'), 'average'), '3min', 'average')"
     op: "gt"
