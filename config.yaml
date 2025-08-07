@@ -646,7 +646,7 @@ status_dashboard:
   - name: prod-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
-    domain_name: api.status.otc-service.com
+    domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
@@ -748,7 +748,7 @@ status_dashboard:
   - name: hybrid-ch2_from_eu-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-ch2
-    domain_name: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+    domain_name: api.status.otc-service.com
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
