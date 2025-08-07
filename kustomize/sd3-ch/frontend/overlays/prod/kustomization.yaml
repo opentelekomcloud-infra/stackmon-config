@@ -6,7 +6,7 @@ namespace: status-dashboard-ch-prod
 images:
   - name: sd3-ch-frontend
     newName: quay.io/stackmon/status-dashboard-v3-front
-    newTag: 0.1.1
+    newTag: 1.0.0
 
 resources:
   - ../../base
