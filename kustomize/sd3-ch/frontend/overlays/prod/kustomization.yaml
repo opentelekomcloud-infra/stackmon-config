@@ -6,7 +6,7 @@ namespace: status-dashboard-ch-prod
 images:
   - name: sd3-ch-frontend
     newName: quay.io/stackmon/status-dashboard-v3-front
-    newTag: 0.1.1
+    newTag: 1.0.0-ch
 
 resources:
   - ../../base
@@ -24,7 +24,7 @@ patchesStrategicMerge:
           }
     spec:
       rules:
-        - host: status-ch-new.otc-service.com
+        - host: status-ch.otc-service.com
           http:
             paths:
             - path: /
@@ -37,5 +37,5 @@ patchesStrategicMerge:
 
       tls:
       - hosts:
-        - status-ch-new.otc-service.com
+        - status-ch.otc-service.com
         secretName: sd3-ch-front-cert-prod
