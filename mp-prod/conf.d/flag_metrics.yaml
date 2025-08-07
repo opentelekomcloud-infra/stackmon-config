@@ -392,7 +392,7 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
-  - name: "api_slow_test"
+  - name: "api_slow"
     service: "deh"
     template:
       name: "api_slow"
