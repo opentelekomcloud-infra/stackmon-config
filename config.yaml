@@ -107,6 +107,7 @@ matrix:
           - cce
           - ces
           - ces_skip_v1
+          - cfw
           - compute
           - csbs
           - css
@@ -272,6 +273,7 @@ matrix:
           - cce
           - ces
           - ces_skip_v1
+          - cfw
           - compute
           - csbs
           - css
