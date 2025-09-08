@@ -83,6 +83,11 @@ elements:
       - /os-keypairs
       - /os-server-groups
       - /os-availability-zone
+  config:
+    service_type: rms
+    sdk_proxy: rms
+    urls:
+      - /resource-manager/policy-definitions
   csbs:
     service_type: data-protect
     sdk_proxy: csbs
