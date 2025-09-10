@@ -554,9 +554,8 @@ health_metrics:
     expressions:
       - expression: "rms.api_slow || rms.api_success_rate_low"
         weight: 1
-      - expression: "rms.api_down_3min"
+      - expression: "rms.api_down"
         weight: 2
-
 
   ### CTS
   cts:
