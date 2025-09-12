@@ -541,7 +541,7 @@ health_metrics:
         weight: 1
       - expression: "ces.api_down_3min"
         weight: 2
-  
+
   ### CONFIG
   config:
     service: rms
