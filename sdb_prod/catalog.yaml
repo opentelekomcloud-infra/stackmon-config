@@ -439,6 +439,11 @@ components:
     region: EU-NL
     type: wafd
   name: Dedicated Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: hss
+  name: Host Security Service
 ### Global
 - attributes:
     category: Sites
