@@ -525,7 +525,7 @@ health_metrics:
       - expression: "premium-waf.api_down"
         weight: 2
   ### HSS
-  wafd:
+  hss:
     service: hss
     component_name: "Host Security Service"
     category: security

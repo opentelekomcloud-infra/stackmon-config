@@ -1538,7 +1538,7 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
-    ### Host Security Service
+  ### Host Security Service
   - name: "api_down"
     service: "hss"
     template:
