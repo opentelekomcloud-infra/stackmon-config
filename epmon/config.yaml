@@ -376,6 +376,14 @@ elements:
     sdk_proxy: plas
     urls:
       - /plasconnector/connectors?pageSize=10&pageNum=1
+  private-natgw:
+    service_type: natv3
+    sdk_proxy: natv3
+    urls:
+      - /private-nat/gateways
+      - /private-nat/transit-ips
+      - /private-nat/dnat-rules
+      - /private-nat/snat-rules
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:
@@ -419,6 +427,14 @@ elements:
       - /manage/shared-repositories?center=self
       - /manage/repos
       - /manage/namespaces
+  taurusdb:
+    service_type: gaussdb-mysql
+    sdk_proxy: gaussdb
+    urls:
+      - /flavors/gaussdb-mysql?availability_zone_mode=multi
+      - /instances
+      - /backups
+      - /configurations
   volume_skip_v2:
     service_type: volumev2
   volume:

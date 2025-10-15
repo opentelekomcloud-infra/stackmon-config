@@ -125,6 +125,11 @@ components:
     type: ddm
   name: Distributed Database Middleware
 - attributes:
+    category: Database
+    region: EU-DE
+    type: gaussdb-mysql
+  name: TaurusDB
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
@@ -314,6 +319,11 @@ components:
     region: EU-DE
     type: plas
   name: Private Link Access Service
+- attributes:
+    category: Network
+    region: EU-DE
+    type: private-natgw
+  name: Private NAT Gateway
 - attributes:
     category: Database
     region: EU-DE

@@ -1056,6 +1056,28 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
+  ### Private NATGW
+  - name: "api_down"
+    service: "natv3"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "natv3"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "natv3"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### RDS
   - name: "api_down"
     service: "rdsv3"
@@ -1180,6 +1202,28 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
+
+  ### TaurusDB
+  - name: "api_down"
+    service: "gaussdb-mysql"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "gaussdb-mysql"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "gaussdb-mysql"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
 
   ### TMS
   # - name: "api_down"

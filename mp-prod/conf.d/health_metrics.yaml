@@ -335,6 +335,20 @@ health_metrics:
         weight: 1
       - expression: "nat.api_down"
         weight: 2
+  ### Private NAT GW
+  private-natgw:
+    service: natv3
+    component_name: "Private NAT Gateway"
+    category: network
+    metrics:
+      - natv3.api_down
+      - natv3.api_slow
+      - natv3.api_success_rate_low
+    expressions:
+      - expression: "natv3.api_slow || natv3.api_success_rate_low"
+        weight: 1
+      - expression: "natv3.api_down"
+        weight: 2
   ### VPN
   vpn:
     service: vpn
@@ -349,7 +363,6 @@ health_metrics:
         weight: 1
       - expression: "vpc.api_down"
         weight: 2
-
   ### PLAS
   plas:
     service: plas
@@ -438,6 +451,20 @@ health_metrics:
       - expression: "ddmv1.api_slow || ddmv1.api_success_rate_low || ddmv2.api_slow || ddmv2.api_success_rate_low"
         weight: 1
       - expression: "ddmv1.api_down || ddmv2.api_down"
+        weight: 2
+  ### TaurusDB
+  taurusdb:
+    service: gaussdb-mysql
+    component_name: "TaurusDB"
+    category: database
+    metrics:
+      - gaussdb-mysql.api_down
+      - gaussdb-mysql.api_slow
+      - gaussdb-mysql.api_success_rate_low
+    expressions:
+      - expression: "gaussdb-mysql.api_slow || gaussdb-mysql.api_success_rate_low"
+        weight: 1
+      - expression: "gaussdb-mysql.api_down"
         weight: 2
 
   ## SecurityServices
