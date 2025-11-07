@@ -1034,28 +1034,6 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
-  ### PLAS
-  - name: "api_down"
-    service: "plas"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_slow"
-    service: "plas"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_success_rate_low"
-    service: "plas"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-
   ### Private NATGW
   - name: "api_down"
     service: "natv3"

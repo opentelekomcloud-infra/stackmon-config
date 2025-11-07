@@ -204,12 +204,6 @@ components:
 #     type: opengauss
 #   name: GaussDB (openGauss)
 
-# - attributes:
-#     category: Network
-#     region: EU-CH2
-#     type: plas
-#   name: Private Link Access
-
 - attributes:
     category: Database
     region: EU-CH2

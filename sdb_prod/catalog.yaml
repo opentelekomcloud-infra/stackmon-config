@@ -317,11 +317,6 @@ components:
 - attributes:
     category: Network
     region: EU-DE
-    type: plas
-  name: Private Link Access Service
-- attributes:
-    category: Network
-    region: EU-DE
     type: private-natgw
   name: Private NAT Gateway
 - attributes:

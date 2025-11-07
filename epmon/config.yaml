@@ -371,11 +371,6 @@ elements:
   orchestration_skip:
     service_type: orchestration
     urls: []
-  plas:
-    service_type: plas
-    sdk_proxy: plas
-    urls:
-      - /plasconnector/connectors?pageSize=10&pageNum=1
   private-natgw:
     service_type: natv3
     sdk_proxy: natv3
