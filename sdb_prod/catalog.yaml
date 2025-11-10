@@ -60,6 +60,11 @@ components:
     type: ces
   name: Cloud Eye
 - attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: rms
+  name: Config
+- attributes:
     category: Storage
     region: EU-DE
     type: csbs

@@ -108,6 +108,7 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
@@ -272,6 +273,7 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
