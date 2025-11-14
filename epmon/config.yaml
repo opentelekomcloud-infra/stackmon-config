@@ -294,6 +294,15 @@ elements:
     sdk_proxy: geminidb
     urls:
       - /jobs
+  hss:
+    service_type: hss
+    sdk_proxy: hss
+    urls:
+      - /asset/statistics
+      - /asset/user/statistics
+      - /asset/app/statistics
+      - /asset/auto-launch/statistics
+      - /asset/users
   identity:
     service_type: identity
     urls:
