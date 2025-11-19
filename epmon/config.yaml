@@ -83,6 +83,11 @@ elements:
       - /os-keypairs
       - /os-server-groups
       - /os-availability-zone
+  config:
+    service_type: rms
+    sdk_proxy: rms
+    urls:
+      - /resource-manager/policy-definitions
   csbs:
     service_type: data-protect
     sdk_proxy: csbs
@@ -380,11 +385,6 @@ elements:
   orchestration_skip:
     service_type: orchestration
     urls: []
-  plas:
-    service_type: plas
-    sdk_proxy: plas
-    urls:
-      - /plasconnector/connectors?pageSize=10&pageNum=1
   private-natgw:
     service_type: natv3
     sdk_proxy: natv3

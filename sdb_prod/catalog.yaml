@@ -60,6 +60,11 @@ components:
     type: ces
   name: Cloud Eye
 - attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: rms
+  name: Config
+- attributes:
     category: Storage
     region: EU-DE
     type: csbs
@@ -317,11 +322,6 @@ components:
 - attributes:
     category: Network
     region: EU-DE
-    type: plas
-  name: Private Link Access Service
-- attributes:
-    category: Network
-    region: EU-DE
     type: private-natgw
   name: Private NAT Gateway
 - attributes:
@@ -475,6 +475,11 @@ components:
     region: Global
     type: status-dashboard
   name: Status Dashboard
+- attributes:
+    category: Sites
+    region: Global
+    type: my-workplace
+  name: Business Login / MyWorkplace
 - attributes:
     category: Financial Services
     region: Global

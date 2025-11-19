@@ -363,20 +363,6 @@ health_metrics:
         weight: 1
       - expression: "vpc.api_down"
         weight: 2
-  ### PLAS
-  plas:
-    service: plas
-    component_name: "Private Link Access Service"
-    category: network
-    metrics:
-      - plas.api_down
-      - plas.api_slow
-      - plas.api_success_rate_low
-    expressions:
-      - expression: "plas.api_slow || plas.api_success_rate_low"
-        weight: 1
-      - expression: "plas.api_down"
-        weight: 2
 
   ## Database
   ### RDS
@@ -554,6 +540,22 @@ health_metrics:
         weight: 1
       - expression: "ces.api_down_3min"
         weight: 2
+
+  ### CONFIG
+  config:
+    service: rms
+    component_name: "Config"
+    category: management
+    metrics:
+      - rms.api_slow
+      - rms.api_down
+      - rms.api_success_rate_low
+    expressions:
+      - expression: "rms.api_slow || rms.api_success_rate_low"
+        weight: 1
+      - expression: "rms.api_down"
+        weight: 2
+
   ### CTS
   cts:
     service: cts

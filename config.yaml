@@ -108,6 +108,7 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
@@ -154,7 +155,6 @@ matrix:
           - object_store
           - ocr
           - orchestration_skip
-          - plas
           - private-natgw
           - rds_skip_unver
           - rds_skip_v1
@@ -274,6 +274,7 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
@@ -320,7 +321,6 @@ matrix:
           - object_store
           - ocr
           - orchestration_skip
-          - plas
           - private-natgw
           - rds_skip_unver
           - rds_skip_v1
@@ -429,7 +429,6 @@ matrix:
           - cts_skip_v2
           - cts_v3_swiss
           - dcaas
-          - deh
           - dns_private_only
           - ecs
           - elb
@@ -474,7 +473,6 @@ matrix:
           - cts_skip_v2
           - cts_v3_swiss
           - dcaas
-          - deh
           - dns_private_only
           - ecs
           - elb

@@ -78,11 +78,11 @@ components:
 #     type: dds
 #   name: Document Database Service
 
-- attributes:
-    category: Compute
-    region: EU-CH2
-    type: deh
-  name: Dedicated Host
+# - attributes:
+#     category: Compute
+#     region: EU-CH2
+#     type: deh
+#   name: Dedicated Host
 
 # - attributes:
 #     category: Big Data and Data Analysis
@@ -203,12 +203,6 @@ components:
 #     region: EU-CH2
 #     type: opengauss
 #   name: GaussDB (openGauss)
-
-# - attributes:
-#     category: Network
-#     region: EU-CH2
-#     type: plas
-#   name: Private Link Access
 
 - attributes:
     category: Database

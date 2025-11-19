@@ -169,6 +169,28 @@ flag_metrics:
       - name: "production_eu-de"
       - name: "production_eu-nl"
 
+  ### CONFIG
+  - name: "api_down"
+    service: "rms"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "rms"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "rms"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"
+
   ### CSBS
   - name: "api_down"
     service: "data-protect"
@@ -1029,28 +1051,6 @@ flag_metrics:
 
   - name: "api_success_rate_low"
     service: "ocr"
-    template:
-      name: "api_success_rate_low"
-    environments:
-      - name: "production_eu-de"
-
-  ### PLAS
-  - name: "api_down"
-    service: "plas"
-    template:
-      name: "api_down"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_slow"
-    service: "plas"
-    template:
-      name: "api_slow"
-    environments:
-      - name: "production_eu-de"
-
-  - name: "api_success_rate_low"
-    service: "plas"
     template:
       name: "api_success_rate_low"
     environments:
