@@ -78,11 +78,11 @@ components:
 #     type: dds
 #   name: Document Database Service
 
-- attributes:
-    category: Compute
-    region: EU-CH2
-    type: deh
-  name: Dedicated Host
+# - attributes:
+#     category: Compute
+#     region: EU-CH2
+#     type: deh
+#   name: Dedicated Host
 
 # - attributes:
 #     category: Big Data and Data Analysis

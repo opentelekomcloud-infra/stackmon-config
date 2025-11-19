@@ -32,19 +32,19 @@ health_metrics:
       - expression: "as.api_down"
         weight: 2
   ### DEH
-  deh:
-    service: deh
-    component_name: "Dedicated Host"
-    category: compute
-    metrics:
-      - deh.api_down
-      - deh.api_slow
-      - deh.api_success_rate_low
-    expressions:
-      - expression: "deh.api_slow || deh.api_success_rate_low"
-        weight: 1
-      - expression: "deh.api_down"
-        weight: 2
+  #  deh:
+  #    service: deh
+  #    component_name: "Dedicated Host"
+  #    category: compute
+  #    metrics:
+  #      - deh.api_down
+  #      - deh.api_slow
+  #      - deh.api_success_rate_low
+  #    expressions:
+  #      - expression: "deh.api_slow || deh.api_success_rate_low"
+  #        weight: 1
+  #      - expression: "deh.api_down"
+  #        weight: 2
   ### ECS
   ecs:
     service: ecs
