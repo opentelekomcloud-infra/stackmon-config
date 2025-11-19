@@ -471,6 +471,11 @@ components:
     type: status-dashboard
   name: Status Dashboard
 - attributes:
+    category: Sites
+    region: Global
+    type: my-workplace
+  name: Business Login / MyWorkplace
+- attributes:
     category: Financial Services
     region: Global
     type: financial-dashboard
