@@ -1442,7 +1442,7 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
-  ### HelCenter
+  ### HelpCenter
   - name: "api_down"
     service: "helpcenter"
     template:
@@ -1538,3 +1538,24 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
+  ### Host Security Service
+  - name: "api_down"
+    service: "hss"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "hss"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "hss"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"

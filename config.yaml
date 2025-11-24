@@ -140,6 +140,7 @@ matrix:
           - evpn
           - functiongraph_v2
           - geminidb
+          - hss
           - identity
           - image
           - kms_skip_unver
@@ -303,6 +304,7 @@ matrix:
           - enterprise-dashboard-v1
           - er
           - geminidb
+          - hss
           - evpn
           - functiongraph_v2
           - identity
