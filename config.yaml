@@ -160,6 +160,7 @@ matrix:
           - rds_skip_v1
           - rds
           - sdrs
+          - sfs3_skip
           - sfsturbo
           - smn
           - smn_skip_v2
@@ -326,6 +327,7 @@ matrix:
           - rds_skip_v1
           - rds
           - sdrs
+          - sfs3_skip
           - sfsturbo
           - smn
           - smn_skip_v2

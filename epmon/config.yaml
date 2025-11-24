@@ -412,6 +412,9 @@ elements:
       - /server-groups
       - /protected-instances
       - /replications
+  sfs3_skip:
+    service_type: volume
+    urls: []
   sfsturbo:
     service_type: sfsturbo
     urls:
