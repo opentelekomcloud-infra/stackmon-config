@@ -449,12 +449,12 @@ components:
     category: Sites
     region: Global
     type: console
-  name: Open Telekom Cloud Console
+  name: T Cloud Public Console
 - attributes:
     category: Sites
     region: Global
     type: otc
-  name: Open Telekom Cloud
+  name: T Cloud Public Homepage
 - attributes:
     category: Sites
     region: Global
@@ -469,7 +469,7 @@ components:
     category: Sites
     region: Global
     type: community
-  name: Open Telekom Cloud Community
+  name: T Cloud Public Community
 - attributes:
     category: Sites
     region: Global

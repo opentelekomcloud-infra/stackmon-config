@@ -760,7 +760,7 @@ health_metrics:
   ### Console
   console:
     service: console
-    component_name: "Open Telekom Cloud Console"
+    component_name: "T Cloud Public Console"
     category: global
     metrics:
       - console.api_slow
@@ -771,10 +771,10 @@ health_metrics:
         weight: 1
       - expression: "console.api_down"
         weight: 2
-  ### Open Telekom Cloud
+  ### T Cloud Public
   otc:
     service: otc
-    component_name: "Open Telekom Cloud"
+    component_name: "T Cloud Public Homepage"
     category: global
     metrics:
       - otc.api_slow
@@ -816,7 +816,7 @@ health_metrics:
   ### Community
   community:
     service: community
-    component_name: "Open Telekom Cloud Community"
+    component_name: "T Cloud Public Community"
     category: global
     metrics:
       - community.api_slow
