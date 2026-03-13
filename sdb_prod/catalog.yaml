@@ -411,11 +411,6 @@ components:
   name: VPC Endpoint
 - attributes:
     category: Network
-    region: EU-DE
-    type: vpn
-  name: Virtual Private Network
-- attributes:
-    category: Network
     region: EU-NL
     type: vpn
   name: Virtual Private Network
