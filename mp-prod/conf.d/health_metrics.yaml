@@ -1,11 +1,11 @@
 ---
 health_metrics:
-  ## Compute
+  ## Computing
   ### AS
   as:
     service: as
     component_name: "Auto Scaling"
-    category: compute
+    category: Computing
     metrics:
       - as.api_down
       - as.api_slow
@@ -19,7 +19,7 @@ health_metrics:
   deh:
     service: deh
     component_name: "Dedicated Host"
-    category: compute
+    category: Computing
     metrics:
       - deh.api_down
       - deh.api_slow
@@ -33,7 +33,7 @@ health_metrics:
   ecs:
     service: ecs
     component_name: "Elastic Cloud Server"
-    category: compute
+    category: Computing
     metrics:
       - ecs.api_down
       - ecs.api_slow
@@ -50,7 +50,7 @@ health_metrics:
   ims:
     service: image
     component_name: "Image Management Service"
-    category: compute
+    category: Computing
     metrics:
       - image.api_down
       - image.api_slow
@@ -64,7 +64,7 @@ health_metrics:
   bms:
     service: bms
     component_name: "Bare Metal Server"
-    category: compute
+    category: Computing
     metrics:
       - bms.api_down
       - bms.api_slow
@@ -364,12 +364,12 @@ health_metrics:
       - expression: "vpc.api_down"
         weight: 2
 
-  ## Database
+  ## Databases
   ### RDS
   rds:
     service: rds
     component_name: "Relational Database Service"
-    category: database
+    category: Databases
     metrics:
       - rdsv3.api_down
       - rdsv3.api_slow
@@ -383,7 +383,7 @@ health_metrics:
   dds:
     service: dds
     component_name: "Document Database Service"
-    category: database
+    category: Databases
     metrics:
       - ddsv3.api_down
       - ddsv3.api_slow
@@ -397,7 +397,7 @@ health_metrics:
   dcs:
     service: dcs
     component_name: "Distributed Cache Service"
-    category: database
+    category: Databases
     metrics:
       - dcs.api_down
       - dcs.api_slow
@@ -411,7 +411,7 @@ health_metrics:
   geminidb:
     service: geminidb
     component_name: "GeminiDB Service"
-    category: database
+    category: Databases
     metrics:
       - geminidb.api_down
       - geminidb.api_slow
@@ -425,7 +425,7 @@ health_metrics:
   ddm:
     service: ddm
     component_name: "Distributed Database Middleware"
-    category: database
+    category: Databases
     metrics:
       - ddmv1.api_slow
       - ddmv1.api_down
@@ -442,7 +442,7 @@ health_metrics:
   taurusdb:
     service: gaussdb-mysql
     component_name: "TaurusDB"
-    category: database
+    category: Databases
     metrics:
       - gaussdb-mysql.api_down
       - gaussdb-mysql.api_slow
@@ -616,7 +616,7 @@ health_metrics:
       - expression: "ltsv2.api_down"
         weight: 2
 
-  ## BigData
+  ## Data Analysis
   ### CSS
   css:
     service: css
@@ -724,7 +724,7 @@ health_metrics:
       - expression: "ocr.api_down"
         weight: 2
 
-  ## Application Services
+  ## Application
   ### DMS
   dms:
     service: dms
@@ -831,7 +831,7 @@ health_metrics:
   functiongraph:
     service: functiongraph
     component_name: "FunctionGraph"
-    category: compute
+    category: Computing
     metrics:
       - functiongraph.api_slow
       - functiongraph.api_down
