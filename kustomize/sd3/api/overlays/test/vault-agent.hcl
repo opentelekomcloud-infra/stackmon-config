@@ -25,11 +25,13 @@ export SD_LOG_LEVEL=devel
 export SD_SECRET_KEY={{ .Data.data.sdsecretkey }}
 export SD_WEB_URL=https://status.test.cloudmon.otc-service.com
 export SD_HOSTNAME=https://api.test.status.otc-service.com
-export SD_AUTH_GROUP={{ .Data.data.authgroup }}
 export SD_KEYCLOAK_URL={{ .Data.data.keycloakurl }}
 export SD_KEYCLOAK_REALM={{ .Data.data.keycloakrealm }}
 export SD_KEYCLOAK_CLIENT_ID={{ .Data.data.keycloakclientid }}
 export SD_KEYCLOAK_CLIENT_SECRET={{ .Data.data.keycloakclientsecret }}
+export SD_RBAC_GROUP_ADMINS={{ .Data.data.rbacgroupadmins }}
+export SD_RBAC_GROUP_OPERATORS={{ .Data.data.rbacgroupoperators }}
+export SD_RBAC_GROUP_CREATORS={{ .Data.data.rbacgroupcreators }}
 {{- end }}
 
 EOT
