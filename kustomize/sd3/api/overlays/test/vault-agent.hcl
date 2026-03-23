@@ -29,9 +29,9 @@ export SD_KEYCLOAK_URL={{ .Data.data.keycloakurl }}
 export SD_KEYCLOAK_REALM={{ .Data.data.keycloakrealm }}
 export SD_KEYCLOAK_CLIENT_ID={{ .Data.data.keycloakclientid }}
 export SD_KEYCLOAK_CLIENT_SECRET={{ .Data.data.keycloakclientsecret }}
-export SD_RBAC_GROUP_ADMINS={{ .Data.data.rbacgroupadmins }}
-export SD_RBAC_GROUP_OPERATORS={{ .Data.data.rbacgroupoperators }}
-export SD_RBAC_GROUP_CREATORS={{ .Data.data.rbacgroupcreators }}
+export SD_RBAC_GROUPS_ADMINS={{ .Data.data.rbacgroupadmins }}
+export SD_RBAC_GROUPS_OPERATORS={{ .Data.data.rbacgroupoperators }}
+export SD_RBAC_GROUPS_CREATORS={{ .Data.data.rbacgroupcreators }}
 {{- end }}
 
 EOT
