@@ -774,7 +774,7 @@ health_metrics:
   ### T Cloud Public
   otc:
     service: otc
-    component_name: "T Cloud Public Homepage"
+    component_name: "T Cloud Public"
     category: global
     metrics:
       - otc.api_slow

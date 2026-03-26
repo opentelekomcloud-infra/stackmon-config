@@ -454,7 +454,7 @@ components:
     category: Sites
     region: Global
     type: otc
-  name: T Cloud Public Homepage
+  name: T Cloud Public
 - attributes:
     category: Sites
     region: Global
