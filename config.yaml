@@ -643,7 +643,7 @@ plugins:
     image: quay.io/stackmon/globalmon:change_14_latest
 
 status_dashboard:
-# This block is obsolete but needed for hardcoded dependency of MP on SDB
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: prod-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
@@ -712,7 +712,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_internal.yaml
 
-# This block is obsolete but needed for hardcoded dependency of MP on SDB
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: beta
     kube_context: cloudmon-de
     kube_namespace: stackmon-beta
@@ -781,7 +781,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_ch2_internal.yaml
 
-# This block is obsolete but needed for hardcoded dependency of MP on SDB
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: ch2-beta
     kube_context: cloudmon-de
     kube_namespace: stackmon-beta-ch2
@@ -816,7 +816,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_ch2_beta.yaml
 
-# This block is obsolete but needed for hardcoded dependency of MP on SDB
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: ch2-prod
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod-ch2
