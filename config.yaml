@@ -528,7 +528,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_26_latest"
+          newTag: "change_20_latest"
 
       patches:
         - patch: |-
