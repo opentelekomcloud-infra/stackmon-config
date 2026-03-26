@@ -170,7 +170,6 @@ matrix:
           - volume_skip_v2
           - volume
           - vpcep
-          - vpn
           - waf
           - wafd
           - wks
@@ -336,7 +335,6 @@ matrix:
           - volume_skip_v2
           - volume
           - vpcep
-          - vpn
           - waf
           - wafd
           - wks
