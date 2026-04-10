@@ -108,6 +108,7 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
@@ -139,6 +140,7 @@ matrix:
           - evpn
           - functiongraph_v2
           - geminidb
+          - hss
           - identity
           - image
           - kms_skip_unver
@@ -153,7 +155,6 @@ matrix:
           - object_store
           - ocr
           - orchestration_skip
-          - plas
           - private-natgw
           - rds_skip_unver
           - rds_skip_v1
@@ -169,7 +170,6 @@ matrix:
           - volume_skip_v2
           - volume
           - vpcep
-          - vpn
           - waf
           - wafd
           - wks
@@ -273,6 +273,7 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
@@ -302,6 +303,7 @@ matrix:
           - enterprise-dashboard-v1
           - er
           - geminidb
+          - hss
           - evpn
           - functiongraph_v2
           - identity
@@ -318,7 +320,6 @@ matrix:
           - object_store
           - ocr
           - orchestration_skip
-          - plas
           - private-natgw
           - rds_skip_unver
           - rds_skip_v1
@@ -334,7 +335,6 @@ matrix:
           - volume_skip_v2
           - volume
           - vpcep
-          - vpn
           - waf
           - wafd
           - wks
@@ -427,7 +427,6 @@ matrix:
           - cts_skip_v2
           - cts_v3_swiss
           - dcaas
-          - deh
           - dns_private_only
           - ecs
           - elb
@@ -472,7 +471,6 @@ matrix:
           - cts_skip_v2
           - cts_v3_swiss
           - dcaas
-          - deh
           - dns_private_only
           - ecs
           - elb
@@ -528,7 +526,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_20_latest"
+          newTag: "change_26_latest"
 
       patches:
         - patch: |-
@@ -643,6 +641,7 @@ plugins:
     image: quay.io/stackmon/globalmon:change_14_latest
 
 status_dashboard:
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: prod-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
@@ -711,6 +710,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_internal.yaml
 
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: beta
     kube_context: cloudmon-de
     kube_namespace: stackmon-beta
@@ -779,6 +779,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_ch2_internal.yaml
 
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: ch2-beta
     kube_context: cloudmon-de
     kube_namespace: stackmon-beta-ch2
@@ -813,6 +814,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_ch2_beta.yaml
 
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: ch2-prod
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod-ch2

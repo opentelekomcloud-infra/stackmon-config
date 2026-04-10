@@ -2,7 +2,7 @@
 services:
   otc:
     urls:
-      - "https://www.open-telekom-cloud.com"
+      - "https://public.t-cloud.com"
   console:
     urls:
       - "https://console.otc.t-systems.com"

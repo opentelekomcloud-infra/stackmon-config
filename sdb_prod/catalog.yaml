@@ -60,6 +60,11 @@ components:
     type: ces
   name: Cloud Eye
 - attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: rms
+  name: Config
+- attributes:
     category: Storage
     region: EU-DE
     type: csbs
@@ -317,11 +322,6 @@ components:
 - attributes:
     category: Network
     region: EU-DE
-    type: plas
-  name: Private Link Access Service
-- attributes:
-    category: Network
-    region: EU-DE
     type: private-natgw
   name: Private NAT Gateway
 - attributes:
@@ -411,11 +411,6 @@ components:
   name: VPC Endpoint
 - attributes:
     category: Network
-    region: EU-DE
-    type: vpn
-  name: Virtual Private Network
-- attributes:
-    category: Network
     region: EU-NL
     type: vpn
   name: Virtual Private Network
@@ -439,17 +434,22 @@ components:
     region: EU-NL
     type: wafd
   name: Dedicated Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: hss
+  name: Host Security Service
 ### Global
 - attributes:
     category: Sites
     region: Global
     type: console
-  name: Open Telekom Cloud Console
+  name: T Cloud Public Console
 - attributes:
     category: Sites
     region: Global
     type: otc
-  name: Open Telekom Cloud
+  name: T Cloud Public
 - attributes:
     category: Sites
     region: Global
@@ -464,12 +464,17 @@ components:
     category: Sites
     region: Global
     type: community
-  name: Open Telekom Cloud Community
+  name: T Cloud Public Community
 - attributes:
     category: Sites
     region: Global
     type: status-dashboard
   name: Status Dashboard
+- attributes:
+    category: Sites
+    region: Global
+    type: my-workplace
+  name: Business Login / MyWorkplace
 - attributes:
     category: Financial Services
     region: Global

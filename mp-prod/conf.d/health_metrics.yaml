@@ -363,20 +363,6 @@ health_metrics:
         weight: 1
       - expression: "vpc.api_down"
         weight: 2
-  ### PLAS
-  plas:
-    service: plas
-    component_name: "Private Link Access Service"
-    category: network
-    metrics:
-      - plas.api_down
-      - plas.api_slow
-      - plas.api_success_rate_low
-    expressions:
-      - expression: "plas.api_slow || plas.api_success_rate_low"
-        weight: 1
-      - expression: "plas.api_down"
-        weight: 2
 
   ## Database
   ### RDS
@@ -472,7 +458,7 @@ health_metrics:
   antiddos:
     service: antiddos
     component_name: "Anti DDoS"
-    category: database
+    category: security
     metrics:
       - antiddos.api_down
       - antiddos.api_slow
@@ -486,7 +472,7 @@ health_metrics:
   kms:
     service: kms
     component_name: "Key Management Service"
-    category: database
+    category: security
     metrics:
       - kms.api_down
       - kms.api_slow
@@ -500,7 +486,7 @@ health_metrics:
   waf:
     service: waf
     component_name: "Web Application Firewall"
-    category: database
+    category: security
     metrics:
       - waf.api_down
       - waf.api_slow
@@ -510,12 +496,11 @@ health_metrics:
         weight: 1
       - expression: "waf.api_down"
         weight: 2
-
   ### WAFD
   wafd:
     service: wafd
     component_name: "Dedicated Web Application Firewall"
-    category: database
+    category: security
     metrics:
       - premium-waf.api_down
       - premium-waf.api_slow
@@ -524,6 +509,20 @@ health_metrics:
       - expression: "premium-waf.api_slow || premium-waf.api_success_rate_low"
         weight: 1
       - expression: "premium-waf.api_down"
+        weight: 2
+  ### HSS
+  hss:
+    service: hss
+    component_name: "Host Security Service"
+    category: security
+    metrics:
+      - hss.api_down
+      - hss.api_slow
+      - hss.api_success_rate_low
+    expressions:
+      - expression: "hss.api_slow || hss.api_success_rate_low"
+        weight: 1
+      - expression: "hss.api_down"
         weight: 2
 
   ## Management and Deployment
@@ -541,6 +540,22 @@ health_metrics:
         weight: 1
       - expression: "ces.api_down_3min"
         weight: 2
+
+  ### CONFIG
+  config:
+    service: rms
+    component_name: "Config"
+    category: management
+    metrics:
+      - rms.api_slow
+      - rms.api_down
+      - rms.api_success_rate_low
+    expressions:
+      - expression: "rms.api_slow || rms.api_success_rate_low"
+        weight: 1
+      - expression: "rms.api_down"
+        weight: 2
+
   ### CTS
   cts:
     service: cts
@@ -745,7 +760,7 @@ health_metrics:
   ### Console
   console:
     service: console
-    component_name: "Open Telekom Cloud Console"
+    component_name: "T Cloud Public Console"
     category: global
     metrics:
       - console.api_slow
@@ -756,10 +771,10 @@ health_metrics:
         weight: 1
       - expression: "console.api_down"
         weight: 2
-  ### Open Telekom Cloud
+  ### T Cloud Public
   otc:
     service: otc
-    component_name: "Open Telekom Cloud"
+    component_name: "T Cloud Public"
     category: global
     metrics:
       - otc.api_slow
@@ -801,7 +816,7 @@ health_metrics:
   ### Community
   community:
     service: community
-    component_name: "Open Telekom Cloud Community"
+    component_name: "T Cloud Public Community"
     category: global
     metrics:
       - community.api_slow

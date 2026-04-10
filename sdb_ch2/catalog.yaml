@@ -78,11 +78,11 @@ components:
 #     type: dds
 #   name: Document Database Service
 
-- attributes:
-    category: Compute
-    region: EU-CH2
-    type: deh
-  name: Dedicated Host
+# - attributes:
+#     category: Compute
+#     region: EU-CH2
+#     type: deh
+#   name: Dedicated Host
 
 # - attributes:
 #     category: Big Data and Data Analysis
@@ -204,12 +204,6 @@ components:
 #     type: opengauss
 #   name: GaussDB (openGauss)
 
-# - attributes:
-#     category: Network
-#     region: EU-CH2
-#     type: plas
-#   name: Private Link Access
-
 - attributes:
     category: Database
     region: EU-CH2
@@ -304,12 +298,12 @@ components:
     category: Sites
     region: Global
     type: console
-  name: Open Telekom Cloud Console
+  name: T Cloud Public Console
 - attributes:
     category: Sites
     region: Global
     type: otc
-  name: Open Telekom Cloud
+  name: T Cloud Public
 - attributes:
     category: Sites
     region: Global
@@ -329,4 +323,4 @@ components:
     category: Sites
     region: Global
     type: community
-  name: Open Telekom Cloud Community
+  name: T Cloud Public Community
