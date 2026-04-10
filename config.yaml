@@ -381,6 +381,7 @@ matrix:
           - elbv1_skip
           - elbv3
           - er
+          - hss
           - identity
           - image
           - kms_skip_unver
