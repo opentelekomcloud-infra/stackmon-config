@@ -103,9 +103,9 @@ matrix:
           - as_skip_v1
           - bms
           - cbr
-          - cc
           - cce_skip_unver
           - cce
+          - ccn
           - ces
           - ces_skip_v1
           - compute
@@ -200,9 +200,9 @@ matrix:
           - as
           - as_skip_v1
           - cbr
-          - cc
           - cce_skip_unver
           - cce
+          - ccn
           - ces
           - ces_skip_v1
           - compute
@@ -270,9 +270,9 @@ matrix:
           - as_skip_v1
           - bms
           - cbr
-          - cc
           - cce_skip_unver
           - cce
+          - ccn          
           - ces
           - ces_skip_v1
           - compute
@@ -360,9 +360,9 @@ matrix:
           - as
           - as_skip_v1
           - cbr
-          - cc
           - cce_skip_unver
           - cce
+          - ccn
           - ces
           - ces_skip_v1
           - compute

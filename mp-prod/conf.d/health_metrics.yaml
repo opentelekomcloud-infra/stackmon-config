@@ -363,19 +363,19 @@ health_metrics:
         weight: 1
       - expression: "vpc.api_down"
         weight: 2
-  ### CC
-  cc:
-    service: cc
+  ### CCN
+  ccn:
+    service: ccn
     component_name: "Cloud Connect"
     category: network
     metrics:
-      - cc.api_down
-      - cc.api_slow
-      - cc.api_success_rate_low
+      - ccn.api_down
+      - ccn.api_slow
+      - ccn.api_success_rate_low
     expressions:
-      - expression: "cc.api_slow || cc.api_success_rate_low"
+      - expression: "ccn.api_slow || ccn.api_success_rate_low"
         weight: 1
-      - expression: "cc.api_down"
+      - expression: "ccn.api_down"
         weight: 2
 
   ## Database

@@ -42,7 +42,7 @@ components:
 - attributes:
     category: Network
     region: EU-DE
-    type: cc
+    type: ccn
   name: Cloud Connect
 - attributes:
     category: Container
