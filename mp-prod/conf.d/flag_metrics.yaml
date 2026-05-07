@@ -1350,7 +1350,6 @@ flag_metrics:
     template:
       name: "api_down"
     environments:
-      - name: "production_eu-de"
       - name: "production_eu-nl"
 
   - name: "api_slow"
@@ -1358,7 +1357,6 @@ flag_metrics:
     template:
       name: "api_slow"
     environments:
-      - name: "production_eu-de"
       - name: "production_eu-nl"
 
   - name: "api_success_rate_low"
@@ -1366,7 +1364,6 @@ flag_metrics:
     template:
       name: "api_success_rate_low"
     environments:
-      - name: "production_eu-de"
       - name: "production_eu-nl"
   ### WAF
   - name: "api_down"
@@ -1440,7 +1437,7 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
       - name: "production_eu-nl"
-  ### Open Telekom Cloud
+  ### T Cloud Public
   - name: "api_down"
     service: "otc"
     template:
