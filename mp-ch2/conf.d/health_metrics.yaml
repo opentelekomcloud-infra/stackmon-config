@@ -1,6 +1,6 @@
 ---
 health_metrics:
-  ## Application Services
+  ## Application
   ### SMN
   smn:
     service: smn
@@ -16,12 +16,12 @@ health_metrics:
       - expression: "smn.api_down"
         weight: 2
 
-  ## Compute
+  ## Computing
   ### AS
   as:
     service: as
     component_name: "Auto Scaling"
-    category: compute
+    category: Computing
     metrics:
       - as.api_down
       - as.api_slow
@@ -35,7 +35,7 @@ health_metrics:
   #  deh:
   #    service: deh
   #    component_name: "Dedicated Host"
-  #    category: compute
+  #    category: Computing
   #    metrics:
   #      - deh.api_down
   #      - deh.api_slow
@@ -49,7 +49,7 @@ health_metrics:
   ecs:
     service: ecs
     component_name: "Elastic Cloud Server"
-    category: compute
+    category: Computing
     metrics:
       - ecs.api_down
       - ecs.api_slow
@@ -66,7 +66,7 @@ health_metrics:
   ims:
     service: ims
     component_name: "Image Management Service"
-    category: compute
+    category: Computing
     metrics:
       - ims.api_down
       - ims.api_slow
@@ -266,12 +266,12 @@ health_metrics:
       - expression: "vpc.api_down"
         weight: 2
 
-  ## Database
+  ## Databases
   ### RDS
   rds:
     service: rds
     component_name: "Relational Database Service"
-    category: database
+    category: Databases
     metrics:
       - rdsv3.api_down
       - rdsv3.api_slow

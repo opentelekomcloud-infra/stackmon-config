@@ -7,19 +7,19 @@ components:
 
 # AOM is to be replaced by AOM2.0
 # - attributes:
-#     category: Application Services
+#     category: Application
 #     region: EU-CH2
 #     type: aom
 #   name: Application Operations Management
 
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-CH2
     type: as
   name: Auto Scaling
 
 # - attributes:
-#     category: Compute
+#     category: Computing
 #     region: EU-CH2
 #     type: bms
 #   name: Bare Metal Server
@@ -49,7 +49,7 @@ components:
 #   name: Cloud Server Backup Service
 
 # - attributes:
-#     category: Big Data and Data Analysis
+#     category: Data Analysis
 #     region: EU-CH2
 #     type: css
 #   name: Cloud Search Service
@@ -67,31 +67,31 @@ components:
   name: Direct Connect
 
 # - attributes:
-#     category: Database
+#     category: Databases
 #     region: EU-CH2
 #     type: dcs
 #   name: Distributed Cache Service
 
 # - attributes:
-#     category: Database
+#     category: Databases
 #     region: EU-CH2
 #     type: dds
 #   name: Document Database Service
 
 # - attributes:
-#     category: Compute
+#     category: Computing
 #     region: EU-CH2
 #     type: deh
 #   name: Dedicated Host
 
 # - attributes:
-#     category: Big Data and Data Analysis
+#     category: Data Analysis
 #     region: EU-CH2
 #     type: dis
 #   name: Data Ingestion Service
 
 # - attributes:
-#     category: Application Services
+#     category: Application
 #     region: EU-CH2
 #     type: dms
 #   name: Distributed Message Service
@@ -103,19 +103,19 @@ components:
   name: Domain Name Service
 
 # - attributes:
-#     category: Database
+#     category: Databases
 #     region: EU-CH2
 #     type: drs
 #   name: Data Replication Service
 
 # - attributes:
-#     category: Big Data and Data Analysis
+#     category: Data Analysis
 #     region: EU-CH2
 #     type: dws
 #   name: Data Warehouse Service
 
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-CH2
     type: ecs
   name: Elastic Cloud Server
@@ -139,13 +139,13 @@ components:
   name: Elastic Volume Service
 
 # - attributes:
-#     category: Database
+#     category: Databases
 #     region: EU-CH2
 #     type: gaussdb_mysql
 #   name: GaussDB (for MySQL)
 
 # - attributes:
-#     category: Database
+#     category: Databases
 #     region: EU-CH2
 #     type: gaussdb_nosql
 #   name: GaussDB NoSQL
@@ -157,7 +157,7 @@ components:
   name: Identity and Access Management
 
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-CH2
     type: ims
   name: Image Management Service
@@ -175,13 +175,13 @@ components:
 #   name: Log Tank Service
 
 # - attributes:
-#     category: Big Data and Data Analysis
+#     category: Data Analysis
 #     region: EU-CH2
 #     type: ma
 #   name: ModelArts
 
 # - attributes:
-#     category: Big Data and Data Analysis
+#     category: Data Analysis
 #     region: EU-CH2
 #     type: mrs
 #   name: Map Reduce Service
@@ -199,13 +199,13 @@ components:
   name: Object Storage Service
 
 # - attributes:
-#     category: Database
+#     category: Databases
 #     region: EU-CH2
 #     type: opengauss
 #   name: GaussDB (openGauss)
 
 - attributes:
-    category: Database
+    category: Databases
     region: EU-CH2
     type: rds
   name: Relational Database Service
@@ -235,7 +235,7 @@ components:
 #   name: Scalable File System
 
 - attributes:
-    category: Application Services
+    category: Application
     region: EU-CH2
     type: smn
   name: Simple Message Notification
