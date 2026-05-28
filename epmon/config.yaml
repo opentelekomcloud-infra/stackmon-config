@@ -289,6 +289,9 @@ elements:
     urls:
       - /fgs/quotas
       - /fgs/dependencies
+      - /fgs/functions
+      - /fgs/functions/reservedinstances
+      - /fgs/functions/reservedinstanceconfigs
   geminidb:
     service_type: geminidb
     sdk_proxy: geminidb
