@@ -165,6 +165,11 @@ components:
     type: dms
   name: Distributed Message Service
 - attributes:
+    category: Application Services
+    region: EU-DE
+    type: aom
+  name: Application Operations Management
+- attributes:
     category: Network
     region: EU-DE
     type: dns
