@@ -10,22 +10,22 @@ components:
     type: antiddos
   name: Anti DDoS
 - attributes:
-    category: Application Services
+    category: Application
     region: EU-DE
     type: apigv2
   name: API Gateway
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-DE
     type: as
   name: Auto Scaling
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-NL
     type: as
   name: Auto Scaling
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-DE
     type: bms
   name: Bare Metal Server
@@ -70,17 +70,17 @@ components:
     type: csbs
   name: Cloud Server Backup Service
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: css
   name: Cloud Search Service
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-NL
     type: css
   name: Cloud Search Service
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: dataarts
   name: DataArts Studio
@@ -105,62 +105,62 @@ components:
     type: dc
   name: Direct Connect
 - attributes:
-    category: Database
+    category: Databases
     region: EU-DE
     type: dcs
   name: Distributed Cache Service
 - attributes:
-    category: Database
+    category: Databases
     region: EU-NL
     type: dcs
   name: Distributed Cache Service
 - attributes:
-    category: Database
+    category: Databases
     region: EU-DE
     type: dds
   name: Document Database Service
 - attributes:
-    category: Database
+    category: Databases
     region: EU-NL
     type: dds
   name: Document Database Service
 - attributes:
-    category: Database
+    category: Databases
     region: EU-DE
     type: ddm
   name: Distributed Database Middleware
 - attributes:
-    category: Database
+    category: Databases
     region: EU-DE
     type: gaussdb-mysql
   name: TaurusDB
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-DE
     type: deh
   name: Dedicated Host
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-NL
     type: deh
   name: Dedicated Host
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: dli
   name: Data Lake Insight
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: ocr
   name: Optical Character Recognition
 - attributes:
-    category: Application Services
+    category: Application
     region: EU-DE
     type: dms
   name: Distributed Message Service
 - attributes:
-    category: Application Services
+    category: Application
     region: EU-NL
     type: dms
   name: Distributed Message Service
@@ -175,17 +175,17 @@ components:
     type: dns
   name: Domain Name Service
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: dws
   name: Data Warehouse Service
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-DE
     type: ecs
   name: Elastic Cloud Server
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-NL
     type: ecs
   name: Elastic Cloud Server
@@ -240,12 +240,12 @@ components:
     type: iam
   name: Identity and Access Management
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-DE
     type: functiongraph
   name: FunctionGraph
 - attributes:
-    category: Database
+    category: Databases
     region: EU-DE
     type: geminidb
   name: GeminiDB Service
@@ -255,12 +255,12 @@ components:
     type: iam
   name: Identity and Access Management
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-DE
     type: ims
   name: Image Management Service
 - attributes:
-    category: Compute
+    category: Computing
     region: EU-NL
     type: ims
   name: Image Management Service
@@ -285,17 +285,17 @@ components:
     type: lts
   name: Log Tank Service
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: ma
   name: ModelArts
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-DE
     type: mrs
   name: Map Reduce Service
 - attributes:
-    category: Big Data and Data Analysis
+    category: Data Analysis
     region: EU-NL
     type: mrs
   name: Map Reduce Service
@@ -325,12 +325,12 @@ components:
     type: private-natgw
   name: Private NAT Gateway
 - attributes:
-    category: Database
+    category: Databases
     region: EU-DE
     type: rds
   name: Relational Database Service
 - attributes:
-    category: Database
+    category: Databases
     region: EU-NL
     type: rds
   name: Relational Database Service
@@ -355,12 +355,12 @@ components:
     type: sfs
   name: Scalable File Service
 - attributes:
-    category: Application Services
+    category: Application
     region: EU-DE
     type: smn
   name: Simple Message Notification
 - attributes:
-    category: Application Services
+    category: Application
     region: EU-NL
     type: smn
   name: Simple Message Notification
