@@ -855,3 +855,17 @@ health_metrics:
         weight: 1
       - expression: "apigv2.api_down"
         weight: 2
+  ### EPS
+  eps:
+    service: eps
+    component_name: "Enterprise Project Service"
+    category: management
+    metrics:
+      - eps.api_slow
+      - eps.api_down
+      - eps.api_success_rate_low
+    expressions:
+      - expression: "eps.api_slow || eps.api_success_rate_low"
+        weight: 1
+      - expression: "eps.api_down"
+        weight: 2
