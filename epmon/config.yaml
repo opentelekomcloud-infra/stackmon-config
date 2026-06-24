@@ -538,3 +538,10 @@ elements:
   swift:
     service_type: object-store
     urls: []
+  eps:
+    service_type: eps
+    sdk_proxy: eps
+    urls:
+      - /enterprise-projects
+      - /enterprise-projects/quotas
+      - /enterprise-projects/providers

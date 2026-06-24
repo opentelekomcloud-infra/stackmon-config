@@ -1556,3 +1556,24 @@ flag_metrics:
       name: "api_success_rate_low"
     environments:
       - name: "production_eu-de"
+  ### EPS
+  - name: "api_down"
+    service: "eps"
+    template:
+      name: "api_down"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_slow"
+    service: "eps"
+    template:
+      name: "api_slow"
+    environments:
+      - name: "production_eu-de"
+
+  - name: "api_success_rate_low"
+    service: "eps"
+    template:
+      name: "api_success_rate_low"
+    environments:
+      - name: "production_eu-de"

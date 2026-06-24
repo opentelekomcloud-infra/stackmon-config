@@ -136,6 +136,7 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - eps
           - er
           - evpn
           - functiongraph_v2
@@ -381,6 +382,7 @@ matrix:
           - elbv1_skip
           - elbv3
           - er
+          - hss
           - identity
           - image
           - kms_skip_unver
