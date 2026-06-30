@@ -740,7 +740,7 @@ health_metrics:
     expressions:
       - expression: "aom_v1.api_slow || aom_v1.api_success_rate_low || aom_v2.api_slow || aom_v2.api_success_rate_low"
         weight: 1
-      - expression: "aom_v1.api_down || aom_v2.api_down"
+      - expression: "aom_v1.api_down && aom_v2.api_down"
         weight: 2
   ### DMS
   dms:
