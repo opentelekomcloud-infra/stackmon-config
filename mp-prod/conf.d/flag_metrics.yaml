@@ -1086,10 +1086,10 @@ flag_metrics:
     environments:
       - name: "production_eu-de"
 
-  - name: "api_slow"
+  - name: "api_slow_3000"
     service: "ocr"
     template:
-      name: "api_slow"
+      name: "api_slow_3000"
     environments:
       - name: "production_eu-de"
 
