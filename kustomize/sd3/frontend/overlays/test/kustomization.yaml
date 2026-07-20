@@ -17,6 +17,10 @@ patchesStrategicMerge:
     kind: Ingress
     metadata:
       name: sd3-frontend-ingress
+      annotations:
+        nginx.ingress.kubernetes.io/configuration-snippet: |
+          more_set_headers "X-Frame-Options: DENY";
+          more_set_headers "Content-Security-Policy: frame-ancestors 'none'";
     spec:
       rules:
         - host: test.status.otc-service.com
