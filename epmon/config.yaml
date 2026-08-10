@@ -474,8 +474,6 @@ elements:
     urls:
       - /volumes
       - /snapshots
-      - /os-volume-transfer
-      - /os-availability-zone
   vbs_skip_v2:
     service_type: vbsv2
     urls: []
