@@ -421,7 +421,6 @@ elements:
     service_type: sdrs
     sdk_proxy: sdrs
     urls:
-      - /active-domains
       - /server-groups
       - /protected-instances
       - /replications
