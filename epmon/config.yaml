@@ -24,6 +24,16 @@ elements:
       - /apigw/instances
       - /apigw/instance/configs
       - /apigw/instance-tags
+  aom_v1:
+    service_type: aomv1
+    sdk_proxy: aomv1
+    urls:
+      - /inv/servicediscoveryrules
+  aom_v2:
+    service_type: aomv2
+    sdk_proxy: aomv2
+    urls:
+      - /alarm-rules
   as:
     service_type: as
     sdk_proxy: auto_scaling
@@ -299,6 +309,9 @@ elements:
     urls:
       - /fgs/quotas
       - /fgs/dependencies
+      - /fgs/functions
+      - /fgs/functions/reservedinstances
+      - /fgs/functions/reservedinstanceconfigs
   geminidb:
     service_type: geminidb
     sdk_proxy: geminidb
@@ -418,7 +431,6 @@ elements:
     service_type: sdrs
     sdk_proxy: sdrs
     urls:
-      - /active-domains
       - /server-groups
       - /protected-instances
       - /replications
@@ -471,8 +483,6 @@ elements:
     urls:
       - /volumes
       - /snapshots
-      - /os-volume-transfer
-      - /os-availability-zone
   vbs_skip_v2:
     service_type: vbsv2
     urls: []
