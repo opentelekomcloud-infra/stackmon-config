@@ -456,6 +456,17 @@ elements:
       - /instances
       - /backups
       - /configurations
+  tms:
+    service_type: tms
+    sdk_proxy: tms
+    urls:
+      - /
+      - /v1.0
+      - /v1.0/predefine_tags
+      - /v1.0/tms/quotas
+      - /v1.0/tag-keys
+      - /v1.0/tag-values?key=QA
+      - /v1.0/tms/providers
   volume_skip_v2:
     service_type: volumev2
   volume:

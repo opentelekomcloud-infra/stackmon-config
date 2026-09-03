@@ -168,6 +168,7 @@ matrix:
           - swift
           - swrv2
           - taurusdb
+          - tms
           - vbs
           - volume_skip_v2
           - volume
@@ -243,6 +244,7 @@ matrix:
           - smn
           - smn_skip_v2
           - swrv2
+          - tms
           - volume_skip_v2
           - volume
           - vpcep
@@ -335,6 +337,7 @@ matrix:
           - swift
           - swrv2
           - taurusdb
+          - tms
           - vbs
           - volume_skip_v2
           - volume
@@ -403,6 +406,7 @@ matrix:
           - smn
           - smn_skip_v2
           - swrv2
+          - tms
           - volume_skip_v2
           - volume
           - vpcep
@@ -447,6 +451,7 @@ matrix:
           - smn
           - smn_skip_v2
           - swrv2
+          - tms
           - volume_skip_v2
           - volume_no_backups
           - vpcep
@@ -491,6 +496,7 @@ matrix:
           - smn
           - smn_skip_v2
           - swrv2
+          - tms
           - volume_skip_v2
           - volume_no_backups
           - vpcep
