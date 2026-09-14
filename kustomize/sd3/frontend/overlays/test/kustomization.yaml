@@ -18,9 +18,21 @@ patchesStrategicMerge:
     metadata:
       name: sd3-frontend-ingress
       annotations:
+        # The site is served from the OBS static website bucket. OBS picks the
+        # bucket by Host header only and ignores SNI, so upstream-vhost carries
+        # the endpoint while backend-protocol upgrades the proxy_pass scheme.
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+        nginx.ingress.kubernetes.io/upstream-vhost: "status-dashboard-test.obs-website.eu-de.otc.t-systems.com"
         nginx.ingress.kubernetes.io/configuration-snippet: |
           more_set_headers "X-Frame-Options: DENY";
           more_set_headers "Content-Security-Policy: frame-ancestors 'none'";
+          location ~ ^/rss {
+            return 301 https://api.test.status.otc-service.com$request_uri;
+          }
+          # OBS answers 404 for SPA routes that are not bucket keys; the
+          # in-cluster nginx used to return 200 for them, so keep that.
+          proxy_intercept_errors on;
+          error_page 404 =200 /index.html;
     spec:
       rules:
         - host: test.status.otc-service.com
@@ -37,3 +49,16 @@ patchesStrategicMerge:
       - hosts:
         - test.status.otc-service.com
         secretName: sd3-front-cert-test
+  - |-
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: sd3-frontend
+    spec:
+      type: ExternalName
+      externalName: status-dashboard-test.obs-website.eu-de.otc.t-systems.com
+      selector: null
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 443
