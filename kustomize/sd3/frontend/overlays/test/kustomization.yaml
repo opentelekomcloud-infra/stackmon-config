@@ -21,13 +21,6 @@ patchesStrategicMerge:
         nginx.ingress.kubernetes.io/configuration-snippet: |
           more_set_headers "X-Frame-Options: DENY";
           more_set_headers "Content-Security-Policy: frame-ancestors 'none'";
-          location ~ ^/rss {
-            return 301 https://api.test.status.otc-service.com$request_uri;
-          }
-          # OBS answers 404 for SPA routes that are not bucket keys; the
-          # in-cluster nginx used to return 200 for them, so keep that.
-          proxy_intercept_errors on;
-          error_page 404 =200 /index.html;
     spec:
       rules:
         - host: test.status.otc-service.com
