@@ -18,12 +18,14 @@ patchesStrategicMerge:
     metadata:
       name: sd3-frontend-ingress
       annotations:
+        # The site is served from the OBS static website bucket. OBS selects the bucket by
+        # Host header only and ignores SNI, so upstream-vhost carries the endpoint while
+        # backend-protocol upgrades the proxy_pass scheme to HTTPS.
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+        nginx.ingress.kubernetes.io/upstream-vhost: "status.obs-website.eu-de.otc.t-systems.com"
         nginx.ingress.kubernetes.io/configuration-snippet: |
           more_set_headers "X-Frame-Options: DENY";
           more_set_headers "Content-Security-Policy: frame-ancestors 'none'";
-          location ~ ^/rss {
-            return 301 https://api.status.otc-service.com$request_uri;
-          }
     spec:
       rules:
         - host: status.otc-service.com
@@ -41,3 +43,18 @@ patchesStrategicMerge:
       - hosts:
         - status.otc-service.com
         secretName: sd3-front-cert-prod
+  # The bucket is the origin now, so the Service becomes an alias for its website
+  # endpoint. An ExternalName Service must not carry a selector.
+  - |-
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: sd3-frontend
+    spec:
+      type: ExternalName
+      externalName: status.obs-website.eu-de.otc.t-systems.com
+      selector: null
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 443
