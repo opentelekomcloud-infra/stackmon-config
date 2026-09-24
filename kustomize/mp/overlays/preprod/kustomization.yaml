@@ -1,0 +1,41 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: sd3-test
+
+resources:
+  - ../../base
+
+images:
+  - name: metrics-processor
+    newName: swr.eu-de.otc.t-systems.com/stackmon-preprod/metrics-processor
+    newTag: sha-ddd0c03
+
+labels:
+  - pairs:
+      app.kubernetes.io/instance: preprod
+      app.kubernetes.io/managed-by: argocd
+      environment: preprod
+
+configMapGenerator:
+  - name: metrics-processor-config
+    files:
+      - config.yaml
+  - name: metrics-processor-confd
+    files:
+      - flag_metrics.yaml=conf.d/flag_metrics.yaml
+      - health_metrics.yaml=conf.d/health_metrics.yaml
+      - metric_templates.yaml=conf.d/metric_templates.yaml
+
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: metrics-processor
+      spec:
+        template:
+          spec:
+            containers:
+              - name: reporter
+                $patch: delete

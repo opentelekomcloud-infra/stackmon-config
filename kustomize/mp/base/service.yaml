@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: metrics-processor
+  labels:
+    app.kubernetes.io/name: metrics-processor
+    app.kubernetes.io/component: convertor-reporter
+spec:
+  selector:
+    app.kubernetes.io/name: metrics-processor
+    app.kubernetes.io/component: convertor-reporter
+  ports:
+    - name: api
+      port: 80
+      targetPort: 3005

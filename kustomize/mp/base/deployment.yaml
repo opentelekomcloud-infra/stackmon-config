@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metrics-processor
+  labels:
+    app.kubernetes.io/name: metrics-processor
+    app.kubernetes.io/component: convertor-reporter
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: metrics-processor
+      app.kubernetes.io/component: convertor-reporter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: metrics-processor
+        app.kubernetes.io/component: convertor-reporter
+    spec:
+      serviceAccountName: metrics-processor
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: convertor
+          image: metrics-processor
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: api
+              containerPort: 3005
+          env:
+            - name: RUST_LOG
+              value: debug
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+            limits:
+              cpu: 100m
+              memory: 200Mi
+          readinessProbe:
+            httpGet:
+              path: /api/v1
+              port: api
+            initialDelaySeconds: 2
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /api/v1
+              port: api
+            initialDelaySeconds: 20
+            periodSeconds: 30
+          volumeMounts:
+            - name: instance-config
+              mountPath: /cloudmon/config.yaml
+              subPath: config.yaml
+              readOnly: true
+            - name: instance-confd
+              mountPath: /cloudmon/conf.d
+              readOnly: true
+        - name: reporter
+          command: ["/cloudmon/cloudmon-metrics-reporter"]
+          image: metrics-processor
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: RUST_LOG
+              value: debug
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+            limits:
+              cpu: 100m
+              memory: 200Mi
+          volumeMounts:
+            - name: instance-config
+              mountPath: /cloudmon/config.yaml
+              subPath: config.yaml
+              readOnly: true
+            - name: instance-confd
+              mountPath: /cloudmon/conf.d
+              readOnly: true
+      volumes:
+        - name: instance-config
+          configMap:
+            name: metrics-processor-config
+        - name: instance-confd
+          configMap:
+            name: metrics-processor-confd
