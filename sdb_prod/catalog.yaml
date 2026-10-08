@@ -12,13 +12,8 @@ components:
 - attributes:
     category: Application Services
     region: EU-DE
-    type: aom
-  name: Application Operations Management
-- attributes:
-    category: Application Services
-    region: EU-NL
-    type: aom
-  name: Application Operations Management
+    type: apigv2
+  name: API Gateway
 - attributes:
     category: Compute
     region: EU-DE
@@ -35,11 +30,6 @@ components:
     type: bms
   name: Bare Metal Server
 - attributes:
-    category: Compute
-    region: EU-NL
-    type: bms
-  name: Bare Metal Server
-- attributes:
     category: Storage
     region: EU-DE
     type: cbr
@@ -53,12 +43,12 @@ components:
     category: Container
     region: EU-DE
     type: cce
-  name: Cloud Container Service
+  name: Cloud Container Engine
 - attributes:
     category: Container
     region: EU-NL
     type: cce
-  name: Cloud Container Service
+  name: Cloud Container Engine
 - attributes:
     category: Management & Deployment
     region: EU-DE
@@ -70,13 +60,13 @@ components:
     type: ces
   name: Cloud Eye
 - attributes:
-    category: Storage
+    category: Management & Deployment
     region: EU-DE
-    type: csbs
-  name: Cloud Server Backup Service
+    type: rms
+  name: Config
 - attributes:
     category: Storage
-    region: EU-NL
+    region: EU-DE
     type: csbs
   name: Cloud Server Backup Service
 - attributes:
@@ -90,6 +80,11 @@ components:
     type: css
   name: Cloud Search Service
 - attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: dataarts
+  name: DataArts Studio
+- attributes:
     category: Management & Deployment
     region: EU-DE
     type: cts
@@ -100,12 +95,12 @@ components:
     type: cts
   name: Cloud Trace Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: dc
   name: Direct Connect
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: dc
   name: Direct Connect
@@ -130,6 +125,16 @@ components:
     type: dds
   name: Document Database Service
 - attributes:
+    category: Database
+    region: EU-DE
+    type: ddm
+  name: Distributed Database Middleware
+- attributes:
+    category: Database
+    region: EU-DE
+    type: gaussdb-mysql
+  name: TaurusDB
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
@@ -142,13 +147,13 @@ components:
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
-    type: dis
-  name: Data Ingestion Service
+    type: dli
+  name: Data Lake Insight
 - attributes:
     category: Big Data and Data Analysis
-    region: EU-NL
-    type: dis
-  name: Data Ingestion Service
+    region: EU-DE
+    type: ocr
+  name: Optical Character Recognition
 - attributes:
     category: Application Services
     region: EU-DE
@@ -160,33 +165,23 @@ components:
     type: dms
   name: Distributed Message Service
 - attributes:
-    category: Networking
+    category: Application Services
+    region: EU-DE
+    type: aom
+  name: Application Operations Management
+- attributes:
+    category: Network
     region: EU-DE
     type: dns
   name: Domain Name Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: dns
   name: Domain Name Service
 - attributes:
-    category: Database
-    region: EU-DE
-    type: drs
-  name: Data Replication Service
-- attributes:
-    category: Database
-    region: EU-NL
-    type: drs
-  name: Data Replication Service
-- attributes:
     category: Big Data and Data Analysis
     region: EU-DE
-    type: dws
-  name: Data Warehouse Service
-- attributes:
-    category: Big Data and Data Analysis
-    region: EU-NL
     type: dws
   name: Data Warehouse Service
 - attributes:
@@ -200,22 +195,22 @@ components:
     type: ecs
   name: Elastic Cloud Server
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: eip
   name: Elastic IP
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: eip
   name: Elastic IP
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: elb
   name: Elastic Load Balancing
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: elb
   name: Elastic Load Balancing
@@ -230,30 +225,35 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
-    category: Database
+    category: Network
     region: EU-DE
-    type: gaussdb_mysql
-  name: GaussDB (for MySQL)
+    type: erv3
+  name: Enterprise Router
 - attributes:
-    category: Database
+    category: Network
     region: EU-NL
-    type: gaussdb_mysql
-  name: GaussDB (for MySQL)
+    type: erv3
+  name: Enterprise Router
 - attributes:
-    category: Database
+    category: Network
     region: EU-DE
-    type: gaussdb_nosql
-  name: GaussDB NoSQL
-- attributes:
-    category: Database
-    region: EU-NL
-    type: gaussdb_nosql
-  name: GaussDB NoSQL
+    type: evpn
+  name: Enterprise Virtual Private Network
 - attributes:
     category: Security Services
     region: EU-DE
     type: iam
   name: Identity and Access Management
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: functiongraph
+  name: FunctionGraph
+- attributes:
+    category: Database
+    region: EU-DE
+    type: geminidb
+  name: GeminiDB Service
 - attributes:
     category: Security Services
     region: EU-NL
@@ -296,11 +296,6 @@ components:
   name: ModelArts
 - attributes:
     category: Big Data and Data Analysis
-    region: EU-NL
-    type: ma
-  name: ModelArts
-- attributes:
-    category: Big Data and Data Analysis
     region: EU-DE
     type: mrs
   name: Map Reduce Service
@@ -310,12 +305,12 @@ components:
     type: mrs
   name: Map Reduce Service
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: natgw
   name: NAT Gateway
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: natgw
   name: NAT Gateway
@@ -330,25 +325,10 @@ components:
     type: obs
   name: Object Storage Service
 - attributes:
-    category: Database
+    category: Network
     region: EU-DE
-    type: opengauss
-  name: GaussDB (openGauss)
-- attributes:
-    category: Database
-    region: EU-NL
-    type: opengauss
-  name: GaussDB (openGauss)
-- attributes:
-    category: Networking
-    region: EU-DE
-    type: plas
-  name: Private Link Access
-- attributes:
-    category: Networking
-    region: EU-NL
-    type: plas
-  name: Private Link Access
+    type: private-natgw
+  name: Private NAT Gateway
 - attributes:
     category: Database
     region: EU-DE
@@ -359,26 +339,6 @@ components:
     region: EU-NL
     type: rds
   name: Relational Database Service
-- attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: rms
-  name: Resource Management Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: rms
-  name: Resource Management Service
-- attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: rts
-  name: Resource Template Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: rts
-  name: Resource Template Service
 - attributes:
     category: Storage
     region: EU-DE
@@ -393,12 +353,12 @@ components:
     category: Storage
     region: EU-DE
     type: sfs
-  name: Scalable File System
+  name: Scalable File Service
 - attributes:
     category: Storage
     region: EU-NL
     type: sfs
-  name: Scalable File System
+  name: Scalable File Service
 - attributes:
     category: Application Services
     region: EU-DE
@@ -410,16 +370,6 @@ components:
     type: smn
   name: Simple Message Notification
 - attributes:
-    category: Networking
-    region: EU-DE
-    type: smg
-  name: Secure Mail Gateway
-- attributes:
-    category: Networking
-    region: EU-NL
-    type: smg
-  name: Secure Mail Gateway
-- attributes:
     category: Container
     region: EU-DE
     type: swr
@@ -429,53 +379,43 @@ components:
     region: EU-NL
     type: swr
   name: Software Repository for Containers
-- attributes:
-    category: Management & Deployment
-    region: EU-DE
-    type: tms
-  name: Tag Management Service
-- attributes:
-    category: Management & Deployment
-    region: EU-NL
-    type: tms
-  name: Tag Management Service
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-DE
+#     type: tms
+#   name: Tag Management Service
+# - attributes:
+#     category: Management & Deployment
+#     region: EU-NL
+#     type: tms
+#   name: Tag Management Service
 - attributes:
     category: Storage
     region: EU-DE
     type: vbs
   name: Volume Backup Service
 - attributes:
-    category: Storage
-    region: EU-NL
-    type: vbs
-  name: Volume Backup Service
-- attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: vpc
   name: Virtual Private Cloud
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: vpc
   name: Virtual Private Cloud
 - attributes:
-    category: Networking
+    category: Network
     region: EU-DE
     type: vpcep
   name: VPC Endpoint
 - attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: vpcep
   name: VPC Endpoint
 - attributes:
-    category: Networking
-    region: EU-DE
-    type: vpn
-  name: Virtual Private Network
-- attributes:
-    category: Networking
+    category: Network
     region: EU-NL
     type: vpn
   name: Virtual Private Network
@@ -499,3 +439,54 @@ components:
     region: EU-NL
     type: wafd
   name: Dedicated Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: hss
+  name: Host Security Service
+### Global
+- attributes:
+    category: Sites
+    region: Global
+    type: console
+  name: T Cloud Public Console
+- attributes:
+    category: Sites
+    region: Global
+    type: otc
+  name: T Cloud Public
+- attributes:
+    category: Sites
+    region: Global
+    type: helpcenter
+  name: HelpCenter
+- attributes:
+    category: Sites
+    region: Global
+    type: architecturecenter
+  name: Architecture Center
+- attributes:
+    category: Sites
+    region: Global
+    type: community
+  name: T Cloud Public Community
+- attributes:
+    category: Sites
+    region: Global
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
+    category: Sites
+    region: Global
+    type: my-workplace
+  name: Business Login / MyWorkplace
+- attributes:
+    category: Financial Services
+    region: Global
+    type: financial-dashboard
+  name: Financial Dashboard
+- attributes:
+    category: Financial Services
+    region: Global
+    type: billing
+  name: Invoicing

@@ -1,11 +1,14 @@
 ---
 # monitoring elements
 elements:
-  antiddos: # simple regular antiddos
-    service_type: antiddos # service_type in the catalog
-    sdk_proxy: anti_ddos # how SDK proxy is named
-    urls: # which urls to test
-      - /
+  # simple regular antiddos
+  antiddos:
+    # service_type in the catalog
+    service_type: antiddos
+    # how SDK proxy is named
+    sdk_proxy: anti_ddos
+    # which urls to test
+    urls:
       - /antiddos
       - /antiddos/query_config_list
       - /antiddos/default/config
@@ -13,11 +16,28 @@ elements:
   antiddos_skip_bad_type:
     service_type: AntiDDoS
     urls: []
+  apig_v2:
+    service_type: apigv2
+    sdk_proxy: apig
+    urls:
+      - /apigw/available-zones
+      - /apigw/instances
+      - /apigw/instance/configs
+      - /apigw/instance-tags
+  aom_v1:
+    service_type: aomv1
+    sdk_proxy: aomv1
+    urls:
+      - /inv/servicediscoveryrules
+  aom_v2:
+    service_type: aomv2
+    sdk_proxy: aomv2
+    urls:
+      - /alarm-rules
   as:
     service_type: as
     sdk_proxy: auto_scaling
     urls:
-      - /
       - /scaling_group
       - /scaling_configuration
       - /scaling_policy
@@ -31,186 +51,361 @@ elements:
   as_skip_v1:
     service_type: asv1
     urls: []
-  bms_skip:
+  bms:
     service_type: bms
+    urls:
+      - /v1
+      - /baremetalservers/detail
+      - /baremetalservers/flavors
+      - /baremetalservers/limits
+  cbr:
+    service_type: cbr
+    sdk_proxy: cbr
+    urls:
+      - /operation-logs
+      - /vaults
+      - /backups
+      - /policies
+      - /vault/tags
   cce_skip_unver:
     service_type: cce
   cce:
     service_type: ccev2.0
     sdk_proxy: cce
     urls:
-    - /clusters
+      - /clusters
+      - /quotas
   ces:
     service_type: ces
     sdk_proxy: ces
     urls:
-    - /
-    - /metrics
-    - /alarms
+      - /metrics?limit=1
+      - /alarms
+      - /quotas
   ces_skip_v1:
     service_type: cesv1
   compute:
     service_type: compute
     urls:
-    - /
-    - /servers
-    - /flavors
-    - /limits
-    - /os-keypairs
-    - /os-server-groups
-    - /os-availability-zone
+      - /servers
+      - /flavors
+      - /limits
+      - /os-keypairs
+      - /os-server-groups
+      - /os-availability-zone
+  config:
+    service_type: rms
+    sdk_proxy: rms
+    urls:
+      - /resource-manager/policy-definitions
+  csbs:
+    service_type: data-protect
+    sdk_proxy: csbs
+    urls:
+      - /policies
+      - /quotas
+      - /csbs_backup_policy/tags
+      - /checkpoint_items
   css:
     service_type: css
     sdk_proxy: css
     urls:
-    - /
-    - /clusters
+      - /clusters
+      - /css-cluster/tags
   cts_skip_unver:
     service_type: cts
+    sdk_proxy: cts
+    urls: []
+  cts_skip_v1:
+    service_type: cts
+    sdk_proxy: cts
+    urls: []
   cts_skip_v2:
     service_type: ctsv2
-  cts:
-    service_type: ctsv2
     sdk_proxy: cts
-    urls:
-    - /
+    urls: []
   cts_v3:
     service_type: ctsv3
-    sdk_proxy: cts
+    sdk_proxy: ctsv3
     urls:
-    - /
-  data_protect_skip:
-    service_type: data-protect
+      - /notifications/smn
+      - /trackers
+      - /traces
+  cts_v3_swiss:
+    service_type: ctsv3
+    sdk_proxy: ctsv3
+    urls:
+      - /trackers
+      - /traces
+  dataarts:
+    service_type: dataarts
+    sdk_proxy: dataarts
+    urls:
+      - /clusters
   database_skip:
     service_type: database
   dcaas:
     service_type: dcaas
     sdk_proxy: dcaas
     urls:
-    - /dcaas/direct-connects
-    - /dcaas/virtual-interfaces
-    - /dcaas/dc-endpoint-groups
-    - /dcaas/virtual-gateways
+      - /dcaas/direct-connects
+      - /dcaas/dc-endpoint-groups
+      - /dcaas/virtual-gateways
   dcs:
     service_type: dcs
     sdk_proxy: dcs
     urls:
-    - /
-    - /instances
-    - /quota
+      - /instances
+      - /quota
   dcs_skip_v1:
     service_type: dcsv1
+  ddmv1:
+    service_type: ddmv1
+    sdk_proxy: ddmv1
+    urls:
+      - /instances
+  ddmv2:
+    service_type: ddmv2
+    sdk_proxy: ddmv2
+    urls:
+      - /engines
   dds:
     service_type: ddsv3
     sdk_proxy: dds
     urls:
-    - /
-    - /v3
-    - /instances
+      - /v3
+      - /instances
   deh:
     service_type: deh
     urls:
-    - /
-    - /dedicated-hosts
+      - /dedicated-hosts
   dis_skip_unver:
     service_type: dis
-  dis:
-    service_type: disv2
+  dli:
+    service_type: dli
     urls:
-    - /
-    - /streams
-    - /stream/tags
+      - /queues
+      - /jobs
+      - /streaming/jobs
   dms:
     service_type: dms
     sdk_proxy: dms
     urls:
-    - /queues
-    - /quotas/dms
-    - /queue/tags
-  dms_skip_v2:
+      - /queues
+      - /quotas/dms
+      - /queue/tags
+  dmsv2:
     service_type: dmsv2
+    sdk_proxy: dmsv2
+    urls:
+      - /instances
   dns:
     service_type: dns
     urls:
-    - /
-    - /zones
-    - /recordsets
-    - /reverse/floatingips
+      - /zones
+      - /recordsets
+      - /reverse/floatingips
   dns_private_only:
     service_type: dns
     urls:
-    - /
-    - /zones
-    - /recordsets
+      - /zones
+      - /recordsets
   dws:
     service_type: dws
     urls:
-    - /
-    - /clusters
-    - /snaphosts
+      - /clusters
+      - /snapshots
+      - /tags
+  ecs:
+    service_type: ecs
+    sdk_proxy: ecs
+    urls:
+      - /cloudservers/detail
+      - /cloudservers/limits
+      - /cloudservers/tags
+  eipv2.0:
+    service_type: vpc
+    urls:
+      - /
+      - /v2.0
+      - /v2.0/floatingips
+      - /v2.0/eip/floatingips_v6
+  elb_skip:
+    service_type: elb
+    sdk_proxy: elb
+    urls: []
+  elbv1_skip:
+    service_type: elbv1
+    urls: []
+  elb:
+    service_type: elb
+    sdk_proxy: elb
+    urls:
+      - /lbaas/loadbalancers
+      - /lbaas/listeners
+      - /lbaas/pools
+      - /lbaas/healthmonitors
+      - /lbaas/l7policies
+      - /lbaas/whitelists
+      - /lbaas/certificates
+  elbv3:
+    service_type: elbv3
+    sdk_proxy: elbv3
+    urls:
+      - /elb/quotas
+      - /elb/availability-zones
+      - /elb/flavors
+      - /elb/loadbalancers
+      - /elb/listeners
+      - /elb/pools
+      - /elb/healthmonitors
+      - /elb/l7policies
+      - /elb/certificates
+      - /elb/security-policies
+      - /elb/system-security-policies
+      - /elb/ipgroups
+  enterprise-dashboard:
+    service_type: enterprise-dashboard
+    urls:
+      - /api/health
+  enterprise-dashboard-v1:
+    service_type: enterprise-dashboard-v1
+    urls: []
+  er:
+    service_type: erv3
+    sdk_proxy: er
+    urls:
+      - /enterprise-router/quotas
+      - /enterprise-router/availability-zones
+      - /enterprise-router/instances
+  evpn:
+    service_type: evpn
+    sdk_proxy: evpn
+    urls:
+      - /vpn-connection
+      - /vpn-gateways/availability-zones
+      - /vpn-gateways
+      - /customer-gateways
+      - /vpn/quotas
+      - /connection-monitors
+      - /vpn-connection/tags
+      - /vpn-gateways/tags
+      - /customer-gateways/tags
   dws_skip_v1:
     service_type: dwsv1
+  functiongraph_v2:
+    service_type: functiongraph
+    sdk_proxy: function_graph
+    urls:
+      - /fgs/quotas
+      - /fgs/dependencies
+      - /fgs/functions
+      - /fgs/functions/reservedinstances
+      - /fgs/functions/reservedinstanceconfigs
+  geminidb:
+    service_type: geminidb
+    sdk_proxy: geminidb
+    urls:
+      - /jobs
+  hss:
+    service_type: hss
+    sdk_proxy: hss
+    urls:
+      - /asset/statistics
+      - /asset/user/statistics
+      - /asset/app/statistics
+      - /asset/auto-launch/statistics
+      - /asset/users
   identity:
     service_type: identity
     urls:
-    - /
-    - /regions
-    - /auth/projects
+      - /
+      - /regions
+      - /auth/projects
+      - /projects
   image:
     service_type: image
     urls:
-    - /
-    - /images
-    - /schemas/images
+      - /
+      - /images?limit=1
+      - /schemas/images
+      - /schemas/image
   kms_skip_unver:
     service_type: kms
   kms:
     service_type: kmsv1
     sdk_proxy: kms
     urls:
-    - /
-    - /kms/list-keys
-    - /kms/user-quotas
+      - /kms/user-quotas
+      - /kms/user-instances
+      - /kms/tags
+  ltsv2:
+    service_type: ltsv2
+    sdk_proxy: lts
+    urls:
+      - /groups
+      - /transfers
+  modelarts:
+    service_type: modelartsv1
+    sdk_proxy: modelartsv1
+    urls:
+      - /notebooks
+      - /models
+      - /training-jobs
+      - /services
+  modelartsv2:
+    service_type: modelartsv2
+    sdk_proxy: modelartsv2
+    urls:
+      - /datasets
   mrs:
     service_type: mrsv1
     sdk_proxy: mrs
     urls:
-    - /data-sources
-    - /cluster_infos
-    - /job-binaries
+      - /data-sources
+      - /cluster_infos
+      - /job-binaries
   nat:
     service_type: nat
     urls:
-    - /
-    - /nat_gateways
-    - /snat_rules
-    - /dnat_rules
+      - /nat_gateways
+      - /snat_rules
+      - /dnat_rules
   network:
     service_type: network
     urls:
-    - /
-    - /networks
-    - /subnets
-    - /ports
-    - /routers
-    - /floatingips
-    - /security-groups
-    - /subnetpools
+      - /networks
+      - /subnets
+      - /ports
+      - /routers
+      - /floatingips
+      - /security-groups
+      - /subnetpools
   object_skip:
     service_type: object
   object_store:
     service_type: object-store
     sdk_proxy: object_store
     urls:
-    - /
-    - /info
-  orchestration:
-    service_type: orchestration
+      - /
+      - /info
+  ocr:
+    service_type: ocr
+    sdk_proxy: ocr
     urls:
-    - /stacks
-    - /build_info
-    - /software_configs
-    - /resource_types
+      - /ocr/general-table-health
+      - /ocr/general-text-health
+  orchestration_skip:
+    service_type: orchestration
+    urls: []
+  private-natgw:
+    service_type: natv3
+    sdk_proxy: natv3
+    urls:
+      - /private-nat/gateways
+      - /private-nat/transit-ips
+      - /private-nat/dnat-rules
+      - /private-nat/snat-rules
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:
@@ -219,55 +414,137 @@ elements:
     service_type: rdsv3
     sdk_proxy: rds
     urls:
-    - /
-    - /datastores/postgresql
-    - /instances
-    - /configurations
+      - /datastores/postgresql
+      - /instances
+      - /configurations
   sdrs:
     service_type: sdrs
+    sdk_proxy: sdrs
     urls:
-    - /
-    - /v1
-    - /active-domains
-    - /server-groups
-    - /protected-instances
-    - /replications
+      - /server-groups
+      - /protected-instances
+      - /replications
   sfsturbo:
     service_type: sfsturbo
     urls:
-    - /sfs-turbo/shares/detail
+      - /sfs-turbo/shares/detail
+      - /sfs-turbo/tags
   share:
     service_type: sharev2
     sdk_proxy: share
-    urls:
-    - /
-    - /v2
-    - /shares
+    urls: []
   smn:
     service_type: smn
     urls:
-    - /
-    - /notifications
-    - /notifications/subscriptions
-    - /notifications/message_template
+      - /notifications
+      - /notifications/subscriptions
+      - /notifications/message_template
   smn_skip_v2:
     service_type: smnv2
+  swrv2:
+    service_type: swrv2
+    sdk_proxy: swrv2
+    urls:
+      - /manage/shared-repositories?center=self
+      - /manage/repos
+      - /manage/namespaces
+  taurusdb:
+    service_type: gaussdb-mysql
+    sdk_proxy: gaussdb
+    urls:
+      - /flavors/gaussdb-mysql?availability_zone_mode=multi
+      - /instances
+      - /backups
+      - /configurations
   volume_skip_v2:
     service_type: volumev2
   volume:
     service_type: volumev3
     sdk_proxy: block_storage
     urls:
-    - /volumes
-    - /snapshots
-    - /backups
-    - /os-volume-transfer
-    - /os-availability-zone
+      - /volumes
+      - /snapshots
+      - /backups
+      - /os-volume-transfer
+      - /os-availability-zone
   volume_no_backups:
     service_type: volumev3
     sdk_proxy: block_storage
     urls:
-    - /volumes
-    - /snapshots
-    - /os-volume-transfer
-    - /os-availability-zone
+      - /volumes
+      - /snapshots
+  vbs_skip_v2:
+    service_type: vbsv2
+    urls: []
+  vbs:
+    service_type: vbs
+    urls:
+      - /backups
+      - /backuppolicy
+      - /backups/detail
+      - /backuppolicy/tags
+  vpcep:
+    service_type: vpcep
+    sdk_proxy: vpcep
+    urls:
+      - /vpc-endpoint-services
+      - /vpc-endpoints
+      - /vpc-endpoint-services/public
+      - /quotas
+      - /endpoint_service/tags
+      - /endpoint/tags
+  vpn:
+    service_type: vpc
+    urls:
+      - /
+      - /v2.0
+      - /v2.0/vpn/ipsec-site-connections
+      - /v2.0/vpn/vpnservices
+      - /v2.0/vpn/ipsecpolicies
+      - /v2.0/vpn/ikepolicies
+      - /v2.0/vpn/endpoint-groups
+  waf:
+    service_type: waf
+    sdk_proxy: waf
+    urls:
+      - /waf/bundle
+      - /waf/bundle/usage/instance
+      - /waf/bundle/usage/policy
+      - /waf/bundle/usage/certificate
+      - /waf/instance
+      - /waf/certificate
+      - /waf/policy
+      - /waf/event/dump
+      - /waf/config/alert
+      - /waf/map/threat
+      - /waf/map/sipheader
+      - /waf/tags
+  wafd:
+    service_type: premium-waf
+    sdk_proxy: wafd
+    urls:
+      - /premium-waf/instance
+      - /premium-waf/host
+      - /waf/policy
+      - /waf/valuelist
+      - /waf/certificate
+      - /waf/event?recent=today
+  wafd_swiss:
+    service_type: waf
+    sdk_proxy: waf
+    urls:
+      - /premium-waf/instance
+      - /premium-waf/host
+      - /waf/policy
+      - /waf/valuelist
+      - /waf/certificate
+      - /waf/event?recent=today
+  workspace:
+    service_type: workspace
+    urls: []
+  wks:
+    service_type: wks
+    urls: []
+  swift:
+    service_type: object-store
+    urls: []
