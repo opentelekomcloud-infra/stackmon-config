@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sd3-api
+  labels:
+    app: sd3-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sd3-api
+  template:
+    metadata:
+      labels:
+        app: sd3-api
+    spec:
+      serviceAccount: sd3
+      containers:
+      - name: sd3-api
+        image: sd3-api
+        command:
+          ["/bin/sh", "-c"]
+        args:
+          ['source /secrets/sd3-api-env && "/usr/src/app/app"']
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        # livenessProbe:
+        #   httpGet:
+        #     path: /v1/component_status
+        #     port: 8000
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: /v1/component_status
+        #     port: 8000
+        #   initialDelaySeconds: 5
+        #   periodSeconds: 5
+        volumeMounts:
+        - mountPath: "/secrets"
+          name: "secrets"
+      initContainers:
+      - name: "vault-agent"
+        command:
+        - "sh"
+        - "-c"
+        - "vault agent -config=/etc/vault/vault-agent.hcl -exit-after-auth=true"
+        env:
+        # The VM vault is being retired and its certificate is only valid for
+        # vault1, so anything using the vault-lb name fails TLS verification.
+        # The in-cluster vault presents a certificate signed by its own CA,
+        # which this image does not trust, hence VAULT_SKIP_VERIFY - the same
+        # setting the ArgoCD vault plugin uses to reach it.
+        - name: "VAULT_ADDR"
+          value: "https://vault-otcinfra2.vault.svc.cluster.local:8200"
+        - name: "VAULT_SKIP_VERIFY"
+          value: "true"
+        image: "hashicorp/vault"
+        resources:
+          limits:
+            cpu: "300m"
+            memory: "300Mi"
+          requests:
+            cpu: "50m"
+            memory: "50Mi"
+        volumeMounts:
+        - mountPath: "/etc/vault"
+          name: "vault-agent-config"
+        - mountPath: "/secrets"
+          name: "secrets"
+        - mountPath: "/var/run/secrets/tokens"
+          name: "k8-tokens"
+          readOnly: true
+      volumes:
+      - name: vault-agent-config
+        configMap:
+          defaultMode: 420
+          name: sd3-vault-config
+      - name: secrets
+        emptyDir: {}
+      - name: "k8-tokens"
+        projected:
+          defaultMode: 420
+          sources:
+          - serviceAccountToken:
+              expirationSeconds: 7200
+              path: "vault-token"
