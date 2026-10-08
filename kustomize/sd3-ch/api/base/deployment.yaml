@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sd3-ch-api
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: sd3-ch-api
@@ -15,6 +15,10 @@ spec:
         app: sd3-ch-api
     spec:
       serviceAccount: sd3-ch
+      # SWR is private; the secret is replicated into every namespace by
+      # kubernetes-replicator (system-config pull-secrets chart).
+      imagePullSecrets:
+        - name: swr-secret
       containers:
       - name: sd3-ch-api
         image: sd3-ch-api
@@ -31,18 +35,20 @@ spec:
           limits:
             cpu: 500m
             memory: 512Mi
-        # livenessProbe:
-        #   httpGet:
-        #     path: /v1/component_status
-        #     port: 8000
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 10
-        # readinessProbe:
-        #   httpGet:
-        #     path: /v1/component_status
-        #     port: 8000
-        #   initialDelaySeconds: 5
-        #   periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            # /readyz pings the database, so a pod that lost DB connectivity is
+            # pulled from the Service rotation instead of serving 500s.
+            path: /readyz
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
         volumeMounts:
         - mountPath: "/secrets"
           name: "secrets"
@@ -62,7 +68,9 @@ spec:
           value: "https://vault-otcinfra2.vault.svc.cluster.local:8200"
         - name: "VAULT_SKIP_VERIFY"
           value: "true"
-        image: "hashicorp/vault"
+        # Pinned: an untagged reference resolves to hashicorp/vault:latest, whose
+        # Agent 2.x hangs on KVv2 reads against the 1.19 server in this cluster.
+        image: "hashicorp/vault:1.19.0"
         resources:
           limits:
             cpu: "300m"
