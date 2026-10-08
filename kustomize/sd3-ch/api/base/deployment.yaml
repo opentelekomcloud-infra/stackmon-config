@@ -49,6 +49,12 @@ spec:
             port: 8000
           initialDelaySeconds: 5
           periodSeconds: 5
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1001
+          runAsGroup: 1001
+          readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
         volumeMounts:
         - mountPath: "/secrets"
           name: "secrets"
