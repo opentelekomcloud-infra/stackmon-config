@@ -1,7 +1,7 @@
 datasource:
-  # Same CarbonAPI as the EU instance: the CH2 environment lives in the same
-  # Graphite store, the instance just queries hybrid_eu-ch2.
-  url: https://graphite-ca.eco.tsi-dev.otc-service.com
+  # Same CarbonAPI as the EU instance: its store also carries the hybrid_eu-ch2
+  # environment, so the instance only differs by the environment it queries.
+  url: https://graphite.cloudmon.eco.tsi-dev.otc-service.com
   timeout: 15
 server:
   port: 3005
