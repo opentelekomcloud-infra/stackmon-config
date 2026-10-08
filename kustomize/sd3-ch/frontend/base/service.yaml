@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sd3-ch-frontend
+  labels:
+    app: sd3-ch-frontend
+spec:
+  selector:
+    app: sd3-ch-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
