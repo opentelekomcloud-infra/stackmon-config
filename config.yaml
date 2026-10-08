@@ -98,6 +98,9 @@ matrix:
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
+          - aom_v1
+          - aom_v2
+          - apig_v2
           - as
           - as_skip_v1
           - bms
@@ -107,20 +110,22 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
-          - cts_v2
+          - cts_skip_v2
           - cts_v3
           - dataarts
           - database_skip
           - dcaas
           - dcs
           - dcs_skip_v1
+          - ddmv1
+          - ddmv2
           - dds
           - deh
           - dis_skip_unver
-          - dis
           - dli
           - dms
           - dmsv2
@@ -133,7 +138,11 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - er
+          - evpn
           - functiongraph_v2
+          - geminidb
+          - hss
           - identity
           - image
           - kms_skip_unver
@@ -146,8 +155,9 @@ matrix:
           - network
           - object_skip
           - object_store
+          - ocr
           - orchestration_skip
-          - plas
+          - private-natgw
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -157,18 +167,19 @@ matrix:
           - smn_skip_v2
           - swift
           - swrv2
+          - taurusdb
           - vbs
           - volume_skip_v2
           - volume
           - vpcep
-          - vpn
           - waf
           - wafd
           - wks
           - workspace
       - name: globalmon
-        globalmons_inventory_group_name: globalmons
+        globalmons_inventory_group_name: globalmons_de
         cloud_name: production_eu-de
+        config: globalmon/config_eu-de.yaml
   - env: production_eu-nl
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -197,7 +208,7 @@ matrix:
           - compute
           - css
           - cts_skip_v1
-          - cts_v2
+          - cts_skip_v2
           - cts_v3
           - database_skip
           - dcaas
@@ -213,6 +224,7 @@ matrix:
           - elb_skip
           - elbv1_skip
           - elbv3
+          - er
           - identity
           - image
           - kms_skip_unver
@@ -236,6 +248,10 @@ matrix:
           - vpcep
           - vpn
           - waf
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_de
+        cloud_name: production_eu-nl
+        config: globalmon/config_eu-nl.yaml
   - env: production_eu-de
     monitoring_zone: eu-nl
     # TODO: placing db_url here feels questionable
@@ -249,6 +265,9 @@ matrix:
         config_elements:
           - antiddos
           - antiddos_skip_bad_type
+          - aom_v1
+          - aom_v2
+          - apig_v2
           - as
           - as_skip_v1
           - bms
@@ -258,20 +277,22 @@ matrix:
           - ces
           - ces_skip_v1
           - compute
+          - config
           - csbs
           - css
           - cts_skip_v1
-          - cts_v2
+          - cts_skip_v2
           - cts_v3
           - dataarts
           - database_skip
           - dcaas
           - dcs
           - dcs_skip_v1
+          - ddmv1
+          - ddmv2
           - dds
           - deh
           - dis_skip_unver
-          - dis
           - dli
           - dms
           - dmsv2
@@ -284,6 +305,10 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - er
+          - geminidb
+          - hss
+          - evpn
           - functiongraph_v2
           - identity
           - image
@@ -297,8 +322,9 @@ matrix:
           - network
           - object_skip
           - object_store
+          - ocr
           - orchestration_skip
-          - plas
+          - private-natgw
           - rds_skip_unver
           - rds_skip_v1
           - rds
@@ -308,15 +334,19 @@ matrix:
           - smn_skip_v2
           - swift
           - swrv2
+          - taurusdb
           - vbs
           - volume_skip_v2
           - volume
           - vpcep
-          - vpn
           - waf
           - wafd
           - wks
           - workspace
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: production_eu-de
+        config: globalmon/config_eu-de.yaml
   - env: production_eu-nl
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -338,7 +368,7 @@ matrix:
           - compute
           - css
           - cts_skip_v1
-          - cts_v2
+          - cts_skip_v2
           - cts_v3
           - database_skip
           - dcaas
@@ -354,6 +384,7 @@ matrix:
           - elb_skip
           - elbv1_skip
           - elbv3
+          - er
           - identity
           - image
           - kms_skip_unver
@@ -377,6 +408,10 @@ matrix:
           - vpcep
           - vpn
           - waf
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: production_eu-nl
+        config: globalmon/config_eu-nl.yaml
   - env: hybrid_eu-ch2
     monitoring_zone: eu-de
     db_entry: apimon.apimon
@@ -396,7 +431,6 @@ matrix:
           - cts_skip_v2
           - cts_v3_swiss
           - dcaas
-          - deh
           - dns_private_only
           - ecs
           - elb
@@ -418,6 +452,10 @@ matrix:
           - vpcep
           - vpn
           - wafd_swiss
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_de
+        cloud_name: hybrid_eu-ch2
+        config: globalmon/config_eu-ch2.yaml
   - env: hybrid_eu-ch2
     monitoring_zone: eu-nl
     db_entry: apimon.apimon
@@ -437,7 +475,6 @@ matrix:
           - cts_skip_v2
           - cts_v3_swiss
           - dcaas
-          - deh
           - dns_private_only
           - ecs
           - elb
@@ -459,6 +496,10 @@ matrix:
           - vpcep
           - vpn
           - wafd_swiss
+      - name: globalmon
+        globalmons_inventory_group_name: globalmons_nl
+        cloud_name: hybrid_eu-ch2
+        config: globalmon/config_eu-ch2.yaml
 
 metrics_processor:
   - name: prod
@@ -489,7 +530,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_18_latest"
+          newTag: "change_26_latest"
 
       patches:
         - patch: |-
@@ -540,7 +581,7 @@ metrics_processor:
 
       images:
         - name: quay.io/stackmon/metrics-processor
-          newTag: "change_18_latest"
+          newTag: "change_20_latest"
 
       patches:
         - patch: |-
@@ -593,7 +634,7 @@ plugins:
         grafana_dashboards_location: dashboards
   - name: epmon
     type: epmon
-    image: quay.io/stackmon/apimon:change_58_latest
+    image: quay.io/stackmon/apimon:change_66_latest
     config: epmon/config.yaml
   - name: lb
     type: general
@@ -601,14 +642,14 @@ plugins:
     init_image: quay.io/opentelekomcloud/cloudmon-plugin-lb-init
   - name: globalmon
     type: globalmon
-    image: quay.io/stackmon/globalmon:change_8_latest
-    config: globalmon/config.yaml
+    image: quay.io/stackmon/globalmon:change_14_latest
 
 status_dashboard:
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: prod-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod
-    domain_name: status.otc-service.com
+    domain_name: api.status.otc-service.com
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
@@ -617,7 +658,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_52_latest"
 
       patchesStrategicMerge:
         - |-
@@ -642,7 +683,7 @@ status_dashboard:
   - name: prod
     kube_context: cloudmon-de
     kube_namespace: stackmon
-    domain_name: status.cloudmon.eco.tsi-dev.otc-service.com
+    domain_name: api.status.otc-service.com
     kustomization:
       extra_files:
         - sdb_prod/catalog.yaml
@@ -651,7 +692,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_52_latest"
 
       patchesStrategicMerge:
         - |-
@@ -673,6 +714,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_internal.yaml
 
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: beta
     kube_context: cloudmon-de
     kube_namespace: stackmon-beta
@@ -685,7 +727,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_52_latest"
 
       patchesStrategicMerge:
         - |-
@@ -710,7 +752,7 @@ status_dashboard:
   - name: hybrid-ch2_from_eu-de
     kube_context: cloudmon-de
     kube_namespace: stackmon-ch2
-    domain_name: status-ch2.cloudmon.eco.tsi-dev.otc-service.com
+    domain_name: api.status-ch.otc-service.com
     kustomization:
       extra_files:
         - sdb_ch2/catalog.yaml
@@ -719,7 +761,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_52_latest"
 
       patchesStrategicMerge:
         - |-
@@ -741,6 +783,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_ch2_internal.yaml
 
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: ch2-beta
     kube_context: cloudmon-de
     kube_namespace: stackmon-beta-ch2
@@ -753,7 +796,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_52_latest"
 
       patchesStrategicMerge:
         - |-
@@ -775,6 +818,7 @@ status_dashboard:
       resources:
         - kustomize/sdb/sdb_ch2_beta.yaml
 
+  # This block is obsolete but needed for hardcoded dependency of MP on SDB
   - name: ch2-prod
     kube_context: cloudmon-de
     kube_namespace: stackmon-prod-ch2
@@ -787,7 +831,7 @@ status_dashboard:
       images:
         - name: quay.io/opentelekomcloud/stackmon-status-dashboard
           newName: quay.io/opentelekomcloud/otc-status-dashboard
-          newTag: "change_50_latest"
+          newTag: "change_52_latest"
 
       patchesStrategicMerge:
         - |-

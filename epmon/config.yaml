@@ -16,6 +16,24 @@ elements:
   antiddos_skip_bad_type:
     service_type: AntiDDoS
     urls: []
+  apig_v2:
+    service_type: apigv2
+    sdk_proxy: apig
+    urls:
+      - /apigw/available-zones
+      - /apigw/instances
+      - /apigw/instance/configs
+      - /apigw/instance-tags
+  aom_v1:
+    service_type: aomv1
+    sdk_proxy: aomv1
+    urls:
+      - /inv/servicediscoveryrules
+  aom_v2:
+    service_type: aomv2
+    sdk_proxy: aomv2
+    urls:
+      - /alarm-rules
   as:
     service_type: as
     sdk_proxy: auto_scaling
@@ -75,6 +93,11 @@ elements:
       - /os-keypairs
       - /os-server-groups
       - /os-availability-zone
+  config:
+    service_type: rms
+    sdk_proxy: rms
+    urls:
+      - /resource-manager/policy-definitions
   csbs:
     service_type: data-protect
     sdk_proxy: csbs
@@ -101,16 +124,13 @@ elements:
     service_type: ctsv2
     sdk_proxy: cts
     urls: []
-  cts_v2:
-    service_type: ctsv2
-    sdk_proxy: ctsv2
-    urls:
-      - /system/trace?limit=10
   cts_v3:
     service_type: ctsv3
     sdk_proxy: ctsv3
     urls:
       - /notifications/smn
+      - /trackers
+      - /traces
   cts_v3_swiss:
     service_type: ctsv3
     sdk_proxy: ctsv3
@@ -139,6 +159,16 @@ elements:
       - /quota
   dcs_skip_v1:
     service_type: dcsv1
+  ddmv1:
+    service_type: ddmv1
+    sdk_proxy: ddmv1
+    urls:
+      - /instances
+  ddmv2:
+    service_type: ddmv2
+    sdk_proxy: ddmv2
+    urls:
+      - /engines
   dds:
     service_type: ddsv3
     sdk_proxy: dds
@@ -151,12 +181,6 @@ elements:
       - /dedicated-hosts
   dis_skip_unver:
     service_type: dis
-  dis:
-    service_type: disv2
-    urls:
-      - /
-      - /streams
-      - /stream/tags
   dli:
     service_type: dli
     urls:
@@ -190,15 +214,14 @@ elements:
     service_type: dws
     urls:
       - /clusters
-      - /snaphosts
-      - /clusters/tags
+      - /snapshots
+      - /tags
   ecs:
     service_type: ecs
     sdk_proxy: ecs
     urls:
       - /cloudservers/detail
       - /cloudservers/limits
-      - /cloudservers/flavors
       - /cloudservers/tags
   eipv2.0:
     service_type: vpc
@@ -247,8 +270,27 @@ elements:
       - /api/health
   enterprise-dashboard-v1:
     service_type: enterprise-dashboard-v1
+    urls: []
+  er:
+    service_type: erv3
+    sdk_proxy: er
     urls:
-      - /consumption/health
+      - /enterprise-router/quotas
+      - /enterprise-router/availability-zones
+      - /enterprise-router/instances
+  evpn:
+    service_type: evpn
+    sdk_proxy: evpn
+    urls:
+      - /vpn-connection
+      - /vpn-gateways/availability-zones
+      - /vpn-gateways
+      - /customer-gateways
+      - /vpn/quotas
+      - /connection-monitors
+      - /vpn-connection/tags
+      - /vpn-gateways/tags
+      - /customer-gateways/tags
   dws_skip_v1:
     service_type: dwsv1
   functiongraph_v2:
@@ -257,6 +299,23 @@ elements:
     urls:
       - /fgs/quotas
       - /fgs/dependencies
+      - /fgs/functions
+      - /fgs/functions/reservedinstances
+      - /fgs/functions/reservedinstanceconfigs
+  geminidb:
+    service_type: geminidb
+    sdk_proxy: geminidb
+    urls:
+      - /jobs
+  hss:
+    service_type: hss
+    sdk_proxy: hss
+    urls:
+      - /asset/statistics
+      - /asset/user/statistics
+      - /asset/app/statistics
+      - /asset/auto-launch/statistics
+      - /asset/users
   identity:
     service_type: identity
     urls:
@@ -290,7 +349,7 @@ elements:
     service_type: modelartsv1
     sdk_proxy: modelartsv1
     urls:
-      - /demanager/instances?de_type=Notebook
+      - /notebooks
       - /models
       - /training-jobs
       - /services
@@ -330,14 +389,23 @@ elements:
     urls:
       - /
       - /info
+  ocr:
+    service_type: ocr
+    sdk_proxy: ocr
+    urls:
+      - /ocr/general-table-health
+      - /ocr/general-text-health
   orchestration_skip:
     service_type: orchestration
     urls: []
-  plas:
-    service_type: plas
-    sdk_proxy: plas
+  private-natgw:
+    service_type: natv3
+    sdk_proxy: natv3
     urls:
-      - /plasconnector/connectors?pageSize=10&pageNum=1
+      - /private-nat/gateways
+      - /private-nat/transit-ips
+      - /private-nat/dnat-rules
+      - /private-nat/snat-rules
   rds_skip_unver:
     service_type: rds
   rds_skip_v1:
@@ -353,7 +421,6 @@ elements:
     service_type: sdrs
     sdk_proxy: sdrs
     urls:
-      - /active-domains
       - /server-groups
       - /protected-instances
       - /replications
@@ -381,6 +448,14 @@ elements:
       - /manage/shared-repositories?center=self
       - /manage/repos
       - /manage/namespaces
+  taurusdb:
+    service_type: gaussdb-mysql
+    sdk_proxy: gaussdb
+    urls:
+      - /flavors/gaussdb-mysql?availability_zone_mode=multi
+      - /instances
+      - /backups
+      - /configurations
   volume_skip_v2:
     service_type: volumev2
   volume:
@@ -398,8 +473,6 @@ elements:
     urls:
       - /volumes
       - /snapshots
-      - /os-volume-transfer
-      - /os-availability-zone
   vbs_skip_v2:
     service_type: vbsv2
     urls: []

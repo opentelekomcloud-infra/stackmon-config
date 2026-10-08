@@ -78,11 +78,11 @@ components:
 #     type: dds
 #   name: Document Database Service
 
-- attributes:
-    category: Compute
-    region: EU-CH2
-    type: deh
-  name: Dedicated Host
+# - attributes:
+#     category: Compute
+#     region: EU-CH2
+#     type: deh
+#   name: Dedicated Host
 
 # - attributes:
 #     category: Big Data and Data Analysis
@@ -204,12 +204,6 @@ components:
 #     type: opengauss
 #   name: GaussDB (openGauss)
 
-# - attributes:
-#     category: Network
-#     region: EU-CH2
-#     type: plas
-#   name: Private Link Access
-
 - attributes:
     category: Database
     region: EU-CH2
@@ -299,4 +293,34 @@ components:
     region: EU-CH2
     type: wafd
   name: Dedicated Web Application Firewall
-
+### Global
+- attributes:
+    category: Sites
+    region: Global
+    type: console
+  name: T Cloud Public Console
+- attributes:
+    category: Sites
+    region: Global
+    type: otc
+  name: T Cloud Public
+- attributes:
+    category: Sites
+    region: Global
+    type: helpcenter
+  name: HelpCenter
+- attributes:
+    category: Sites
+    region: Global
+    type: architecturecenter
+  name: Architecture Center
+- attributes:
+    category: Sites
+    region: Global
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
+    category: Sites
+    region: Global
+    type: community
+  name: T Cloud Public Community
