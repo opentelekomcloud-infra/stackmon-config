@@ -11,9 +11,8 @@ environments:
     attributes:
       region: EU-NL
 status_dashboard:
-  # The reporter posts to {url}/v2/events, so this is the API host rather than
-  # the site origin.
-  url: https://api.status.otc-service.com
+  # The reporter posts to {url}/v2/events. The site and the API share one origin.
+  url: https://status.otc-service.com
   oidc_issuer: https://zitadel.eco.tsi-dev.otc-service.com
   oidc_key_file: /cloudmon/service-account.json
   # Both scopes are required: without the :aud one the token audience falls back
