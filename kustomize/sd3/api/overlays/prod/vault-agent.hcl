@@ -22,6 +22,9 @@ template {
 export SD_DB={{ .Data.data.dburl }}
 export SD_CACHE=internal
 export SD_LOG_LEVEL=devel
+# The OBS static website endpoint the backend proxies every path the API does
+# not own. Host only: OBS picks the bucket from the Host header and ignores SNI.
+export SD_STATIC_ORIGINS=status.obs-website.eu-de.otc.t-systems.com
 export SD_OIDC_ISSUER=https://zitadel.eco.tsi-dev.otc-service.com
 # Audience every accepted token must carry: the Zitadel project id, not the
 # SPA client id used by the frontend login.
