@@ -22,14 +22,22 @@ template {
 export SD_DB={{ .Data.data.dburl }}
 export SD_CACHE=internal
 export SD_LOG_LEVEL=devel
-export SD_SECRET_KEY={{ .Data.data.sdsecretkey }}
+export SD_OIDC_ISSUER=https://zitadel.eco.tsi-dev.otc-service.com
+# Audience every accepted token must carry: the Zitadel project id, not the
+# SPA client id used by the frontend login.
+export SD_OIDC_CLIENT_ID=394183996340174906
+export SD_OIDC_USERNAME_CLAIM=email
+export SD_RBAC_ROLES_ADMINS=sd_admins
+export SD_RBAC_ROLES_OPERATORS=sd_operators
+export SD_RBAC_ROLES_CREATORS=sd_creators
+export SD_RBAC_ROLES_REPORTERS=sd_reporters
 export SD_WEB_URL=https://status-ch.otc-service.com
-export SD_HOSTNAME=https://api.status-ch.otc-service.com
-export SD_RBAC_GROUPS_ADMINS={{ .Data.data.authgroup }}
-export SD_KEYCLOAK_URL={{ .Data.data.keycloakurl }}
-export SD_KEYCLOAK_REALM={{ .Data.data.keycloakrealm }}
-export SD_KEYCLOAK_CLIENT_ID={{ .Data.data.keycloakclientid }}
-export SD_KEYCLOAK_CLIENT_SECRET={{ .Data.data.keycloakclientsecret }}
+# Mail stays off until migration 000008 has been applied: enabling it without
+# the outbox table aborts startup. SD_SMTP_* come with that change.
+export SD_NOTIFICATIONS_ENABLED=false
+# Constrains only the creator-supplied contact_email, never the review
+# audience, which is why SDMoD stays reachable through this.
+export SD_NOTIFICATIONS_ALLOWED_DOMAINS=t-systems.com
 {{- end }}
 
 EOT
