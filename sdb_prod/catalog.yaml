@@ -10,6 +10,11 @@ components:
     type: antiddos
   name: Anti DDoS
 - attributes:
+    category: Application Services
+    region: EU-DE
+    type: apigv2
+  name: API Gateway
+- attributes:
     category: Compute
     region: EU-DE
     type: as
@@ -38,12 +43,12 @@ components:
     category: Container
     region: EU-DE
     type: cce
-  name: Cloud Container Service
+  name: Cloud Container Engine
 - attributes:
     category: Container
     region: EU-NL
     type: cce
-  name: Cloud Container Service
+  name: Cloud Container Engine
 - attributes:
     category: Management & Deployment
     region: EU-DE
@@ -54,6 +59,11 @@ components:
     region: EU-NL
     type: ces
   name: Cloud Eye
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: rms
+  name: Config
 - attributes:
     category: Storage
     region: EU-DE
@@ -115,6 +125,16 @@ components:
     type: dds
   name: Document Database Service
 - attributes:
+    category: Database
+    region: EU-DE
+    type: ddm
+  name: Distributed Database Middleware
+- attributes:
+    category: Database
+    region: EU-DE
+    type: gaussdb-mysql
+  name: TaurusDB
+- attributes:
     category: Compute
     region: EU-DE
     type: deh
@@ -124,17 +144,17 @@ components:
     region: EU-NL
     type: deh
   name: Dedicated Host
-- attributes:
-    category: Big Data and Data Analysis
-    region: EU-DE
-    type: dis
-  name: Data Ingestion Service
 - attributes:
     category: Big Data and Data Analysis
     region: EU-DE
     type: dli
   name: Data Lake Insight
 - attributes:
+    category: Big Data and Data Analysis
+    region: EU-DE
+    type: ocr
+  name: Optical Character Recognition
+- attributes:
     category: Application Services
     region: EU-DE
     type: dms
@@ -144,6 +164,11 @@ components:
     region: EU-NL
     type: dms
   name: Distributed Message Service
+- attributes:
+    category: Application Services
+    region: EU-DE
+    type: aom
+  name: Application Operations Management
 - attributes:
     category: Network
     region: EU-DE
@@ -200,15 +225,35 @@ components:
     type: evs
   name: Elastic Volume Service
 - attributes:
-    category: Management & Deployment
+    category: Network
     region: EU-DE
-    type: enterprise-dashboard
-  name: Enterprise Dashboard
+    type: erv3
+  name: Enterprise Router
+- attributes:
+    category: Network
+    region: EU-NL
+    type: erv3
+  name: Enterprise Router
+- attributes:
+    category: Network
+    region: EU-DE
+    type: evpn
+  name: Enterprise Virtual Private Network
 - attributes:
     category: Security Services
     region: EU-DE
     type: iam
   name: Identity and Access Management
+- attributes:
+    category: Compute
+    region: EU-DE
+    type: functiongraph
+  name: FunctionGraph
+- attributes:
+    category: Database
+    region: EU-DE
+    type: geminidb
+  name: GeminiDB Service
 - attributes:
     category: Security Services
     region: EU-NL
@@ -282,8 +327,8 @@ components:
 - attributes:
     category: Network
     region: EU-DE
-    type: plas
-  name: Private Link Access Service
+    type: private-natgw
+  name: Private NAT Gateway
 - attributes:
     category: Database
     region: EU-DE
@@ -371,11 +416,6 @@ components:
   name: VPC Endpoint
 - attributes:
     category: Network
-    region: EU-DE
-    type: vpn
-  name: Virtual Private Network
-- attributes:
-    category: Network
     region: EU-NL
     type: vpn
   name: Virtual Private Network
@@ -399,3 +439,54 @@ components:
     region: EU-NL
     type: wafd
   name: Dedicated Web Application Firewall
+- attributes:
+    category: Security Services
+    region: EU-DE
+    type: hss
+  name: Host Security Service
+### Global
+- attributes:
+    category: Sites
+    region: Global
+    type: console
+  name: T Cloud Public Console
+- attributes:
+    category: Sites
+    region: Global
+    type: otc
+  name: T Cloud Public
+- attributes:
+    category: Sites
+    region: Global
+    type: helpcenter
+  name: HelpCenter
+- attributes:
+    category: Sites
+    region: Global
+    type: architecturecenter
+  name: Architecture Center
+- attributes:
+    category: Sites
+    region: Global
+    type: community
+  name: T Cloud Public Community
+- attributes:
+    category: Sites
+    region: Global
+    type: status-dashboard
+  name: Status Dashboard
+- attributes:
+    category: Sites
+    region: Global
+    type: my-workplace
+  name: Business Login / MyWorkplace
+- attributes:
+    category: Financial Services
+    region: Global
+    type: financial-dashboard
+  name: Financial Dashboard
+- attributes:
+    category: Financial Services
+    region: Global
+    type: billing
+  name: Invoicing
