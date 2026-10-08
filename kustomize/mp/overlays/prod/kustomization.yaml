@@ -18,6 +18,28 @@ labels:
       app.kubernetes.io/managed-by: argocd
       environment: prod
 
+# The base hardcodes debug, which logs every Graphite query on each 60s cycle.
+# Reporter outcomes are logged at info, so lowering the level loses nothing needed
+# to confirm a report. Strategic merge matches containers and env by name.
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: metrics-processor
+      spec:
+        template:
+          spec:
+            containers:
+              - name: convertor
+                env:
+                  - name: RUST_LOG
+                    value: info
+              - name: reporter
+                env:
+                  - name: RUST_LOG
+                    value: info
+
 configMapGenerator:
   - name: metrics-processor-config
     files:
