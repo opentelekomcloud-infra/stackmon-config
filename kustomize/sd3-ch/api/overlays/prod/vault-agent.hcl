@@ -51,7 +51,9 @@ export SD_NOTIFICATIONS_BACKOFF_INTERVAL=5m
 {{ with secret "secret/data/statusdashboard/smg" -}}
 export SD_SMTP_HOST={{ .Data.data.dns_a_record }}
 export SD_SMTP_PORT={{ .Data.data.port }}
-export SD_SMTP_FROM={{ .Data.data.smtpuser }}
+# The relay only checks that the sender domain resolves; it does not have to
+# match the authenticated account, which stays in SD_SMTP_USER.
+export SD_SMTP_FROM=status-dashboard@t-cloud-public.com
 export SD_SMTP_USER={{ .Data.data.smtpuser }}
 export SD_SMTP_PASSWORD={{ .Data.data.smtppassword }}
 export SD_SMTP_TLS=false
