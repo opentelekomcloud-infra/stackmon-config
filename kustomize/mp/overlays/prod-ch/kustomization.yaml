@@ -1,0 +1,51 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: status-dashboard-ch-prod
+
+resources:
+  - ../../base
+  - secret.yaml
+
+images:
+  - name: metrics-processor
+    newName: swr.eu-de.otc.t-systems.com/stackmon/metrics-processor
+    newTag: sha-b46273a
+
+labels:
+  - pairs:
+      app.kubernetes.io/instance: prod-ch
+      app.kubernetes.io/managed-by: argocd
+      environment: prod
+
+# The base hardcodes debug, which logs every Graphite query on each 60s cycle.
+# Reporter outcomes are logged at info, so lowering the level loses nothing needed
+# to confirm a report. Strategic merge matches containers and env by name.
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: metrics-processor
+      spec:
+        template:
+          spec:
+            containers:
+              - name: convertor
+                env:
+                  - name: RUST_LOG
+                    value: info
+              - name: reporter
+                env:
+                  - name: RUST_LOG
+                    value: info
+
+configMapGenerator:
+  - name: metrics-processor-config
+    files:
+      - config.yaml
+  - name: metrics-processor-confd
+    files:
+      - flag_metrics.yaml=conf.d/flag_metrics.yaml
+      - health_metrics.yaml=conf.d/health_metrics.yaml
+      - metric_templates.yaml=conf.d/metric_templates.yaml
