@@ -1,0 +1,428 @@
+---
+health_metrics:
+  ## Application Services
+  ### SMN
+  smn:
+    service: smn
+    component_name: "Simple Message Notification"
+    category: application
+    metrics:
+      - smn.api_down
+      - smn.api_slow
+      - smn.api_success_rate_low
+    expressions:
+      - expression: "smn.api_slow || smn.api_success_rate_low"
+        weight: 1
+      - expression: "smn.api_down"
+        weight: 2
+
+  ## Compute
+  ### AS
+  as:
+    service: as
+    component_name: "Auto Scaling"
+    category: compute
+    metrics:
+      - as.api_down
+      - as.api_slow
+      - as.api_success_rate_low
+    expressions:
+      - expression: "as.api_slow || as.api_success_rate_low"
+        weight: 1
+      - expression: "as.api_down"
+        weight: 2
+  ### DEH
+  #  deh:
+  #    service: deh
+  #    component_name: "Dedicated Host"
+  #    category: compute
+  #    metrics:
+  #      - deh.api_down
+  #      - deh.api_slow
+  #      - deh.api_success_rate_low
+  #    expressions:
+  #      - expression: "deh.api_slow || deh.api_success_rate_low"
+  #        weight: 1
+  #      - expression: "deh.api_down"
+  #        weight: 2
+  ### ECS
+  ecs:
+    service: ecs
+    component_name: "Elastic Cloud Server"
+    category: compute
+    metrics:
+      - ecs.api_down
+      - ecs.api_slow
+      - ecs.api_success_rate_low
+      - compute.api_down
+      - compute.api_slow
+      - compute.api_success_rate_low
+    expressions:
+      - expression: "ecs.api_slow || compute.api_slow || ecs.api_success_rate_low || compute.api_success_rate_low"
+        weight: 1
+      - expression: "ecs.api_down || compute.api_down"
+        weight: 2
+  ### IMS
+  ims:
+    service: ims
+    component_name: "Image Management Service"
+    category: compute
+    metrics:
+      - ims.api_down
+      - ims.api_slow
+      - ims.api_success_rate_low
+    expressions:
+      - expression: "ims.api_slow || ims.api_success_rate_low"
+        weight: 1
+      - expression: "ims.api_down"
+        weight: 2
+  ## Container
+  ### CCE
+  cce:
+    service: cce
+    component_name: "Cloud Container Engine"
+    category: container
+    metrics:
+      - ccev2_0.api_down
+      - ccev2_0.api_slow
+      - ccev2_0.api_success_rate_low
+    expressions:
+      - expression: "ccev2_0.api_slow || ccev2_0.api_success_rate_low"
+        weight: 1
+      - expression: "ccev2_0.api_down"
+        weight: 2
+
+  ### SWR
+  swr:
+    service: swr
+    component_name: "Software Repository for Containers"
+    category: container
+    metrics:
+      - swrv2.api_down
+      - swrv2.api_slow
+      - swrv2.api_success_rate_low
+    expressions:
+      - expression: "swrv2.api_slow || swrv2.api_success_rate_low"
+        weight: 1
+      - expression: "swrv2.api_down"
+        weight: 2
+
+  ## Storage
+  ### EVS
+  evs:
+    service: evs
+    component_name: "Elastic Volume Service"
+    category: storage
+    metrics:
+      - block-storage.api_down
+      - block-storage.api_slow
+      - block-storage.api_success_rate_low
+    expressions:
+      - expression: "block-storage.api_slow || block-storage.api_success_rate_low"
+        weight: 1
+      - expression: "block-storage.api_down"
+        weight: 2
+  ### CBR
+  cbr:
+    service: cbr
+    component_name: "Cloud Backup and Recovery"
+    category: storage
+    metrics:
+      - cbr.api_down
+      - cbr.api_slow
+      - cbr.api_success_rate_low
+    expressions:
+      - expression: "cbr.api_slow || cbr.api_success_rate_low"
+        weight: 1
+      - expression: "cbr.api_down"
+        weight: 2
+  ### OBS
+  obs:
+    service: obs
+    component_name: "Object Storage Service"
+    category: storage
+    metrics:
+      - obs.api_down
+      - obs.api_slow
+      - obs.api_success_rate_low
+    expressions:
+      - expression: "obs.api_slow || obs.api_success_rate_low"
+        weight: 1
+      - expression: "obs.api_down"
+        weight: 2
+  ### SDRS
+  sdrs:
+    service: sdrs
+    component_name: "Storage Disaster Recovery Service"
+    category: storage
+    metrics:
+      - sdrs.api_down
+      - sdrs.api_slow
+      - sdrs.api_success_rate_low
+    expressions:
+      - expression: "sdrs.api_slow || sdrs.api_success_rate_low"
+        weight: 1
+      - expression: "sdrs.api_down"
+        weight: 2
+
+  ## Network
+  ### DC
+  dcaas:
+    service: dcaas
+    component_name: "Direct Connect"
+    category: network
+    metrics:
+      - dcaas.api_down
+      - dcaas.api_slow
+      - dcaas.api_success_rate_low
+    expressions:
+      - expression: "dcaas.api_slow || dcaas.api_success_rate_low"
+        weight: 1
+      - expression: "dcaas.api_down"
+        weight: 2
+  ### DNS
+  dns:
+    service: dns
+    component_name: "Domain Name Service"
+    category: network
+    metrics:
+      - dns.api_down
+      - dns.api_slow
+      - dns.api_success_rate_low
+    expressions:
+      - expression: "dns.api_slow || dns.api_success_rate_low"
+        weight: 1
+      - expression: "dns.api_down"
+        weight: 2
+  ### ELB
+  elb:
+    service: elb
+    component_name: "Elastic Load Balancing"
+    category: network
+    metrics:
+      - elbv3.api_down
+      - elbv3.api_slow
+      - elbv3.api_success_rate_low
+    expressions:
+      - expression: "elbv3.api_slow || elbv3.api_success_rate_low"
+        weight: 1
+      - expression: "elbv3.api_down"
+        weight: 2
+  ### NAT GW
+  natgw:
+    service: natgw
+    component_name: "NAT Gateway"
+    category: network
+    metrics:
+      - nat.api_down
+      - nat.api_slow
+      - nat.api_success_rate_low
+    expressions:
+      - expression: "nat.api_slow || nat.api_success_rate_low"
+        weight: 1
+      - expression: "nat.api_down"
+        weight: 2
+  ### VPC
+  vpc:
+    service: vpc
+    component_name: "Virtual Private Cloud"
+    category: network
+    metrics:
+      - network.api_down
+      - network.api_slow
+      - network.api_success_rate_low
+    expressions:
+      - expression: "network.api_slow || network.api_success_rate_low"
+        weight: 1
+      - expression: "network.api_down"
+        weight: 2
+  ### VPCEP
+  vpcep:
+    service: vpcep
+    component_name: "VPC Endpoint"
+    category: network
+    metrics:
+      - vpcep.api_down
+      - vpcep.api_slow
+      - vpcep.api_success_rate_low
+    expressions:
+      - expression: "vpcep.api_slow || vpcep.api_success_rate_low"
+        weight: 1
+      - expression: "vpcep.api_down"
+        weight: 2
+
+  ### VPN
+  vpn:
+    service: vpn
+    component_name: "Virtul Private Network"
+    category: network
+    metrics:
+      - vpc.api_down
+      - vpc.api_slow
+      - vpc.api_success_rate_low
+    expressions:
+      - expression: "vpc.api_slow || vpc.api_success_rate_low"
+        weight: 1
+      - expression: "vpc.api_down"
+        weight: 2
+
+  ## Database
+  ### RDS
+  rds:
+    service: rds
+    component_name: "Relational Database Service"
+    category: database
+    metrics:
+      - rdsv3.api_down
+      - rdsv3.api_slow
+      - rdsv3.api_success_rate_low
+    expressions:
+      - expression: "rdsv3.api_slow || rdsv3.api_success_rate_low"
+        weight: 1
+      - expression: "rdsv3.api_down"
+        weight: 2
+
+  ## SecurityServices
+  ### IAM
+  iam:
+    service: iam
+    component_name: "Identity and Access Management"
+    category: security-services
+    metrics:
+      - identity.api_slow
+      - identity.api_down
+      - identity.api_success_rate_low
+    expressions:
+      - expression: "identity.api_slow || identity.api_success_rate_low"
+        weight: 1
+      - expression: "identity.api_down"
+        weight: 2
+  ### KMS
+  kms:
+    service: kms
+    component_name: "Key Management Service"
+    category: security-services
+    metrics:
+      - kms.api_down
+      - kms.api_slow
+      - kms.api_success_rate_low
+    expressions:
+      - expression: "kms.api_slow || kms.api_success_rate_low"
+        weight: 1
+      - expression: "kms.api_down"
+        weight: 2
+  ### WAF
+  waf:
+    service: waf
+    component_name: "Dedicated Web Application Firewall"
+    category: security-services
+    metrics:
+      - waf.api_down
+      - waf.api_slow
+      - waf.api_success_rate_low
+    expressions:
+      - expression: "waf.api_slow || waf.api_success_rate_low"
+        weight: 1
+      - expression: "waf.api_down"
+        weight: 2
+
+  ## Management and Deployment
+  ### CES
+  ces:
+    service: ces
+    component_name: "Cloud Eye"
+    category: management
+    metrics:
+      - ces.api_slow
+      - ces.api_down
+      - ces.api_success_rate_low
+    expressions:
+      - expression: "ces.api_slow || ces.api_success_rate_low"
+        weight: 1
+      - expression: "ces.api_down"
+        weight: 2
+  ### CTS
+  cts:
+    service: cts
+    component_name: "Cloud Trace Service"
+    category: management
+    metrics:
+      - ctsv3.api_slow
+      - ctsv3.api_down
+      - ctsv3.api_success_rate_low
+    expressions:
+      - expression: "ctsv3.api_slow || ctsv3.api_success_rate_low"
+        weight: 1
+      - expression: "ctsv3.api_down"
+        weight: 2
+  ## Global Services
+  ### Console
+  console:
+    service: console
+    component_name: "T Cloud Public Console"
+    category: global
+    metrics:
+      - console.api_slow
+      - console.api_down
+      - console.api_success_rate_low
+    expressions:
+      - expression: "console.api_slow || console.api_success_rate_low"
+        weight: 1
+      - expression: "console.api_down"
+        weight: 2
+  ### T Cloud Public
+  otc:
+    service: otc
+    component_name: "T Cloud Public"
+    category: global
+    metrics:
+      - otc.api_slow
+      - otc.api_down
+      - otc.api_success_rate_low
+    expressions:
+      - expression: "otc.api_slow || otc.api_success_rate_low"
+        weight: 1
+      - expression: "otc.api_down"
+        weight: 2
+  ### HelpCenter
+  helpcenter:
+    service: helpcenter
+    component_name: "HelpCenter"
+    category: global
+    metrics:
+      - helpcenter.api_slow
+      - helpcenter.api_down
+      - helpcenter.api_success_rate_low
+    expressions:
+      - expression: "helpcenter.api_slow || helpcenter.api_success_rate_low"
+        weight: 1
+      - expression: "helpcenter.api_down"
+        weight: 2
+  ### ArchitectureCenter
+  architecturecenter:
+    service: architecturecenter
+    component_name: "Architecture Center"
+    category: global
+    metrics:
+      - architecturecenter.api_slow
+      - architecturecenter.api_down
+      - architecturecenter.api_success_rate_low
+    expressions:
+      - expression: "architecturecenter.api_slow || architecturecenter.api_success_rate_low"
+        weight: 1
+      - expression: "architecturecenter.api_down"
+        weight: 2
+  ### Community
+  community:
+    service: community
+    component_name: "T Cloud Public Community"
+    category: global
+    metrics:
+      - community.api_slow
+      - community.api_down
+      - community.api_success_rate_low
+    expressions:
+      - expression: "community.api_slow || community.api_success_rate_low"
+        weight: 1
+      - expression: "community.api_down"
+        weight: 2

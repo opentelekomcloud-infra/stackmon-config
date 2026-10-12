@@ -1,0 +1,21 @@
+datasource:
+  # Same CarbonAPI as the EU instance: its store also carries the hybrid_eu-ch2
+  # environment, so the instance only differs by the environment it queries.
+  url: https://graphite.cloudmon.eco.tsi-dev.otc-service.com
+  timeout: 15
+server:
+  port: 3005
+environments:
+  - name: hybrid_eu-ch2
+    attributes:
+      region: EU-CH2
+status_dashboard:
+  # The reporter posts to {url}/v2/events. The site and the API share one origin.
+  url: https://status-ch.otc-service.com
+  oidc_issuer: https://zitadel.eco.tsi-dev.otc-service.com
+  oidc_key_file: /cloudmon/service-account.json
+  # Both scopes are required: without the :aud one the token audience falls back
+  # to the machine client id and the backend rejects it with 401.
+  oidc_scopes:
+    - "urn:zitadel:iam:org:project:role:sd_reporters"
+    - "urn:zitadel:iam:org:project:id:394183996340174906:aud"
