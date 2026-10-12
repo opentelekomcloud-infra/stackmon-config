@@ -8,8 +8,8 @@ resources:
 
 images:
   - name: sd3-ch-api
-    newName: quay.io/stackmon/status-dashboard-v3
-    newTag: sha-c8a0ea8
+    newName: swr.eu-de.otc.t-systems.com/stackmon/status-dashboard
+    newTag: v2.0.0
 
 configMapGenerator:
   - name: sd3-ch-vault-config
@@ -24,7 +24,7 @@ patchesStrategicMerge:
       name: sd3-ch-api-ingress
     spec:
       rules:
-        - host: api.status-ch.otc-service.com
+        - host: status-ch.otc-service.com
           http:
             paths:
             - path: /
@@ -36,5 +36,5 @@ patchesStrategicMerge:
                     number: 8000
       tls:
       - hosts:
-        - api.status-ch.otc-service.com
+        - status-ch.otc-service.com
         secretName: sd3-cert-prod
