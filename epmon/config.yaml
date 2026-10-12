@@ -270,7 +270,8 @@ elements:
       - /api/health
   enterprise-dashboard-v1:
     service_type: enterprise-dashboard-v1
-    urls: []
+    urls:
+      - /consumption/health
   er:
     service_type: erv3
     sdk_proxy: er
