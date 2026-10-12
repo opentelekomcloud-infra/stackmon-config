@@ -41,7 +41,7 @@ export SD_NOTIFICATIONS_ENABLED=true
 export SD_NOTIFICATIONS_SMOD_EMAIL=SDMoD@t-cloud-public.com
 # Constrains only the creator-supplied contact_email, never the review
 # audience, which is why SDMoD stays reachable through this.
-export SD_NOTIFICATIONS_ALLOWED_DOMAINS=t-systems.com
+export SD_NOTIFICATIONS_ALLOWED_DOMAINS=t-systems.com,t-cloud-public.com
 export SD_NOTIFICATIONS_LEASE_TIMEOUT=60s
 export SD_NOTIFICATIONS_MAX_ATTEMPTS=5
 export SD_NOTIFICATIONS_BACKOFF_INTERVAL=5m
