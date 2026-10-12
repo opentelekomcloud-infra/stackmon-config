@@ -18,7 +18,7 @@ spec:
       # SWR is private; the secret is replicated into every namespace by
       # kubernetes-replicator (system-config pull-secrets chart).
       imagePullSecrets:
-        - name: swr-secret
+      - name: swr-secret
       containers:
       - name: sd3-api
         image: sd3-api
