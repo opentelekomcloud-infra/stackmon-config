@@ -1,0 +1,29 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: status-dashboard
+
+resources:
+  - ../../base
+  - secret.yaml
+
+images:
+  - name: metrics-processor
+    newName: swr.eu-de.otc.t-systems.com/stackmon/metrics-processor
+    newTag: sha-b46273a
+
+labels:
+  - pairs:
+      app.kubernetes.io/instance: prod
+      app.kubernetes.io/managed-by: argocd
+      environment: prod
+
+configMapGenerator:
+  - name: metrics-processor-config
+    files:
+      - config.yaml
+  - name: metrics-processor-confd
+    files:
+      - flag_metrics.yaml=conf.d/flag_metrics.yaml
+      - health_metrics.yaml=conf.d/health_metrics.yaml
+      - metric_templates.yaml=conf.d/metric_templates.yaml
