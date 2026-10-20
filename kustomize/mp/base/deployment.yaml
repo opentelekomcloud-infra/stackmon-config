@@ -35,12 +35,14 @@ spec:
             - name: RUST_LOG
               value: debug
           resources:
+            # Debug logging keeps every Graphite query of the 60s cycle in the
+            # process; 200Mi OOMKilled the convertor (exit 137) on 2026-10-02.
             requests:
               cpu: 10m
               memory: 50Mi
             limits:
               cpu: 100m
-              memory: 200Mi
+              memory: 512Mi
           readinessProbe:
             httpGet:
               path: /api/v1
@@ -74,7 +76,7 @@ spec:
               memory: 50Mi
             limits:
               cpu: 100m
-              memory: 200Mi
+              memory: 512Mi
           volumeMounts:
             - name: instance-config
               mountPath: /cloudmon/config.yaml
