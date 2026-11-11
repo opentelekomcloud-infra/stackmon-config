@@ -75,6 +75,16 @@ elements:
     urls:
       - /clusters
       - /quotas
+  ccn:
+    service_type: ccn
+    sdk_proxy: ccn
+    urls:
+      - /gcn/central-networks
+      - /gcn/quotas
+      - /gcn/capabilities
+      - /gcb/sites
+      - /gcb/configs
+      - /gcb/gcbandwidths
   ces:
     service_type: ces
     sdk_proxy: ces
