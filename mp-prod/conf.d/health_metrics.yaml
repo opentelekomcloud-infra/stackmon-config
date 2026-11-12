@@ -570,6 +570,21 @@ health_metrics:
         weight: 1
       - expression: "ctsv3.api_down_3min"
         weight: 2
+  ### TMS
+  tms:
+    service: tms
+    component_name: "Tag Management Service"
+    category: management
+    metrics:
+      - tms.api_slow
+      - tms.api_down
+      - tms.api_success_rate_low
+    expressions:
+      - expression: "tms.api_slow || tms.api_success_rate_low"
+        weight: 1
+      - expression: "tms.api_down"
+        weight: 2
+
   ### Enterprise-Dashboard
   enterprise-dashboard:
     service: enterprise-dashboard
@@ -773,6 +788,7 @@ health_metrics:
         weight: 1
       - expression: "smn.api_down"
         weight: 2
+   
   ## Global Services
   ### Console
   console:
