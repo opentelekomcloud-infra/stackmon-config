@@ -138,6 +138,7 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - eps
           - er
           - evpn
           - functiongraph_v2
@@ -224,6 +225,7 @@ matrix:
           - elb_skip
           - elbv1_skip
           - elbv3
+          - eps
           - er
           - identity
           - image
@@ -305,6 +307,7 @@ matrix:
           - elbv3
           - enterprise-dashboard
           - enterprise-dashboard-v1
+          - eps
           - er
           - geminidb
           - hss
@@ -384,7 +387,9 @@ matrix:
           - elb_skip
           - elbv1_skip
           - elbv3
+          - eps
           - er
+          - hss
           - identity
           - image
           - kms_skip_unver
