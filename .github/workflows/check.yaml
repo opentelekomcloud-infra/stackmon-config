@@ -1,4 +1,4 @@
-name: Linters
+name: check
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  linters:
+  check:
     runs-on: ubuntu-latest
 
     steps:
