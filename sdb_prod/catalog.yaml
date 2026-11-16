@@ -444,6 +444,11 @@ components:
     region: EU-DE
     type: hss
   name: Host Security Service
+- attributes:
+    category: Security Services
+    region: EU-NL
+    type: hss
+  name: Host Security Service
 ### Global
 - attributes:
     category: Sites
@@ -490,3 +495,13 @@ components:
     region: Global
     type: billing
   name: Invoicing
+- attributes:
+    category: Management & Deployment
+    region: EU-DE
+    type: eps
+  name: Enterprise Project Service
+- attributes:
+    category: Management & Deployment
+    region: EU-NL
+    type: eps
+  name: Enterprise Project Service
