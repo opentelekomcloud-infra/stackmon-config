@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: api.status-ch.otc-service.com
+  - host: status-ch.otc-service.com
     http:
       paths:
       - path: /
