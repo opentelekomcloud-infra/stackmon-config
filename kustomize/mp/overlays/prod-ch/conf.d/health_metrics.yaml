@@ -254,7 +254,7 @@ health_metrics:
   ### VPN
   vpn:
     service: vpn
-    component_name: "Virtul Private Network"
+    component_name: "Virtual Private Network"
     category: network
     metrics:
       - vpc.api_down
@@ -359,7 +359,9 @@ health_metrics:
   ### Console
   console:
     service: console
-    component_name: "T Cloud Public Console"
+    component_name: "Open Telekom Cloud Console"
+    component_attributes:
+      region: Global
     category: global
     metrics:
       - console.api_slow
@@ -370,10 +372,12 @@ health_metrics:
         weight: 1
       - expression: "console.api_down"
         weight: 2
-  ### T Cloud Public
+  ### Open Telekom Cloud
   otc:
     service: otc
-    component_name: "T Cloud Public"
+    component_name: "Open Telekom Cloud"
+    component_attributes:
+      region: Global
     category: global
     metrics:
       - otc.api_slow
@@ -388,6 +392,8 @@ health_metrics:
   helpcenter:
     service: helpcenter
     component_name: "HelpCenter"
+    component_attributes:
+      region: Global
     category: global
     metrics:
       - helpcenter.api_slow
@@ -402,6 +408,8 @@ health_metrics:
   architecturecenter:
     service: architecturecenter
     component_name: "Architecture Center"
+    component_attributes:
+      region: Global
     category: global
     metrics:
       - architecturecenter.api_slow
@@ -415,7 +423,9 @@ health_metrics:
   ### Community
   community:
     service: community
-    component_name: "T Cloud Public Community"
+    component_name: "Open Telekom Cloud Community"
+    component_attributes:
+      region: Global
     category: global
     metrics:
       - community.api_slow
