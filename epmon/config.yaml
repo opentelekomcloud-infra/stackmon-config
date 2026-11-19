@@ -395,6 +395,7 @@ elements:
     urls:
       - /ocr/general-table-health
       - /ocr/general-text-health
+      - /ocr/smart-document-health
   orchestration_skip:
     service_type: orchestration
     urls: []
