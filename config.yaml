@@ -204,6 +204,7 @@ matrix:
           - cbr
           - cce_skip_unver
           - cce
+          - ccn
           - ces
           - ces_skip_v1
           - compute
@@ -275,7 +276,6 @@ matrix:
           - cbr
           - cce_skip_unver
           - cce
-          - ccn
           - ces
           - ces_skip_v1
           - compute
