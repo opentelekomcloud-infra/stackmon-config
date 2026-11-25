@@ -40,6 +40,11 @@ components:
     type: cbr
   name: Cloud Backup and Recovery
 - attributes:
+    category: Network
+    region: EU-DE
+    type: ccn
+  name: Cloud Connect
+- attributes:
     category: Container
     region: EU-DE
     type: cce
